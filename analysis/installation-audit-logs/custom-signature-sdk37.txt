@@ -1,0 +1,18 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v3.2 scheme (APK Signature Scheme v3.2): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+V3.0 Signer: certificate DN: CN=SMART TIME Local Test, OU=Development, O=Local Test, C=KR
+V3.0 Signer: certificate SHA-256 digest: a80b353626387a9f1ee006775ea5c0f2e481d2f39b90b11ee2e53202e486a851
+V3.0 Signer: certificate SHA-1 digest: e04cbe0e77463964fb7b49fc2fcef5716e49b8d3
+V3.0 Signer: certificate MD5 digest: ea73a1f19a871e9524235bef266b5d64
+V3.0 Signer: key algorithm: RSA
+V3.0 Signer: key size (bits): 2048
+V3.0 Signer: public key SHA-256 digest: 9a9095f1dfc4900238be01b07e2500f8b7040b90b6bddc4b3eaf971312083ac9
+V3.0 Signer: public key SHA-1 digest: 6a060378c064d098504fb986015313d4773de6a5
+V3.0 Signer: public key MD5 digest: 42b35074c17e57d26af36ce3077bc671

@@ -1,0 +1,157 @@
+[
+  {
+    "dex": "assets/audience_network/classes.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 34,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "assets/audience_network/classes2.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1497,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 24,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes10.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes11.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes12.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes13.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes14.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": [
+      "Ldalvik/system/DexClassLoader;",
+      "Ldalvik/system/InMemoryDexClassLoader;"
+    ]
+  },
+  {
+    "dex": "classes15.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": [
+      "Ldalvik/system/DexClassLoader;",
+      "Ldalvik/system/PathClassLoader;"
+    ]
+  },
+  {
+    "dex": "classes16.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes17.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": [
+      "Ldalvik/system/PathClassLoader;"
+    ]
+  },
+  {
+    "dex": "classes18.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes19.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes2.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 2,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes3.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes4.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes5.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes6.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes7.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes8.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": []
+  },
+  {
+    "dex": "classes9.dex",
+    "string_pools_equal": false,
+    "new_string_count": 0,
+    "removed_string_count": 1,
+    "original_dynamic_loader_references": []
+  }
+]

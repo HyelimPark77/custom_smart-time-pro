@@ -1,0 +1,4 @@
+Tool: Android SDK Build Tools 37.0.0
+Command: zipalign -c -P 16 -v 4 Diz_SW01_Custom_0.1.0_ARM64_TEST.apk
+Exit code: 0
+Verification successful

@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-02",
+  "apk": "Diz_SW01_Custom_0.1.0_ARM64_TEST.apk",
+  "sha256": "94331dac82401815115650592e012fe99fa2e59f43d4e860afa2a7b94a868b93",
+  "device_model": "Galaxy S25 SM-S931N",
+  "android_version": null,
+  "one_ui_version": null,
+  "same_security_block_reported_for_custom_identity": true,
+  "sdk_build_tools": "37.0.0",
+  "signature_v2_verified": true,
+  "signature_v3_verified": true,
+  "original_certificate_sha256": "22f1cfbef897405e5de13d0e86d42e939b8de7c0789025eb9d2d26b8cda54083",
+  "custom_certificate_sha256": "a80b353626387a9f1ee006775ea5c0f2e481d2f39b90b11ee2e53202e486a851",
+  "zipalign_c_P16_verified": true,
+  "extractNativeLibs": true,
+  "compressed_native_libraries": 50,
+  "elf_16k_pass_count": 48,
+  "elf_16k_not_pass": [
+    "lib/arm64-v8a/libspeechenhancement.so",
+    "lib/arm64-v8a/libspeechenhancement_jni.so"
+  ],
+  "nonaligned_libraries_identical_to_original": true,
+  "dex_string_pool_added_strings": 0,
+  "malware_scan_performed": false,
+  "runtime_tested": false,
+  "device_page_size": null,
+  "new_apk_created_for_this_audit": false,
+  "security_verdict_cause_confirmed": false
+}

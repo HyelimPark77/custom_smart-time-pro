@@ -1,0 +1,1138 @@
+[
+  {
+    "library": "lib/arm64-v8a/libandroidx.graphics.path.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 7232,
+        "vaddr": 23616,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 8144,
+        "vaddr": 40912,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libapminsighta.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 97232,
+        "vaddr": 113616,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 99624,
+        "vaddr": 132392,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libapminsightb.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 119680,
+        "vaddr": 136064,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 121360,
+        "vaddr": 154128,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libapplovin-native-crash-reporter.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 826608,
+        "vaddr": 842992,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 857672,
+        "vaddr": 890440,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libBaiduMapSDK_base_v7_5_3.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 65536,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 65536,
+        "offset": 554136,
+        "vaddr": 619672,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libBaiduMapSDK_map_v7_5_3.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 65536,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 65536,
+        "offset": 7777328,
+        "vaddr": 7842864,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libBodyfat_SDK.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 65536,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 65536,
+        "offset": 47728,
+        "vaddr": 113264,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libBSBiaAlg.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 65536,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 65536,
+        "offset": 23920,
+        "vaddr": 89456,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libbuffer_pgl.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 6480,
+        "vaddr": 22864,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libcbuf.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 4864,
+        "vaddr": 21248,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libchipsea_bias_v235.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 65536,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 65536,
+        "offset": 11616,
+        "vaddr": 77152,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libczxing.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 9535312,
+        "vaddr": 9551696,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 9769192,
+        "vaddr": 9801960,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libeasyopus.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 264064,
+        "vaddr": 280448,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 280720,
+        "vaddr": 313488,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libezip.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 374464,
+        "vaddr": 390848,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 391304,
+        "vaddr": 424072,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libfile_lock_pgl.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 3856,
+        "vaddr": 20240,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libgnustl_shared.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 65536,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 65536,
+        "offset": 1073912,
+        "vaddr": 1139448,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libindoor.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 65536,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 65536,
+        "offset": 249296,
+        "vaddr": 314832,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libjl_auth.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 8512,
+        "vaddr": 24896,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 9088,
+        "vaddr": 41856,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libjl_bmp_convert.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 374032,
+        "vaddr": 390416,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 376384,
+        "vaddr": 409152,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libjl_crc.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 2608,
+        "vaddr": 18992,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 3144,
+        "vaddr": 35912,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libjl_enc.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 12848,
+        "vaddr": 29232,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 13456,
+        "vaddr": 46224,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libjl_eq.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 264160,
+        "vaddr": 280544,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 280672,
+        "vaddr": 313440,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libjl_fatfs.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 325312,
+        "vaddr": 341696,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 342960,
+        "vaddr": 375728,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libjl_opus.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 25952,
+        "vaddr": 42336,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 26904,
+        "vaddr": 59672,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libjl_ota_auth.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 11904,
+        "vaddr": 28288,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 12520,
+        "vaddr": 45288,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libjl_pack_format.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 262112,
+        "vaddr": 278496,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 278992,
+        "vaddr": 311760,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libjl_speex.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 12512,
+        "vaddr": 28896,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 13344,
+        "vaddr": 46112,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/liblocSDK8b.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 65536,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 65536,
+        "offset": 208048,
+        "vaddr": 273584,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libMicrosoft.CognitiveServices.Speech.core.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 7682064,
+        "vaddr": 7698448,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 8420600,
+        "vaddr": 8453368,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libMicrosoft.CognitiveServices.Speech.extension.audio.sys.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 142720,
+        "vaddr": 159104,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 155920,
+        "vaddr": 188688,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libMicrosoft.CognitiveServices.Speech.extension.codec.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 128400,
+        "vaddr": 144784,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 134536,
+        "vaddr": 167304,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libMicrosoft.CognitiveServices.Speech.extension.kws.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 273136,
+        "vaddr": 289520,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 278136,
+        "vaddr": 310904,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libMicrosoft.CognitiveServices.Speech.extension.lu.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 487152,
+        "vaddr": 503536,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 512800,
+        "vaddr": 545568,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libMicrosoft.CognitiveServices.Speech.extension.silk_codec.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 174544,
+        "vaddr": 190928,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 177616,
+        "vaddr": 210384,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libMicrosoft.CognitiveServices.Speech.java.bindings.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 241392,
+        "vaddr": 257776,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 246288,
+        "vaddr": 279056,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libnms.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 256976,
+        "vaddr": 273360,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 291408,
+        "vaddr": 324176,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libopus.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 421688,
+        "vaddr": 438072,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libpglarmor.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 63792,
+        "vaddr": 80176,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 66176,
+        "vaddr": 98944,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libRtkAesJni.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 16592,
+        "vaddr": 32976,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 17120,
+        "vaddr": 49888,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libsls_producer.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 170528,
+        "vaddr": 186912,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 173024,
+        "vaddr": 205792,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libsmawatchface.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 15680,
+        "vaddr": 32064,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libspark.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 65536,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 65536,
+        "offset": 71896,
+        "vaddr": 137432,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libSparkChain.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 65536,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 65536,
+        "offset": 10448752,
+        "vaddr": 10514288,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libspeechenhancement.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 4096,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 4096,
+        "offset": 8845200,
+        "vaddr": 8849296,
+        "congruent_16k": false
+      },
+      {
+        "align": 4096,
+        "offset": 8846608,
+        "vaddr": 8854800,
+        "congruent_16k": false
+      }
+    ],
+    "elf_alignment_16k": false
+  },
+  {
+    "library": "lib/arm64-v8a/libspeechenhancement_jni.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 4096,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 4096,
+        "offset": 3488,
+        "vaddr": 7584,
+        "congruent_16k": false
+      }
+    ],
+    "elf_alignment_16k": false
+  },
+  {
+    "library": "lib/arm64-v8a/libst_opus.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 424080,
+        "vaddr": 440464,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libst_speex.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 120880,
+        "vaddr": 137264,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 124336,
+        "vaddr": 157104,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libTjHwBiaAlgAC4003.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 65536,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 65536,
+        "offset": 44424,
+        "vaddr": 109960,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libtt_ugen_layout.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 16384,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 418112,
+        "vaddr": 434496,
+        "congruent_16k": true
+      },
+      {
+        "align": 16384,
+        "offset": 435944,
+        "vaddr": 468712,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  },
+  {
+    "library": "lib/arm64-v8a/libweibosdkcore.so",
+    "compressed": true,
+    "load_segments": [
+      {
+        "align": 65536,
+        "offset": 0,
+        "vaddr": 0,
+        "congruent_16k": true
+      },
+      {
+        "align": 65536,
+        "offset": 23760,
+        "vaddr": 89296,
+        "congruent_16k": true
+      }
+    ],
+    "elf_alignment_16k": true
+  }
+]
