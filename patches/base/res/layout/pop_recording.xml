@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/bg_pop_cover_bottom" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/pop_recording_img" android:layout_width="wrap_content" android:layout_height="90.0dp" android:src="@drawable/pop_recording_animation_img" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/text_color" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="@string/release_sending" />
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/pop_recording_clear_img" android:layout_width="60.0dp" android:layout_height="60.0dp" android:layout_margin="10.0dp" android:src="@drawable/pop_recording_clear_img" />
+    <ImageView android:background="@drawable/pop_recording_btn_img" android:layout_width="match_parent" android:layout_height="wrap_content" />
+</LinearLayout>

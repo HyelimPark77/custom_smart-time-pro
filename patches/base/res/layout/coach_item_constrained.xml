@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" style="@style/abh_coach_layout_style_bg"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatImageView android:paddingTop="20.0dp" android:paddingBottom="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/abh_no_create_a_plan_icon" />
+    <TextView android:textSize="20.0dp" android:textColor="@color/text_color" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="@string/no_activity_data_available" />
+    <TextView android:textSize="16.0dp" android:textColor="@color/line_color" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="@string/no_activity_data_available_tip" />
+</LinearLayout>

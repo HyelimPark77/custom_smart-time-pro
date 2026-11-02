@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?android:selectableItemBackground" android:paddingLeft="15.0dp" android:paddingTop="15.0dp" android:paddingRight="10.0dp" android:paddingBottom="15.0dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/rbSelectedState" android:layout_alignParentLeft="true">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="20.0dp" android:textColor="@drawable/selector_text_color_white_gray8a" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apple Inc" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dp">
+            <com.sma.smartv3.view.text.PFMedium android:textSize="14.0dp" android:textColor="@android:color/white" android:id="@id/tv_exchange" android:background="@drawable/shape_stock_exchange" android:padding="2.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="US" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="18.0dp" android:textColor="@drawable/selector_text_color_white_gray8a" android:id="@id/tv_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AAPL" android:layout_marginStart="6.0dp" />
+        </LinearLayout>
+        <com.sma.smartv3.view.text.PFMedium android:textSize="14.0dp" android:textColor="@color/line_color" android:id="@id/tv_exchange_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="Buenos Aires Exchange" />
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dp">
+            <com.sma.smartv3.view.text.PFMedium android:textSize="16.0dp" android:textColor="@drawable/selector_text_color_white_gray8a" android:id="@id/tv_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="155.35" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="16.0dp" android:textColor="@drawable/selector_text_color_white_gray8a" android:id="@id/tv_change" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2.31" android:layout_centerHorizontal="true" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="16.0dp" android:textColor="@drawable/selector_text_color_white_gray8a" android:id="@id/tv_change_percent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1.50%" android:layout_marginEnd="20.0dp" android:layout_alignParentEnd="true" />
+            <ImageView android:id="@id/iv_change_percent" android:layout_width="16.0dp" android:layout_height="16.0dp" android:src="@drawable/icon_stock_rise" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatRadioButton android:id="@id/rbSelectedState" android:focusable="false" android:focusableInTouchMode="false" android:visibility="visible" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginRight="15.0dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" android:backgroundTint="@color/text_color" />
+</RelativeLayout>

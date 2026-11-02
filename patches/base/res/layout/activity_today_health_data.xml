@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_title_iv_tv_iv" />
+    <com.sma.smartv3.view.text.PFMedium android:textSize="16.0sp" android:textColor="@color/text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="@string/today_all_data" android:layout_marginStart="35.0dp" />
+    <LinearLayout android:layout_height="wrap_content" android:layout_marginStart="22.0dp" android:layout_marginEnd="22.0dp" style="@style/status_card_style">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="120.0dp" android:layout_marginTop="10.0dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" android:paddingEnd="6.0dp">
+                <LinearLayout android:orientation="horizontal" android:id="@id/llStep" android:background="@drawable/v2_status_item_activity_step_panel_bg" android:padding="5.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="5.0dp" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="35.0dp" android:layout_height="35.0dp" android:layout_marginTop="6.0dp" android:src="@drawable/icon_steps" android:layout_marginStart="4.0dp" />
+                    <com.sma.smartv3.view.text.DINCondBold android:textSize="22.0sp" android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@id/ac_today_health_data_steps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="0" android:layout_marginStart="10.0dp" />
+                    <com.sma.smartv3.view.text.PFMedium android:textSize="12.0sp" android:textColor="@color/black" android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="@string/steps" android:layout_marginStart="5.0dp" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/llSleep" android:background="@drawable/v2_status_item_activity_sleep_panel_bg" android:padding="5.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5.0dp" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="35.0dp" android:layout_height="35.0dp" android:layout_marginTop="6.0dp" android:src="@drawable/icon_sleep_today" android:layout_marginStart="4.0dp" />
+                    <com.sma.smartv3.view.text.DINCondBold android:textSize="22.0sp" android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@id/ac_today_health_data_sleep" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="0H 0M" android:layout_marginStart="10.0dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" android:paddingStart="6.0dp">
+                <LinearLayout android:orientation="horizontal" android:id="@id/llCalories" android:background="@drawable/v2_status_item_activity_kcal_panel_bg" android:padding="5.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="5.0dp" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_calories" android:layout_width="35.0dp" android:layout_height="35.0dp" android:layout_marginTop="6.0dp" android:src="@drawable/icon_calories" android:layout_marginStart="4.0dp" />
+                    <com.sma.smartv3.view.text.DINCondBold android:textSize="22.0sp" android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@id/ac_today_health_data_calorie" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="0" android:layout_marginStart="10.0dp" />
+                    <com.sma.smartv3.view.text.PFMedium android:textSize="12.0sp" android:textColor="@color/black" android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="@string/kcal" android:layout_marginStart="5.0dp" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/llDistance" android:background="@drawable/v2_status_item_activity_distance_panel_bg" android:padding="5.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5.0dp" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_distance" android:layout_width="35.0dp" android:layout_height="35.0dp" android:layout_marginTop="6.0dp" android:src="@drawable/icon_distance" android:layout_marginStart="4.0dp" />
+                    <com.sma.smartv3.view.text.DINCondBold android:textSize="22.0sp" android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@id/ac_today_health_data_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="0" android:layout_marginStart="10.0dp" />
+                    <com.sma.smartv3.view.text.PFMedium android:textSize="12.0sp" android:textColor="@color/black" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/ac_today_health_data_distanceUnit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="@string/km" android:layout_marginStart="5.0dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <com.sma.smartv3.view.text.PFMedium android:textSize="12.0sp" android:textColor="@color/line_color" android:layout_marginTop="10.0dp" android:layout_marginBottom="10.0dp" android:text="@string/today_data_tip" style="@style/status_card_style_1_title" />
+    </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content" android:layout_marginStart="22.0dp" android:layout_marginEnd="22.0dp" style="@style/status_card_style">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="16.0sp" android:layout_marginBottom="4.0dp" android:text="@string/today_health_record" android:layout_marginStart="4.0dp" style="@style/status_card_style_1_title" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/status_item_today_health_data" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="60.0dp" />
+    </LinearLayout>
+</LinearLayout>

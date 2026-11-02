@@ -1,0 +1,45 @@
+package com.jieli.jl_rcsp.exception;
+
+import com.android.mltcode.paycertificationapi.i0XO1;
+import com.jieli.jl_rcsp.util.CHexConver;
+
+/* JADX INFO: loaded from: classes17.dex */
+public class ParseDataException extends BaseException {
+    public static final int REASON_INSUFFICIENT_DATA = 1;
+    public static final int REASON_TYPE_NOT_MATCH = 2;
+    private byte[] data;
+    private final int reason;
+
+    public ParseDataException(int r2, String r3) {
+        this(r2, r3, new byte[0]);
+    }
+
+    public byte[] getData() {
+        return this.data;
+    }
+
+    @Override // com.jieli.jl_rcsp.exception.BaseException
+    public int getErrorCode() {
+        return 12289;
+    }
+
+    public int getReason() {
+        return this.reason;
+    }
+
+    public ParseDataException setData(byte[] r1) {
+        this.data = r1;
+        return this;
+    }
+
+    @Override // java.lang.Throwable
+    public String toString() {
+        return "ParseException{data=" + CHexConver.byte2HexStr(this.data) + ", reason=" + this.reason + ", message=\"" + getMessage() + "\"" + i0XO1.IO;
+    }
+
+    public ParseDataException(int r1, String r2, byte[] r3) {
+        super(r2);
+        this.reason = r1;
+        this.data = r3;
+    }
+}

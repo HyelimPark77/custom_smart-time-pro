@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:background="@drawable/shape_sport_ll_bg" android:padding="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/activity_horizontal_margin" android:layout_marginEnd="@dimen/activity_horizontal_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sma.smartv3.view.text.PFMedium android:textSize="16.0sp" android:textColor="@color/text_color" android:id="@id/item_mode_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/workout7" />
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/device_white_ll_item_bg" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.sma.smartv3.view.text.PFMedium android:textSize="20.0dp" android:textColor="@color/text_color" android:id="@id/item_leading_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                <com.sma.smartv3.view.text.PFMedium android:textSize="12.0dp" android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/times_key" android:layout_marginStart="1.0dp" />
+            </LinearLayout>
+            <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/accumulated_lead" />
+        </LinearLayout>
+        <TextView android:background="@drawable/dashed_vertical_line" android:layout_width="1.0dp" android:layout_height="match_parent" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.sma.smartv3.view.text.PFMedium android:textSize="20.0dp" android:textColor="@color/text_color" android:id="@id/item_flat_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                <com.sma.smartv3.view.text.PFMedium android:textSize="12.0dp" android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/times_key" android:layout_marginStart="1.0dp" />
+            </LinearLayout>
+            <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/accumulated_balance" />
+        </LinearLayout>
+        <TextView android:background="@drawable/dashed_vertical_line" android:layout_width="1.0dp" android:layout_height="match_parent" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.sma.smartv3.view.text.PFMedium android:textSize="20.0dp" android:textColor="@color/text_color" android:id="@id/item_backward_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                <com.sma.smartv3.view.text.PFMedium android:textSize="12.0dp" android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/times_key" android:layout_marginStart="1.0dp" />
+            </LinearLayout>
+            <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/accumulated_backwardness" />
+        </LinearLayout>
+    </LinearLayout>
+    <View style="@style/dashed_line" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="16.0dp" android:textColor="@color/text_color" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/last_record" android:layout_weight="1.0" />
+        <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:id="@id/item_list_record_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/more" />
+        <ImageView android:layout_marginEnd="0.0dp" style="@style/sprots_item_right_iv_style" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/item_last_record" android:background="@drawable/device_white_ll_item_bg" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView android:id="@id/record_sports_icon" android:layout_width="25.0dp" android:layout_height="25.0dp" android:src="@drawable/ic_workout10" />
+            <com.sma.smartv3.view.text.PFMedium android:textColor="@color/text_color" android:id="@id/record_sports_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/workout10" android:layout_toRightOf="@id/record_sports_icon" android:layout_marginStart="10.0dp" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="12.0sp" android:textColor="@color/line_color" android:id="@id/record_sports_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="15:32" android:layout_toRightOf="@id/record_sports_icon" android:layout_below="@id/record_sports_title" android:layout_marginStart="10.0dp" />
+            <com.sma.smartv3.view.text.PFMedium android:textColor="@color/text_color" android:id="@id/record_sports_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5.12KM" android:layout_alignParentRight="true" android:layout_marginStart="10.0dp" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="12.0sp" android:textColor="@color/line_color" android:id="@id/record_sports_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="80Kcal | 00:30:00" android:layout_below="@id/record_sports_title" android:layout_alignParentRight="true" android:layout_marginStart="10.0dp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View style="@style/dashed_line" />
+    <com.sma.smartv3.view.text.PFMedium android:textSize="18.0dp" android:textColor="@color/text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/navigator_item_mon_target" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="34.0dp" android:layout_marginTop="10.0dp">
+        <com.sma.smartv3.view.text.PFMedium android:textColor="@color/black" android:gravity="center" android:id="@id/item_time_tv" android:background="@drawable/shape_edit_8_stroke" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="@string/time" android:layout_weight="1.0" android:layout_marginEnd="20.0dp" />
+        <com.sma.smartv3.view.text.PFMedium android:textColor="@color/black" android:gravity="center" android:id="@id/item_speed_tv" android:background="@drawable/shape_edit_8_stroke" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="@string/pace" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/device_white_ll_item_bg" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.sma.smartv3.view.text.PFMedium android:textSize="20.0dp" android:textColor="@color/text_color" android:id="@id/item_leading_mon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                <com.sma.smartv3.view.text.PFMedium android:textSize="12.0dp" android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/times_key" android:layout_marginStart="1.0dp" />
+            </LinearLayout>
+            <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/leading" />
+        </LinearLayout>
+        <TextView android:background="@drawable/dashed_vertical_line" android:layout_width="1.0dp" android:layout_height="match_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.sma.smartv3.view.text.PFMedium android:textSize="20.0dp" android:textColor="@color/text_color" android:id="@id/item_flat_mon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                <com.sma.smartv3.view.text.PFMedium android:textSize="12.0dp" android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/times_key" android:layout_marginStart="1.0dp" />
+            </LinearLayout>
+            <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/flat" />
+        </LinearLayout>
+        <TextView android:background="@drawable/dashed_vertical_line" android:layout_width="1.0dp" android:layout_height="match_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.sma.smartv3.view.text.PFMedium android:textSize="20.0dp" android:textColor="@color/text_color" android:id="@id/item_backward_mon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                <com.sma.smartv3.view.text.PFMedium android:textSize="12.0dp" android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/times_key" android:layout_marginStart="1.0dp" />
+            </LinearLayout>
+            <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/backward" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="16.0dp" android:textColor="@color/text_color" android:id="@id/item_lin_chart_record_time" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="" android:layout_weight="1.0" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="16.0dp" android:textColor="@color/red" android:id="@id/item_lin_chart_record_type" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="12.0sp" android:textColor="@color/line_color" android:id="@id/item_lin_chart_record_target" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="12.0sp" android:textColor="@color/line_color" android:gravity="center" android:id="@id/item_lin_chart_record_actual" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="12.0sp" android:textColor="@color/line_color" android:gravity="end" android:id="@id/item_lin_chart_record_difference" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp">
+        <View android:background="@color/orange" android:layout_width="10.0dp" android:layout_height="10.0dp" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="12.0sp" android:textColor="@color/orange" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/goal" android:layout_marginStart="10.0dp" />
+        <View android:background="@color/green" android:layout_width="10.0dp" android:layout_height="10.0dp" android:layout_marginStart="15.0dp" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="12.0sp" android:textColor="@color/green" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/actual" android:layout_marginStart="10.0dp" />
+    </LinearLayout>
+    <com.github.mikephil.charting.charts.LineChart android:id="@id/line_chart" android:layout_width="match_parent" android:layout_height="200.0dp" />
+</LinearLayout>

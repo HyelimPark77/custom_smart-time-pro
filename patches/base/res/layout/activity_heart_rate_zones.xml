@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/root" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/layout_title_iv_tv_iv" />
+        <LinearLayout android:orientation="vertical" android:id="@id/show_heart_rate_ll" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/shape_sport_ll_bg" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16.0dp">
+                <LinearLayout android:background="@drawable/device_white_ll_item_bg" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.sma.smartv3.view.text.PFMedium android:textColor="@color/text_color" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/hr_zone" android:layout_weight="1.0" />
+                    <com.sma.smartv3.view.text.PFMedium android:textColor="@color/text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/heart_rate_zones_unit" />
+                </LinearLayout>
+                <LinearLayout android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.sma.smartv3.view.text.PFMedium android:textColor="@color/text_color" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/strenuous_exercise" android:layout_weight="1.0" />
+                    <com.sma.smartv3.view.text.PFMedium android:textColor="@color/red" android:id="@id/hr_value_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="172~190" />
+                </LinearLayout>
+                <LinearLayout android:paddingBottom="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16.0dp" android:paddingEnd="16.0dp">
+                    <com.sma.smartv3.view.text.PFMedium android:textColor="@color/text_color" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/anaerobic_exercise" android:layout_weight="1.0" />
+                    <com.sma.smartv3.view.text.PFMedium android:textColor="#ff254c" android:id="@id/hr_value_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="152~172" />
+                </LinearLayout>
+                <LinearLayout android:paddingBottom="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16.0dp" android:paddingEnd="16.0dp">
+                    <com.sma.smartv3.view.text.PFMedium android:textColor="@color/text_color" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/aerobic_exercise" android:layout_weight="1.0" />
+                    <com.sma.smartv3.view.text.PFMedium android:textColor="#ff7500" android:id="@id/hr_value_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="133~152" />
+                </LinearLayout>
+                <LinearLayout android:paddingBottom="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16.0dp" android:paddingEnd="16.0dp">
+                    <com.sma.smartv3.view.text.PFMedium android:textColor="@color/text_color" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/fat_burning_exercise" android:layout_weight="1.0" />
+                    <com.sma.smartv3.view.text.PFMedium android:textColor="#65cf5c" android:id="@id/hr_value_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="154~133" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16.0dp" android:paddingEnd="16.0dp">
+                    <com.sma.smartv3.view.text.PFMedium android:textColor="@color/text_color" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/warm_up_exercise" android:layout_weight="1.0" />
+                    <com.sma.smartv3.view.text.PFMedium android:textColor="#5ea1ff" android:id="@id/hr_value_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="104~114" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/heart_rate_zones_tip" android:layout_marginStart="25.0dp" android:layout_marginEnd="25.0dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/show_heart_rate_null_ll" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_width="150.0dp" android:layout_height="150.0dp" android:src="@drawable/sport_empty_icon" />
+        <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="@string/no_data" />
+        <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="@string/hr_nu_data_tip" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="30.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="开始测试" android:onClick="onEnter" />
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="GSensor测试" android:onClick="onGSensor" />
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="漏光测试" android:onClick="onHrLeak" />
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="心率BIO" android:onClick="onHrBIO" />
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="退出测试" android:onClick="onExit" />
+    <TextView android:id="@id/tv_info" android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+</LinearLayout>

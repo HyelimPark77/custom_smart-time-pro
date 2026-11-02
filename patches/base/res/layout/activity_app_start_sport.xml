@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/view_page_main_bg" style="@style/status_info_ll"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/layout_title_iv_tv_iv" />
+    <com.google.android.material.tabs.TabLayout android:id="@id/table" style="@style/status_info_tba_card_scrollable" />
+    <androidx.viewpager.widget.ViewPager android:id="@id/view_pager" style="@style/status_info_vp" />
+</LinearLayout>

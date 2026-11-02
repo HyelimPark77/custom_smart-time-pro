@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root_view" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_title_iv_tv_iv" />
+    <LinearLayout android:orientation="vertical" android:id="@id/gen_panel" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="200.0dp">
+            <View android:layout_marginTop="20.0dp" style="@style/h_divider_gray2_margin22" />
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" android:layout_marginStart="22.0dp" android:layout_marginEnd="22.0dp">
+                <EditText android:textColor="@color/text_color" android:textColorHint="@color/line_color" android:gravity="start" android:id="@id/et_content" android:background="@null" android:layout_width="match_parent" android:layout_height="120.0dp" android:layout_margin="5.0dp" android:hint="@string/ai_key_input_tip" />
+            </RelativeLayout>
+            <View style="@style/h_divider_gray2_margin22" />
+        </LinearLayout>
+        <Button android:layout_marginTop="20.0dp" android:layout_marginBottom="20.0dp" android:text="@string/save" android:onClick="onSave" android:layout_marginStart="32.0dp" android:layout_marginEnd="32.0dp" style="@style/btn_common" />
+    </LinearLayout>
+</LinearLayout>

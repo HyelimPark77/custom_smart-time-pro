@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:mcpapp="http://schemas.android.com/apk/com.l4digital.fastscroll">
+    <FrameLayout android:id="@id/toolbar_container" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="match_parent" android:layout_height="?android:actionBarSize" app:popupTheme="?pickPopupWindowStyleTheme" app:theme="?pickToolbarTheme" />
+        <com.miguelcatalan.materialsearchview.MaterialSearchView android:id="@id/search_view" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/controlPanel">
+            <com.l4digital.fastscroll.FastScrollRecyclerView android:id="@id/recyclerView" android:layout_width="match_parent" android:layout_height="match_parent" mcpapp:bubbleColor="@color/colorPrimaryDark" mcpapp:bubbleTextColor="#ffffff" mcpapp:handleColor="@color/colorPrimaryDark" mcpapp:hideScrollbar="false" mcpapp:showTrack="false" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/progressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="?android:progressBarStyle" />
+            <TextView android:layout_gravity="center" android:id="@id/tvNoData" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_data" />
+        </FrameLayout>
+        <LinearLayout android:gravity="right" android:orientation="vertical" android:id="@id/controlPanel" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <View android:id="@id/borderView" android:background="@color/border_color" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_alignParentBottom="false" />
+            <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ProgressBar android:layout_gravity="center" android:id="@id/progressBar_async" android:visibility="gone" android:layout_width="25.0dp" android:layout_height="25.0dp" android:layout_marginLeft="15.0dp" android:layout_centerVertical="true" style="?android:progressBarStyle" />
+                <TextView android:enabled="false" android:textSize="16.0sp" android:textColor="@color/selector_contact_select_text" android:gravity="left|center" android:layout_gravity="right" android:id="@id/tvSelectAll" android:background="?android:selectableItemBackground" android:paddingLeft="20.0dp" android:paddingTop="15.0dp" android:paddingRight="20.0dp" android:paddingBottom="15.0dp" android:focusable="true" android:visibility="visible" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_select_all" android:layout_weight="1.0" android:layout_toRightOf="@id/progressBar_async" />
+                <TextView android:enabled="false" android:textSize="16.0sp" android:textColor="@color/selector_contact_select_text" android:gravity="center" android:layout_gravity="right" android:id="@id/tvSelect" android:background="?android:selectableItemBackground" android:paddingLeft="20.0dp" android:paddingTop="15.0dp" android:paddingRight="20.0dp" android:paddingBottom="15.0dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_done" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

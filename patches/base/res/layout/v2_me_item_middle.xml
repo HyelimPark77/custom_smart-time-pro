@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/shape_me_bottom_ll_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dp" android:layout_marginStart="22.0dp" android:layout_marginEnd="22.0dp" android:paddingVertical="5.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/btGoal" style="@style/me_item_middle_ll">
+        <ImageView android:src="@drawable/icon_goal" style="@style/me_item_middle_iv" />
+        <com.sma.smartv3.view.text.PFMedium android:text="@string/goal_set" style="@style/me_item_middle_tv" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/btUserInfo" style="@style/me_item_middle_ll">
+        <ImageView android:src="@drawable/icon_user_info" style="@style/me_item_middle_iv" />
+        <com.sma.smartv3.view.text.PFMedium android:text="@string/user_info" style="@style/me_item_middle_tv" />
+    </LinearLayout>
+</LinearLayout>

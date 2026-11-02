@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-5.0dp" android:src="@drawable/popup_view_btn_bg_vector" android:layout_marginEnd="15.0dp" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/popup_view_btn_bg" android:paddingLeft="15.0dp" android:paddingRight="15.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="10.0dp">
+        <LinearLayout android:id="@id/popup_switch_ai_model" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@drawable/ai_answer_switch_icon" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="14.0sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/switch_ai_modle" android:maxLines="1" android:layout_marginStart="6.0dp" />
+        </LinearLayout>
+        <View android:layout_gravity="center_horizontal" android:id="@id/popup_switch_ai_model_view" android:background="@color/white" android:visibility="invisible" android:layout_width="120.0dp" android:layout_height="1.0px" android:layout_marginTop="5.0dp" android:layout_marginBottom="5.0dp" />
+        <LinearLayout android:id="@id/popup_clear_chats" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dp">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@drawable/ai_answer_chat_clean_icon" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="14.0sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/clear_chats" android:maxLines="1" android:layout_marginStart="6.0dp" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/popup_search_online" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dp">
+            <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center_vertical" android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@drawable/ai_answer_network_settings_icon" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="14.0sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/chat_settings" android:maxLines="1" android:layout_marginStart="6.0dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

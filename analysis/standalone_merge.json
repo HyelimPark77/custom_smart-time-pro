@@ -1,0 +1,16 @@
+{
+  "output": "standalone",
+  "new_public_ids": 163,
+  "split_attribute_aliases": {
+    "APKTOOL_DUMMY_0x7f04009f": "barLength",
+    "APKTOOL_DUMMY_0x7f040255": "drawableSize",
+    "APKTOOL_DUMMY_0x7f0402e9": "gapBetweenBars"
+  },
+  "removed_metadata": [
+    "com.android.vending.splits.required",
+    "com.android.vending.splits",
+    "com.android.vending.derived.apk.id"
+  ],
+  "native_abi": "arm64-v8a",
+  "note": "Base rebuilt DEX reused; no protocol or account behavior changed."
+}

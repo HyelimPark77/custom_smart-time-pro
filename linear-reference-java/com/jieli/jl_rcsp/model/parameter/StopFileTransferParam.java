@@ -1,0 +1,32 @@
+package com.jieli.jl_rcsp.model.parameter;
+
+import com.android.mltcode.paycertificationapi.i0XO1;
+import com.jieli.jl_rcsp.model.base.BaseParameter;
+import com.jieli.jl_rcsp.util.CHexConver;
+
+/* JADX INFO: loaded from: classes17.dex */
+public class StopFileTransferParam extends BaseParameter {
+    private int reason;
+
+    public StopFileTransferParam(int r1) {
+        this.reason = r1;
+    }
+
+    @Override // com.jieli.jl_rcsp.model.base.BaseParameter, com.jieli.jl_rcsp.interfaces.cmd.IParamBase
+    public byte[] getParamData() {
+        return new byte[]{CHexConver.intToByte(this.reason)};
+    }
+
+    public int getReason() {
+        return this.reason;
+    }
+
+    public void setReason(int r1) {
+        this.reason = r1;
+    }
+
+    @Override // com.jieli.jl_rcsp.model.base.BaseParameter
+    public String toString() {
+        return "StopFileTransferParam{reason=" + this.reason + i0XO1.IO + "\n" + super.toString();
+    }
+}

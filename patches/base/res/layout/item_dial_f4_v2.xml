@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/dial_ll" android:paddingTop="16.0dp" android:paddingBottom="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="8.0dp" android:paddingEnd="8.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sma.smartv3.view.ImageViewRound android:id="@id/iv" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <TextView android:textColor="@color/order_text_orange" android:layout_gravity="center_horizontal" android:id="@id/pay_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" />
+    <com.sma.smartv3.view.ProgressButton android:id="@id/pb" android:layout_width="match_parent" android:layout_height="28.0dp" android:layout_marginTop="8.0dp" style="@style/btn_common" />
+</LinearLayout>

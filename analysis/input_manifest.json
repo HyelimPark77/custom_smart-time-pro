@@ -1,0 +1,47 @@
+{
+  "apks": [
+    {
+      "file": "com.sma.smartv3.pro.apk",
+      "bytes": 204169384,
+      "sha256": "d011c6d37a4d4cf92e9d24d81ab99b6fb8e530059a27ff6d785c63b4adc89be4",
+      "dex": [
+        "assets/audience_network/classes.dex",
+        "assets/audience_network/classes2.dex",
+        "classes.dex",
+        "classes10.dex",
+        "classes11.dex",
+        "classes12.dex",
+        "classes13.dex",
+        "classes14.dex",
+        "classes15.dex",
+        "classes16.dex",
+        "classes17.dex",
+        "classes18.dex",
+        "classes19.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex",
+        "classes6.dex",
+        "classes7.dex",
+        "classes8.dex",
+        "classes9.dex"
+      ],
+      "entries": 16277
+    },
+    {
+      "file": "config.arm64_v8a.apk",
+      "bytes": 24789357,
+      "sha256": "07624ff9e9411fbe9b3e3592b277948a5e79dc9622d4d9d638dffe1199fecb33",
+      "dex": [],
+      "entries": 55
+    },
+    {
+      "file": "config.xxhdpi.apk",
+      "bytes": 373756,
+      "sha256": "3e89b8e6a30c956fa5c5ca13192e1e575cb0b8369ddd35806e8c6bb43cbf0fd3",
+      "dex": [],
+      "entries": 173
+    }
+  ]
+}

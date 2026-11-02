@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_height="wrap_content" style="@style/sport_rl_v2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/distanceLl" android:visibility="gone" style="@style/sport_rl_distance_ll">
+        <com.sma.smartv3.view.text.DINCondBold android:id="@id/distanceNow" android:text="25.6" style="@style/sport_rl_distance_ll_tv" />
+        <com.sma.smartv3.view.text.PFMedium android:id="@id/nowGoalUnit" android:text="@string/km" android:layout_toRightOf="@id/distanceNow" android:layout_alignBaseline="@id/distanceNow" style="@style/sport_rl_distance_ll_unit" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/cumulativeRunningLl" android:visibility="gone" style="@style/sport_rl_cumulative_run_ll">
+        <com.sma.smartv3.view.text.PFMedium android:text="@string/cumulative_running" style="@style/sport_rl_cumulative_run_ll_tv" />
+        <ImageView android:layout_gravity="center_vertical" android:layout_marginTop="0.0dp" android:src="@drawable/icon_right_enter_normal" android:layout_marginStart="5.0dp" style="@style/sport_rl_cumulative_run_ll_iv" />
+    </LinearLayout>
+    <com.sma.smartv3.view.text.PFMedium android:id="@id/sportSet" android:background="@drawable/shape_gps_signal_bg" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:visibility="gone" android:text="@string/set_goals" android:paddingStart="20.0dp" android:paddingEnd="20.0dp" style="@style/sport_rl_cumulative_run_ll_tv" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:minHeight="130.0dp" android:paddingStart="20.0dp" android:paddingEnd="20.0dp">
+        <LinearLayout android:gravity="center" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.sma.smartv3.view.TintImageView android:id="@id/sportHot" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/icon_run_goal_setting_v3" android:onClick="sportSetClick" style="@style/sport_rl_start_run_rl_goal" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageButton android:layout_gravity="center" android:id="@id/sportStart" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/icon_run_start_v3" android:onClick="sportPauseClick" style="@style/sport_rl_start_run_rl_start" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.sma.smartv3.view.TintImageView android:id="@id/sportGoalSet" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/icon_sport_fitness_v3" style="@style/sport_rl_start_run_rl_set" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

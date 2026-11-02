@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/item_health_btn_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:enabled="false" android:textSize="16.0dp" android:layout_gravity="start" android:id="@id/btn_common_heathy" android:layout_width="wrap_content" android:layout_marginTop="15.0dp" android:layout_marginBottom="10.0dp" android:text="@string/ai_heathy_analysis" android:layout_marginStart="22.0dp" style="@style/btn_common" />
+    <com.sma.smartv3.view.text.PFMedium android:textSize="14.0dp" android:textColor="@color/text_color" android:id="@id/tv_common_heathy" android:background="@color/color_ai_health_report_result_bg" android:padding="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="22.0dp" android:layout_marginEnd="22.0dp" />
+    <LinearLayout android:id="@id/questions_healthy_tip_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:layout_marginStart="22.0dp" android:layout_marginEnd="22.0dp">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="12.0dp" android:textColor="@color/line_color" android:id="@id/tv_common_heathy_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_questions_healthy_tip" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="12.0dp" android:textColor="@color/colorAccent" android:id="@id/tv_common_healthy_questions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/health_qa" android:layout_marginStart="2.0dp" />
+    </LinearLayout>
+</LinearLayout>

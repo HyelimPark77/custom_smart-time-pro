@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/translate_header_back_title" />
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10.0dp" android:layout_above="@id/pop_recording_img" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/pop_recording_img" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="90.0dp" android:layout_marginBottom="10.0dp" android:src="@drawable/pop_recording_animation_img" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingBottom="15.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="1.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/left_recording_img" android:layout_width="52.0dp" android:layout_height="52.0dp" android:src="@drawable/icon_translate_face" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="14.0dp" android:textColor="@color/text_color" android:id="@id/left_record_detail" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:text="@string/click_ear_phone_record" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="1.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/right_recording_img" android:layout_width="52.0dp" android:layout_height="52.0dp" android:src="@drawable/icon_translate_face_blue" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="14.0dp" android:textColor="@color/text_color" android:id="@id/right_record_detail" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:text="@string/click_mobile_phone_record" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

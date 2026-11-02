@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/root_view" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/llItemContent" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:tag="force_login_show" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageButton android:id="@id/server_select_img_button" android:background="@null" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:src="@drawable/icon_bind_help" android:onClick="moreSetting" android:layout_marginEnd="12.0dp" android:layout_alignParentEnd="true" />
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp" android:layout_marginBottom="22.0dp" android:layout_marginStart="22.0dp" android:layout_marginEnd="22.0dp">
+                    <com.sma.smartv3.view.text.PFMedium android:textSize="24.0dp" android:textColor="@color/text_color" android:id="@id/server_select_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="@string/data_storage_server" />
+                    <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="@string/data_isolation_instructions" />
+                </LinearLayout>
+            </RelativeLayout>
+            <View android:tag="force_login_show" android:layout_marginTop="20.0dp" style="@style/h_divider_gray2_margin22" />
+            <LinearLayout android:onClick="asiaPacific" style="@style/user_info_container">
+                <com.sma.smartv3.view.text.PFMedium android:text="@string/asia_pacific" style="@style/user_info_title" />
+                <ImageView style="@style/user_info_image" />
+            </LinearLayout>
+            <View style="@style/h_divider_gray2_margin22" />
+            <LinearLayout android:orientation="vertical" android:id="@id/taiWanServerLl" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:layout_marginTop="30.0dp" style="@style/h_divider_gray2_margin22" />
+                <LinearLayout android:onClick="asiaPacificTaiWan" style="@style/user_info_container">
+                    <com.sma.smartv3.view.text.PFMedium android:text="@string/tai_wan" style="@style/user_info_title" />
+                    <ImageView style="@style/user_info_image" />
+                </LinearLayout>
+                <View style="@style/h_divider_gray2_margin22" />
+            </LinearLayout>
+            <View android:layout_marginTop="30.0dp" style="@style/h_divider_gray2_margin22" />
+            <LinearLayout android:onClick="europAmerica" style="@style/user_info_container">
+                <com.sma.smartv3.view.text.PFMedium android:text="@string/europe_and_america" style="@style/user_info_title" />
+                <ImageView style="@style/user_info_image" />
+            </LinearLayout>
+            <View style="@style/h_divider_gray2_margin22" />
+            <View android:layout_marginTop="30.0dp" style="@style/h_divider_gray2_margin22" />
+            <LinearLayout android:onClick="SiliconValleyServerLl" style="@style/user_info_container">
+                <com.sma.smartv3.view.text.PFMedium android:text="@string/silicon_valley_of_america_name" style="@style/user_info_title" />
+                <ImageView style="@style/user_info_image" />
+            </LinearLayout>
+            <LinearLayout android:visibility="gone" android:onClick="indiaBeatxp" style="@style/user_info_container">
+                <com.sma.smartv3.view.text.PFMedium android:text="@string/india" style="@style/user_info_title" />
+                <ImageView style="@style/user_info_image" />
+            </LinearLayout>
+            <View style="@style/h_divider_gray2_margin22" />
+            <View android:layout_marginTop="30.0dp" style="@style/h_divider_gray2_margin22" />
+            <LinearLayout android:tag="force_login_show" android:onClick="chinaMainland" style="@style/user_info_container">
+                <com.sma.smartv3.view.text.PFMedium android:text="@string/china_mainland" style="@style/user_info_title" />
+                <ImageView style="@style/user_info_image" />
+            </LinearLayout>
+            <View android:tag="force_login_show" style="@style/h_divider_gray2_margin22" />
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_african" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:layout_marginTop="30.0dp" style="@style/h_divider_gray2_margin22" />
+                <LinearLayout android:onClick="african" style="@style/user_info_container">
+                    <com.sma.smartv3.view.text.PFMedium android:text="@string/african" style="@style/user_info_title" />
+                    <ImageView style="@style/user_info_image" />
+                </LinearLayout>
+                <View style="@style/h_divider_gray2_margin22" />
+            </LinearLayout>
+            <View android:layout_marginTop="30.0dp" style="@style/h_divider_gray2_margin22" />
+            <LinearLayout android:onClick="noLogin" style="@style/user_info_container">
+                <com.sma.smartv3.view.text.PFMedium android:text="@string/not_logged_in_yet" style="@style/user_info_title" />
+                <ImageView style="@style/user_info_image" />
+            </LinearLayout>
+            <View style="@style/h_divider_gray2_margin22" />
+            <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:tag="force_login_show" android:paddingTop="10.0dp" android:paddingBottom="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/not_logged_in_yet_tip" android:paddingStart="22.0dp" android:paddingEnd="22.0dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

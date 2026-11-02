@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView style="@style/abh_title_left" />
+        <com.sma.smartv3.view.text.PFMedium style="@style/abh_title_center" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/text_color" android:id="@id/rightTitleTv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feedback_history" android:paddingHorizontal="20.0dp" android:paddingVertical="4.0dp" />
+    </LinearLayout>
+    <com.github.lzyzsd.jsbridge.BridgeWebView android:id="@id/webView" android:layout_width="match_parent" android:layout_height="match_parent" />
+</LinearLayout>

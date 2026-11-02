@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/device_item_root_style2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sma.smartv3.view.TintImageView android:id="@id/iv" android:background="@drawable/bg_sport_item_info" android:padding="3.0dp" android:src="@drawable/ic_workout7" style="@style/device_item_iv_style" />
+    <com.sma.smartv3.view.text.PFMedium android:textSize="18.0dp" android:textColor="@color/text_color" android:text="@string/message_push" android:layout_marginStart="5.0dp" android:layout_marginEnd="5.0dp" style="@style/device_item_tv_left" />
+</LinearLayout>

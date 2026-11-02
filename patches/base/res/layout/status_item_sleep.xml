@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/status_card_style"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/status_card_style_1">
+        <com.sma.smartv3.view.TintImageView android:id="@id/sleepIv" android:src="@drawable/icon_sleep" style="@style/status_card_style_1_iv" />
+        <LinearLayout android:layout_toEndOf="@id/sleepIv" style="@style/status_card_style_1_ll">
+            <com.sma.smartv3.view.text.PFMedium android:text="@string/sleep" style="@style/status_card_style_1_title" />
+            <com.sma.smartv3.view.text.DINCondBold android:id="@id/sleepTime" android:text="--" style="@style/status_card_style_1_time" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true">
+            <com.sma.smartv3.view.text.DINCondBold android:id="@id/sleepHour" android:text="0" android:layout_marginEnd="4.0dp" style="@style/status_card_style_1_content" />
+            <com.sma.smartv3.view.text.PFRegular android:text="@string/h" android:layout_marginEnd="8.0dp" style="@style/unit_style" />
+            <com.sma.smartv3.view.text.DINCondBold android:id="@id/sleepMinute" android:text="0" android:layout_marginEnd="4.0dp" style="@style/status_card_style_1_content" />
+            <com.sma.smartv3.view.text.PFRegular android:text="@string/h_m" android:layout_marginEnd="8.0dp" style="@style/unit_style" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:layout_height="wrap_content" android:minHeight="120.0dp" style="@style/status_item_chart_rl_style">
+        <com.sma.smartv3.view.text.DINCondBold android:id="@id/noData" style="@style/no_data_tv" />
+        <RelativeLayout android:id="@id/sleepBarChartRl" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="110.0dp">
+            <com.github.mikephil.charting.charts.BarChart android:id="@id/sleepBarChart" android:layout_width="match_parent" android:layout_height="100.0dp" />
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="80.0dp" android:layout_marginStart="6.0dp" android:layout_marginEnd="6.0dp">
+                <TextView android:textSize="10.0sp" android:textColor="@color/line_color" android:id="@id/sleepStartTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="22:00" android:layout_alignParentStart="true" />
+                <TextView android:textSize="10.0sp" android:textColor="@color/line_color" android:id="@id/sleepEndTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="08:00" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,5917 @@
+.class public final Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;
+.super Lcom/bestmafen/androidbase/base/BaseActivity;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/szabh/smable3/component/BleHandleCallback;
+
+
+# annotations
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nDeveloperGsensor2Activity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeveloperGsensor2Activity.kt\ncom/sma/smartv3/ui/me/DeveloperGsensor2Activity\n+ 2 SPUtils.kt\ncom/bestmafen/androidbase/extension/SPUtilsKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,287:1\n19#2:288\n15#2:289\n1563#3:290\n1634#3,3:291\n1563#3:294\n1634#3,3:295\n*S KotlinDebug\n*F\n+ 1 DeveloperGsensor2Activity.kt\ncom/sma/smartv3/ui/me/DeveloperGsensor2Activity\n*L\n61#1:288\n61#1:289\n103#1:290\n103#1:291,3\n104#1:294\n104#1:295,3\n*E\n"
+.end annotation
+
+.annotation build Lkotlin/jvm/internal/SourceDebugExtension;
+    value = {
+        "SMAP\nDeveloperGsensor2Activity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeveloperGsensor2Activity.kt\ncom/sma/smartv3/ui/me/DeveloperGsensor2Activity\n+ 2 SPUtils.kt\ncom/bestmafen/androidbase/extension/SPUtilsKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,287:1\n19#2:288\n15#2:289\n1563#3:290\n1634#3,3:291\n1563#3:294\n1634#3,3:295\n*S KotlinDebug\n*F\n+ 1 DeveloperGsensor2Activity.kt\ncom/sma/smartv3/ui/me/DeveloperGsensor2Activity\n*L\n61#1:288\n61#1:289\n103#1:290\n103#1:291,3\n104#1:294\n104#1:295,3\n*E\n"
+    }
+.end annotation
+
+
+# instance fields
+.field private final MAX_TIME:J
+
+.field private final btn$delegate:Lkotlin/Lazy;
+    .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+    .end annotation
+.end field
+
+.field private count:I
+
+.field private endTime:J
+
+.field private final hmssformat:Ljava/text/SimpleDateFormat;
+    .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+    .end annotation
+.end field
+
+.field private final lineChart$delegate:Lkotlin/Lazy;
+    .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+    .end annotation
+.end field
+
+.field private final mAppUser:Lcom/sma/smartv3/model/AppUser;
+    .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+    .end annotation
+.end field
+
+.field private mCountDownTimer:Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity$OXO1;
+    .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+    .end annotation
+.end field
+
+.field private final mData:Ljava/util/LinkedList;
+    .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList<",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleGSensorRaw;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private mGsensorFile:Ljava/io/File;
+    .annotation build Lcom/android/mltcode/paycertificationapi/tb1;
+    .end annotation
+.end field
+
+.field private mHrFile:Ljava/io/File;
+    .annotation build Lcom/android/mltcode/paycertificationapi/tb1;
+    .end annotation
+.end field
+
+.field private mLoadingPopup:Lcom/android/mltcode/paycertificationapi/uq;
+    .annotation build Lcom/android/mltcode/paycertificationapi/tb1;
+    .end annotation
+.end field
+
+.field private final mMotionData:Ljava/util/LinkedList;
+    .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList<",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleGSensorMotion;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private mState:Z
+
+.field private startTime:J
+
+.field private final tvInfo$delegate:Lkotlin/Lazy;
+    .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+    .end annotation
+.end field
+
+.field private final tvTime$delegate:Lkotlin/Lazy;
+    .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 32
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v0}, Lcom/bestmafen/androidbase/base/BaseActivity;-><init>()V
+
+    new-instance v1, Lcom/android/mltcode/paycertificationapi/iXiI1X1I;
+
+    invoke-direct {v1, v0}, Lcom/android/mltcode/paycertificationapi/iXiI1X1I;-><init>(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+
+    invoke-static {v1}, Lkotlin/LazyKt__LazyJVMKt;->iO(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->lineChart$delegate:Lkotlin/Lazy;
+
+    new-instance v1, Lcom/android/mltcode/paycertificationapi/X0111XO;
+
+    invoke-direct {v1, v0}, Lcom/android/mltcode/paycertificationapi/X0111XO;-><init>(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+
+    invoke-static {v1}, Lkotlin/LazyKt__LazyJVMKt;->iO(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->btn$delegate:Lkotlin/Lazy;
+
+    new-instance v1, Ljava/util/LinkedList;
+
+    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v1, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mData:Ljava/util/LinkedList;
+
+    new-instance v1, Ljava/util/LinkedList;
+
+    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v1, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mMotionData:Ljava/util/LinkedList;
+
+    sget-object v1, Lcom/android/mltcode/paycertificationapi/a01;->OXO1:Lcom/android/mltcode/paycertificationapi/a01;
+
+    invoke-virtual {v1}, Lcom/android/mltcode/paycertificationapi/a01;->IiI10X()Lcom/blankj/utilcode/util/SPUtils;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/sma/smartv3/model/AppUser;
+
+    const v30, 0x7ffffff
+
+    const/16 v31, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x0
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
+
+    const/16 v21, 0x0
+
+    const/16 v22, 0x0
+
+    const/16 v23, 0x0
+
+    const/16 v24, 0x0
+
+    const/16 v25, 0x0
+
+    const/16 v26, 0x0
+
+    const/16 v27, 0x0
+
+    const/16 v28, 0x0
+
+    const/16 v29, 0x0
+
+    invoke-direct/range {v2 .. v31}, Lcom/sma/smartv3/model/AppUser;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIFFLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FFIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sma/smartv3/model/ThirdPlatform;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    new-instance v3, Lcom/google/gson/Gson;
+
+    invoke-direct {v3}, Lcom/google/gson/Gson;-><init>()V
+
+    const-class v4, Lcom/sma/smartv3/model/AppUser;
+
+    invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v1, v5}, Lcom/blankj/utilcode/util/SPUtils;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1, v4}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v2, v1
+
+    :goto_0
+    check-cast v2, Lcom/sma/smartv3/model/AppUser;
+
+    iput-object v2, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mAppUser:Lcom/sma/smartv3/model/AppUser;
+
+    new-instance v1, Lcom/android/mltcode/paycertificationapi/XO110iXI;
+
+    invoke-direct {v1, v0}, Lcom/android/mltcode/paycertificationapi/XO110iXI;-><init>(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+
+    invoke-static {v1}, Lkotlin/LazyKt__LazyJVMKt;->iO(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->tvInfo$delegate:Lkotlin/Lazy;
+
+    new-instance v1, Lcom/android/mltcode/paycertificationapi/OX1X;
+
+    invoke-direct {v1, v0}, Lcom/android/mltcode/paycertificationapi/OX1X;-><init>(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+
+    invoke-static {v1}, Lkotlin/LazyKt__LazyJVMKt;->iO(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->tvTime$delegate:Lkotlin/Lazy;
+
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v2, 0x2
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v1
+
+    iput-wide v1, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->MAX_TIME:J
+
+    new-instance v3, Ljava/text/SimpleDateFormat;
+
+    const-string v4, "HH:mm:ss.SSS"
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v5
+
+    invoke-direct {v3, v4, v5}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    iput-object v3, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->hmssformat:Ljava/text/SimpleDateFormat;
+
+    new-instance v3, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity$OXO1;
+
+    invoke-direct {v3, v0, v1, v2}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity$OXO1;-><init>(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;J)V
+
+    iput-object v3, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mCountDownTimer:Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity$OXO1;
+
+    return-void
+.end method
+
+.method public static synthetic I0iXXO(Ljava/text/SimpleDateFormat;Lcom/szabh/smable3/entity/BleGSensorRaw;)Ljava/lang/CharSequence;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->onReceiveGSensorRaw$lambda$2(Ljava/text/SimpleDateFormat;Lcom/szabh/smable3/entity/BleGSensorRaw;)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic I1XOi1(Ljava/io/File;Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->share$lambda$0$0$1(Ljava/io/File;Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+
+    return-void
+.end method
+
+.method public static synthetic IIX1OXO(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Landroid/widget/Button;
+    .locals 0
+
+    invoke-static {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->btn_delegate$lambda$0(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Landroid/widget/Button;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic O10IXXX0X(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Lcom/github/mikephil/charting/charts/LineChart;
+    .locals 0
+
+    invoke-static {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->lineChart_delegate$lambda$0(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Lcom/github/mikephil/charting/charts/LineChart;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic OIX0iXi(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+    .locals 0
+
+    invoke-static {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->toggle$lambda$0(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+
+    return-void
+.end method
+
+.method public static synthetic X0O(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Landroid/widget/TextView;
+    .locals 0
+
+    invoke-static {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->tvInfo_delegate$lambda$0(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Landroid/widget/TextView;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic X1ii(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Landroid/widget/TextView;
+    .locals 0
+
+    invoke-static {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->tvTime_delegate$lambda$0(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Landroid/widget/TextView;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic XXI(Ljava/text/SimpleDateFormat;Lcom/szabh/smable3/entity/BleHRRaw;)Ljava/lang/CharSequence;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->onReceiveHRRaw$lambda$0(Ljava/text/SimpleDateFormat;Lcom/szabh/smable3/entity/BleHRRaw;)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic XiOIO(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+    .locals 0
+
+    invoke-static {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->share$lambda$0(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+
+    return-void
+.end method
+
+.method public static final synthetic access$getTvInfo(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Landroid/widget/TextView;
+    .locals 0
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getTvInfo()Landroid/widget/TextView;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getTvTime(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Landroid/widget/TextView;
+    .locals 0
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getTvTime()Landroid/widget/TextView;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private static final btn_delegate$lambda$0(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Landroid/widget/Button;
+    .locals 1
+
+    const v0, 0x7f0a01e9
+
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/widget/Button;
+
+    return-object p0
+.end method
+
+.method private final getBtn()Landroid/widget/Button;
+    .locals 2
+
+    iget-object v0, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->btn$delegate:Lkotlin/Lazy;
+
+    invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "getValue(...)"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->O10IXXX0X(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v0, Landroid/widget/Button;
+
+    return-object v0
+.end method
+
+.method private final getLineChart()Lcom/github/mikephil/charting/charts/LineChart;
+    .locals 2
+
+    iget-object v0, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->lineChart$delegate:Lkotlin/Lazy;
+
+    invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "getValue(...)"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->O10IXXX0X(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v0, Lcom/github/mikephil/charting/charts/LineChart;
+
+    return-object v0
+.end method
+
+.method private final getMNow()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string v1, "yyyyMMdd_HHmm"
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    new-instance v1, Ljava/util/Date;
+
+    invoke-direct {v1}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {v0, v1}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method private final getShareFile(Ljava/lang/String;)Ljava/io/File;
+    .locals 4
+
+    sget-object v0, Lcom/android/mltcode/paycertificationapi/sz0;->OXO1:Lcom/android/mltcode/paycertificationapi/sz0;
+
+    sget-object v1, Lcom/bestmafen/androidbase/io/Location;->EXTERNAL:Lcom/bestmafen/androidbase/io/Location;
+
+    sget-object v2, Lcom/android/mltcode/paycertificationapi/hn1;->XIi00iiXO:Lcom/android/mltcode/paycertificationapi/hn1$OXO1;
+
+    invoke-virtual {v2}, Lcom/android/mltcode/paycertificationapi/hn1$OXO1;->O00()Lcom/android/mltcode/paycertificationapi/hn1;
+
+    move-result-object v2
+
+    const-string v3, "share"
+
+    invoke-virtual {v2, v3}, Lcom/android/mltcode/paycertificationapi/hn1;->XIi00iiXO(Ljava/lang/String;)Lcom/android/mltcode/paycertificationapi/hn1;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2, p1}, Lcom/android/mltcode/paycertificationapi/sz0;->OXO1(Lcom/bestmafen/androidbase/io/Location;Lcom/android/mltcode/paycertificationapi/hn1;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method private final getTvInfo()Landroid/widget/TextView;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->tvInfo$delegate:Lkotlin/Lazy;
+
+    invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method private final getTvTime()Landroid/widget/TextView;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->tvTime$delegate:Lkotlin/Lazy;
+
+    invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method public static synthetic iIiiO(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->share$lambda$0$0(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private static final lineChart_delegate$lambda$0(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Lcom/github/mikephil/charting/charts/LineChart;
+    .locals 1
+
+    const v0, 0x7f0a06ab
+
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/github/mikephil/charting/charts/LineChart;
+
+    return-object p0
+.end method
+
+.method private static final onReceiveGSensorRaw$lambda$2(Ljava/text/SimpleDateFormat;Lcom/szabh/smable3/entity/BleGSensorRaw;)Ljava/lang/CharSequence;
+    .locals 3
+
+    const-string v0, "it"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->X0O(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Ljava/util/Date;
+
+    invoke-direct {v0}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {p0, v0}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1}, Lcom/szabh/smable3/entity/BleGSensorRaw;->getMX()S
+
+    move-result v0
+
+    invoke-virtual {p1}, Lcom/szabh/smable3/entity/BleGSensorRaw;->getMY()S
+
+    move-result v1
+
+    invoke-virtual {p1}, Lcom/szabh/smable3/entity/BleGSensorRaw;->getMZ()S
+
+    move-result p1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, ","
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, "\n"
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private static final onReceiveHRRaw$lambda$0(Ljava/text/SimpleDateFormat;Lcom/szabh/smable3/entity/BleHRRaw;)Ljava/lang/CharSequence;
+    .locals 1
+
+    const-string v0, "it"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->X0O(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Ljava/util/Date;
+
+    invoke-direct {v0}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {p0, v0}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1}, Lcom/szabh/smable3/entity/BleHRRaw;->getMPpg()I
+
+    move-result p1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, ","
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, "\n"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private static final share$lambda$0(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+    .locals 8
+
+    new-instance v5, Lcom/android/mltcode/paycertificationapi/i00i0;
+
+    invoke-direct {v5, p0}, Lcom/android/mltcode/paycertificationapi/i00i0;-><init>(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+
+    const/16 v6, 0x1f
+
+    const/4 v7, 0x0
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-static/range {v0 .. v7}, Lkotlin/concurrent/ThreadsKt;->iO(ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
+
+    return-void
+.end method
+
+.method private static final share$lambda$0$0(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Lkotlin/Unit;
+    .locals 8
+
+    iget-object v0, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mAppUser:Lcom/sma/smartv3/model/AppUser;
+
+    invoke-virtual {v0}, Lcom/sma/smartv3/model/AppUser;->getNickname()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getMNow()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "-db&log-"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ".zip"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getShareFile(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/blankj/utilcode/util/FileUtils;->createOrExistsFile(Ljava/io/File;)Z
+
+    :try_start_0
+    sget-object v2, Lcom/android/mltcode/paycertificationapi/sz0;->OXO1:Lcom/android/mltcode/paycertificationapi/sz0;
+
+    sget-object v3, Lcom/bestmafen/androidbase/io/Location;->INTERNAL:Lcom/bestmafen/androidbase/io/Location;
+
+    sget-object v0, Lcom/android/mltcode/paycertificationapi/hn1;->XIi00iiXO:Lcom/android/mltcode/paycertificationapi/hn1$OXO1;
+
+    invoke-virtual {v0}, Lcom/android/mltcode/paycertificationapi/hn1$OXO1;->XIi00iiXO()Lcom/android/mltcode/paycertificationapi/hn1;
+
+    move-result-object v4
+
+    const/4 v6, 0x4
+
+    const/4 v7, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-static/range {v2 .. v7}, Lcom/android/mltcode/paycertificationapi/sz0;->XIi00iiXO(Lcom/android/mltcode/paycertificationapi/sz0;Lcom/bestmafen/androidbase/io/Location;Lcom/android/mltcode/paycertificationapi/hn1;Ljava/lang/String;ILjava/lang/Object;)Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-static {v2}, Lcom/android/mltcode/paycertificationapi/uz0;->X0i1O(Lcom/android/mltcode/paycertificationapi/sz0;)Ljava/io/File;
+
+    move-result-object v3
+
+    invoke-static {v2}, Lcom/android/mltcode/paycertificationapi/uz0;->X1IX(Lcom/android/mltcode/paycertificationapi/sz0;)Ljava/io/File;
+
+    move-result-object v2
+
+    filled-new-array {v0, v3, v2}, [Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkotlin/collections/CollectionsKt__CollectionsKt;->iXiX011([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Collection;
+
+    invoke-static {v0, v1}, Lcom/blankj/utilcode/util/ZipUtils;->zipFiles(Ljava/util/Collection;Ljava/io/File;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+
+    :goto_0
+    new-instance v0, Lcom/android/mltcode/paycertificationapi/iX0OXi1;
+
+    invoke-direct {v0, v1, p0}, Lcom/android/mltcode/paycertificationapi/iX0OXi1;-><init>(Ljava/io/File;Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
+
+    sget-object p0, Lkotlin/Unit;->OXO1:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final share$lambda$0$0$1(Ljava/io/File;Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+    .locals 3
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.intent.action.SEND"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "android.intent.extra.TEXT"
+
+    const-string v2, "Share DB And Log"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    sget-object v1, Lcom/android/mltcode/paycertificationapi/sz0;->OXO1:Lcom/android/mltcode/paycertificationapi/sz0;
+
+    invoke-virtual {v1, p0}, Lcom/android/mltcode/paycertificationapi/sz0;->XO0O10(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object p0
+
+    const-string v1, "android.intent.extra.STREAM"
+
+    invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const-string p0, "*/*"
+
+    invoke-virtual {v0, p0}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-static {v0, v2}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    iget-object p0, p1, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mLoadingPopup:Lcom/android/mltcode/paycertificationapi/uq;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/PopupWindow;->dismiss()V
+
+    :cond_0
+    return-void
+.end method
+
+.method private static final toggle$lambda$0(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+    .locals 2
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getTvInfo()Landroid/widget/TextView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getTvInfo()Landroid/widget/TextView;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/TextView;->getLineCount()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/text/Layout;->getLineTop(I)I
+
+    move-result v0
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getTvInfo()Landroid/widget/TextView;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getTvInfo()Landroid/widget/TextView;
+
+    move-result-object p0
+
+    add-int/lit8 v0, v0, 0xa
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1, v0}, Landroid/view/View;->scrollTo(II)V
+
+    return-void
+.end method
+
+.method private static final tvInfo_delegate$lambda$0(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Landroid/widget/TextView;
+    .locals 1
+
+    const v0, 0x7f0a0c9c
+
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/widget/TextView;
+
+    return-object p0
+.end method
+
+.method private static final tvTime_delegate$lambda$0(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)Landroid/widget/TextView;
+    .locals 1
+
+    const v0, 0x7f0a188d
+
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/widget/TextView;
+
+    return-object p0
+.end method
+
+.method private final updateGsensor()V
+    .locals 10
+
+    const/4 v0, 0x0
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    iget-object v4, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mData:Ljava/util/LinkedList;
+
+    invoke-virtual {v4}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    const-string v5, "iterator(...)"
+
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->O10IXXX0X(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :cond_0
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    const-string v6, "next(...)"
+
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->O10IXXX0X(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v5, Ljava/util/List;
+
+    invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    :goto_0
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_0
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lcom/szabh/smable3/entity/BleGSensorRaw;
+
+    new-instance v7, Lcom/github/mikephil/charting/data/Entry;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    invoke-virtual {v6}, Lcom/szabh/smable3/entity/BleGSensorRaw;->getMX()S
+
+    move-result v9
+
+    int-to-float v9, v9
+
+    invoke-direct {v7, v8, v9}, Lcom/github/mikephil/charting/data/Entry;-><init>(FF)V
+
+    invoke-interface {v1, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v7, Lcom/github/mikephil/charting/data/Entry;
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    invoke-virtual {v6}, Lcom/szabh/smable3/entity/BleGSensorRaw;->getMY()S
+
+    move-result v9
+
+    int-to-float v9, v9
+
+    invoke-direct {v7, v8, v9}, Lcom/github/mikephil/charting/data/Entry;-><init>(FF)V
+
+    invoke-interface {v2, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v7, Lcom/github/mikephil/charting/data/Entry;
+
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    invoke-virtual {v6}, Lcom/szabh/smable3/entity/BleGSensorRaw;->getMZ()S
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    invoke-direct {v7, v8, v6}, Lcom/github/mikephil/charting/data/Entry;-><init>(FF)V
+
+    invoke-interface {v3, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v4, Lcom/github/mikephil/charting/data/LineDataSet;
+
+    const-string v5, "X"
+
+    invoke-direct {v4, v1, v5}, Lcom/github/mikephil/charting/data/LineDataSet;-><init>(Ljava/util/List;Ljava/lang/String;)V
+
+    invoke-virtual {v4, v0}, Lcom/github/mikephil/charting/data/LineDataSet;->OXOO0X0i(Z)V
+
+    const-string v1, "#ff0000"
+
+    invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v4, v1}, Lcom/android/mltcode/paycertificationapi/iO101O0XI;->II1(I)V
+
+    sget-object v1, Lcom/github/mikephil/charting/data/LineDataSet$Mode;->HORIZONTAL_BEZIER:Lcom/github/mikephil/charting/data/LineDataSet$Mode;
+
+    invoke-virtual {v4, v1}, Lcom/github/mikephil/charting/data/LineDataSet;->OXXO0O1X(Lcom/github/mikephil/charting/data/LineDataSet$Mode;)V
+
+    new-instance v5, Lcom/github/mikephil/charting/data/LineDataSet;
+
+    const-string v6, "Y"
+
+    invoke-direct {v5, v2, v6}, Lcom/github/mikephil/charting/data/LineDataSet;-><init>(Ljava/util/List;Ljava/lang/String;)V
+
+    invoke-virtual {v5, v0}, Lcom/github/mikephil/charting/data/LineDataSet;->OXOO0X0i(Z)V
+
+    const-string v2, "#00ff00"
+
+    invoke-static {v2}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v2
+
+    invoke-virtual {v5, v2}, Lcom/android/mltcode/paycertificationapi/iO101O0XI;->II1(I)V
+
+    invoke-virtual {v5, v1}, Lcom/github/mikephil/charting/data/LineDataSet;->OXXO0O1X(Lcom/github/mikephil/charting/data/LineDataSet$Mode;)V
+
+    new-instance v2, Lcom/github/mikephil/charting/data/LineDataSet;
+
+    const-string v6, "Z"
+
+    invoke-direct {v2, v3, v6}, Lcom/github/mikephil/charting/data/LineDataSet;-><init>(Ljava/util/List;Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Lcom/github/mikephil/charting/data/LineDataSet;->OXOO0X0i(Z)V
+
+    const-string v3, "#0000ff"
+
+    invoke-static {v3}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Lcom/android/mltcode/paycertificationapi/iO101O0XI;->II1(I)V
+
+    invoke-virtual {v2, v1}, Lcom/github/mikephil/charting/data/LineDataSet;->OXXO0O1X(Lcom/github/mikephil/charting/data/LineDataSet$Mode;)V
+
+    new-instance v1, Lcom/android/mltcode/paycertificationapi/co;
+
+    const/4 v3, 0x3
+
+    new-array v3, v3, [Lcom/android/mltcode/paycertificationapi/IiXO1XOi;
+
+    aput-object v4, v3, v0
+
+    const/4 v0, 0x1
+
+    aput-object v5, v3, v0
+
+    const/4 v0, 0x2
+
+    aput-object v2, v3, v0
+
+    invoke-direct {v1, v3}, Lcom/android/mltcode/paycertificationapi/co;-><init>([Lcom/android/mltcode/paycertificationapi/IiXO1XOi;)V
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getLineChart()Lcom/github/mikephil/charting/charts/LineChart;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/github/mikephil/charting/charts/Chart;->setData(Lcom/android/mltcode/paycertificationapi/XOi0;)V
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getLineChart()Lcom/github/mikephil/charting/charts/LineChart;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+.end method
+
+.method private final updateMotion()V
+    .locals 8
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    iget-object v3, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mMotionData:Ljava/util/LinkedList;
+
+    invoke-virtual {v3}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    const-string v4, "iterator(...)"
+
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->O10IXXX0X(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :cond_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    const-string v5, "next(...)"
+
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->O10IXXX0X(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v4, Ljava/util/List;
+
+    invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :goto_0
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/szabh/smable3/entity/BleGSensorMotion;
+
+    new-instance v6, Lcom/github/mikephil/charting/data/Entry;
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v7
+
+    int-to-float v7, v7
+
+    invoke-virtual {v5}, Lcom/szabh/smable3/entity/BleGSensorMotion;->getMMotion()S
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    invoke-direct {v6, v7, v5}, Lcom/github/mikephil/charting/data/Entry;-><init>(FF)V
+
+    invoke-interface {v2, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v3, Lcom/github/mikephil/charting/data/LineDataSet;
+
+    const-string v4, "motion"
+
+    invoke-direct {v3, v2, v4}, Lcom/github/mikephil/charting/data/LineDataSet;-><init>(Ljava/util/List;Ljava/lang/String;)V
+
+    const-string v2, "#ff0000"
+
+    invoke-static {v2}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v2
+
+    invoke-virtual {v3, v2}, Lcom/android/mltcode/paycertificationapi/iO101O0XI;->II1(I)V
+
+    invoke-virtual {v3, v1}, Lcom/android/mltcode/paycertificationapi/iO101O0XI;->OXO1(Z)V
+
+    sget-object v2, Lcom/github/mikephil/charting/data/LineDataSet$Mode;->HORIZONTAL_BEZIER:Lcom/github/mikephil/charting/data/LineDataSet$Mode;
+
+    invoke-virtual {v3, v2}, Lcom/github/mikephil/charting/data/LineDataSet;->OXXO0O1X(Lcom/github/mikephil/charting/data/LineDataSet$Mode;)V
+
+    invoke-virtual {v3, v0}, Lcom/github/mikephil/charting/data/LineDataSet;->OXOO0X0i(Z)V
+
+    new-instance v2, Lcom/android/mltcode/paycertificationapi/co;
+
+    new-array v1, v1, [Lcom/android/mltcode/paycertificationapi/IiXO1XOi;
+
+    aput-object v3, v1, v0
+
+    invoke-direct {v2, v1}, Lcom/android/mltcode/paycertificationapi/co;-><init>([Lcom/android/mltcode/paycertificationapi/IiXO1XOi;)V
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getLineChart()Lcom/github/mikephil/charting/charts/LineChart;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Lcom/github/mikephil/charting/charts/Chart;->setData(Lcom/android/mltcode/paycertificationapi/XOi0;)V
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getLineChart()Lcom/github/mikephil/charting/charts/LineChart;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final clear(Landroid/view/View;)V
+    .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    const-string v0, "view"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->X0O(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->count:I
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getTvInfo()Landroid/widget/TextView;
+
+    move-result-object p1
+
+    const-string v0, ""
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object p1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mCountDownTimer:Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity$OXO1;
+
+    invoke-virtual {p1}, Landroid/os/CountDownTimer;->cancel()V
+
+    return-void
+.end method
+
+.method public final copy(Landroid/view/View;)V
+    .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    const-string v0, "view"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->X0O(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getTvInfo()Landroid/widget/TextView;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    if-nez p1, :cond_1
+
+    :cond_0
+    const-string p1, ""
+
+    :cond_1
+    invoke-static {p1}, Lcom/blankj/utilcode/util/ClipboardUtils;->copyText(Ljava/lang/CharSequence;)V
+
+    const p1, 0x7f140363
+
+    invoke-static {p1}, Lcom/blankj/utilcode/util/ToastUtils;->showLong(I)V
+
+    return-void
+.end method
+
+.method public init(Landroid/os/Bundle;)V
+    .locals 0
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Lcom/android/mltcode/paycertificationapi/tb1;
+        .end annotation
+    .end param
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->setRequestedOrientation(I)V
+
+    sget-object p1, Lcom/szabh/smable3/component/BleConnector;->INSTANCE:Lcom/szabh/smable3/component/BleConnector;
+
+    invoke-virtual {p1, p0}, Lcom/szabh/smable3/component/BleConnector;->addHandleCallback(Lcom/szabh/smable3/component/BleHandleCallback;)V
+
+    return-void
+.end method
+
+.method public initView()V
+    .locals 2
+
+    new-instance v0, Lcom/sma/smartv3/view/chart/MyMarkerView;
+
+    const v1, 0x7f0d0f77
+
+    invoke-direct {v0, p0, v1}, Lcom/sma/smartv3/view/chart/MyMarkerView;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getLineChart()Lcom/github/mikephil/charting/charts/LineChart;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/github/mikephil/charting/components/MarkerView;->setChartView(Lcom/github/mikephil/charting/charts/Chart;)V
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getLineChart()Lcom/github/mikephil/charting/charts/LineChart;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/github/mikephil/charting/charts/Chart;->setMarker(Lcom/android/mltcode/paycertificationapi/I10XIIXi0;)V
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getTvInfo()Landroid/widget/TextView;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/text/method/ScrollingMovementMethod;
+
+    invoke-direct {v1}, Landroid/text/method/ScrollingMovementMethod;-><init>()V
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
+
+    return-void
+.end method
+
+.method public layoutId()I
+    .locals 1
+
+    const v0, 0x7f0d005f
+
+    return v0
+.end method
+
+.method public bridge onAICoachGeneratePlanUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onAICoachGeneratePlanUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onAICommandUpdate(Lcom/szabh/smable3/entity/BleAICommand;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleAICommand;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onAICommandUpdate(Lcom/szabh/smable3/entity/BleAICommand;)V
+
+    return-void
+.end method
+
+.method public bridge onActivityRecognitionUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onActivityRecognitionUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onAlarmAdd(Lcom/szabh/smable3/entity/BleAlarm;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleAlarm;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onAlarmAdd(Lcom/szabh/smable3/entity/BleAlarm;)V
+
+    return-void
+.end method
+
+.method public bridge onAlarmDelete(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onAlarmDelete(I)V
+
+    return-void
+.end method
+
+.method public bridge onAlarmUpdate(Lcom/szabh/smable3/entity/BleAlarm;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleAlarm;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onAlarmUpdate(Lcom/szabh/smable3/entity/BleAlarm;)V
+
+    return-void
+.end method
+
+.method public bridge onAppOpUpdate(Lcom/szabh/smable3/entity/BleAppOp;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleAppOp;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onAppOpUpdate(Lcom/szabh/smable3/entity/BleAppOp;)V
+
+    return-void
+.end method
+
+.method public bridge onAppSportDataResponse(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onAppSportDataResponse(Z)V
+
+    return-void
+.end method
+
+.method public bridge onBWNaviInfoUpdate(Lcom/szabh/smable3/entity/BleBWNaviInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleBWNaviInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onBWNaviInfoUpdate(Lcom/szabh/smable3/entity/BleBWNaviInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onBacklightUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onBacklightUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onBandKeyUpdate(Lcom/szabh/smable3/entity/BleBandKey;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleBandKey;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onBandKeyUpdate(Lcom/szabh/smable3/entity/BleBandKey;)V
+
+    return-void
+.end method
+
+.method public bridge onBleGolfScore(Lcom/szabh/smable3/entity/BleGolfScore;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleGolfScore;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onBleGolfScore(Lcom/szabh/smable3/entity/BleGolfScore;)V
+
+    return-void
+.end method
+
+.method public bridge onBleThirdPartyDataUpdate(Lcom/szabh/smable3/entity/BleThirdPartyData;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleThirdPartyData;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onBleThirdPartyDataUpdate(Lcom/szabh/smable3/entity/BleThirdPartyData;)V
+
+    return-void
+.end method
+
+.method public bridge onBleVideoCallInfo(Lcom/szabh/smable3/entity/BleVideoCallInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleVideoCallInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onBleVideoCallInfo(Lcom/szabh/smable3/entity/BleVideoCallInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onCPChatUpdate(Lcom/szabh/smable3/entity/BleCPChat;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleCPChat;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onCPChatUpdate(Lcom/szabh/smable3/entity/BleCPChat;)V
+
+    return-void
+.end method
+
+.method public bridge onCPGiftsInfoUpdate(Lcom/szabh/smable3/entity/BleCPGiftsInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleCPGiftsInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onCPGiftsInfoUpdate(Lcom/szabh/smable3/entity/BleCPGiftsInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onCPListenerUpdate(Lcom/szabh/smable3/entity/BleCPListener;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleCPListener;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onCPListenerUpdate(Lcom/szabh/smable3/entity/BleCPListener;)V
+
+    return-void
+.end method
+
+.method public bridge onCPMissYouUpdate(Lcom/szabh/smable3/entity/BleCPMissYou;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleCPMissYou;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onCPMissYouUpdate(Lcom/szabh/smable3/entity/BleCPMissYou;)V
+
+    return-void
+.end method
+
+.method public bridge onCPTodoUpdate(Lcom/szabh/smable3/entity/BleCPTodo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleCPTodo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onCPTodoUpdate(Lcom/szabh/smable3/entity/BleCPTodo;)V
+
+    return-void
+.end method
+
+.method public bridge onCaloriesGoalUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onCaloriesGoalUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onCameraResponse(ZI)V
+    .locals 0
+
+    invoke-super {p0, p1, p2}, Lcom/szabh/smable3/component/BleHandleCallback;->onCameraResponse(ZI)V
+
+    return-void
+.end method
+
+.method public bridge onCameraStateChange(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onCameraStateChange(I)V
+
+    return-void
+.end method
+
+.method public bridge onChatAppUpdate(Lcom/szabh/smable3/entity/BleChatApp;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleChatApp;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onChatAppUpdate(Lcom/szabh/smable3/entity/BleChatApp;)V
+
+    return-void
+.end method
+
+.method public bridge onChatMessageUpdate(Lcom/szabh/smable3/entity/BleChatMessage;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleChatMessage;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onChatMessageUpdate(Lcom/szabh/smable3/entity/BleChatMessage;)V
+
+    return-void
+.end method
+
+.method public bridge onChatVoiceUpdate(Lcom/szabh/smable3/entity/BleChatVoice;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleChatVoice;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onChatVoiceUpdate(Lcom/szabh/smable3/entity/BleChatVoice;)V
+
+    return-void
+.end method
+
+.method public bridge onCheckInEveryDayUpdate(Lcom/szabh/smable3/entity/BleCheckInEveryDay;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleCheckInEveryDay;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onCheckInEveryDayUpdate(Lcom/szabh/smable3/entity/BleCheckInEveryDay;)V
+
+    return-void
+.end method
+
+.method public bridge onClassicBluetoothStateChange(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onClassicBluetoothStateChange(I)V
+
+    return-void
+.end method
+
+.method public bridge onCommandReply(Lcom/szabh/smable3/BleKey;Lcom/szabh/smable3/BleKeyFlag;Z)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/BleKey;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .param p2    # Lcom/szabh/smable3/BleKeyFlag;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1, p2, p3}, Lcom/szabh/smable3/component/BleHandleCallback;->onCommandReply(Lcom/szabh/smable3/BleKey;Lcom/szabh/smable3/BleKeyFlag;Z)V
+
+    return-void
+.end method
+
+.method public bridge onCommandSendTimeout(Lcom/szabh/smable3/BleKey;Lcom/szabh/smable3/BleKeyFlag;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/BleKey;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .param p2    # Lcom/szabh/smable3/BleKeyFlag;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1, p2}, Lcom/szabh/smable3/component/BleHandleCallback;->onCommandSendTimeout(Lcom/szabh/smable3/BleKey;Lcom/szabh/smable3/BleKeyFlag;)V
+
+    return-void
+.end method
+
+.method public bridge onContactUsStateChange(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onContactUsStateChange(I)V
+
+    return-void
+.end method
+
+.method public bridge onDeleteAICoachPlan()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/szabh/smable3/component/BleHandleCallback;->onDeleteAICoachPlan()V
+
+    return-void
+.end method
+
+.method public bridge onDeleteFileResponse(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onDeleteFileResponse(I)V
+
+    return-void
+.end method
+
+.method public onDestroy()V
+    .locals 8
+
+    sget-object v0, Lcom/szabh/smable3/component/BleConnector;->INSTANCE:Lcom/szabh/smable3/component/BleConnector;
+
+    invoke-virtual {v0, p0}, Lcom/szabh/smable3/component/BleConnector;->removeHandleCallback(Lcom/szabh/smable3/component/BleHandleCallback;)V
+
+    iget-boolean v1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mState:Z
+
+    if-eqz v1, :cond_0
+
+    sget-object v1, Lcom/szabh/smable3/BleKey;->GSENSOR_OUTPUT:Lcom/szabh/smable3/BleKey;
+
+    sget-object v2, Lcom/szabh/smable3/BleKeyFlag;->UPDATE:Lcom/szabh/smable3/BleKeyFlag;
+
+    const/16 v6, 0x18
+
+    const/4 v7, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-static/range {v0 .. v7}, Lcom/szabh/smable3/component/BaseBleConnector;->sendBoolean$default(Lcom/szabh/smable3/component/BaseBleConnector;Lcom/szabh/smable3/BleKey;Lcom/szabh/smable3/BleKeyFlag;ZZZILjava/lang/Object;)Z
+
+    :cond_0
+    invoke-super {p0}, Lcom/bestmafen/androidbase/base/BaseActivity;->onDestroy()V
+
+    return-void
+.end method
+
+.method public bridge onDeviceConnected(Landroid/bluetooth/BluetoothDevice;)V
+    .locals 0
+    .param p1    # Landroid/bluetooth/BluetoothDevice;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onDeviceConnected(Landroid/bluetooth/BluetoothDevice;)V
+
+    return-void
+.end method
+
+.method public bridge onDeviceConnecting(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onDeviceConnecting(Z)V
+
+    return-void
+.end method
+
+.method public bridge onDeviceFileUpdate(Lcom/szabh/smable3/entity/BleDeviceFile;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleDeviceFile;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onDeviceFileUpdate(Lcom/szabh/smable3/entity/BleDeviceFile;)V
+
+    return-void
+.end method
+
+.method public bridge onDeviceOpUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onDeviceOpUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onDeviceRequestAGpsFile(Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onDeviceRequestAGpsFile(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public bridge onDeviceSMSQuickReply(Lcom/szabh/smable3/entity/BleSMSQuickReply;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSMSQuickReply;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onDeviceSMSQuickReply(Lcom/szabh/smable3/entity/BleSMSQuickReply;)V
+
+    return-void
+.end method
+
+.method public bridge onDeviceSportDataUpdate(Lcom/szabh/smable3/entity/BleDeviceSportData;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleDeviceSportData;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onDeviceSportDataUpdate(Lcom/szabh/smable3/entity/BleDeviceSportData;)V
+
+    return-void
+.end method
+
+.method public bridge onDistanceGoalUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onDistanceGoalUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onDoubleScreenSettingsUpdate(Lcom/szabh/smable3/entity/BleDoubleScreenSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleDoubleScreenSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onDoubleScreenSettingsUpdate(Lcom/szabh/smable3/entity/BleDoubleScreenSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onDrinkWaterUpdate(Lcom/szabh/smable3/entity/BleDrinkWaterSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleDrinkWaterSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onDrinkWaterUpdate(Lcom/szabh/smable3/entity/BleDrinkWaterSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onEarphoneAncSettingsUpdate(Lcom/szabh/smable3/entity/BleEarphoneAncSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleEarphoneAncSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onEarphoneAncSettingsUpdate(Lcom/szabh/smable3/entity/BleEarphoneAncSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onEarphoneCallUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onEarphoneCallUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onEarphoneKeyUpdate(Lcom/szabh/smable3/entity/BleEarphoneKey;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleEarphoneKey;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onEarphoneKeyUpdate(Lcom/szabh/smable3/entity/BleEarphoneKey;)V
+
+    return-void
+.end method
+
+.method public bridge onEarphoneSoundEffectsSettingsUpdate(Lcom/szabh/smable3/entity/BleEarphoneSoundEffectsSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleEarphoneSoundEffectsSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onEarphoneSoundEffectsSettingsUpdate(Lcom/szabh/smable3/entity/BleEarphoneSoundEffectsSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onEarphoneStateUpdate(Lcom/szabh/smable3/entity/BleEarphoneState;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleEarphoneState;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onEarphoneStateUpdate(Lcom/szabh/smable3/entity/BleEarphoneState;)V
+
+    return-void
+.end method
+
+.method public bridge onFactoryTestUpdate(Lcom/szabh/smable3/entity/BleFactoryTest;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleFactoryTest;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onFactoryTestUpdate(Lcom/szabh/smable3/entity/BleFactoryTest;)V
+
+    return-void
+.end method
+
+.method public bridge onFallSetUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onFallSetUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onFindEarphoneUpdate(Lcom/szabh/smable3/entity/BleFindEarphone;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleFindEarphone;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onFindEarphoneUpdate(Lcom/szabh/smable3/entity/BleFindEarphone;)V
+
+    return-void
+.end method
+
+.method public bridge onFindPhone(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onFindPhone(Z)V
+
+    return-void
+.end method
+
+.method public bridge onFindWatchUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onFindWatchUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onFollowSystemDateFormat()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/szabh/smable3/component/BleHandleCallback;->onFollowSystemDateFormat()V
+
+    return-void
+.end method
+
+.method public bridge onFollowSystemHour()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/szabh/smable3/component/BleHandleCallback;->onFollowSystemHour()V
+
+    return-void
+.end method
+
+.method public bridge onFollowSystemLanguage(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onFollowSystemLanguage(Z)V
+
+    return-void
+.end method
+
+.method public bridge onGameControlUpdate(Lcom/szabh/smable3/entity/BleGameControl;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleGameControl;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onGameControlUpdate(Lcom/szabh/smable3/entity/BleGameControl;)V
+
+    return-void
+.end method
+
+.method public bridge onGestureWake2Update(Lcom/szabh/smable3/entity/BleGestureWake2;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleGestureWake2;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onGestureWake2Update(Lcom/szabh/smable3/entity/BleGestureWake2;)V
+
+    return-void
+.end method
+
+.method public bridge onGestureWakeUpdate(Lcom/szabh/smable3/entity/BleGestureWake;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleGestureWake;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onGestureWakeUpdate(Lcom/szabh/smable3/entity/BleGestureWake;)V
+
+    return-void
+.end method
+
+.method public bridge onGoogleNaviInfoUpdate(Lcom/szabh/smable3/entity/BleGoogleNaviInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleGoogleNaviInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onGoogleNaviInfoUpdate(Lcom/szabh/smable3/entity/BleGoogleNaviInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onHIDState(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onHIDState(I)V
+
+    return-void
+.end method
+
+.method public bridge onHIDValueChange(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onHIDValueChange(I)V
+
+    return-void
+.end method
+
+.method public bridge onHRWarningSet(Lcom/szabh/smable3/entity/BleHrWarningSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleHrWarningSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onHRWarningSet(Lcom/szabh/smable3/entity/BleHrWarningSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onHanBaoVibrationStateChange(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onHanBaoVibrationStateChange(I)V
+
+    return-void
+.end method
+
+.method public bridge onHighAntiAssistChange(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onHighAntiAssistChange(I)V
+
+    return-void
+.end method
+
+.method public bridge onHourSystemUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onHourSystemUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onHydrationUpdate(Lcom/szabh/smable3/entity/BleHydrationSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleHydrationSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onHydrationUpdate(Lcom/szabh/smable3/entity/BleHydrationSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onIPCExceptionUpdate(Lcom/szabh/smable3/entity/BleIPCException;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleIPCException;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onIPCExceptionUpdate(Lcom/szabh/smable3/entity/BleIPCException;)V
+
+    return-void
+.end method
+
+.method public bridge onIPCOTAStateUpdate(Lcom/szabh/smable3/entity/BleIPCOTAState;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleIPCOTAState;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onIPCOTAStateUpdate(Lcom/szabh/smable3/entity/BleIPCOTAState;)V
+
+    return-void
+.end method
+
+.method public bridge onIPCStateUpdate(Lcom/szabh/smable3/entity/BleIPCState;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleIPCState;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onIPCStateUpdate(Lcom/szabh/smable3/entity/BleIPCState;)V
+
+    return-void
+.end method
+
+.method public bridge onIPCStoresInfoUpdate(Lcom/szabh/smable3/entity/BleIPCStoresInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleIPCStoresInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onIPCStoresInfoUpdate(Lcom/szabh/smable3/entity/BleIPCStoresInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onIPCWifiInfoUpdate(Lcom/szabh/smable3/entity/BleIPCWifiInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleIPCWifiInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onIPCWifiInfoUpdate(Lcom/szabh/smable3/entity/BleIPCWifiInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onIdentityCreate(ZLcom/szabh/smable3/entity/BleDeviceInfo;)V
+    .locals 0
+    .param p2    # Lcom/szabh/smable3/entity/BleDeviceInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/tb1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1, p2}, Lcom/szabh/smable3/component/BleHandleCallback;->onIdentityCreate(ZLcom/szabh/smable3/entity/BleDeviceInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onIdentityDelete(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onIdentityDelete(Z)V
+
+    return-void
+.end method
+
+.method public bridge onIdentityDeleteByDevice(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onIdentityDeleteByDevice(Z)V
+
+    return-void
+.end method
+
+.method public bridge onIncomingCallRingUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onIncomingCallRingUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onIncomingCallStatus(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onIncomingCallStatus(I)V
+
+    return-void
+.end method
+
+.method public bridge onLoveTapUpdate(Lcom/szabh/smable3/entity/BleLoveTap;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleLoveTap;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onLoveTapUpdate(Lcom/szabh/smable3/entity/BleLoveTap;)V
+
+    return-void
+.end method
+
+.method public bridge onLoveTapUserDelete(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onLoveTapUserDelete(I)V
+
+    return-void
+.end method
+
+.method public bridge onLoveTapUserUpdate(Lcom/szabh/smable3/entity/BleLoveTapUser;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleLoveTapUser;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onLoveTapUserUpdate(Lcom/szabh/smable3/entity/BleLoveTapUser;)V
+
+    return-void
+.end method
+
+.method public bridge onMeasurementUpdate(Lcom/szabh/smable3/entity/BleMeasurement;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleMeasurement;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onMeasurementUpdate(Lcom/szabh/smable3/entity/BleMeasurement;)V
+
+    return-void
+.end method
+
+.method public bridge onMedicationAlarmAdd(Lcom/szabh/smable3/entity/BleMedicationAlarm;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleMedicationAlarm;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onMedicationAlarmAdd(Lcom/szabh/smable3/entity/BleMedicationAlarm;)V
+
+    return-void
+.end method
+
+.method public bridge onMedicationAlarmDelete(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onMedicationAlarmDelete(I)V
+
+    return-void
+.end method
+
+.method public bridge onMedicationAlarmUpdate(Lcom/szabh/smable3/entity/BleMedicationAlarm;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleMedicationAlarm;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onMedicationAlarmUpdate(Lcom/szabh/smable3/entity/BleMedicationAlarm;)V
+
+    return-void
+.end method
+
+.method public bridge onMedicationReminderDelete(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onMedicationReminderDelete(I)V
+
+    return-void
+.end method
+
+.method public bridge onMedicationReminderUpdate(Lcom/szabh/smable3/entity/BleMedicationReminder;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleMedicationReminder;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onMedicationReminderUpdate(Lcom/szabh/smable3/entity/BleMedicationReminder;)V
+
+    return-void
+.end method
+
+.method public bridge onMeetingReminderAdd(Lcom/szabh/smable3/entity/BleMeetingReminder;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleMeetingReminder;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onMeetingReminderAdd(Lcom/szabh/smable3/entity/BleMeetingReminder;)V
+
+    return-void
+.end method
+
+.method public bridge onMeetingReminderDelete(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onMeetingReminderDelete(I)V
+
+    return-void
+.end method
+
+.method public bridge onMeetingReminderUpdate(Lcom/szabh/smable3/entity/BleMeetingReminder;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleMeetingReminder;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onMeetingReminderUpdate(Lcom/szabh/smable3/entity/BleMeetingReminder;)V
+
+    return-void
+.end method
+
+.method public bridge onMultiFileTransferReadFile(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onMultiFileTransferReadFile(I)V
+
+    return-void
+.end method
+
+.method public bridge onMultiFileTransferResponse(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onMultiFileTransferResponse(I)V
+
+    return-void
+.end method
+
+.method public bridge onNaviInfoUpdate(Lcom/szabh/smable3/entity/BleNaviInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleNaviInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onNaviInfoUpdate(Lcom/szabh/smable3/entity/BleNaviInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onNoDisturbUpdate(Lcom/szabh/smable3/entity/BleNoDisturbSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleNoDisturbSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onNoDisturbUpdate(Lcom/szabh/smable3/entity/BleNoDisturbSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onNotificationLightScreenSetUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onNotificationLightScreenSetUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onNotificationSettings2Update(Lcom/szabh/smable3/entity/BleNotificationSettings2;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleNotificationSettings2;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onNotificationSettings2Update(Lcom/szabh/smable3/entity/BleNotificationSettings2;)V
+
+    return-void
+.end method
+
+.method public bridge onOTA(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onOTA(Z)V
+
+    return-void
+.end method
+
+.method public bridge onPowerSaveModeState(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onPowerSaveModeState(I)V
+
+    return-void
+.end method
+
+.method public bridge onPowerSaveModeStateChange(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onPowerSaveModeStateChange(I)V
+
+    return-void
+.end method
+
+.method public bridge onQiblaSettingsUpdate()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/szabh/smable3/component/BleHandleCallback;->onQiblaSettingsUpdate()V
+
+    return-void
+.end method
+
+.method public bridge onReadAICoachGenerateBeforeInfo(Lcom/szabh/smable3/entity/BleAICoachBeforePlan;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleAICoachBeforePlan;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadAICoachGenerateBeforeInfo(Lcom/szabh/smable3/entity/BleAICoachBeforePlan;)V
+
+    return-void
+.end method
+
+.method public bridge onReadAICoachGenerateBeforeInfoV2(Lcom/szabh/smable3/entity/BleAICoachBeforePlanV2;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleAICoachBeforePlanV2;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadAICoachGenerateBeforeInfoV2(Lcom/szabh/smable3/entity/BleAICoachBeforePlanV2;)V
+
+    return-void
+.end method
+
+.method public bridge onReadAICoachPlan(Lcom/szabh/smable3/entity/BleAICoachGeneratePlan;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleAICoachGeneratePlan;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadAICoachPlan(Lcom/szabh/smable3/entity/BleAICoachGeneratePlan;)V
+
+    return-void
+.end method
+
+.method public bridge onReadAICoachPlanV2(Lcom/szabh/smable3/entity/BleAICoachGeneratePlanV2;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleAICoachGeneratePlanV2;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadAICoachPlanV2(Lcom/szabh/smable3/entity/BleAICoachGeneratePlanV2;)V
+
+    return-void
+.end method
+
+.method public bridge onReadActivity(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleActivity;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadActivity(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadActivityDetail(Lcom/szabh/smable3/entity/BleActivityDetail;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleActivityDetail;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadActivityDetail(Lcom/szabh/smable3/entity/BleActivityDetail;)V
+
+    return-void
+.end method
+
+.method public bridge onReadAddressBook(Lcom/szabh/smable3/entity/BleAddressBook;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleAddressBook;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadAddressBook(Lcom/szabh/smable3/entity/BleAddressBook;)V
+
+    return-void
+.end method
+
+.method public bridge onReadAlarm(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleAlarm;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadAlarm(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadAlipayBindInfo(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleAlipayBindInfo;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadAlipayBindInfo(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadAlipaySettings(Lcom/szabh/smable3/entity/BleAlipaySettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleAlipaySettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadAlipaySettings(Lcom/szabh/smable3/entity/BleAlipaySettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadAppApiVersion(Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadAppApiVersion(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public bridge onReadAppInfoList(Lcom/szabh/smable3/entity/BleAppInfoList;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleAppInfoList;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadAppInfoList(Lcom/szabh/smable3/entity/BleAppInfoList;)V
+
+    return-void
+.end method
+
+.method public bridge onReadAppSportState(Lcom/szabh/smable3/entity/BleAppSportState;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleAppSportState;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadAppSportState(Lcom/szabh/smable3/entity/BleAppSportState;)V
+
+    return-void
+.end method
+
+.method public bridge onReadAvgHeartRate(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleAvgHeartRate;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadAvgHeartRate(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBAC(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleBAC;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBAC(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBacCalibration(Lcom/szabh/smable3/entity/BleBacCalibration;Lcom/szabh/smable3/BleKeyFlag;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleBacCalibration;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .param p2    # Lcom/szabh/smable3/BleKeyFlag;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1, p2}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBacCalibration(Lcom/szabh/smable3/entity/BleBacCalibration;Lcom/szabh/smable3/BleKeyFlag;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBacklight(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBacklight(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadBatteryUsage(Lcom/szabh/smable3/entity/BleBatteryUsage;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleBatteryUsage;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBatteryUsage(Lcom/szabh/smable3/entity/BleBatteryUsage;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBleAddress(Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBleAddress(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBleGolfMapCacheInfo(Lcom/szabh/smable3/entity/BleGolfMapCacheInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleGolfMapCacheInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBleGolfMapCacheInfo(Lcom/szabh/smable3/entity/BleGolfMapCacheInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBleGolfSportSwitch(Lcom/szabh/smable3/entity/BleGolfSportSwitch;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleGolfSportSwitch;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBleGolfSportSwitch(Lcom/szabh/smable3/entity/BleGolfSportSwitch;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBleGolfWatchMapInfo(Lcom/szabh/smable3/entity/BleGolfWatchMapInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleGolfWatchMapInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBleGolfWatchMapInfo(Lcom/szabh/smable3/entity/BleGolfWatchMapInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBleGolfWatchVersionInfo(Lcom/szabh/smable3/entity/BleGolfWatchVersionInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleGolfWatchVersionInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBleGolfWatchVersionInfo(Lcom/szabh/smable3/entity/BleGolfWatchVersionInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBleHrv(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleHrv;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBleHrv(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBleLogText(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleLogText;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBleLogText(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBloodGlucose(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleBloodGlucose;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBloodGlucose(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBloodOxyGenSettings(Lcom/szabh/smable3/entity/BleBloodOxyGenSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleBloodOxyGenSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBloodOxyGenSettings(Lcom/szabh/smable3/entity/BleBloodOxyGenSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBloodOxygen(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleBloodOxygen;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBloodOxygen(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBloodPressure(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleBloodPressure;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBloodPressure(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBloodPressureCalibration(Lcom/szabh/smable3/entity/BleBloodPressureCalibration;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleBloodPressureCalibration;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBloodPressureCalibration(Lcom/szabh/smable3/entity/BleBloodPressureCalibration;)V
+
+    return-void
+.end method
+
+.method public bridge onReadBodyStatus(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleBodyStatus;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadBodyStatus(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadCPUserInfo(Lcom/szabh/smable3/entity/BleCPUserInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleCPUserInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadCPUserInfo(Lcom/szabh/smable3/entity/BleCPUserInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onReadCalibrationData(Lcom/szabh/smable3/entity/BleCalibrationData;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleCalibrationData;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadCalibrationData(Lcom/szabh/smable3/entity/BleCalibrationData;)V
+
+    return-void
+.end method
+
+.method public bridge onReadCalorieIntake(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleCalorieIntake;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadCalorieIntake(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadCaloriesGoal(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadCaloriesGoal(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadChatApp(Lcom/szabh/smable3/entity/BleChatApp;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleChatApp;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadChatApp(Lcom/szabh/smable3/entity/BleChatApp;)V
+
+    return-void
+.end method
+
+.method public bridge onReadCheckInEveryDay(Lcom/szabh/smable3/entity/BleCheckInEveryDay;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleCheckInEveryDay;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadCheckInEveryDay(Lcom/szabh/smable3/entity/BleCheckInEveryDay;)V
+
+    return-void
+.end method
+
+.method public bridge onReadClassicBluetoothState(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadClassicBluetoothState(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadCoachingIds(Lcom/szabh/smable3/entity/BleCoachingIds;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleCoachingIds;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadCoachingIds(Lcom/szabh/smable3/entity/BleCoachingIds;)V
+
+    return-void
+.end method
+
+.method public bridge onReadCyWeeAlgorithm(Lcom/szabh/smable3/entity/BleCyWeeAlgorithm;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleCyWeeAlgorithm;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadCyWeeAlgorithm(Lcom/szabh/smable3/entity/BleCyWeeAlgorithm;)V
+
+    return-void
+.end method
+
+.method public bridge onReadDailyPower(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BlePhysicalPower;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadDailyPower(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadDateFormat(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadDateFormat(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadDeviceFile(Lcom/szabh/smable3/entity/BleDeviceFile;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleDeviceFile;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadDeviceFile(Lcom/szabh/smable3/entity/BleDeviceFile;)V
+
+    return-void
+.end method
+
+.method public bridge onReadDeviceFileV2(Lcom/szabh/smable3/entity/BleDeviceFile2;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleDeviceFile2;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadDeviceFileV2(Lcom/szabh/smable3/entity/BleDeviceFile2;)V
+
+    return-void
+.end method
+
+.method public bridge onReadDeviceInfo(Lcom/szabh/smable3/entity/BleDeviceInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleDeviceInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadDeviceInfo(Lcom/szabh/smable3/entity/BleDeviceInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onReadDeviceInfo2(Lcom/szabh/smable3/entity/BleDeviceInfo2;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleDeviceInfo2;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadDeviceInfo2(Lcom/szabh/smable3/entity/BleDeviceInfo2;)V
+
+    return-void
+.end method
+
+.method public bridge onReadDeviceLanguages(Lcom/szabh/smable3/entity/BleDeviceLanguages;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleDeviceLanguages;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadDeviceLanguages(Lcom/szabh/smable3/entity/BleDeviceLanguages;)V
+
+    return-void
+.end method
+
+.method public bridge onReadDeviceLanguages2(Lcom/szabh/smable3/entity/BleDeviceLanguages2;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleDeviceLanguages2;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadDeviceLanguages2(Lcom/szabh/smable3/entity/BleDeviceLanguages2;)V
+
+    return-void
+.end method
+
+.method public bridge onReadDeviceUniqueDataSettings(Lcom/szabh/smable3/entity/BleDeviceUniqueDataSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleDeviceUniqueDataSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadDeviceUniqueDataSettings(Lcom/szabh/smable3/entity/BleDeviceUniqueDataSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadDistanceGoal(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadDistanceGoal(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadDoubleScreenSettings(Lcom/szabh/smable3/entity/BleDoubleScreenSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleDoubleScreenSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadDoubleScreenSettings(Lcom/szabh/smable3/entity/BleDoubleScreenSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadDrinkWater(Lcom/szabh/smable3/entity/BleDrinkWaterSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleDrinkWaterSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadDrinkWater(Lcom/szabh/smable3/entity/BleDrinkWaterSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadECGRealtime(Lcom/szabh/smable3/entity/BleECGRealtime;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleECGRealtime;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadECGRealtime(Lcom/szabh/smable3/entity/BleECGRealtime;)V
+
+    return-void
+.end method
+
+.method public bridge onReadEarphoneAncSettings(Lcom/szabh/smable3/entity/BleEarphoneAncSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleEarphoneAncSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadEarphoneAncSettings(Lcom/szabh/smable3/entity/BleEarphoneAncSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadEarphoneCall(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadEarphoneCall(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadEarphoneInfo(Lcom/szabh/smable3/entity/BleEarphoneInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleEarphoneInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadEarphoneInfo(Lcom/szabh/smable3/entity/BleEarphoneInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onReadEarphoneKey(Lcom/szabh/smable3/entity/BleEarphoneKey;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleEarphoneKey;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadEarphoneKey(Lcom/szabh/smable3/entity/BleEarphoneKey;)V
+
+    return-void
+.end method
+
+.method public bridge onReadEarphonePower(Lcom/szabh/smable3/entity/BleEarphonePower;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleEarphonePower;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadEarphonePower(Lcom/szabh/smable3/entity/BleEarphonePower;)V
+
+    return-void
+.end method
+
+.method public bridge onReadEarphoneSoundEffectsSettings(Lcom/szabh/smable3/entity/BleEarphoneSoundEffectsSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleEarphoneSoundEffectsSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadEarphoneSoundEffectsSettings(Lcom/szabh/smable3/entity/BleEarphoneSoundEffectsSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadEarphoneState(Lcom/szabh/smable3/entity/BleEarphoneState;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleEarphoneState;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadEarphoneState(Lcom/szabh/smable3/entity/BleEarphoneState;)V
+
+    return-void
+.end method
+
+.method public bridge onReadEcg(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleEcg;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadEcg(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadEcgSettings(Lcom/szabh/smable3/entity/BleEcgSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleEcgSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadEcgSettings(Lcom/szabh/smable3/entity/BleEcgSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadEnergyRating(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleEnergyRating;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadEnergyRating(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadFallSet(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadFallSet(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadFilePath(Lcom/szabh/smable3/entity/BleAppAudioBookList;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleAppAudioBookList;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadFilePath(Lcom/szabh/smable3/entity/BleAppAudioBookList;)V
+
+    return-void
+.end method
+
+.method public bridge onReadFirmwareVersion(Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadFirmwareVersion(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public bridge onReadFoodBalance(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleFoodBalance;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadFoodBalance(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadGestureWake(Lcom/szabh/smable3/entity/BleGestureWake;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleGestureWake;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadGestureWake(Lcom/szabh/smable3/entity/BleGestureWake;)V
+
+    return-void
+.end method
+
+.method public bridge onReadGestureWake2(Lcom/szabh/smable3/entity/BleGestureWake2;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleGestureWake2;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadGestureWake2(Lcom/szabh/smable3/entity/BleGestureWake2;)V
+
+    return-void
+.end method
+
+.method public bridge onReadGirlCareMonthly(Lcom/szabh/smable3/entity/BleGirlCareMonthly;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleGirlCareMonthly;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadGirlCareMonthly(Lcom/szabh/smable3/entity/BleGirlCareMonthly;)V
+
+    return-void
+.end method
+
+.method public bridge onReadGirlCareSettings(Lcom/szabh/smable3/entity/BleGirlCareSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleGirlCareSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadGirlCareSettings(Lcom/szabh/smable3/entity/BleGirlCareSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadGoMoreSettings(Lcom/szabh/smable3/entity/BleGoMoreSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleGoMoreSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadGoMoreSettings(Lcom/szabh/smable3/entity/BleGoMoreSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadGolfWatchScore(Lcom/szabh/smable3/entity/BleGolfWatchScore;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleGolfWatchScore;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadGolfWatchScore(Lcom/szabh/smable3/entity/BleGolfWatchScore;)V
+
+    return-void
+.end method
+
+.method public bridge onReadGpsFirmwareVersion(Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadGpsFirmwareVersion(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public bridge onReadHanBaoSettings(Lcom/szabh/smable3/entity/BleHanBaoSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleHanBaoSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadHanBaoSettings(Lcom/szabh/smable3/entity/BleHanBaoSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadHanBaoVibration(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleHanBaoVibration;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadHanBaoVibration(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadHeartRate(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleHeartRate;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadHeartRate(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadHeartRateZones(Lcom/szabh/smable3/entity/BleHeartRateZones;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleHeartRateZones;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadHeartRateZones(Lcom/szabh/smable3/entity/BleHeartRateZones;)V
+
+    return-void
+.end method
+
+.method public bridge onReadHourSystem(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadHourSystem(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadHrMonitoringSettings(Lcom/szabh/smable3/entity/BleHrMonitoringSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleHrMonitoringSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadHrMonitoringSettings(Lcom/szabh/smable3/entity/BleHrMonitoringSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadHrMonitoringSettingsV2(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadHrMonitoringSettingsV2(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadHrvBaseLine(Lcom/szabh/smable3/entity/BleHrvBaseLine;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleHrvBaseLine;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadHrvBaseLine(Lcom/szabh/smable3/entity/BleHrvBaseLine;)V
+
+    return-void
+.end method
+
+.method public bridge onReadHrvMonitoringSettings(Lcom/szabh/smable3/entity/BleHrvMonitoringSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleHrvMonitoringSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadHrvMonitoringSettings(Lcom/szabh/smable3/entity/BleHrvMonitoringSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadHydrationSettings(Lcom/szabh/smable3/entity/BleHydrationSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleHydrationSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadHydrationSettings(Lcom/szabh/smable3/entity/BleHydrationSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadIPCInfo(Lcom/szabh/smable3/entity/BleIPCInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleIPCInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadIPCInfo(Lcom/szabh/smable3/entity/BleIPCInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onReadIPCState(Lcom/szabh/smable3/entity/BleIPCState;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleIPCState;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadIPCState(Lcom/szabh/smable3/entity/BleIPCState;)V
+
+    return-void
+.end method
+
+.method public bridge onReadIPCStoresInfo(Lcom/szabh/smable3/entity/BleIPCStoresInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleIPCStoresInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadIPCStoresInfo(Lcom/szabh/smable3/entity/BleIPCStoresInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onReadIPCVersion(Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadIPCVersion(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public bridge onReadIncomingCallRing(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadIncomingCallRing(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadLactateThreshold(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleLactateThreshold;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadLactateThreshold(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadLanguage(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadLanguage(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadLanguagePackVersion(Lcom/szabh/smable3/entity/BleLanguagePackVersion;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleLanguagePackVersion;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadLanguagePackVersion(Lcom/szabh/smable3/entity/BleLanguagePackVersion;)V
+
+    return-void
+.end method
+
+.method public bridge onReadLocation(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleLocation;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadLocation(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadLoveTapUser(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleLoveTapUser;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadLoveTapUser(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadMatchRecord(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleMatchRecord;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadMatchRecord(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadMatchRecord2(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleMatchRecord2;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadMatchRecord2(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadMatchRecord3(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleMatchRecord3;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadMatchRecord3(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadMedicationAlarm(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleMedicationAlarm;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadMedicationAlarm(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadMedicationReminder(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleMedicationReminder;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadMedicationReminder(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadMeetingReminder(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleMeetingReminder;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadMeetingReminder(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadMindStatus(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleMindStatus;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadMindStatus(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadMtkOtaMeta()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadMtkOtaMeta()V
+
+    return-void
+.end method
+
+.method public bridge onReadMultiFileTransfer(Lcom/szabh/smable3/entity/BleMapFileList;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleMapFileList;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadMultiFileTransfer(Lcom/szabh/smable3/entity/BleMapFileList;)V
+
+    return-void
+.end method
+
+.method public bridge onReadNetworkFirmwareVersion(Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadNetworkFirmwareVersion(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public bridge onReadNoDisturb(Lcom/szabh/smable3/entity/BleNoDisturbSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleNoDisturbSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadNoDisturb(Lcom/szabh/smable3/entity/BleNoDisturbSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadNotificationLightScreenSet(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadNotificationLightScreenSet(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadNotificationSettings2(Lcom/szabh/smable3/entity/BleNotificationSettings2;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleNotificationSettings2;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadNotificationSettings2(Lcom/szabh/smable3/entity/BleNotificationSettings2;)V
+
+    return-void
+.end method
+
+.method public bridge onReadOfflineAsrSettings(Lcom/szabh/smable3/entity/BleOfflineAsrSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleOfflineAsrSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadOfflineAsrSettings(Lcom/szabh/smable3/entity/BleOfflineAsrSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadOngoingDialogue(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadOngoingDialogue(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadOptionalMapAuthInfo(Lcom/szabh/smable3/entity/BleOptionalMapAuthInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleOptionalMapAuthInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadOptionalMapAuthInfo(Lcom/szabh/smable3/entity/BleOptionalMapAuthInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onReadPackageStatus(Lcom/szabh/smable3/entity/BlePackageStatus;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BlePackageStatus;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadPackageStatus(Lcom/szabh/smable3/entity/BlePackageStatus;)V
+
+    return-void
+.end method
+
+.method public bridge onReadPower(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadPower(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadPower2(Lcom/szabh/smable3/entity/BlePower2;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BlePower2;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadPower2(Lcom/szabh/smable3/entity/BlePower2;)V
+
+    return-void
+.end method
+
+.method public bridge onReadPressure(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BlePressure;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadPressure(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadPressureTimingMeasurement(Lcom/szabh/smable3/entity/BlePressureTimingMeasurement;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BlePressureTimingMeasurement;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadPressureTimingMeasurement(Lcom/szabh/smable3/entity/BlePressureTimingMeasurement;)V
+
+    return-void
+.end method
+
+.method public bridge onReadQiblaSettings(Lcom/szabh/smable3/entity/BleQiblaSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleQiblaSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadQiblaSettings(Lcom/szabh/smable3/entity/BleQiblaSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadRecordControl(Lcom/szabh/smable3/entity/BleRecordControl;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleRecordControl;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadRecordControl(Lcom/szabh/smable3/entity/BleRecordControl;)V
+
+    return-void
+.end method
+
+.method public bridge onReadRelaxReminder(Lcom/szabh/smable3/entity/BleRelaxReminder;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleRelaxReminder;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadRelaxReminder(Lcom/szabh/smable3/entity/BleRelaxReminder;)V
+
+    return-void
+.end method
+
+.method public bridge onReadRespiratoryRate(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleRespiratoryRate;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadRespiratoryRate(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadRestingHeartRate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadRestingHeartRate(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadRingVibrationSet(Lcom/szabh/smable3/entity/BleRingVibrationSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleRingVibrationSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadRingVibrationSet(Lcom/szabh/smable3/entity/BleRingVibrationSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadRri(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleRri;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadRri(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadSDCardInfo(Lcom/szabh/smable3/entity/BleSDCardInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSDCardInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSDCardInfo(Lcom/szabh/smable3/entity/BleSDCardInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onReadSGCameraSet(Lcom/szabh/smable3/entity/BleSGCameraSet;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSGCameraSet;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSGCameraSet(Lcom/szabh/smable3/entity/BleSGCameraSet;)V
+
+    return-void
+.end method
+
+.method public bridge onReadSGKeySet(Lcom/szabh/smable3/entity/BleSGKeySet;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSGKeySet;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSGKeySet(Lcom/szabh/smable3/entity/BleSGKeySet;)V
+
+    return-void
+.end method
+
+.method public bridge onReadSGKeywordAwake(Lcom/szabh/smable3/entity/BleSGKeywordAwake;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSGKeywordAwake;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSGKeywordAwake(Lcom/szabh/smable3/entity/BleSGKeywordAwake;)V
+
+    return-void
+.end method
+
+.method public bridge onReadSGSet(Lcom/szabh/smable3/entity/BleSGSet;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSGSet;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSGSet(Lcom/szabh/smable3/entity/BleSGSet;)V
+
+    return-void
+.end method
+
+.method public bridge onReadSGSleepSet(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSGSleepSet(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadSOSSettings(Lcom/szabh/smable3/entity/BleSOSSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSOSSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSOSSettings(Lcom/szabh/smable3/entity/BleSOSSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadScreenBrightnessSet(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadScreenBrightnessSet(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadSedentariness(Lcom/szabh/smable3/entity/BleSedentarinessSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSedentarinessSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSedentariness(Lcom/szabh/smable3/entity/BleSedentarinessSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadSleep(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleSleep;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSleep(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadSleepGoal(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSleepGoal(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadSleepMonitoringMode(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSleepMonitoringMode(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadSleepQuality(Lcom/szabh/smable3/entity/BleSleepQuality;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSleepQuality;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSleepQuality(Lcom/szabh/smable3/entity/BleSleepQuality;)V
+
+    return-void
+.end method
+
+.method public bridge onReadSleepQualityScore(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSleepQualityScore(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadSleepRaw([B)V
+    .locals 0
+    .param p1    # [B
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSleepRaw([B)V
+
+    return-void
+.end method
+
+.method public bridge onReadSleepRespiratoryRate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSleepRespiratoryRate(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadSleepRiskLevel(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSleepRiskLevel(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadSleepSet(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSleepSet(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadSosCallLog(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleSosCallLog;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSosCallLog(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadSosContact(Lcom/szabh/smable3/entity/BleSosContact;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSosContact;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSosContact(Lcom/szabh/smable3/entity/BleSosContact;)V
+
+    return-void
+.end method
+
+.method public bridge onReadSportDurationGoal(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadSportDurationGoal(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadStandbyWatchFaceSet(Lcom/szabh/smable3/entity/BleStandbyWatchFaceSet;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleStandbyWatchFaceSet;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadStandbyWatchFaceSet(Lcom/szabh/smable3/entity/BleStandbyWatchFaceSet;)V
+
+    return-void
+.end method
+
+.method public bridge onReadStepGoal(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadStepGoal(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadStock(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleStock;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadStock(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadStock(Z)V
+    .locals 0
+
+    .line 2
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadStock(Z)V
+
+    return-void
+.end method
+
+.method public bridge onReadTemperature(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleTemperature;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadTemperature(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadTemperatureUnit(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadTemperatureUnit(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadTrainingStatus(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleTrainingStatus;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadTrainingStatus(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadTuyaKey(Lcom/szabh/smable3/entity/BleTuyaKey;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleTuyaKey;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadTuyaKey(Lcom/szabh/smable3/entity/BleTuyaKey;)V
+
+    return-void
+.end method
+
+.method public bridge onReadUiPackVersion(Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadUiPackVersion(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public bridge onReadUnit(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadUnit(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadUserProfile(Lcom/szabh/smable3/entity/BleUserProfile;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleUserProfile;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadUserProfile(Lcom/szabh/smable3/entity/BleUserProfile;)V
+
+    return-void
+.end method
+
+.method public bridge onReadVitalityValue(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleVitality;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadVitalityValue(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadVoiceControl(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadVoiceControl(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadWatchFaceId(Lcom/szabh/smable3/entity/BleWatchFaceId;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleWatchFaceId;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadWatchFaceId(Lcom/szabh/smable3/entity/BleWatchFaceId;)V
+
+    return-void
+.end method
+
+.method public bridge onReadWatchFaceIndex(Lcom/szabh/smable3/entity/BleWatchFaceIndex;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleWatchFaceIndex;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadWatchFaceIndex(Lcom/szabh/smable3/entity/BleWatchFaceIndex;)V
+
+    return-void
+.end method
+
+.method public bridge onReadWatchFaceMaxSize(Lcom/szabh/smable3/entity/BleWatchFaceMaxSize;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleWatchFaceMaxSize;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadWatchFaceMaxSize(Lcom/szabh/smable3/entity/BleWatchFaceMaxSize;)V
+
+    return-void
+.end method
+
+.method public bridge onReadWatchFaceSwitch(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadWatchFaceSwitch(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadWatchPassword(Lcom/szabh/smable3/entity/BleSettingWatchPassword;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSettingWatchPassword;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadWatchPassword(Lcom/szabh/smable3/entity/BleSettingWatchPassword;)V
+
+    return-void
+.end method
+
+.method public bridge onReadWearWayState(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadWearWayState(I)V
+
+    return-void
+.end method
+
+.method public bridge onReadWeatherRealTime(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadWeatherRealTime(Z)V
+
+    return-void
+.end method
+
+.method public bridge onReadWechatPaySettings(Lcom/szabh/smable3/entity/BleWechatPaySettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleWechatPaySettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadWechatPaySettings(Lcom/szabh/smable3/entity/BleWechatPaySettings;)V
+
+    return-void
+.end method
+
+.method public bridge onReadWorkout(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleWorkout;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadWorkout(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadWorkout2(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleWorkout2;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadWorkout2(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadWorkout3(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleWorkout3;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadWorkout3(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadWorkout4(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleWorkout4;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadWorkout4(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReadWorkout4Segmentation(Lcom/szabh/smable3/entity/BleWorkout4Segmentation;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleWorkout4Segmentation;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadWorkout4Segmentation(Lcom/szabh/smable3/entity/BleWorkout4Segmentation;)V
+
+    return-void
+.end method
+
+.method public bridge onReadWorldClock(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleWorldClock;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReadWorldClock(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onRealTimeMeasurement(Lcom/szabh/smable3/entity/BleRealTimeMeasurement;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleRealTimeMeasurement;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onRealTimeMeasurement(Lcom/szabh/smable3/entity/BleRealTimeMeasurement;)V
+
+    return-void
+.end method
+
+.method public bridge onReceiveCmTrace([BZ)V
+    .locals 0
+    .param p1    # [B
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1, p2}, Lcom/szabh/smable3/component/BleHandleCallback;->onReceiveCmTrace([BZ)V
+
+    return-void
+.end method
+
+.method public bridge onReceiveFilePacket(Lcom/szabh/smable3/entity/BleReceiveFilePacket;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleReceiveFilePacket;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReceiveFilePacket(Lcom/szabh/smable3/entity/BleReceiveFilePacket;)V
+
+    return-void
+.end method
+
+.method public onReceiveGSensorMotion(Ljava/util/List;)V
+    .locals 1
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleGSensorMotion;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string v0, "gSensorMotions"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->X0O(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-boolean v0, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mState:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mMotionData:Ljava/util/LinkedList;
+
+    invoke-virtual {v0, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    iget-object p1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mMotionData:Ljava/util/LinkedList;
+
+    invoke-virtual {p1}, Ljava/util/LinkedList;->size()I
+
+    move-result p1
+
+    const/16 v0, 0x3c
+
+    if-le p1, v0, :cond_0
+
+    iget-object p1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mMotionData:Ljava/util/LinkedList;
+
+    invoke-virtual {p1}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
+
+    :cond_0
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->updateMotion()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public onReceiveGSensorRaw(Ljava/util/List;)V
+    .locals 18
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleGSensorRaw;",
+            ">;)V"
+        }
+    .end annotation
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    const-string v2, "gSensorRaws"
+
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->X0O(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-boolean v2, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mState:Z
+
+    if-eqz v2, :cond_4
+
+    move-object v3, v1
+
+    check-cast v3, Ljava/lang/Iterable;
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    const/16 v4, 0xa
+
+    invoke-static {v3, v4}, Lkotlin/collections/CollectionsKt__IterablesKt;->X00XIX1(Ljava/lang/Iterable;I)I
+
+    move-result v5
+
+    invoke-direct {v2, v5}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    :goto_0
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_0
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lcom/szabh/smable3/entity/BleGSensorRaw;
+
+    invoke-virtual {v6}, Lcom/szabh/smable3/entity/BleGSensorRaw;->getMX()S
+
+    move-result v6
+
+    invoke-static {v6}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object v6
+
+    invoke-interface {v2, v6}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v2}, Lkotlin/collections/CollectionsKt___CollectionsKt;->O0i(Ljava/lang/Iterable;)D
+
+    move-result-wide v5
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-static {v3, v4}, Lkotlin/collections/CollectionsKt__IterablesKt;->X00XIX1(Ljava/lang/Iterable;I)I
+
+    move-result v4
+
+    invoke-direct {v2, v4}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :goto_1
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lcom/szabh/smable3/entity/BleGSensorRaw;
+
+    invoke-virtual {v7}, Lcom/szabh/smable3/entity/BleGSensorRaw;->getMY()S
+
+    move-result v7
+
+    invoke-static {v7}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object v7
+
+    invoke-interface {v2, v7}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {v2}, Lkotlin/collections/CollectionsKt___CollectionsKt;->O0i(Ljava/lang/Iterable;)D
+
+    move-result-wide v7
+
+    mul-double v9, v5, v5
+
+    mul-double v11, v7, v7
+
+    add-double/2addr v9, v11
+
+    invoke-static {v9, v10}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v9
+
+    const/16 v2, 0x5a
+
+    int-to-double v11, v2
+
+    mul-double/2addr v11, v9
+
+    const/16 v2, 0x200
+
+    int-to-double v13, v2
+
+    div-double/2addr v11, v13
+
+    sget-object v2, Lcom/android/mltcode/paycertificationapi/i1O0OXO1O;->OXO1:Lcom/android/mltcode/paycertificationapi/i1O0OXO1O;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v13, "onReceiveGSensorRaw -> xAvg="
+
+    invoke-virtual {v4, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v5, v6}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v5, ", yAvg="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v7, v8}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v5, ", p="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v9, v10}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v5, ", a="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v11, v12}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Lcom/android/mltcode/paycertificationapi/i1O0OXO1O;->XOO0ii0(Ljava/lang/String;)V
+
+    new-instance v2, Ljava/text/SimpleDateFormat;
+
+    const-string v4, "yyyyMMdd_HHmmss"
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v5
+
+    invoke-direct {v2, v4, v5}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    new-instance v9, Lcom/android/mltcode/paycertificationapi/XX0O1Ii01;
+
+    invoke-direct {v9, v2}, Lcom/android/mltcode/paycertificationapi/XX0O1Ii01;-><init>(Ljava/text/SimpleDateFormat;)V
+
+    const/16 v10, 0x1f
+
+    const/4 v11, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-static/range {v3 .. v11}, Lkotlin/collections/CollectionsKt___CollectionsKt;->XOiXXOO(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v12
+
+    const/16 v16, 0x4
+
+    const/16 v17, 0x0
+
+    const-string v13, ", "
+
+    const-string v14, ""
+
+    const/4 v15, 0x0
+
+    invoke-static/range {v12 .. v17}, Lcom/android/mltcode/paycertificationapi/oe5;->IXO0OOi(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mGsensorFile:Ljava/io/File;
+
+    if-eqz v3, :cond_2
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x0
+
+    invoke-static {v3, v2, v5, v4, v5}, Lcom/android/mltcode/paycertificationapi/iI0OiO;->IO(Ljava/io/File;Ljava/lang/String;Ljava/nio/charset/Charset;ILjava/lang/Object;)V
+
+    :cond_2
+    iget-object v2, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mData:Ljava/util/LinkedList;
+
+    invoke-virtual {v2, v1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    iget-object v1, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mData:Ljava/util/LinkedList;
+
+    invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
+
+    move-result v1
+
+    const/16 v2, 0x3c
+
+    if-le v1, v2, :cond_3
+
+    iget-object v1, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mData:Ljava/util/LinkedList;
+
+    invoke-virtual {v1}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
+
+    :cond_3
+    invoke-direct {v0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->updateGsensor()V
+
+    :cond_4
+    return-void
+.end method
+
+.method public bridge onReceiveGSensorSHSY(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleGSensorSHSY;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReceiveGSensorSHSY(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public onReceiveHRRaw(Ljava/util/List;)V
+    .locals 20
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleHRRaw;",
+            ">;)V"
+        }
+    .end annotation
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    const-string v2, "hrRaws"
+
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->X0O(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-boolean v2, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mState:Z
+
+    if-eqz v2, :cond_0
+
+    new-instance v2, Ljava/text/SimpleDateFormat;
+
+    const-string v3, "yyyyMMdd_HHmmss"
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v4
+
+    invoke-direct {v2, v3, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    move-object v5, v1
+
+    check-cast v5, Ljava/lang/Iterable;
+
+    new-instance v11, Lcom/android/mltcode/paycertificationapi/O0X11iI;
+
+    invoke-direct {v11, v2}, Lcom/android/mltcode/paycertificationapi/O0X11iI;-><init>(Ljava/text/SimpleDateFormat;)V
+
+    const/16 v12, 0x1f
+
+    const/4 v13, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    invoke-static/range {v5 .. v13}, Lkotlin/collections/CollectionsKt___CollectionsKt;->XOiXXOO(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v14
+
+    const/16 v18, 0x4
+
+    const/16 v19, 0x0
+
+    const-string v15, ", "
+
+    const-string v16, ""
+
+    const/16 v17, 0x0
+
+    invoke-static/range {v14 .. v19}, Lcom/android/mltcode/paycertificationapi/oe5;->IXO0OOi(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, v0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mHrFile:Ljava/io/File;
+
+    if-eqz v2, :cond_0
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x0
+
+    invoke-static {v2, v1, v4, v3, v4}, Lcom/android/mltcode/paycertificationapi/iI0OiO;->IO(Ljava/io/File;Ljava/lang/String;Ljava/nio/charset/Charset;ILjava/lang/Object;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public bridge onReceiveLocationGga(Lcom/szabh/smable3/entity/BleLocationGga;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleLocationGga;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReceiveLocationGga(Lcom/szabh/smable3/entity/BleLocationGga;)V
+
+    return-void
+.end method
+
+.method public bridge onReceiveLocationGsv(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BleLocationGsv;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReceiveLocationGsv(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReceiveMusicCommand(Lcom/szabh/smable3/entity/MusicCommand;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/MusicCommand;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReceiveMusicCommand(Lcom/szabh/smable3/entity/MusicCommand;)V
+
+    return-void
+.end method
+
+.method public bridge onReceivePpgSHSY(Ljava/util/List;)V
+    .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/szabh/smable3/entity/BlePpgSHSY;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReceivePpgSHSY(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public bridge onReceiveRealtimeLog(Lcom/szabh/smable3/entity/BleRealtimeLog;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleRealtimeLog;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReceiveRealtimeLog(Lcom/szabh/smable3/entity/BleRealtimeLog;)V
+
+    return-void
+.end method
+
+.method public bridge onReceiveRecordPacket(Lcom/szabh/smable3/entity/BleRecordPacket;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleRecordPacket;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onReceiveRecordPacket(Lcom/szabh/smable3/entity/BleRecordPacket;)V
+
+    return-void
+.end method
+
+.method public bridge onRecordControlUpdate(Lcom/szabh/smable3/entity/BleRecordControl;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleRecordControl;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onRecordControlUpdate(Lcom/szabh/smable3/entity/BleRecordControl;)V
+
+    return-void
+.end method
+
+.method public bridge onRequestAgpsPrerequisite()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/szabh/smable3/component/BleHandleCallback;->onRequestAgpsPrerequisite()V
+
+    return-void
+.end method
+
+.method public bridge onRequestLocation(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onRequestLocation(I)V
+
+    return-void
+.end method
+
+.method public bridge onRingVibrationSetUpdate(Lcom/szabh/smable3/entity/BleRingVibrationSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleRingVibrationSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onRingVibrationSetUpdate(Lcom/szabh/smable3/entity/BleRingVibrationSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onSDCardInfoUpdate(Lcom/szabh/smable3/entity/BleSDCardInfo;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSDCardInfo;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onSDCardInfoUpdate(Lcom/szabh/smable3/entity/BleSDCardInfo;)V
+
+    return-void
+.end method
+
+.method public bridge onSGTestUpdate(Lcom/szabh/smable3/entity/BleSGTest;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSGTest;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onSGTestUpdate(Lcom/szabh/smable3/entity/BleSGTest;)V
+
+    return-void
+.end method
+
+.method public bridge onSGTtsUpdate(Lcom/szabh/smable3/entity/BleSGTts;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSGTts;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onSGTtsUpdate(Lcom/szabh/smable3/entity/BleSGTts;)V
+
+    return-void
+.end method
+
+.method public bridge onSOSSettingsUpdate(Lcom/szabh/smable3/entity/BleSOSSettings;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSOSSettings;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onSOSSettingsUpdate(Lcom/szabh/smable3/entity/BleSOSSettings;)V
+
+    return-void
+.end method
+
+.method public bridge onScreenBrightnessSetUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onScreenBrightnessSetUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onSessionStateChange(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onSessionStateChange(Z)V
+
+    return-void
+.end method
+
+.method public bridge onSleepNotifyUpdate(Lcom/szabh/smable3/entity/BleSleepNotify;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSleepNotify;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onSleepNotifyUpdate(Lcom/szabh/smable3/entity/BleSleepNotify;)V
+
+    return-void
+.end method
+
+.method public bridge onSosContactUpdate(Lcom/szabh/smable3/entity/BleSosContact;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSosContact;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onSosContactUpdate(Lcom/szabh/smable3/entity/BleSosContact;)V
+
+    return-void
+.end method
+
+.method public bridge onSportEndNotifyUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onSportEndNotifyUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onStandbyWatchFaceSetUpdate(Lcom/szabh/smable3/entity/BleStandbyWatchFaceSet;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleStandbyWatchFaceSet;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onStandbyWatchFaceSetUpdate(Lcom/szabh/smable3/entity/BleStandbyWatchFaceSet;)V
+
+    return-void
+.end method
+
+.method public bridge onStepGoalUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onStepGoalUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onStockDelete(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onStockDelete(I)V
+
+    return-void
+.end method
+
+.method public bridge onStreamProgress(ZIIILcom/szabh/smable3/BleKey;)V
+    .locals 0
+    .param p5    # Lcom/szabh/smable3/BleKey;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super/range {p0 .. p5}, Lcom/szabh/smable3/component/BleHandleCallback;->onStreamProgress(ZIIILcom/szabh/smable3/BleKey;)V
+
+    return-void
+.end method
+
+.method public bridge onSyncData(ILcom/szabh/smable3/BleKey;)V
+    .locals 0
+    .param p2    # Lcom/szabh/smable3/BleKey;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1, p2}, Lcom/szabh/smable3/component/BleHandleCallback;->onSyncData(ILcom/szabh/smable3/BleKey;)V
+
+    return-void
+.end method
+
+.method public bridge onTimeUpdate()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/szabh/smable3/component/BleHandleCallback;->onTimeUpdate()V
+
+    return-void
+.end method
+
+.method public bridge onUpdateAICoachGenerateBeforeInfoV2(Lcom/szabh/smable3/entity/BleAICoachBeforePlanV2;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleAICoachBeforePlanV2;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onUpdateAICoachGenerateBeforeInfoV2(Lcom/szabh/smable3/entity/BleAICoachBeforePlanV2;)V
+
+    return-void
+.end method
+
+.method public bridge onUpdateAICoachLeaveDay(Lcom/szabh/smable3/entity/BleLeaveDay;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleLeaveDay;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onUpdateAICoachLeaveDay(Lcom/szabh/smable3/entity/BleLeaveDay;)V
+
+    return-void
+.end method
+
+.method public bridge onUpdateAppSportState(Lcom/szabh/smable3/entity/BleAppSportState;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleAppSportState;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onUpdateAppSportState(Lcom/szabh/smable3/entity/BleAppSportState;)V
+
+    return-void
+.end method
+
+.method public bridge onUpdateBAC(Lcom/szabh/smable3/entity/BleBAC;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleBAC;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onUpdateBAC(Lcom/szabh/smable3/entity/BleBAC;)V
+
+    return-void
+.end method
+
+.method public bridge onUpdateBloodPressure(Lcom/szabh/smable3/entity/BleBloodPressure;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleBloodPressure;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onUpdateBloodPressure(Lcom/szabh/smable3/entity/BleBloodPressure;)V
+
+    return-void
+.end method
+
+.method public bridge onUpdateHeartRate(Lcom/szabh/smable3/entity/BleHeartRate;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleHeartRate;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onUpdateHeartRate(Lcom/szabh/smable3/entity/BleHeartRate;)V
+
+    return-void
+.end method
+
+.method public bridge onUpdateTemperature(Lcom/szabh/smable3/entity/BleTemperature;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleTemperature;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onUpdateTemperature(Lcom/szabh/smable3/entity/BleTemperature;)V
+
+    return-void
+.end method
+
+.method public bridge onUpdateWatchFaceSwitch(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onUpdateWatchFaceSwitch(Z)V
+
+    return-void
+.end method
+
+.method public bridge onUserProfileUpdate(Lcom/szabh/smable3/entity/BleUserProfile;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleUserProfile;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onUserProfileUpdate(Lcom/szabh/smable3/entity/BleUserProfile;)V
+
+    return-void
+.end method
+
+.method public bridge onVibrationUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onVibrationUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onVibrationUpdateV2(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onVibrationUpdateV2(I)V
+
+    return-void
+.end method
+
+.method public bridge onWatchFaceIdUpdate(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onWatchFaceIdUpdate(Z)V
+
+    return-void
+.end method
+
+.method public bridge onWatchFaceIndexCreate(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onWatchFaceIndexCreate(Z)V
+
+    return-void
+.end method
+
+.method public bridge onWatchFaceIndexUpdate(Lcom/szabh/smable3/entity/BleWatchFaceIndex;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleWatchFaceIndex;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onWatchFaceIndexUpdate(Lcom/szabh/smable3/entity/BleWatchFaceIndex;)V
+
+    return-void
+.end method
+
+.method public bridge onWatchPasswordUpdate(Lcom/szabh/smable3/entity/BleSettingWatchPassword;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleSettingWatchPassword;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onWatchPasswordUpdate(Lcom/szabh/smable3/entity/BleSettingWatchPassword;)V
+
+    return-void
+.end method
+
+.method public bridge onWearWayUpdate(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onWearWayUpdate(I)V
+
+    return-void
+.end method
+
+.method public bridge onWorldClockDelete(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onWorldClockDelete(I)V
+
+    return-void
+.end method
+
+.method public bridge onXMLYBandSetUpdate(Lcom/szabh/smable3/entity/BleXMLYBandSet;)V
+    .locals 0
+    .param p1    # Lcom/szabh/smable3/entity/BleXMLYBandSet;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onXMLYBandSetUpdate(Lcom/szabh/smable3/entity/BleXMLYBandSet;)V
+
+    return-void
+.end method
+
+.method public bridge onXModem(B)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/szabh/smable3/component/BleHandleCallback;->onXModem(B)V
+
+    return-void
+.end method
+
+.method public final share(Landroid/view/View;)V
+    .locals 3
+    .param p1    # Landroid/view/View;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    const-string v0, "view"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->X0O(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mLoadingPopup:Lcom/android/mltcode/paycertificationapi/uq;
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Lcom/android/mltcode/paycertificationapi/uq;
+
+    invoke-virtual {p0}, Lcom/bestmafen/androidbase/base/BaseActivity;->getMContext()Landroid/app/Activity;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Lcom/android/mltcode/paycertificationapi/uq;-><init>(Landroid/app/Activity;)V
+
+    iput-object p1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mLoadingPopup:Lcom/android/mltcode/paycertificationapi/uq;
+
+    :cond_0
+    iget-object p1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mLoadingPopup:Lcom/android/mltcode/paycertificationapi/uq;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lcom/android/mltcode/paycertificationapi/OIXIOIO;->IIX1OXO()V
+
+    :cond_1
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-direct {p1}, Landroid/os/Handler;-><init>()V
+
+    new-instance v0, Lcom/android/mltcode/paycertificationapi/iiIOXI111;
+
+    invoke-direct {v0, p0}, Lcom/android/mltcode/paycertificationapi/iiIOXI111;-><init>(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+
+    const-wide/16 v1, 0x1770
+
+    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+.end method
+
+.method public final toggle(Landroid/view/View;)V
+    .locals 9
+    .param p1    # Landroid/view/View;
+        .annotation build Lcom/android/mltcode/paycertificationapi/aa1;
+        .end annotation
+    .end param
+
+    const-string v0, "view"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->X0O(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-boolean p1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mState:Z
+
+    xor-int/lit8 p1, p1, 0x1
+
+    iput-boolean p1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mState:Z
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getBtn()Landroid/widget/Button;
+
+    move-result-object p1
+
+    iget-boolean v0, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mState:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "Pause"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "Start"
+
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget-object v1, Lcom/szabh/smable3/component/BleConnector;->INSTANCE:Lcom/szabh/smable3/component/BleConnector;
+
+    sget-object v2, Lcom/szabh/smable3/BleKey;->GSENSOR_OUTPUT:Lcom/szabh/smable3/BleKey;
+
+    sget-object v3, Lcom/szabh/smable3/BleKeyFlag;->UPDATE:Lcom/szabh/smable3/BleKeyFlag;
+
+    iget-boolean v4, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mState:Z
+
+    const/16 v7, 0x18
+
+    const/4 v8, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v1 .. v8}, Lcom/szabh/smable3/component/BaseBleConnector;->sendBoolean$default(Lcom/szabh/smable3/component/BaseBleConnector;Lcom/szabh/smable3/BleKey;Lcom/szabh/smable3/BleKeyFlag;ZZZILjava/lang/Object;)Z
+
+    iget-boolean p1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mState:Z
+
+    if-eqz p1, :cond_1
+
+    sget-object p1, Lcom/sma/smartv3/initializer/BleInitializer;->IO:Lcom/sma/smartv3/initializer/BleInitializer;
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lcom/sma/smartv3/initializer/BleInitializer;->I0OX(J)V
+
+    invoke-virtual {p1, v0, v1}, Lcom/sma/smartv3/initializer/BleInitializer;->I00(J)V
+
+    new-instance p1, Ljava/text/SimpleDateFormat;
+
+    const-string v0, "yyyyMMdd_HHmmss"
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v1
+
+    invoke-direct {p1, v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    sget-object v0, Lcom/android/mltcode/paycertificationapi/sz0;->OXO1:Lcom/android/mltcode/paycertificationapi/sz0;
+
+    iget-object v1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mAppUser:Lcom/sma/smartv3/model/AppUser;
+
+    invoke-virtual {v1}, Lcom/sma/smartv3/model/AppUser;->getNickname()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/util/Date;
+
+    invoke-direct {v2}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {p1, v2}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "_GSensor_"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ".csv"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcom/android/mltcode/paycertificationapi/uz0;->Ii0X0X(Lcom/android/mltcode/paycertificationapi/sz0;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mGsensorFile:Ljava/io/File;
+
+    iget-object v2, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mAppUser:Lcom/sma/smartv3/model/AppUser;
+
+    invoke-virtual {v2}, Lcom/sma/smartv3/model/AppUser;->getNickname()Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/util/Date;
+
+    invoke-direct {v3}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {p1, v3}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "_HR_"
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lcom/android/mltcode/paycertificationapi/uz0;->XXiIiX10(Lcom/android/mltcode/paycertificationapi/sz0;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mHrFile:Ljava/io/File;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->startTime:J
+
+    iget p1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->count:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->count:I
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getTvInfo()Landroid/widget/TextView;
+
+    move-result-object p1
+
+    iget v0, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->count:I
+
+    iget-object v1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->hmssformat:Ljava/text/SimpleDateFormat;
+
+    iget-wide v2, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->startTime:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/text/Format;->format(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "\n"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "\n\u5f00\u59cb\u65f6\u95f4:"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->append(Ljava/lang/CharSequence;)V
+
+    iget-object p1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mCountDownTimer:Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity$OXO1;
+
+    invoke-virtual {p1}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->endTime:J
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getTvInfo()Landroid/widget/TextView;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->hmssformat:Ljava/text/SimpleDateFormat;
+
+    iget-wide v1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->endTime:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/text/Format;->format(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "\n\u7ed3\u675f\u65f6\u95f4:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->append(Ljava/lang/CharSequence;)V
+
+    iget-object p1, p0, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->mCountDownTimer:Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity$OXO1;
+
+    invoke-virtual {p1}, Landroid/os/CountDownTimer;->cancel()V
+
+    :goto_1
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getTvTime()Landroid/widget/TextView;
+
+    move-result-object p1
+
+    const-string v0, "\u5269\u4f59\u65f6\u95f4:"
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-direct {p0}, Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;->getTvInfo()Landroid/widget/TextView;
+
+    move-result-object p1
+
+    new-instance v0, Lcom/android/mltcode/paycertificationapi/XOXO1IiIX;
+
+    invoke-direct {v0, p0}, Lcom/android/mltcode/paycertificationapi/XOXO1IiIX;-><init>(Lcom/sma/smartv3/ui/me/DeveloperGsensor2Activity;)V
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method

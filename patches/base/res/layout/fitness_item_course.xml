@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/go_to_my_course" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dp">
+        <com.sma.smartv3.view.text.PFMedium android:textColor="@color/bp_line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我的健身课程" />
+        <ImageView style="@style/device_item_right_iv_style.me_item_bottom_ll_rl_right_iv" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/my_course_recyclerView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="110.0dp" android:layout_marginTop="5.0dp" />
+    <RelativeLayout android:id="@id/my_course_empty_recyclerView" android:background="@drawable/fitness_item_course_empty_bg" android:padding="15.0dp" android:layout_width="match_parent" android:layout_height="110.0dp" android:layout_marginTop="5.0dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <com.sma.smartv3.view.text.PFMedium android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="暂无课程" />
+            <com.sma.smartv3.view.text.PFMedium android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="你还没有训练过课程" />
+        </LinearLayout>
+        <com.sma.smartv3.view.text.PFMedium android:textSize="14.0sp" android:textColor="@color/colorAccent" android:gravity="center" android:id="@id/fitness_item_all_course" android:background="@drawable/fitness_item_pf_bg" android:layout_width="90.0dp" android:layout_height="30.0dp" android:text="去选课" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

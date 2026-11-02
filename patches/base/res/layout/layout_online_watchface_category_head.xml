@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="18.0dp" android:paddingEnd="18.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sma.smartv3.view.text.PFMedium android:id="@id/tv_name" android:text="@string/watch_face_category1" style="@style/watchface_head_item_tv_left" />
+    <com.sma.smartv3.view.text.PFMedium android:id="@id/watchface_more_tv" android:text="@string/more" style="@style/watchface_head_item_tv_right" />
+    <ImageView style="@style/watchface_head_item_right_iv_style" />
+</LinearLayout>

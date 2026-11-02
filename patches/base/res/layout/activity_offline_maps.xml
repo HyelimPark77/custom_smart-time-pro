@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/layout_title_iv_tv_iv" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textColor="@color/line_color" android:id="@id/storage_device" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_horizontal_margin" android:layout_marginStart="@dimen/activity_horizontal_margin" />
+            <ProgressBar android:id="@id/step_v2_goal_pb_progress" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:maxHeight="4.0dp" android:max="30" android:progress="0" android:progressDrawable="@drawable/progress_blue" android:minHeight="4.0dp" android:layout_marginStart="@dimen/activity_horizontal_margin" android:layout_marginEnd="@dimen/activity_horizontal_margin" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+            <TextView android:textSize="18.0dp" android:textColor="@color/text_color" android:id="@id/offline_maps_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:layout_marginStart="@dimen/activity_horizontal_margin" />
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/null_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_above="@id/btn_bottom" android:layout_centerHorizontal="true">
+                    <ImageView android:layout_width="150.0dp" android:layout_height="150.0dp" android:src="@drawable/offline_empty_icon" />
+                    <TextView android:textColor="@color/line_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:text="@string/offline_no_data_tip" android:layout_marginHorizontal="16.0dp" />
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/btn_bottom" android:layout_marginStart="@dimen/activity_horizontal_margin" android:layout_marginEnd="@dimen/activity_horizontal_margin" />
+                <Button android:id="@id/btn_bottom" android:layout_width="match_parent" android:text="@string/off_line_map_add" android:layout_alignParentBottom="true" style="@style/bottom_btn" />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

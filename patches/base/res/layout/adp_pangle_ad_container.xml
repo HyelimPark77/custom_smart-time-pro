@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#98111111" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/adp_top_rl" android:background="@drawable/adp_splash_bg" android:layout_width="match_parent" android:layout_height="62.0dp" android:layout_marginLeft="60.0dp" android:layout_marginTop="15.0dp" android:layout_marginRight="-10.0dp" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/adp_logo" android:layout_width="40.0dp" android:layout_height="40.0dp" android:layout_marginLeft="12.0dp" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:id="@id/adp_splash_title1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dp" android:layout_marginTop="10.0dp" android:text="@string/adp_splash_start_title1" android:singleLine="true" android:layout_toRightOf="@id/adp_logo" android:layout_alignParentTop="true" />
+        <TextView android:textSize="14.5sp" android:id="@id/adp_splash_title2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dp" android:text="@string/adp_splash_start_title2" android:singleLine="true" android:layout_toRightOf="@id/adp_logo" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textStyle="bold" android:textColor="#3e403f" android:id="@id/adp_splash_appname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dp" android:layout_marginBottom="14.0dp" android:singleLine="true" android:layout_toRightOf="@id/adp_logo" android:layout_alignParentBottom="true" />
+        <ImageView android:id="@id/adp_splash_close" android:visibility="gone" android:layout_width="15.0dp" android:layout_height="15.0dp" android:layout_marginRight="35.0dp" android:src="@drawable/adp_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ProgressBar android:id="@id/adp_progressBar" android:layout_width="18.0dp" android:layout_height="18.0dp" android:layout_marginRight="35.0dp" android:indeterminateDrawable="@drawable/adp_progressbar_style" android:indeterminateDuration="1" android:indeterminateBehavior="repeat" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/adp_ad_container" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5.0dp" android:layout_above="@id/adp_splash_line" />
+    <View android:id="@id/adp_splash_line" android:layout_width="match_parent" android:layout_height="5.0dp" android:layout_alignParentBottom="true" />
+</RelativeLayout>

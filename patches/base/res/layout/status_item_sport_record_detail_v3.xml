@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/root" android:layout_width="match_parent" android:layout_height="70.0dp" android:layout_marginBottom="@dimen/activity_vertical_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/menu_wrap_layout" android:layout_width="wrap_content" android:layout_height="match_parent">
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/bt_delete_sport_record" android:background="@drawable/shape_sport_ll_bg" android:layout_width="68.0dp" android:layout_height="match_parent" android:layout_margin="1.0dp" android:src="@drawable/ic_delete" android:backgroundTint="@color/red" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/ll_item_panel" android:background="@drawable/shape_sport_ll_bg" android:paddingTop="16.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="16.0dp" android:paddingEnd="16.0dp">
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/record_sports_icon" android:background="@drawable/shape_sport_record_oval_bg" android:src="@drawable/ic_workout7" android:layout_marginEnd="10.0dp" app:tint="@color/white" style="@style/sport_list_workout_icon_size" />
+        <TextView android:textColor="@color/text_color" android:id="@id/record_sports_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/record_sports_icon" android:layout_marginStart="10.0dp" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/line_color" android:id="@id/record_sports_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:layout_toRightOf="@id/record_sports_icon" android:layout_below="@id/record_sports_title" android:layout_marginStart="10.0dp" />
+        <TextView android:textColor="@color/text_color" android:id="@id/record_sports_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_marginStart="4.0dp" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/line_color" android:id="@id/record_sports_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:layout_marginRight="-7.0dp" android:layout_below="@id/record_sports_title" android:layout_alignParentRight="true" android:layout_marginStart="10.0dp" />
+        <ImageView android:id="@id/abh_sport_source_icon" android:layout_width="16.0dp" android:layout_height="16.0dp" android:src="@drawable/sport_phone_icon" android:layout_toLeftOf="@id/record_sports_value" android:layout_alignTop="@id/record_sports_value" android:layout_alignBottom="@id/record_sports_value" app:tint="@color/text_color" />
+    </RelativeLayout>
+</RelativeLayout>

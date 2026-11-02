@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/weight_measure_bg" android:layout_width="200.0dp" android:layout_height="200.0dp" />
+    <com.sma.smartv3.view.text.PFMedium android:textSize="25.0sp" android:textColor="@color/text_color" android:id="@id/tv_measure_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="30.0dp" android:text="@string/no_data" />
+</LinearLayout>

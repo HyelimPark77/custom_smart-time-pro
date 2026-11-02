@@ -1,0 +1,32 @@
+package com.sma.smartv3.dialog.handler;
+
+import androidx.health.connect.client.records.CervicalMucusRecord;
+import com.android.mltcode.paycertificationapi.aa1;
+import com.android.mltcode.paycertificationapi.tb1;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+/* JADX INFO: loaded from: classes19.dex */
+@DebugMetadata(m39465c = "com.sma.smartv3.dialog.handler.DialogHandlerChain", m39466f = "DialogHandlerChain.kt", m39467i = {0, 0}, m39468l = {84}, m39469m = CervicalMucusRecord.Appearance.CLEAR, m39470n = {"$this$withLock_u24default$iv", "$i$f$withLock"}, m39472s = {"L$0", "I$0"}, m39473v = 1)
+public final class DialogHandlerChain$clear$1 extends ContinuationImpl {
+    int I$0;
+    Object L$0;
+    int label;
+    /* synthetic */ Object result;
+    final /* synthetic */ DialogHandlerChain this$0;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public DialogHandlerChain$clear$1(DialogHandlerChain dialogHandlerChain, Continuation<? super DialogHandlerChain$clear$1> continuation) {
+        super(continuation);
+        this.this$0 = dialogHandlerChain;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    @tb1
+    public final Object invokeSuspend(@aa1 Object obj) {
+        this.result = obj;
+        this.label |= Integer.MIN_VALUE;
+        return this.this$0.m38201iO(this);
+    }
+}

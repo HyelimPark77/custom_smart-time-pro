@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/abh_title">
+        <ImageView style="@style/abh_title_left" />
+        <com.sma.smartv3.view.text.PFMedium style="@style/abh_title_center" />
+        <ImageView style="@style/abh_title_other_right" />
+        <ImageView style="@style/abh_title_right" />
+    </LinearLayout>
+    <WebView android:id="@id/webView" android:layout_width="match_parent" android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+package com.jieli.jl_rcsp.model.command.external_flash;
+
+import com.jieli.jl_rcsp.model.base.CommandWithParam;
+import com.jieli.jl_rcsp.model.parameter.ExternalFlashIOCtrlParam;
+
+/* JADX INFO: loaded from: classes17.dex */
+public class ExtFlashIOCtrlNoResponseCmd extends CommandWithParam<ExternalFlashIOCtrlParam> {
+    public ExtFlashIOCtrlNoResponseCmd(ExternalFlashIOCtrlParam r3) {
+        super(26, ExtFlashIOCtrlNoResponseCmd.class.getSimpleName(), r3);
+    }
+}

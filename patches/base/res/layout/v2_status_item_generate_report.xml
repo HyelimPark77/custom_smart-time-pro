@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="15.0dp" android:layout_marginEnd="15.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="21.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_generate_report" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:layout_marginBottom="30.0dp" android:minHeight="40.0dp" android:text="@string/generate_latest_report" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/btn_common" />
+</androidx.constraintlayout.widget.ConstraintLayout>

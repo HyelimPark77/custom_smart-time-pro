@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingTop="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="32.0dp" android:paddingEnd="32.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sma.smartv3.view.text.PFMedium android:textSize="22.0sp" android:textColor="@color/text_color" android:ellipsize="end" android:id="@id/tv_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_marginEnd="16.0dp" android:layout_toStartOf="@id/iv_rssi" />
+    <com.sma.smartv3.view.text.PFMedium android:textSize="12.0sp" android:textColor="@color/line_color" android:id="@id/tv_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tv_name" />
+    <View android:id="@id/bottom_line" android:layout_marginTop="12.0dp" android:layout_below="@id/tv_address" style="@style/h_divider_gray2" />
+    <ImageView android:id="@id/iv_rssi" android:layout_width="26.0dp" android:layout_height="26.0dp" android:src="@drawable/level_list_device_signal" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+</RelativeLayout>

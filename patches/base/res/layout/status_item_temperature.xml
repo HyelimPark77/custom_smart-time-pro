@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/status_card_style"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_marginBottom="20.0dp" style="@style/status_card_style_1">
+        <com.sma.smartv3.view.TintImageView android:id="@id/tempIv" android:src="@drawable/icon_temperature" style="@style/status_card_style_1_iv" />
+        <LinearLayout android:layout_toStartOf="@id/value_panel" android:layout_toEndOf="@id/tempIv" style="@style/status_card_style_1_ll">
+            <com.sma.smartv3.view.text.PFMedium android:id="@id/tempTitle" android:text="@string/temperature" style="@style/status_card_style_1_title" />
+            <com.sma.smartv3.view.text.DINCondBold android:id="@id/tempLastTime" android:text="2019.10.23 08:30" style="@style/status_card_style_1_time" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/value_panel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true">
+            <com.sma.smartv3.view.text.DINCondBold android:id="@id/tempLastValue" android:text="36.5" android:layout_marginEnd="6.0dp" style="@style/status_card_style_1_content" />
+            <com.sma.smartv3.view.text.PFRegular android:id="@id/tmpUnit" android:text="@string/degree_centigrade" style="@style/unit_style" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

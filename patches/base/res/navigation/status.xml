@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/status" app:startDestination="@id/main_status"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="@string/bottom_status" android:name="com.sma.smartv3.ui.status.CbActiveStatusFragment" android:id="@id/main_status" />
+</navigation>

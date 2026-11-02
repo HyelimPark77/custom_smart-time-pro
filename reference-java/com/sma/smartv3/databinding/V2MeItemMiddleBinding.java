@@ -1,0 +1,64 @@
+package com.sma.smartv3.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.sma.smartv3.pro.R;
+
+/* JADX INFO: loaded from: classes19.dex */
+public final class V2MeItemMiddleBinding implements ViewBinding {
+
+    @NonNull
+    public final LinearLayout btGoal;
+
+    @NonNull
+    public final LinearLayout btUserInfo;
+
+    @NonNull
+    private final LinearLayout rootView;
+
+    private V2MeItemMiddleBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout btGoal, @NonNull LinearLayout btUserInfo) {
+        this.rootView = rootView;
+        this.btGoal = btGoal;
+        this.btUserInfo = btUserInfo;
+    }
+
+    @NonNull
+    public static V2MeItemMiddleBinding bind(@NonNull View rootView) {
+        int i = R.id.btGoal;
+        LinearLayout linearLayout = (LinearLayout) ViewBindings.findChildViewById(rootView, R.id.btGoal);
+        if (linearLayout != null) {
+            i = R.id.btUserInfo;
+            LinearLayout linearLayout2 = (LinearLayout) ViewBindings.findChildViewById(rootView, R.id.btUserInfo);
+            if (linearLayout2 != null) {
+                return new V2MeItemMiddleBinding((LinearLayout) rootView, linearLayout, linearLayout2);
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(rootView.getResources().getResourceName(i)));
+    }
+
+    @NonNull
+    public static V2MeItemMiddleBinding inflate(@NonNull LayoutInflater inflater) {
+        return inflate(inflater, null, false);
+    }
+
+    @NonNull
+    public static V2MeItemMiddleBinding inflate(@NonNull LayoutInflater inflater, @Nullable ViewGroup parent, boolean attachToParent) {
+        View viewInflate = inflater.inflate(R.layout.v2_me_item_middle, parent, false);
+        if (attachToParent) {
+            parent.addView(viewInflate);
+        }
+        return bind(viewInflate);
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    @NonNull
+    public LinearLayout getRoot() {
+        return this.rootView;
+    }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:paddingBottom="200.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="150.0dp" android:layout_height="150.0dp" android:src="@drawable/sport_empty_icon" />
+    <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="@string/no_data" />
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/navigator_null_tip" android:layout_marginHorizontal="16.0dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+package com.jieli.jl_rcsp.interfaces.rcsp;
+
+import android.bluetooth.BluetoothDevice;
+import com.jieli.jl_rcsp.model.base.BaseError;
+import com.jieli.jl_rcsp.model.base.CommandBase;
+
+/* JADX INFO: loaded from: classes17.dex */
+public interface RcspCommandCallback<T extends CommandBase> {
+    void onCommandResponse(BluetoothDevice r1, T r2);
+
+    void onErrCode(BluetoothDevice r1, BaseError r2);
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View style="@style/h_divider_gray2_margin22" />
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="16.0sp" android:textColor="@drawable/selector_text_color_white_gray8a" android:id="@id/tv_title" android:paddingTop="13.0dp" android:paddingBottom="13.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="22.0dp" android:layout_marginEnd="24.0dp" android:layout_toStartOf="@id/fl_right_view" />
+        <FrameLayout android:id="@id/fl_right_view" android:paddingTop="16.0dp" android:paddingBottom="16.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="22.0dp" android:layout_alignParentEnd="true">
+            <androidx.appcompat.widget.AppCompatCheckBox android:id="@id/check_enabled" android:clickable="false" android:checked="true" style="@style/abh_checkbox" />
+            <ImageView android:layout_gravity="end|center" android:id="@id/iv_enter" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_right_enter_normal" />
+        </FrameLayout>
+        <com.sma.smartv3.view.text.PFMedium android:textSize="12.0sp" android:textColor="@color/line_color" android:id="@id/tv_description" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp" android:layout_below="@id/fl_right_view" android:layout_marginStart="22.0dp" android:layout_toStartOf="@id/fl_right_view" />
+    </RelativeLayout>
+    <View style="@style/h_divider_gray2_margin22" />
+</LinearLayout>

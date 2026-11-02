@@ -1,0 +1,28 @@
+package com.sma.smartv3.network;
+
+import com.android.mltcode.paycertificationapi.aa1;
+
+/* JADX INFO: loaded from: classes19.dex */
+public final class Feedback {
+
+    @aa1
+    public static final String CONTACT_WAY = "contactWay";
+
+    @aa1
+    public static final String CONTENT = "content";
+
+    @aa1
+    public static final String EXTRA_INFO = "extraInfo";
+
+    @aa1
+    public static final Feedback INSTANCE = new Feedback();
+
+    @aa1
+    public static final String PROJECT_ID = "projectId";
+
+    @aa1
+    public static final String URL = "/feedback/add";
+
+    private Feedback() {
+    }
+}

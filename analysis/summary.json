@@ -1,0 +1,50 @@
+{
+  "smali_files": 114310,
+  "resources": 11119,
+  "assets": 5046,
+  "manifest_components": 3431,
+  "java": {
+    "readable": {
+      "java_files": 66310,
+      "app_java_files": 5559,
+      "files_with_markers": 6737
+    },
+    "linear_reference": {
+      "java_files": 6710,
+      "app_java_files": 5559,
+      "files_with_markers": 378
+    }
+  },
+  "build": {
+    "base": {
+      "zip_crc_ok": true,
+      "sha256": "9609428578bfa4aa2ca3d771dde8379f2d2d320cede184da6edf39c104753436",
+      "bytes": 207249890,
+      "dex_files": 21,
+      "class_definitions": 114310,
+      "same_classes_per_dex": true,
+      "same_native_libraries": true,
+      "native_libraries": 0
+    },
+    "arm64": {
+      "zip_crc_ok": true,
+      "sha256": "897b01604d45799938fa7a40b5c0d68c8125ca3a9639a9baeb0c785c3a5e6427",
+      "bytes": 24775442,
+      "dex_files": 0,
+      "class_definitions": 0,
+      "same_classes_per_dex": true,
+      "same_native_libraries": true,
+      "native_libraries": 50
+    },
+    "xxhdpi": {
+      "zip_crc_ok": true,
+      "sha256": "507e988a3ec16e0e14a909ca98b6e64f008aa878132f88ec281f9fec9fd06f14",
+      "bytes": 356335,
+      "dex_files": 0,
+      "class_definitions": 0,
+      "same_classes_per_dex": true,
+      "same_native_libraries": true,
+      "native_libraries": 0
+    }
+  }
+}

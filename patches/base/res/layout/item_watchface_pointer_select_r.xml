@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rv" android:background="@drawable/shape_dial_control_bg_r" android:layout_width="90.0dp" android:layout_height="90.0dp" android:layout_margin="5.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/pointerIv" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10.0dp" android:src="@drawable/dial_customize_point_2_0" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/selectStatus" android:layout_width="22.0dp" android:layout_height="22.0dp" android:src="@drawable/ic_watchface_element_right" android:layout_alignParentEnd="true" />
+</RelativeLayout>

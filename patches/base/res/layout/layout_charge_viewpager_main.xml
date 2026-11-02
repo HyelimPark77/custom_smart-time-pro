@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="center" android:id="@id/item_charge_bind" android:layout_width="180.0dp" android:layout_height="165.0dp" android:layout_margin="25.0dp">
+        <com.sma.smartv3.view.ImageViewRound android:layout_gravity="center|bottom" android:id="@id/iv_screensaver" android:visibility="invisible" android:layout_width="110.0dp" android:layout_height="59.0dp" android:layout_marginBottom="31.0dp" app:isCustomize="true" app:radius="10.0dp" app:type="rectangle" />
+    </FrameLayout>
+</FrameLayout>

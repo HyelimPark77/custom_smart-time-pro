@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textSize="13.0sp" android:gravity="left" android:id="@id/inter_form_edit_content" android:paddingTop="16.5dp" android:paddingBottom="16.5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dp" android:hint="@string/bigo_ad_form_question_hint" android:inputType="text" android:paddingStart="12.0dp" android:paddingEnd="12.0dp" />
+    <TextView android:textSize="13.0sp" android:textColor="#262e33" android:id="@id/inter_form_edit_title" android:background="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-8.0dp" android:layout_alignTop="@id/inter_form_edit_content" android:paddingStart="4.0dp" android:paddingEnd="4.0dp" android:layout_marginStart="8.0dp" />
+    <TextView android:textSize="12.0sp" android:textColor="#ff4d6a" android:id="@id/inter_form_edit_warning" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:layout_below="@id/inter_form_edit_content" android:layout_marginStart="12.0dp" />
+</RelativeLayout>

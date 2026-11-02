@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:id="@id/layout_surface_view" android:background="@android:color/black" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/layout">
+        <com.sma.smartv3.ui.trim.view.ZVideoView android:id="@id/video_loader" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true" />
+        <com.github.gzuliyujiang.imagepicker.CropImageView android:id="@id/crop_image_content" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/layout" android:background="@android:color/black" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="12.0dp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/video_shoot_tip" android:layout_width="match_parent" android:layout_height="30.0dp" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+        <FrameLayout android:id="@id/video_frames_layout" android:layout_width="match_parent" android:layout_height="60.0dp" android:layout_below="@id/video_shoot_tip">
+            <androidx.recyclerview.widget.RecyclerView android:layout_gravity="bottom" android:id="@id/video_frames_recyclerView" android:layout_width="match_parent" android:layout_height="50.0dp" />
+            <ImageView android:layout_gravity="bottom" android:id="@id/positionIcon" android:layout_width="wrap_content" android:layout_height="50.0dp" android:layout_marginLeft="35.0dp" android:src="@drawable/icon_seek_bar" android:contentDescription="@null" />
+            <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:layout_gravity="bottom" android:background="@color/shadow_color" android:layout_width="35.0dp" android:layout_height="50.0dp" />
+                <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/seekBarLayout" android:layout_width="0.0dp" android:layout_height="60.0dp" android:layout_weight="1.0" />
+                <View android:layout_gravity="bottom" android:background="@color/shadow_color" android:layout_width="35.0dp" android:layout_height="match_parent" />
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:orientation="horizontal" android:visibility="visible" android:layout_width="match_parent" android:layout_height="50.0dp" android:layout_marginLeft="10.0dp" android:layout_marginRight="10.0dp" android:layout_below="@id/video_frames_layout">
+            <TextView android:textSize="16.0dp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="left" android:id="@id/cancelBtn" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/back" />
+            <ImageView android:layout_gravity="center" android:id="@id/icon_video_play" android:padding="12.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/ic_video_play_black" />
+            <TextView android:textSize="16.0dp" android:textColor="@android:color/holo_green_dark" android:gravity="center" android:layout_gravity="right" android:id="@id/finishBtn" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/finish" />
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

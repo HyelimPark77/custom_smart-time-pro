@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/tv_connect_info" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="13.0dp" android:id="@id/tv_info" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+        <Button android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="添加设备" android:layout_weight="1.0" android:onClick="onAdd" />
+        <Space android:layout_width="10.0dp" android:layout_height="wrap_content" />
+        <Button android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="解绑设备" android:layout_weight="1.0" android:onClick="onUnbind" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+        <Button android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="IC信息" android:layout_weight="1.0" android:onClick="onICInfo" />
+        <Space android:layout_width="10.0dp" android:layout_height="wrap_content" />
+        <Button android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="关机" android:layout_weight="1.0" android:onClick="onShutdown" />
+        <Space android:layout_width="10.0dp" android:layout_height="wrap_content" />
+        <Button android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="复位" android:layout_weight="1.0" android:onClick="onReset" />
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatSpinner android:id="@id/sp_test_mode" android:background="#e4e3e3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp" android:spinnerMode="dropdown" />
+    <EditText android:id="@id/et_ssid" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp" android:text="" android:hint="SSID" />
+    <EditText android:id="@id/et_password" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp" android:text="" android:hint="密码" />
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp" android:text="设置" android:onClick="onSet" />
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp" android:text="批量设置" android:onClick="onBatchSet" />
+</LinearLayout>

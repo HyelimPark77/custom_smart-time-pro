@@ -1,0 +1,26 @@
+package com.sma.smartv3.network;
+
+import com.android.mltcode.paycertificationapi.aa1;
+
+/* JADX INFO: loaded from: classes19.dex */
+public final class GetChoicenessSearchList {
+
+    @aa1
+    public static final GetChoicenessSearchList INSTANCE = null;
+
+    @aa1
+    public static final String LANGUAGE = "language";
+
+    @aa1
+    public static final String RECOMMEND_TYPE = "recommendType";
+
+    @aa1
+    public static final String URL = "/course/appChoicenessSearch";
+
+    static {
+        INSTANCE = new GetChoicenessSearchList();
+    }
+
+    private GetChoicenessSearchList() {
+    }
+}

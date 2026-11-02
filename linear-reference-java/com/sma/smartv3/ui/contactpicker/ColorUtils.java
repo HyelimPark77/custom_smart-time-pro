@@ -1,0 +1,21 @@
+package com.sma.smartv3.ui.contactpicker;
+
+import android.graphics.Color;
+import com.android.mltcode.paycertificationapi.qu0;
+import java.util.Random;
+
+/* JADX INFO: loaded from: classes19.dex */
+public class ColorUtils {
+    private static String[] mColors;
+
+    static {
+        mColors = new String[]{"039BE5", "0F9D58", "4285F4", "FF5722", "DB4437", "689F38", "009688", "DB4437", "3F51B5", "9C27B0", "4E342E", "F50057", "42A5F5", "009688", "9E9D24", "00C853", "BF360C", "37474F"};
+    }
+
+    public ColorUtils() {
+    }
+
+    public static int getRandomMaterialColor() {
+        return Color.parseColor(qu0.XO0O10 + mColors[new Random().nextInt(18)]);
+    }
+}

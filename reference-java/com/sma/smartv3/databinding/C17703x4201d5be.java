@@ -1,0 +1,57 @@
+package com.sma.smartv3.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.sma.smartv3.pro.R;
+
+/* JADX INFO: renamed from: com.sma.smartv3.databinding.EqcielhlxpycgajComYx4aaljfdkeDjjpuayzbvYhnsezneazSjuuab1ActivityWoktso14Binding */
+/* JADX INFO: loaded from: classes19.dex */
+public final class C17703x4201d5be implements ViewBinding {
+
+    @NonNull
+    private final LinearLayout rootView;
+
+    @NonNull
+    public final TextView tvTextUmywwc;
+
+    private C17703x4201d5be(@NonNull LinearLayout rootView, @NonNull TextView tvTextUmywwc) {
+        this.rootView = rootView;
+        this.tvTextUmywwc = tvTextUmywwc;
+    }
+
+    @NonNull
+    public static C17703x4201d5be bind(@NonNull View rootView) {
+        TextView textView = (TextView) ViewBindings.findChildViewById(rootView, R.id.tv_text_umywwc);
+        if (textView != null) {
+            return new C17703x4201d5be((LinearLayout) rootView, textView);
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(rootView.getResources().getResourceName(R.id.tv_text_umywwc)));
+    }
+
+    @NonNull
+    public static C17703x4201d5be inflate(@NonNull LayoutInflater inflater) {
+        return inflate(inflater, null, false);
+    }
+
+    @NonNull
+    public static C17703x4201d5be inflate(@NonNull LayoutInflater inflater, @Nullable ViewGroup parent, boolean attachToParent) {
+        View viewInflate = inflater.inflate(R.layout.f53610x47ce81d6, parent, false);
+        if (attachToParent) {
+            parent.addView(viewInflate);
+        }
+        return bind(viewInflate);
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    @NonNull
+    public LinearLayout getRoot() {
+        return this.rootView;
+    }
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root_view" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/nowTimeDetails_layout" android:layout_height="wrap_content" style="@style/status_item_info_rl_top">
+        <RelativeLayout android:id="@id/loading" android:visibility="gone" android:layout_height="1.0px" style="@style/status_item_info_rl_top" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/dataContent" android:visibility="gone" android:layout_height="1.0px" style="@style/status_item_info_rl_top" />
+        <com.sma.smartv3.view.text.DINCondBold android:id="@id/nowValue" style="@style/status_item_info_ib_one" />
+        <com.sma.smartv3.view.text.DINCondBold android:id="@id/nowTimeDetails" style="@style/status_item_info_ib_one" />
+        <com.sma.smartv3.view.text.PFMedium android:id="@id/valueUnit" android:background="@null" style="@style/status_item_info_now_time" />
+        <ImageView android:id="@id/image" android:background="@null" style="@style/status_item_info_now_time" />
+        <com.sma.smartv3.view.text.PFMedium android:id="@id/nowTime" android:background="@null" android:layout_width="wrap_content" android:text="@string/today" android:drawablePadding="5.0dp" android:drawableEnd="@drawable/sport_records_down_icon" style="@style/status_item_info_now_time" />
+        <ImageButton android:id="@id/beforeTime" android:src="@drawable/selector_left_enter" style="@style/status_item_info_ib_one_v2" />
+        <ImageButton android:id="@id/nextTime" android:src="@drawable/selector_right_enter" android:layout_marginEnd="@dimen/activity_horizontal_margin" style="@style/status_item_info_ib_two_v2" />
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView android:id="@id/scrollView" android:visibility="gone" android:layout_height="wrap_content" style="@style/status_item_info_nsv" />
+    <LinearLayout android:orientation="vertical" android:id="@id/sport_record_total_layout" android:background="@drawable/shape_data_date_tv_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/activity_horizontal_margin">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="20.0sp" android:textColor="@color/text_color" android:gravity="center" android:id="@id/sport_record_total_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="23.0dp" android:layout_marginTop="10.0dp" android:text="@string/sports_overview" android:layout_centerHorizontal="true" />
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="5.0">
+                <com.sma.smartv3.view.text.PFMedium android:textSize="30.0dp" android:textColor="@color/text_color" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/sport_record_total_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+                <com.sma.smartv3.view.text.PFMedium android:textSize="13.0sp" android:textColor="@color/line_color" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/sport_record_total_duration_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+            </LinearLayout>
+            <View android:background="@color/line_color" android:layout_width="1.0px" android:layout_height="match_parent" android:layout_marginTop="40.0dp" android:layout_marginBottom="40.0dp" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="4.0">
+                <com.sma.smartv3.view.text.PFMedium android:textSize="30.0dp" android:textColor="@color/text_color" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/sport_record_total_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+                <com.sma.smartv3.view.text.PFMedium android:textSize="13.0sp" android:textColor="@color/line_color" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/sport_record_total_size_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+            </LinearLayout>
+            <View android:background="@color/line_color" android:layout_width="1.0px" android:layout_height="match_parent" android:layout_marginTop="40.0dp" android:layout_marginBottom="40.0dp" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="5.0">
+                <com.sma.smartv3.view.text.PFMedium android:textSize="30.0dp" android:textColor="@color/text_color" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/sport_record_total_calorie" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+                <com.sma.smartv3.view.text.PFMedium android:textSize="13.0sp" android:textColor="@color/line_color" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/sport_record_total_calorie_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="10.0dp" android:layout_marginHorizontal="@dimen/activity_horizontal_margin" />
+</LinearLayout>

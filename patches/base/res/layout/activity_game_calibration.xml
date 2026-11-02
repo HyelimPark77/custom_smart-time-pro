@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/status_info_ll"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/layout_title_iv_tv_iv" />
+    <LinearLayout android:id="@id/video_layout_vertical" style="@style/status_info_ll">
+        <RelativeLayout android:id="@id/video_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="22.0dp">
+            <androidx.media3.ui.PlayerView android:id="@id/player_view" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintDimensionRatio="H,16:9" app:resize_mode="fit" />
+            <com.sma.smartv3.view.text.PFMedium android:textColor="@color/white" android:gravity="center" android:id="@id/video_to_replay" android:background="#a9000000" android:padding="4.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/game_calibration_replay" android:drawableLeft="@drawable/game_calibration_play" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <com.sma.smartv3.view.text.PFMedium android:textSize="18.0dp" android:textColor="@color/text_color" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="@string/game_calibration_tip_title" />
+        <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:id="@id/game_calibration_detail_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="22.0dp" android:text="@string/game_calibration_tip_detail" />
+        <ImageView android:layout_gravity="center" android:id="@id/game_calibration_image" android:layout_width="55.0dp" android:layout_height="55.0dp" android:layout_marginTop="20.0dp" android:layout_marginBottom="4.0dp" android:src="@drawable/game_calibration_indicate_fail" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="40.0dp" android:textColor="@color/text_color" android:gravity="center" android:layout_gravity="center" android:id="@id/game_calibration_value" android:background="@drawable/game_calibration_y_bg" android:layout_width="130.0dp" android:layout_height="130.0dp" android:text="0" />
+        <View android:layout_width="wrap_content" android:layout_height="0.0dp" android:layout_weight="1.0" />
+        <Button android:id="@id/game_alone_pay_btn" android:layout_width="match_parent" android:layout_marginBottom="40.0dp" android:text="@string/game_calibration_btn" android:layout_marginStart="22.0dp" android:layout_marginEnd="22.0dp" style="@style/bottom_btn" />
+    </LinearLayout>
+</LinearLayout>

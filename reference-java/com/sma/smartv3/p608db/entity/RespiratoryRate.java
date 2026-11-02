@@ -1,0 +1,155 @@
+package com.sma.smartv3.p608db.entity;
+
+import androidx.room.Entity;
+import androidx.room.Index;
+import androidx.room.PrimaryKey;
+import com.android.mltcode.paycertificationapi.I000IiI1O;
+import com.android.mltcode.paycertificationapi.aa1;
+import com.android.mltcode.paycertificationapi.tb1;
+import com.szabh.smable3.component.BleConstsKt;
+import com.szabh.smable3.entity.BleRespiratoryRate;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes19.dex */
+@Entity(indices = {@Index(unique = true, value = {"mTime"})})
+public final class RespiratoryRate {
+
+    @PrimaryKey(autoGenerate = true)
+    private final int mId;
+    private int mIsSync;
+
+    @aa1
+    private String mLocalTime;
+    private long mTime;
+    private int mValue;
+
+    public RespiratoryRate() {
+        this(0, 0L, null, 0, 0, 31, null);
+    }
+
+    public static /* synthetic */ RespiratoryRate copy$default(RespiratoryRate respiratoryRate, int i, long j, String str, int i2, int i3, int i4, Object obj) {
+        if ((i4 & 1) != 0) {
+            i = respiratoryRate.mId;
+        }
+        if ((i4 & 2) != 0) {
+            j = respiratoryRate.mTime;
+        }
+        if ((i4 & 4) != 0) {
+            str = respiratoryRate.mLocalTime;
+        }
+        if ((i4 & 8) != 0) {
+            i2 = respiratoryRate.mValue;
+        }
+        if ((i4 & 16) != 0) {
+            i3 = respiratoryRate.mIsSync;
+        }
+        int i5 = i3;
+        String str2 = str;
+        return respiratoryRate.copy(i, j, str2, i2, i5);
+    }
+
+    public final int component1() {
+        return this.mId;
+    }
+
+    public final long component2() {
+        return this.mTime;
+    }
+
+    @aa1
+    public final String component3() {
+        return this.mLocalTime;
+    }
+
+    public final int component4() {
+        return this.mValue;
+    }
+
+    public final int component5() {
+        return this.mIsSync;
+    }
+
+    @aa1
+    public final RespiratoryRate copy(int i, long j, @aa1 String mLocalTime, int i2, int i3) {
+        Intrinsics.X0O(mLocalTime, "mLocalTime");
+        return new RespiratoryRate(i, j, mLocalTime, i2, i3);
+    }
+
+    public boolean equals(@tb1 Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof RespiratoryRate)) {
+            return false;
+        }
+        RespiratoryRate respiratoryRate = (RespiratoryRate) obj;
+        return this.mId == respiratoryRate.mId && this.mTime == respiratoryRate.mTime && Intrinsics.XOO0ii0(this.mLocalTime, respiratoryRate.mLocalTime) && this.mValue == respiratoryRate.mValue && this.mIsSync == respiratoryRate.mIsSync;
+    }
+
+    public final int getMId() {
+        return this.mId;
+    }
+
+    public final int getMIsSync() {
+        return this.mIsSync;
+    }
+
+    @aa1
+    public final String getMLocalTime() {
+        return this.mLocalTime;
+    }
+
+    public final long getMTime() {
+        return this.mTime;
+    }
+
+    public final int getMValue() {
+        return this.mValue;
+    }
+
+    public int hashCode() {
+        return (((((((Integer.hashCode(this.mId) * 31) + Long.hashCode(this.mTime)) * 31) + this.mLocalTime.hashCode()) * 31) + Integer.hashCode(this.mValue)) * 31) + Integer.hashCode(this.mIsSync);
+    }
+
+    public final void setMIsSync(int i) {
+        this.mIsSync = i;
+    }
+
+    public final void setMLocalTime(@aa1 String str) {
+        Intrinsics.X0O(str, "<set-?>");
+        this.mLocalTime = str;
+    }
+
+    public final void setMTime(long j) {
+        this.mTime = j;
+    }
+
+    public final void setMValue(int i) {
+        this.mValue = i;
+    }
+
+    @aa1
+    public String toString() {
+        return "RespiratoryRate(mId=" + this.mId + ", mTime=" + this.mTime + ", mLocalTime=" + this.mLocalTime + ", mValue=" + this.mValue + ", mIsSync=" + this.mIsSync + I000IiI1O.C2156iO.f1007iO;
+    }
+
+    public RespiratoryRate(int i, long j, @aa1 String mLocalTime, int i2, int i3) {
+        Intrinsics.X0O(mLocalTime, "mLocalTime");
+        this.mId = i;
+        this.mTime = j;
+        this.mLocalTime = mLocalTime;
+        this.mValue = i2;
+        this.mIsSync = i3;
+    }
+
+    public /* synthetic */ RespiratoryRate(int i, long j, String str, int i2, int i3, int i4, DefaultConstructorMarker defaultConstructorMarker) {
+        this((i4 & 1) != 0 ? 0 : i, (i4 & 2) != 0 ? 0L : j, (i4 & 4) != 0 ? "" : str, (i4 & 8) != 0 ? 0 : i2, (i4 & 16) != 0 ? 0 : i3);
+    }
+
+    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    public RespiratoryRate(@aa1 BleRespiratoryRate respiratoryRate, long j) {
+        this(0, (((long) (respiratoryRate.getMTime() + BleConstsKt.DATA_EPOCH)) * 1000) - j, null, respiratoryRate.getMValue(), 0, 21, null);
+        Intrinsics.X0O(respiratoryRate, "respiratoryRate");
+    }
+}

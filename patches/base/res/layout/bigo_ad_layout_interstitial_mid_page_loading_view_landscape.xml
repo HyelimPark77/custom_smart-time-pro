@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="48.0dp" android:layout_marginTop="8.0dp" android:layout_marginRight="48.0dp" android:layout_marginBottom="48.0dp">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <sg.bigo.ads.common.view.RoundedFrameLayout android:layout_width="160.0dp" android:layout_height="32.0dp" app:bigo_ad_radius="2.0dp">
+                    <View android:background="#f0f3f4" android:layout_width="match_parent" android:layout_height="match_parent" />
+                </sg.bigo.ads.common.view.RoundedFrameLayout>
+                <sg.bigo.ads.common.view.RoundedFrameLayout android:layout_width="72.0dp" android:layout_height="16.0dp" android:layout_marginTop="13.5dp" app:bigo_ad_radius="2.0dp">
+                    <View android:background="#f0f3f4" android:layout_width="match_parent" android:layout_height="match_parent" />
+                </sg.bigo.ads.common.view.RoundedFrameLayout>
+                <sg.bigo.ads.common.view.RoundedFrameLayout android:layout_width="200.0dp" android:layout_height="12.0dp" android:layout_marginTop="6.0dp" app:bigo_ad_radius="2.0dp">
+                    <View android:background="#f0f3f4" android:layout_width="match_parent" android:layout_height="match_parent" />
+                </sg.bigo.ads.common.view.RoundedFrameLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <sg.bigo.ads.common.view.RoundedFrameLayout android:layout_width="40.0dp" android:layout_height="16.0dp" app:bigo_ad_radius="2.0dp">
+                            <View android:background="#f0f3f4" android:layout_width="match_parent" android:layout_height="match_parent" />
+                        </sg.bigo.ads.common.view.RoundedFrameLayout>
+                        <sg.bigo.ads.common.view.RoundedFrameLayout android:layout_width="80.0dp" android:layout_height="12.0dp" android:layout_marginTop="8.0dp" app:bigo_ad_radius="2.0dp">
+                            <View android:background="#f0f3f4" android:layout_width="match_parent" android:layout_height="match_parent" />
+                        </sg.bigo.ads.common.view.RoundedFrameLayout>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="32.0dp">
+                        <sg.bigo.ads.common.view.RoundedFrameLayout android:layout_width="40.0dp" android:layout_height="16.0dp" app:bigo_ad_radius="2.0dp">
+                            <View android:background="#f0f3f4" android:layout_width="match_parent" android:layout_height="match_parent" />
+                        </sg.bigo.ads.common.view.RoundedFrameLayout>
+                        <sg.bigo.ads.common.view.RoundedFrameLayout android:layout_width="80.0dp" android:layout_height="12.0dp" android:layout_marginTop="8.0dp" app:bigo_ad_radius="2.0dp">
+                            <View android:background="#f0f3f4" android:layout_width="match_parent" android:layout_height="match_parent" />
+                        </sg.bigo.ads.common.view.RoundedFrameLayout>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="32.0dp">
+                        <sg.bigo.ads.common.view.RoundedFrameLayout android:layout_width="40.0dp" android:layout_height="16.0dp" app:bigo_ad_radius="2.0dp">
+                            <View android:background="#f0f3f4" android:layout_width="match_parent" android:layout_height="match_parent" />
+                        </sg.bigo.ads.common.view.RoundedFrameLayout>
+                        <sg.bigo.ads.common.view.RoundedFrameLayout android:layout_width="80.0dp" android:layout_height="12.0dp" android:layout_marginTop="8.0dp" app:bigo_ad_radius="2.0dp">
+                            <View android:background="#f0f3f4" android:layout_width="match_parent" android:layout_height="match_parent" />
+                        </sg.bigo.ads.common.view.RoundedFrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <sg.bigo.ads.common.view.RoundedFrameLayout android:layout_width="304.0dp" android:layout_height="40.0dp" android:layout_marginTop="28.0dp" app:bigo_ad_radius="8.0dp">
+                    <View android:background="#f0f3f4" android:layout_width="match_parent" android:layout_height="match_parent" />
+                </sg.bigo.ads.common.view.RoundedFrameLayout>
+            </LinearLayout>
+            <sg.bigo.ads.common.view.RoundedFrameLayout android:layout_gravity="end" android:layout_width="120.0dp" android:layout_height="120.0dp" app:bigo_ad_radius="24.0dp">
+                <View android:background="#f0f3f4" android:layout_width="match_parent" android:layout_height="match_parent" />
+            </sg.bigo.ads.common.view.RoundedFrameLayout>
+        </FrameLayout>
+        <sg.bigo.ads.common.view.RoundedFrameLayout android:layout_width="match_parent" android:layout_height="200.0dp" android:layout_marginTop="28.0dp" app:bigo_ad_radius="4.0dp">
+            <View android:background="#f0f3f4" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </sg.bigo.ads.common.view.RoundedFrameLayout>
+    </LinearLayout>
+</ScrollView>

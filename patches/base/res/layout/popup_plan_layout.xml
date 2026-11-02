@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-5.0dp" android:src="@drawable/popup_view_btn_bg_vector" android:layout_marginEnd="15.0dp" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/popup_view_btn_bg" android:paddingLeft="15.0dp" android:paddingRight="15.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="10.0dp">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="14.0sp" android:textColor="@color/black" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/popup_make_plans_again" android:layout_width="wrap_content" android:layout_height="40.0dp" android:text="@string/abh_coach_make_plans_again" android:maxLines="1" />
+        <View android:layout_gravity="center_horizontal" android:id="@id/popup_switch_ai_model_view" android:background="@color/gray_E5E5E5" android:layout_width="120.0dp" android:layout_height="1.0px" android:layout_marginTop="5.0dp" android:layout_marginBottom="5.0dp" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="14.0sp" android:textColor="@color/black" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/popup_terminate_plan" android:layout_width="wrap_content" android:layout_height="40.0dp" android:text="@string/terminate_plan" android:maxLines="1" />
+    </LinearLayout>
+</LinearLayout>

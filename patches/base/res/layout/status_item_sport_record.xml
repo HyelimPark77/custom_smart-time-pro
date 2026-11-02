@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@null" android:paddingStart="0.0dp" android:paddingEnd="0.0dp" style="@style/status_card_style"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/sportItemDetail" android:background="@drawable/common_ripple_status_sport_record_top_item" android:padding="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/layout_sport_record_item" />
+    </LinearLayout>
+    <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8000001dp" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/sportRecordList" android:background="@drawable/common_ripple_status_sport_record_bottom_item" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="14.0sp" android:textColor="@color/text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/see_more_sports" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/abh_root_view" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_func_ll" android:background="@color/title_bar" android:layout_width="match_parent" android:layout_height="50.0dp">
+        <ImageView style="@style/abh_title_left" />
+        <LinearLayout android:id="@id/abh_search_map_et" android:background="@drawable/ripple_ai_tab_seach_bg" android:padding="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="25.0dp">
+            <TextView android:textSize="16.0sp" android:textColor="@color/text_color" android:textColorHint="@color/text_color" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/search_view" android:background="@null" android:paddingLeft="5.0dp" android:paddingRight="5.0dp" android:layout_width="0.0dp" android:layout_height="match_parent" android:hint="@string/search_map_et_hint" android:layout_weight="1.0" />
+            <ImageView android:padding="3.0dp" android:layout_width="30.0dp" android:layout_height="30.0dp" android:layout_marginLeft="10.0dp" android:src="@drawable/search_icon" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.baidu.mapapi.map.TextureMapView android:id="@id/bMapView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <com.sma.smartv3.view.CustomGoogleMapView android:id="@id/gMapView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <com.sma.smartv3.view.MaskView android:id="@id/abh_maskView" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dp" android:layout_centerInParent="true">
+            <TextView android:textColor="@color/white" android:id="@id/download_maps_tip_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="100.0dp" android:text="@string/maps_off_tip1" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="@string/maps_off_tip2" android:layout_marginStart="20.0dp" android:layout_marginEnd="20.0dp" />
+        </LinearLayout>
+        <com.sma.smartv3.view.ProgressButton android:background="@null" android:layout_width="match_parent" android:layout_height="40.0dp" android:text="@string/off_line_map_download" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" app:backgroundColor="@color/colorAccent" app:foregroundColor="@color/colorAccent_secondary" app:progressTextColor="@color/white" app:textColor="@color/white" style="@style/bottom_btn" />
+    </RelativeLayout>
+</LinearLayout>

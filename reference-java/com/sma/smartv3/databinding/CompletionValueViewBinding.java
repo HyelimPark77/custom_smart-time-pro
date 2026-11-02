@@ -1,0 +1,81 @@
+package com.sma.smartv3.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.sma.smartv3.pro.R;
+import com.sma.smartv3.view.text.FontTextView;
+
+/* JADX INFO: loaded from: classes19.dex */
+public final class CompletionValueViewBinding implements ViewBinding {
+
+    @NonNull
+    private final LinearLayout rootView;
+
+    @NonNull
+    public final FontTextView tv1;
+
+    @NonNull
+    public final FontTextView tv2;
+
+    @NonNull
+    public final FontTextView tv3;
+
+    @NonNull
+    public final FontTextView tv4;
+
+    private CompletionValueViewBinding(@NonNull LinearLayout rootView, @NonNull FontTextView tv1, @NonNull FontTextView tv2, @NonNull FontTextView tv3, @NonNull FontTextView tv4) {
+        this.rootView = rootView;
+        this.tv1 = tv1;
+        this.tv2 = tv2;
+        this.tv3 = tv3;
+        this.tv4 = tv4;
+    }
+
+    @NonNull
+    public static CompletionValueViewBinding bind(@NonNull View rootView) {
+        int i = R.id.tv1;
+        FontTextView fontTextView = (FontTextView) ViewBindings.findChildViewById(rootView, R.id.tv1);
+        if (fontTextView != null) {
+            i = R.id.tv2;
+            FontTextView fontTextView2 = (FontTextView) ViewBindings.findChildViewById(rootView, R.id.tv2);
+            if (fontTextView2 != null) {
+                i = R.id.tv3;
+                FontTextView fontTextView3 = (FontTextView) ViewBindings.findChildViewById(rootView, R.id.tv3);
+                if (fontTextView3 != null) {
+                    i = R.id.tv4;
+                    FontTextView fontTextView4 = (FontTextView) ViewBindings.findChildViewById(rootView, R.id.tv4);
+                    if (fontTextView4 != null) {
+                        return new CompletionValueViewBinding((LinearLayout) rootView, fontTextView, fontTextView2, fontTextView3, fontTextView4);
+                    }
+                }
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(rootView.getResources().getResourceName(i)));
+    }
+
+    @NonNull
+    public static CompletionValueViewBinding inflate(@NonNull LayoutInflater inflater) {
+        return inflate(inflater, null, false);
+    }
+
+    @NonNull
+    public static CompletionValueViewBinding inflate(@NonNull LayoutInflater inflater, @Nullable ViewGroup parent, boolean attachToParent) {
+        View viewInflate = inflater.inflate(R.layout.completion_value_view, parent, false);
+        if (attachToParent) {
+            parent.addView(viewInflate);
+        }
+        return bind(viewInflate);
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    @NonNull
+    public LinearLayout getRoot() {
+        return this.rootView;
+    }
+}

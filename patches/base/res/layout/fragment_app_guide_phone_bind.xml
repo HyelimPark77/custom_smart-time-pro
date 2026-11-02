@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/root_view" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/llContent" android:paddingTop="60.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="40.0dp" android:paddingEnd="40.0dp">
+            <ImageView android:id="@id/iv" android:layout_width="150.0dp" android:layout_height="180.0dp" android:src="@drawable/pic_guide_phone_bind" />
+            <com.sma.smartv3.view.text.PFMedium android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dp" android:text="@string/bind_phone_num" style="@style/guide_title_style" />
+            <RelativeLayout android:layout_marginTop="20.0dp" style="@style/edittext_rl">
+                <View style="@style/edittext_bottom_line" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <com.google.android.material.textfield.TextInputLayout android:hint="@string/input_phone_num_tip" style="@style/reset_password_ll_one_style">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@id/phone" android:background="@null" android:maxLines="1" android:inputType="number" android:imeOptions="actionDone" android:layout_marginStart="5.0dp" style="@style/reset_password_ll_one_et_style" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout style="@style/edittext_rl">
+                <View style="@style/edittext_bottom_line" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <com.google.android.material.textfield.TextInputLayout android:layout_width="wrap_content" android:hint="@string/enter_confirmation_code" android:layout_weight="1.0" style="@style/reset_password_ll_one_style">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@id/verification_code" android:background="@null" android:maxLines="1" android:inputType="number" android:imeOptions="actionDone" android:layout_marginStart="5.0dp" style="@style/reset_password_ll_one_et_style" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView android:textColor="@color/colorAccent" android:id="@id/tvGetVerificationCode" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/get_verification_code" />
+                </LinearLayout>
+            </RelativeLayout>
+            <View android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <Button android:enabled="false" android:id="@id/btnDone" android:layout_marginTop="22.0dp" android:text="@string/done" style="@style/btn_common" />
+        </LinearLayout>
+        <View android:id="@id/view_keyboard_height" android:layout_width="match_parent" android:layout_height="0.0dp" />
+    </LinearLayout>
+</ScrollView>

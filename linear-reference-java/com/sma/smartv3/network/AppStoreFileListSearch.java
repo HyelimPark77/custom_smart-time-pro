@@ -1,0 +1,29 @@
+package com.sma.smartv3.network;
+
+import com.android.mltcode.paycertificationapi.aa1;
+
+/* JADX INFO: loaded from: classes19.dex */
+public final class AppStoreFileListSearch {
+
+    @aa1
+    public static final String APP_MODULE_ID = "appModuleId";
+
+    @aa1
+    public static final String BLE_NAME = "bleName";
+
+    @aa1
+    public static final String FLAG = "flag";
+
+    @aa1
+    public static final AppStoreFileListSearch INSTANCE = null;
+
+    @aa1
+    public static final String URL = "/appx/appSearch";
+
+    static {
+        INSTANCE = new AppStoreFileListSearch();
+    }
+
+    private AppStoreFileListSearch() {
+    }
+}

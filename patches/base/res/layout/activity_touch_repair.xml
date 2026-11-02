@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/layout_title_iv_tv_iv" />
+    <androidx.cardview.widget.CardView android:id="@id/cv_player_view" android:padding="22.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="11.0dp" android:layout_marginEnd="11.0dp" app:cardCornerRadius="@dimen/pop_bottom_bg_radius" app:cardElevation="0.0dp">
+        <androidx.media3.ui.PlayerView android:id="@id/player_view" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_constraintDimensionRatio="H,16:9" app:resize_mode="fit" />
+        <com.sma.smartv3.view.text.PFMedium android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/video_to_replay" android:background="#a9000000" android:padding="4.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/game_calibration_replay" android:drawableLeft="@drawable/game_calibration_play" />
+    </androidx.cardview.widget.CardView>
+    <com.sma.smartv3.view.text.PFMedium android:textColor="@color/text_color" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="20.0dp" android:text="@string/touch_repair__repair_tip" android:layout_weight="1.0" android:layout_marginStart="11.0dp" android:layout_marginEnd="11.0dp" />
+    <Button android:layout_width="match_parent" android:layout_height="35.0dp" android:layout_margin="20.0dp" android:text="@string/touch_repair__repair_enable" style="@style/bottom_btn" />
+</LinearLayout>

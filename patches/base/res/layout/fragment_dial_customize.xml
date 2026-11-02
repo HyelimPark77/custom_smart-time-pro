@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/root_view" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:padding="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/item_customize" android:background="@drawable/rectangular_background" android:padding="15.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+            <RelativeLayout android:layout_width="100.0dp" android:layout_height="100.0dp">
+                <com.sma.smartv3.view.ImageViewRound android:clickable="false" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/pic_custom_bg_def" app:isCustomize="true" app:radius="0.0dp" app:type="round" />
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dp" android:layout_alignParentBottom="true" android:layout_centerInParent="true">
+                    <TextView android:textSize="18.0dp" android:textColor="@color/light" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="09:00" />
+                    <TextView android:textSize="8.0dp" android:textColor="@color/light" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="09/25 WED" />
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="15.0dp">
+                <TextView android:textSize="18.0dp" android:textColor="@color/text_color" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dial_customize" />
+                <TextView android:textSize="14.0dp" android:textColor="@color/line_color" android:id="@id/tv_dial_customize_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="@string/dial_customize_desc" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/item_video" android:background="@drawable/rectangular_background" android:padding="15.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+            <RelativeLayout android:layout_width="100.0dp" android:layout_height="100.0dp">
+                <com.sma.smartv3.view.ImageViewRound android:clickable="false" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/pic_custom_video_bg_def" android:scaleType="centerCrop" app:isCustomize="true" app:radius="0.0dp" app:type="round" />
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dp" android:layout_alignParentBottom="true" android:layout_centerInParent="true">
+                    <TextView android:textSize="18.0dp" android:textColor="@color/light" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="09:00" />
+                    <TextView android:textSize="8.0dp" android:textColor="@color/light" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="09/25 WED" />
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="15.0dp">
+                <TextView android:textSize="18.0dp" android:textColor="@color/text_color" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/video_watchface" />
+                <TextView android:textSize="14.0dp" android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="@string/dial_video_customize_desc" android:lines="3" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="13.0dp" android:textColor="@color/line_color" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="@string/dial_custom_remind" />
+    </LinearLayout>
+</ScrollView>

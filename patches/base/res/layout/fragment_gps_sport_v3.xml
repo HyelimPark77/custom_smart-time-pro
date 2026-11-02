@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:id="@id/root_view" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_margin="16.0dp" android:layout_weight="1.0">
+            <ImageView android:id="@id/iv_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" />
+            <FrameLayout android:id="@id/fl_map" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="0.0dp" android:layout_alignParentBottom="true" android:layout_marginEnd="0.0dp" android:layout_alignParentEnd="true">
+                <com.baidu.mapapi.map.TextureMapView android:id="@id/bMapView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" />
+                <com.sma.smartv3.view.CustomGoogleMapView android:id="@id/gMapView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" />
+            </FrameLayout>
+            <ImageView android:background="@drawable/shape_sport_shadow_bg_translucent" android:layout_width="match_parent" android:layout_height="match_parent" />
+            <ImageView android:id="@id/cur_mode_icon" android:visibility="gone" android:layout_width="150.0dp" android:layout_height="150.0dp" android:layout_centerInParent="true" app:tint="@color/black" />
+            <com.sma.smartv3.view.text.PFMedium android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="120.0dp" android:text="@string/sprot_v3_app_start_tip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+            <LinearLayout android:id="@id/gpsLl" android:layout_marginBottom="70.0dp" android:layout_alignParentBottom="true" style="@style/sport_rl_gps_ll">
+                <com.sma.smartv3.view.text.PFMedium android:text="@string/gps" style="@style/sport_rl_gps_ll_gps_tv" />
+                <com.adam.gpsstatus.GpsStatusImageView android:id="@id/ivGpsSignal" android:src="@drawable/signal_1" app:drawable0="@drawable/signal_1" app:drawable1="@drawable/signal_1" app:drawable2="@drawable/signal_2" app:drawable3="@drawable/signal_3" app:thr_1_2="3" app:thr_2_3="8" style="@style/sport_rl_gps_ll_gps_iv" />
+            </LinearLayout>
+        </RelativeLayout>
+        <include layout="@layout/layout_gps_common_v3" />
+        <LinearLayout android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15.0dp">
+            <com.sma.smartv3.view.text.PFMedium android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recommended_course" />
+            <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:gravity="right" android:id="@id/sportRecommendationCourse" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_courses" android:layout_weight="1.0" />
+            <ImageView android:layout_gravity="center_vertical" android:layout_marginStart="1.0dp" style="@style/device_item_right_iv_style" />
+        </LinearLayout>
+        <FrameLayout android:background="@drawable/fitness_item_special_bg" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dp" android:layout_marginStart="15.0dp" android:layout_marginEnd="15.0dp">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/sportRecommendationRecycler" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

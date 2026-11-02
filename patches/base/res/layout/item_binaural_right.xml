@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="78.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="end" android:orientation="vertical" android:background="@drawable/bg_item_binaural_right" android:padding="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="11.0dp">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="14.0dp" android:textColor="@color/color_binaural_right_translate" android:id="@id/tv_original" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="vertical" android:id="@id/translated_play_ll" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.sma.smartv3.view.text.PFMedium android:textSize="14.0dp" android:textColor="@color/color_binaural_right_original" android:id="@id/tv_translated" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" />
+            <ImageView android:id="@id/iv_play" android:visibility="gone" android:layout_width="13.0dp" android:layout_height="13.0dp" android:layout_marginTop="4.0dp" android:src="@drawable/ic_play_record_white" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

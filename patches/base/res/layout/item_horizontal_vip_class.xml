@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/item_dial_class_ll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="70.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/item_dial_class_iv" android:layout_width="40.0dp" android:layout_height="40.0dp" />
+    <com.sma.smartv3.view.text.PFMedium android:textSize="13.0dp" android:textColor="@color/order_text_orange_vip" android:layout_gravity="center_horizontal" android:id="@id/item_dial_class_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:layout_marginBottom="3.0dp" android:layout_marginStart="3.0dp" android:layout_marginEnd="3.0dp" />
+</LinearLayout>

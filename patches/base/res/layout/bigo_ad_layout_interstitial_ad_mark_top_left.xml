@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="left|center" android:orientation="horizontal" android:id="@id/inter_ad_tag_layout" android:padding="9.5dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <sg.bigo.ads.api.AdOptionsView android:id="@id/inter_options" android:layout_width="13.0dp" android:layout_height="13.0dp" android:layout_marginRight="3.5dp" />
+    <LinearLayout android:gravity="left|center" android:orientation="horizontal" android:background="@drawable/bigo_ad_top_left_advertiser_background" android:paddingLeft="6.0dp" android:paddingRight="6.0dp" android:layout_width="wrap_content" android:layout_height="13.0dp">
+        <TextView android:textSize="9.0sp" android:textColor="#ffffff" android:gravity="center_vertical" android:id="@id/inter_ad_label" android:layout_width="wrap_content" android:layout_height="13.0dp" android:text="@string/bigo_ad_tag" android:shadowColor="#33000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="3.0" />
+        <TextView android:textSize="9.0sp" android:textColor="#ffffff" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/inter_advertiser" android:layout_width="wrap_content" android:layout_height="13.0dp" android:text="Bigoad.com" android:shadowColor="#33000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="3.0" android:drawableLeft="@drawable/bigo_ad_domain_left_drawable" />
+    </LinearLayout>
+</LinearLayout>

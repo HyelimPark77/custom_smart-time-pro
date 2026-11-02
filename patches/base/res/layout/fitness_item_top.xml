@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sma.smartv3.view.MyLinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_item" android:background="@color/ai_search_layout_bg" android:padding="5.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="32.0dp" android:layout_marginTop="10.0dp">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="13.0dp" android:textColor="@color/line_color" android:ellipsize="end" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/search_content_tip" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" android:layout_marginStart="5.0dp" />
+        <View android:layout_gravity="center_vertical" android:background="@color/selection_bg_color" android:layout_width="1.0dp" android:layout_height="15.0dp" android:layout_marginStart="10.0dp" />
+        <ImageView android:layout_width="22.0dp" android:layout_height="22.0dp" android:src="@drawable/icon_ai_search" android:layout_marginStart="10.0dp" />
+    </LinearLayout>
+    <RelativeLayout android:background="@drawable/fitness_item_top_card_bg" android:padding="15.0dp" android:layout_width="match_parent" android:layout_height="160.0dp" android:layout_marginTop="15.0dp">
+        <LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp">
+            <com.sma.smartv3.view.text.PFMedium android:textSize="36.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp">
+                <com.sma.smartv3.view.text.PFMedium android:textSize="14.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="运动时长(分钟)" />
+                <ImageView android:layout_gravity="center_vertical" android:layout_marginTop="1.0dp" android:src="@drawable/icon_right_enter_normal" android:layout_marginStart="15.0dp" app:tint="@color/white" style="@style/sport_rl_cumulative_run_ll_iv" />
+            </LinearLayout>
+            <com.sma.smartv3.view.text.PFMedium android:textSize="14.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="今日 0分钟 消耗 0千卡 累计 0次" />
+        </LinearLayout>
+        <com.sma.smartv3.view.text.PFMedium android:textSize="14.0sp" android:textColor="@color/colorAccent" android:gravity="center" android:id="@id/fitness_item_all_course" android:background="@drawable/fitness_item_pf_bg" android:layout_width="90.0dp" android:layout_height="30.0dp" android:layout_marginTop="20.0dp" android:text="@string/all_courses" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</com.sma.smartv3.view.MyLinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/llMovingTarget" style="@style/personal_info_rl"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/personal_info_ll">
+        <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/step_goal_suggest" />
+        <com.sma.smartv3.view.text.PFMedium android:layout_marginTop="30.0dp" android:text="@string/moving_target" style="@style/personal_info_tv_style" />
+        <com.sma.smartv3.view.WheelView.WheelView android:id="@id/wv" android:layout_width="120.0dp" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" />
+        <com.sma.smartv3.view.text.PFMedium android:id="@id/approximatelyEqualTo" android:layout_marginTop="40.0dp" android:text="@string/approximately_equal" style="@style/personal_info_tv_style" />
+        <RelativeLayout android:padding="20.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="100.0dp" android:layout_height="wrap_content">
+                <ImageView android:layout_width="28.0dp" android:layout_height="28.0dp" android:src="@drawable/icon_distance_72" />
+                <com.sma.smartv3.view.text.DINCondBold android:textSize="28.0sp" android:textColor="@color/text_color" android:id="@id/distanceGoal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dp" android:text="770.0" />
+                <com.sma.smartv3.view.text.PFMedium android:id="@id/nowGoalUnit" android:layout_marginTop="3.0dp" android:text="@string/km" style="@style/personal_info_tv_style" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="100.0dp" android:layout_height="wrap_content" android:layout_marginStart="150.0dp">
+                <ImageView android:layout_width="28.0dp" android:layout_height="28.0dp" android:src="@drawable/icon_calories_72" />
+                <com.sma.smartv3.view.text.DINCondBold android:textSize="28.0sp" android:textColor="@color/text_color" android:id="@id/caloriesGoal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dp" android:text="308" />
+                <com.sma.smartv3.view.text.PFMedium android:layout_marginTop="3.0dp" android:text="@string/kcal" style="@style/personal_info_tv_style" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <Button android:id="@id/btGoalDone" android:text="@string/next" android:onClick="doneClick" style="@style/bottom_btn.personal_info_next" />
+</RelativeLayout>

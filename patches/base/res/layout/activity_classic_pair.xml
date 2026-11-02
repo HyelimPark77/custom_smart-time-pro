@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="@null" style="@style/abh_title">
+        <ImageView style="@style/abh_title_left" />
+        <com.sma.smartv3.view.text.PFMedium style="@style/abh_title_center" />
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:id="@id/content" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="20.0dp" />
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

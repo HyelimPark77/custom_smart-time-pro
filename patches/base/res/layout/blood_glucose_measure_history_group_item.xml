@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="match_parent" android:layout_height="20.0dp" />
+    <LinearLayout android:background="@color/view_page_secondary_bg" android:padding="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="20.0dp" android:textColor="@color/text_color" android:id="@id/tv_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2020/03/15" />
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1.0dp" />
+</LinearLayout>

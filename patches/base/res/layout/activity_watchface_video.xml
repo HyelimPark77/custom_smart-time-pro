@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root_view" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:keepScreenOn="true" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/layout_title_iv_tv_iv" />
+        <Button android:background="@null" android:text="@string/sync" android:onClick="onSycn" style="@style/dial_pop_button" />
+    </RelativeLayout>
+    <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView android:id="@id/watchface_view" android:layout_width="260.0dp" android:layout_height="260.0dp" android:layout_margin="8.0dp" app:cardBackgroundColor="#00000000" app:cardCornerRadius="200.0dp" app:cardElevation="6.0dp" app:contentPaddingBottom="2.0dp" app:contentPaddingRight="2.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <com.sma.smartv3.view.ImageViewRound android:id="@id/customizeDialBg" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/pic_custom_video_bg_def" android:layout_centerInParent="true" app:isCustomize="true" app:radius="40.0dp" app:type="round" />
+                <com.sma.smartv3.view.dial.DialElementView android:orientation="vertical" android:id="@id/controlViewStep" android:visibility="gone" android:layout_margin="10.0dp" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" app:customIsAttach="false" app:customIsDrag="true" app:imageSrc="@drawable/dial_control_pop_0" app:tvValue="18564" style="@style/dial_control_show_style" />
+                <com.sma.smartv3.view.dial.DialElementView android:id="@id/controlViewHr" android:visibility="gone" android:layout_margin="10.0dp" android:layout_centerVertical="true" app:customIsAttach="false" app:customIsDrag="true" app:imageSrc="@drawable/dial_control_pop_1" app:tvValue="90" style="@style/dial_control_show_style" />
+                <com.sma.smartv3.view.dial.DialElementView android:orientation="vertical" android:id="@id/controlViewCa" android:visibility="gone" android:layout_margin="10.0dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" app:customIsAttach="false" app:customIsDrag="true" app:imageSrc="@drawable/dial_control_pop_2" app:tvValue="50" style="@style/dial_control_show_style" />
+                <com.sma.smartv3.view.dial.DialElementView android:id="@id/controlViewDis" android:visibility="gone" android:layout_margin="10.0dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true" app:customIsAttach="false" app:customIsDrag="true" app:imageSrc="@drawable/dial_control_pop_3" app:tvValue="6" style="@style/dial_control_show_style" />
+                <com.sma.smartv3.view.dial.DialElementView android:id="@id/timeDigitalView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" app:customIsAttach="false" app:customIsDrag="true" app:elementType="DigitalTime" app:layoutSrc="@layout/layout_watchface_time_digital_content" />
+                <ImageView android:id="@id/timePointView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dial_customize_point_2_0" android:layout_centerInParent="true" />
+                <ImageView android:id="@id/timeScaleView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="2.0dp" android:src="@drawable/dial_customize_scale_2_0" android:scaleType="fitXY" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <ImageView android:layout_gravity="center|bottom" android:layout_width="40.0dp" android:layout_height="40.0dp" android:layout_marginTop="20.0dp" android:src="@drawable/ic_video_add" android:onClick="onAddBg" android:translationZ="20.0dp" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/rectangular_background" android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:layout_marginStart="18.0dp" android:layout_marginEnd="18.0dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10.0dp">
+            <TextView android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/watch_face_video__title_frame_count" />
+            <TextView android:textSize="10.0sp" android:textColor="@color/line_color" android:id="@id/tv_max_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/watch_face_video__max_count_info" />
+        </LinearLayout>
+        <View android:layout_width="wrap_content" android:layout_height="1.0px" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:background="@drawable/bg_edit_video_watchface_count" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_frame_reduce" android:padding="7.0dp" android:layout_width="25.0dp" android:layout_height="25.0dp" android:src="@drawable/icon_reduce" />
+            <EditText android:gravity="center" android:id="@id/et_frame_edit" android:background="@null" android:layout_width="30.0dp" android:layout_height="wrap_content" android:text="3" android:singleLine="true" android:inputType="number" />
+            <ImageView android:id="@id/iv_frame_add" android:padding="7.0dp" android:layout_width="25.0dp" android:layout_height="25.0dp" android:src="@drawable/icon_add" />
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView android:id="@id/nestedScrollView" android:paddingTop="2.0dp" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" android:paddingStart="18.0dp" android:paddingEnd="18.0dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/rectangular_background" android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginVertical="10.0dp">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="30.0dp">
+                    <com.google.android.material.tabs.TabLayout android:id="@id/table" android:background="@null" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" app:tabIndicatorFullWidth="false" app:tabMode="scrollable" app:tabRippleColor="@null" app:tabSelectedTextColor="@color/colorAccent" app:tabTextAppearance="@style/watchface_tabLayout_text_style" app:tabTextColor="@color/line_color" />
+                    <TextView android:background="@null" android:text="@string/reset" android:onClick="onReset" android:layout_marginStart="10.0dp" style="@style/dial_pop_button" />
+                </LinearLayout>
+                <com.sma.smartv3.view.ViewPagerForScrollView android:id="@id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

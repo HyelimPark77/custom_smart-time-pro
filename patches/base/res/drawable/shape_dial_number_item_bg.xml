@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="10.0dp" />
+    <gradient android:startColor="@color/dial_customize_number_item_2" android:endColor="@color/dial_customize_number_item_1" android:angle="90.0" />
+</shape>

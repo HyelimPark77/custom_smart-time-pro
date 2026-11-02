@@ -1,0 +1,241 @@
+package com.jieli.jl_rcsp.model.command.file_op;
+
+import com.jieli.jl_rcsp.interfaces.cmd.IDataOp;
+import com.jieli.jl_rcsp.model.base.BaseParameter;
+import com.jieli.jl_rcsp.model.base.CommandWithParamAndResponse;
+import com.jieli.jl_rcsp.model.base.CommonResponse;
+import com.jieli.jl_rcsp.util.CHexConver;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+
+/* JADX INFO: loaded from: classes17.dex */
+public class DeviceExtendParamCmd extends CommandWithParamAndResponse<Param, Response> {
+    public static final byte OP_DELETE_FILE = 1;
+    public static final byte OP_FILE_TRANSFER = 0;
+    public static final byte OP_READ_FILE = 2;
+
+    public static class DeleteFileParam extends DevParam {
+        public DeleteFileParam(byte[] bArr) {
+            super(bArr);
+        }
+
+        public DeleteFileParam(int i) {
+            super((byte) 1, i);
+        }
+    }
+
+    public static class DevParam extends Param {
+        private int dev;
+
+        public DevParam(byte[] bArr) {
+            super(bArr);
+        }
+
+        public int getDev() {
+            return this.dev;
+        }
+
+        @Override // com.jieli.jl_rcsp.model.command.file_op.DeviceExtendParamCmd.Param, com.jieli.jl_rcsp.interfaces.cmd.IDataOp
+        public int parse(byte[] bArr) {
+            int i;
+            int i2 = super.parse(bArr);
+            if (i2 == 0 || (i = i2 + 4) > bArr.length) {
+                return i2;
+            }
+            this.dev = CHexConver.bytesToInt(bArr, i2, 4);
+            return i;
+        }
+
+        @Override // com.jieli.jl_rcsp.model.command.file_op.DeviceExtendParamCmd.Param, com.jieli.jl_rcsp.interfaces.cmd.IDataOp
+        public byte[] toData() {
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            try {
+                byteArrayOutputStream.write(super.toData());
+                byteArrayOutputStream.write(CHexConver.intToBigBytes(this.dev));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return byteArrayOutputStream.toByteArray();
+        }
+
+        @Override // com.jieli.jl_rcsp.model.command.file_op.DeviceExtendParamCmd.Param, com.jieli.jl_rcsp.model.base.BaseParameter
+        public String toString() {
+            return "DevParam{op=" + ((int) getOp()) + ", dev=" + this.dev + "} ";
+        }
+
+        public DevParam(byte b, int i) {
+            super(b);
+            this.dev = i;
+        }
+    }
+
+    public static class FileTransferParam extends DevParam {
+        private boolean hasCrc16;
+
+        public FileTransferParam(byte[] bArr) {
+            super(bArr);
+        }
+
+        public boolean isHasCrc16() {
+            return this.hasCrc16;
+        }
+
+        @Override // com.jieli.jl_rcsp.model.command.file_op.DeviceExtendParamCmd.DevParam, com.jieli.jl_rcsp.model.command.file_op.DeviceExtendParamCmd.Param, com.jieli.jl_rcsp.interfaces.cmd.IDataOp
+        public int parse(byte[] bArr) {
+            int i;
+            int i2 = super.parse(bArr);
+            if (i2 == 0 || (i = i2 + 1) > bArr.length) {
+                return i2;
+            }
+            this.hasCrc16 = CHexConver.byteToInt(bArr[i2]) == 1;
+            return i;
+        }
+
+        @Override // com.jieli.jl_rcsp.model.command.file_op.DeviceExtendParamCmd.DevParam, com.jieli.jl_rcsp.model.command.file_op.DeviceExtendParamCmd.Param, com.jieli.jl_rcsp.interfaces.cmd.IDataOp
+        public byte[] toData() {
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            try {
+                byteArrayOutputStream.write(super.toData());
+                byteArrayOutputStream.write(this.hasCrc16 ? 1 : 0);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return byteArrayOutputStream.toByteArray();
+        }
+
+        @Override // com.jieli.jl_rcsp.model.command.file_op.DeviceExtendParamCmd.DevParam, com.jieli.jl_rcsp.model.command.file_op.DeviceExtendParamCmd.Param, com.jieli.jl_rcsp.model.base.BaseParameter
+        public String toString() {
+            return "FileTransferParam{hasCrc16=" + this.hasCrc16 + ", dev=" + getDev() + ", op=" + ((int) getOp()) + "} ";
+        }
+
+        public FileTransferParam(int i, boolean z) {
+            super((byte) 0, i);
+            this.hasCrc16 = z;
+        }
+    }
+
+    public static class FileTransferResponse extends Response {
+        public boolean hasCrc16;
+
+        public FileTransferResponse(byte[] bArr) {
+            super(bArr);
+        }
+
+        @Override // com.jieli.jl_rcsp.model.command.file_op.DeviceExtendParamCmd.Response, com.jieli.jl_rcsp.interfaces.cmd.IDataOp
+        public int parse(byte[] bArr) {
+            int i;
+            int i2 = super.parse(bArr);
+            if (i2 == 0 || (i = i2 + 1) > bArr.length) {
+                return i2;
+            }
+            this.hasCrc16 = CHexConver.byteToInt(bArr[i2]) == 1;
+            return i;
+        }
+
+        @Override // com.jieli.jl_rcsp.model.command.file_op.DeviceExtendParamCmd.Response, com.jieli.jl_rcsp.interfaces.cmd.IDataOp
+        public byte[] toData() {
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            try {
+                byteArrayOutputStream.write(super.toData());
+                byteArrayOutputStream.write(this.hasCrc16 ? 1 : 0);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return byteArrayOutputStream.toByteArray();
+        }
+
+        @Override // com.jieli.jl_rcsp.model.base.CommonResponse
+        public String toString() {
+            return "FileTransferResponse{hasCrc16=" + this.hasCrc16 + "} ";
+        }
+
+        public FileTransferResponse(boolean z) {
+            super((byte) 0);
+            this.hasCrc16 = z;
+        }
+    }
+
+    public static class ReadFileParam extends DevParam {
+        public ReadFileParam(byte[] bArr) {
+            super(bArr);
+        }
+
+        public ReadFileParam(int i) {
+            super((byte) 2, i);
+        }
+    }
+
+    public DeviceExtendParamCmd(Param param) {
+        super(39, DeviceExtendParamCmd.class.getSimpleName(), param);
+    }
+
+    public static class Param extends BaseParameter implements IDataOp {
+
+        /* JADX INFO: renamed from: op */
+        private byte f38009op;
+
+        public Param(byte[] bArr) {
+            parse(bArr);
+        }
+
+        public byte getOp() {
+            return this.f38009op;
+        }
+
+        @Override // com.jieli.jl_rcsp.model.base.BaseParameter, com.jieli.jl_rcsp.interfaces.cmd.IParamBase
+        public byte[] getParamData() {
+            return toData();
+        }
+
+        public int parse(byte[] bArr) {
+            if (bArr == null || bArr.length == 0) {
+                return 0;
+            }
+            this.f38009op = bArr[0];
+            return 1;
+        }
+
+        public byte[] toData() {
+            return new byte[]{this.f38009op};
+        }
+
+        @Override // com.jieli.jl_rcsp.model.base.BaseParameter
+        public String toString() {
+            return "Param{op=" + ((int) this.f38009op) + "} ";
+        }
+
+        public Param(byte b) {
+            this.f38009op = b;
+        }
+    }
+
+    public static class Response extends CommonResponse implements IDataOp {
+
+        /* JADX INFO: renamed from: op */
+        private byte f38010op;
+
+        public Response(byte[] bArr) {
+            parse(bArr);
+        }
+
+        public byte getOp() {
+            return this.f38010op;
+        }
+
+        public int parse(byte[] bArr) {
+            if (bArr == null || bArr.length == 0) {
+                return 0;
+            }
+            this.f38010op = bArr[0];
+            return 1;
+        }
+
+        public byte[] toData() {
+            return new byte[]{this.f38010op};
+        }
+
+        public Response(byte b) {
+            this.f38010op = b;
+        }
+    }
+}

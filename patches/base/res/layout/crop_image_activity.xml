@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/black" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/crop_image_back" android:padding="15.0dp" android:layout_width="60.0dp" android:layout_height="60.0dp" android:src="@drawable/crop_image_back" android:scaleType="fitXY" android:contentDescription="返回" android:tooltipText="返回" />
+        <View android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+        <ImageView android:id="@id/crop_image_rotate" android:padding="15.0dp" android:layout_width="60.0dp" android:layout_height="60.0dp" android:src="@drawable/crop_image_rotate" android:scaleType="fitXY" android:contentDescription="旋转" android:tooltipText="顺时针旋转" />
+        <ImageView android:id="@id/crop_image_done" android:padding="15.0dp" android:layout_width="60.0dp" android:layout_height="60.0dp" android:src="@drawable/crop_image_done" android:scaleType="fitXY" android:contentDescription="裁剪" android:tooltipText="确认裁剪" />
+    </LinearLayout>
+    <com.github.gzuliyujiang.imagepicker.CropImageView android:id="@id/crop_image_content" android:layout_width="match_parent" android:layout_height="match_parent" />
+</LinearLayout>

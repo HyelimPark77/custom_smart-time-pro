@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/rv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="4.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/selectStatusAmount" android:background="@drawable/rectangular_background" android:padding="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="2.0dp">
+            <com.sma.smartv3.view.text.PFMedium android:textSize="15.0dp" android:textColor="@color/text_color" android:id="@id/tv_pack_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="100积分" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="13.0dp" android:textColor="@color/line_color" android:id="@id/tv_original_amount" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:text="100" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="22.0dp" android:textColor="@color/colorAccent" android:id="@id/tv_amount" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dp" android:text="100" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/recommendStatus" android:background="@drawable/rectangular_recomm_background" android:paddingLeft="15.0dp" android:paddingTop="1.0dp" android:paddingRight="5.0dp" android:paddingBottom="2.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="2.0dp" android:layout_alignParentRight="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/recommend_status_icon" android:layout_marginEnd="5.0dp" />
+        </FrameLayout>
+    </RelativeLayout>
+</FrameLayout>

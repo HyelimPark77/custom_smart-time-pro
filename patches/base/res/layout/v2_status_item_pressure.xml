@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/empty_panel" android:background="@drawable/v2_status_item_pressure_bg" style="@style/status_card_style">
+        <com.sma.smartv3.view.text.PFMedium android:text="@string/pressure" style="@style/status_card_style_1_title" />
+        <com.sma.smartv3.view.text.PFMedium android:id="@id/tv_no_data" style="@style/status_card_style_no_data" />
+        <com.sma.smartv3.view.TintImageView android:layout_gravity="end" android:src="@drawable/icon_status_pressure" style="@style/status_card_style_2_iv" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/data_panel" android:visibility="gone" style="@style/status_card_style">
+        <com.sma.smartv3.view.text.PFMedium android:text="@string/pressure" style="@style/status_card_style_1_title" />
+        <RelativeLayout style="@style/status_card_style_1">
+            <LinearLayout style="@style/status_card_style_1_ll">
+                <LinearLayout android:id="@id/ll_value" style="@style/status_card_style_1_ll">
+                    <com.sma.smartv3.view.text.MHFont android:id="@id/pressureLastValue" android:text="122" style="@style/status_card_style_1_content" />
+                    <com.sma.smartv3.view.text.DINCondBold android:id="@id/pressureLastTime" android:text="10.23" style="@style/status_card_style_1_time" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.sma.smartv3.view.TintImageView android:id="@id/iv_pressure" android:src="@drawable/icon_pressure" style="@style/status_card_style_1_iv" />
+        </RelativeLayout>
+        <LinearLayout style="@style/status_item_chart_rl_style">
+            <com.github.mikephil.charting.charts.BarChart android:id="@id/pressureBarChart" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+            <com.sma.smartv3.view.text.PFMedium android:id="@id/tv_chart_bottom_text" android:text="@string/last_few_hours" style="@style/status_card_style_bottom_text" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

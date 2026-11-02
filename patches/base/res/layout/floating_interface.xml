@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sma.smartv3.view.FloatFrameLayout android:id="@id/rootView" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_show_all" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_tools" android:layout_width="match_parent" android:layout_height="42.0dp" android:layout_alignParentTop="true">
+            <androidx.appcompat.widget.AppCompatImageView android:id="@id/img_record_show" android:layout_width="26.0dp" android:layout_height="26.0dp" android:layout_marginLeft="8.0dp" android:src="@drawable/icon_record_float" />
+            <androidx.appcompat.widget.AppCompatCheckBox android:textSize="16.0dp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/translate_check" android:visibility="invisible" android:text="@string/translate" android:layout_marginStart="11.0dp" style="@style/checkbox_add" />
+            <androidx.appcompat.widget.AppCompatCheckBox android:textSize="16.0dp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/broadcast_check" android:text="@string/broadcast" android:layout_marginStart="11.0dp" style="@style/checkbox_add" />
+            <androidx.appcompat.widget.AppCompatCheckBox android:textSize="16.0dp" android:textColor="@color/white" android:id="@id/original_check" android:background="@drawable/bt_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" android:button="@color/transparent" android:text="@string/show_original_text" android:paddingHorizontal="8.0dp" />
+            <View android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <androidx.appcompat.widget.AppCompatImageView android:id="@id/img_close" android:layout_width="15.0dp" android:layout_height="15.0dp" android:layout_marginRight="18.0dp" android:src="@drawable/ic_float_close" />
+        </LinearLayout>
+        <com.sma.smartv3.view.text.PFMedium android:textSize="16.0dp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/tv_translate" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:layout_marginBottom="20.0dp" android:text="@string/enter_content" android:maxLines="3" android:layout_below="@id/ll_tools" android:paddingHorizontal="20.0dp" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_hide_content" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/img_record" android:visibility="gone" android:layout_width="50.0dp" android:layout_height="50.0dp" android:src="@drawable/ic_window_big_record" />
+        <FrameLayout android:id="@id/fl_recording" android:visibility="gone" android:layout_width="match_parent" android:layout_height="50.0dp">
+            <ImageView android:layout_gravity="center" android:id="@id/img_recording_animation" android:background="@drawable/aura_recording_animation" android:layout_width="243.0dp" android:layout_height="50.0dp" />
+            <ImageView android:layout_gravity="center" android:id="@id/img_recording" android:layout_width="50.0dp" android:layout_height="50.0dp" android:src="@drawable/arua_ic_window_recording" />
+        </FrameLayout>
+        <com.sma.smartv3.view.text.PFMedium android:textSize="16.0dp" android:textColor="@color/text_color" android:ellipsize="end" android:gravity="center" android:id="@id/tv_original_t" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:maxLines="3" android:shadowColor="#ff000000" android:shadowDx="2.0" android:shadowDy="2.0" android:shadowRadius="4.0" android:paddingHorizontal="20.0dp" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_show_set" android:paddingBottom="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.sma.smartv3.view.text.PFMedium android:textSize="16.0dp" android:textColor="@color/text_color" android:ellipsize="end" android:gravity="center" android:id="@id/tv_translate_t" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:maxLines="3" android:shadowColor="#ff000000" android:shadowDx="2.0" android:shadowDy="2.0" android:shadowRadius="4.0" android:paddingHorizontal="20.0dp" />
+            <View android:id="@id/bottom_line" android:background="#d9d9d9" android:layout_width="32.0dp" android:layout_height="4.0dp" android:layout_marginTop="12.0dp" />
+        </LinearLayout>
+    </LinearLayout>
+</com.sma.smartv3.view.FloatFrameLayout>

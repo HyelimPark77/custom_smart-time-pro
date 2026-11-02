@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/root" android:background="@drawable/shape_sport_ll_bg" android:padding="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/activity_horizontal_margin" android:layout_marginEnd="@dimen/activity_horizontal_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/light" android:gravity="center" android:id="@id/sport_my_record_icon" android:layout_width="40.0dp" android:layout_height="40.0dp" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="10.0dp">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="13.0sp" android:textColor="@color/text_color" android:id="@id/sport_my_record_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.sma.smartv3.view.text.PFMedium android:textSize="16.0dp" android:textColor="@color/text_color" android:id="@id/sport_my_record_value" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="13.0dp" android:textColor="@color/line_color" android:id="@id/sport_my_record_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10.0dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_marginEnd="0.0dp" style="@style/device_item_right_iv_style" />
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/empty_panel" android:background="@drawable/v2_status_item_blood_pressure_bg" style="@style/status_card_style">
+        <com.sma.smartv3.view.text.PFMedium android:text="@string/blood_pressure" style="@style/status_card_style_1_title" />
+        <com.sma.smartv3.view.text.PFMedium android:id="@id/tv_no_data" style="@style/status_card_style_no_data" />
+        <com.sma.smartv3.view.TintImageView android:layout_gravity="end" android:src="@drawable/icon_status_bp" style="@style/status_card_style_2_iv" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/data_panel" android:visibility="gone" style="@style/status_card_style">
+        <com.sma.smartv3.view.text.PFMedium android:text="@string/blood_pressure" style="@style/status_card_style_1_title" />
+        <RelativeLayout style="@style/status_card_style_1">
+            <LinearLayout style="@style/status_card_style_1_ll">
+                <com.sma.smartv3.view.text.MHFont android:id="@id/tempLastValue" android:text="98/120" style="@style/status_card_style_1_content" />
+                <LinearLayout android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.sma.smartv3.view.text.DINCondBold android:id="@id/tempLastTime" android:text="10/23" style="@style/status_card_style_1_time" />
+                    <com.sma.smartv3.view.text.PFRegular android:id="@id/tmpUnit" android:text="@string/mmhg" android:layout_marginStart="4.0dp" style="@style/unit_style" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.sma.smartv3.view.TintImageView android:id="@id/tempIv" android:src="@drawable/icon_bp" style="@style/status_card_style_1_iv" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" style="@style/status_item_chart_rl_style">
+            <com.sma.smartv3.view.segmentedbar.SegmentedBarView android:id="@id/sbvLevel" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="2.0dp" android:paddingEnd="2.0dp" app:sbv_arrow_height="1.0dp" app:sbv_bar_height="28.0dp" app:sbv_segment_bg="false" app:sbv_segment_gap_width="2.0dp" app:sbv_segment_radius="6.0dp" app:sbv_segment_rule="scale" app:sbv_show_description_text="false" app:sbv_show_description_top_text="false" app:sbv_show_segment_text="false" app:sbv_side_style="normal" app:sbv_sliderImg="@drawable/icon_status_sbv_thumb" app:sbv_sliderType="Slider_top" app:sbv_thumb_h="12.0dp" app:sbv_thumb_w="12.0dp" app:sbv_value_sign_height="15.0dp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

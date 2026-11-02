@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/top_layout" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/layout_title_iv_tv_iv" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16.0dp" style="@style/permission_settings_item_style">
+        <com.sma.smartv3.view.TintImageView android:id="@id/iv_network" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ai_answer_network_icon" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="16.0sp" android:textColor="@color/text_color" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_online" android:layout_marginStart="16.0dp" style="@style/permission_settings_item_name_style" />
+        <View android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+        <androidx.appcompat.widget.AppCompatCheckBox android:id="@id/check_search_online" android:padding="2.0dp" style="@style/abh_checkbox" />
+        <androidx.appcompat.widget.AppCompatTextView android:textSize="14.0sp" android:textColor="@color/text_color" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:text="@string/once_activated" />
+    </LinearLayout>
+</LinearLayout>

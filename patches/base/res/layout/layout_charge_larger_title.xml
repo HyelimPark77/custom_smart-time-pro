@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/title_bar" android:layout_marginHorizontal="20.0dp" style="@style/charge_title_bar"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sma.smartv3.view.text.PFMedium style="@style/charge_larger_title" />
+    <com.sma.smartv3.view.text.PFMedium style="@style/charge_larger_sub_title" />
+</LinearLayout>

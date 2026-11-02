@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sleep_notes_array">
+        <item>我睡得很好！</item>
+        <item>我被吵醒了</item>
+        <item>难以入睡</item>
+        <item>非常需要睡眠</item>
+        <item>安稳睡眠</item>
+    </string-array>
+</resources>

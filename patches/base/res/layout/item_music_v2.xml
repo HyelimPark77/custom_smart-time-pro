@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="6.0dp" android:paddingBottom="6.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="35.0dp" android:layout_height="35.0dp" android:src="@drawable/item_tera_box_music_icon" android:layout_marginEnd="10.0dp" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="16.0sp" android:textColor="@color/text_color" android:ellipsize="marquee" android:id="@id/tv" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Music" android:singleLine="true" android:layout_weight="1.0" android:paddingEnd="10.0dp" android:layout_toEndOf="@id/iv" />
+        <ImageButton android:id="@id/btn_delete" android:background="@drawable/icon_delete_2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

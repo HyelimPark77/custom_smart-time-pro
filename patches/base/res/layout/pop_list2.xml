@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/pop_list_recycler" android:layout_width="match_parent" android:layout_height="400.0dp" />
+    <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:textSize="14.0dp" android:textColor="@color/colorAccent" android:layout_gravity="center_horizontal" android:id="@id/pop_list_closure" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="关闭" />
+        <Button android:textSize="14.0dp" android:textColor="@color/colorAccent" android:layout_gravity="center_horizontal" android:id="@id/pop_list_data_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="清除数据" android:layout_marginStart="20.0dp" />
+        <Button android:textSize="14.0dp" android:textColor="@color/colorAccent" android:layout_gravity="center_horizontal" android:id="@id/pop_list_stop_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="停止播放" android:layout_marginStart="20.0dp" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+        <Button android:textSize="14.0dp" android:textColor="@color/colorAccent" android:layout_gravity="center_horizontal" android:id="@id/pop_list_app_recording" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="手机录音" />
+        <Button android:textSize="14.0dp" android:textColor="@color/colorAccent" android:layout_gravity="center_horizontal" android:id="@id/pop_list_bluetooth_recording" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="蓝牙录音" android:layout_marginStart="20.0dp" />
+        <Button android:textSize="14.0dp" android:textColor="@color/colorAccent" android:layout_gravity="center_horizontal" android:id="@id/pop_list_clear_recording" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="结束录制" android:layout_marginStart="20.0dp" />
+    </LinearLayout>
+</LinearLayout>

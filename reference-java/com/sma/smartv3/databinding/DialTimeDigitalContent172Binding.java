@@ -1,0 +1,57 @@
+package com.sma.smartv3.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.sma.smartv3.pro.R;
+
+/* JADX INFO: loaded from: classes19.dex */
+public final class DialTimeDigitalContent172Binding implements ViewBinding {
+
+    /* JADX INFO: renamed from: iv */
+    @NonNull
+    public final ImageView f51105iv;
+
+    @NonNull
+    private final LinearLayout rootView;
+
+    private DialTimeDigitalContent172Binding(@NonNull LinearLayout rootView, @NonNull ImageView iv) {
+        this.rootView = rootView;
+        this.f51105iv = iv;
+    }
+
+    @NonNull
+    public static DialTimeDigitalContent172Binding bind(@NonNull View rootView) {
+        ImageView imageView = (ImageView) ViewBindings.findChildViewById(rootView, R.id.f51417iv);
+        if (imageView != null) {
+            return new DialTimeDigitalContent172Binding((LinearLayout) rootView, imageView);
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(rootView.getResources().getResourceName(R.id.f51417iv)));
+    }
+
+    @NonNull
+    public static DialTimeDigitalContent172Binding inflate(@NonNull LayoutInflater inflater) {
+        return inflate(inflater, null, false);
+    }
+
+    @NonNull
+    public static DialTimeDigitalContent172Binding inflate(@NonNull LayoutInflater inflater, @Nullable ViewGroup parent, boolean attachToParent) {
+        View viewInflate = inflater.inflate(R.layout.dial_time_digital_content_172, parent, false);
+        if (attachToParent) {
+            parent.addView(viewInflate);
+        }
+        return bind(viewInflate);
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    @NonNull
+    public LinearLayout getRoot() {
+        return this.rootView;
+    }
+}

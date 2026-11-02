@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/status_info_ll"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:background="@drawable/game_member_toplayout_bg" android:layout_height="200.0dp" style="@style/status_info_ll">
+        <LinearLayout android:background="@color/transparent" style="@style/abh_title">
+            <ImageView style="@style/abh_title_left" />
+            <com.sma.smartv3.view.text.PFMedium style="@style/abh_title_center" />
+        </LinearLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="20.0dp">
+            <com.sma.smartv3.view.ImageViewRound android:id="@id/game_member_iv_avatar" android:layout_width="60.0dp" android:layout_height="60.0dp" android:src="@drawable/pic_avatar_default" android:layout_marginEnd="20.0dp" app:isCustomize="true" app:type="round" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="18.0dp" android:textColor="#7f5412" android:id="@id/game_member_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/game_member_iv_avatar" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="14.0dp" android:textColor="@color/line_color" android:id="@id/game_member_user_member_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/game_member_iv_avatar" android:layout_alignBottom="@id/game_member_iv_avatar" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/game_member_banner" android:background="@drawable/game_member_banner_bg" android:layout_width="match_parent" android:layout_height="120.0dp" android:layout_marginTop="130.0dp" android:layout_marginStart="20.0dp" android:layout_marginEnd="20.0dp">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="18.0dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/game_member_title" android:layout_toRightOf="@id/game_member_iv_avatar" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="30.0dp" android:textColor="#edff8a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/game_member_tip_invite" android:layout_toRightOf="@id/game_member_iv_avatar" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/game_member_rv" android:paddingTop="10.0dp" android:paddingBottom="50.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/game_member_banner" android:paddingStart="20.0dp" android:paddingEnd="20.0dp" />
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="70.0dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <Button android:layout_gravity="center" style="@style/bottom_btn" />
+    </LinearLayout>
+</RelativeLayout>

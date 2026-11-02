@@ -1,0 +1,13 @@
+package com.jieli.jl_rcsp.model.command.file_op;
+
+import com.jieli.jl_rcsp.model.base.CommandWithParamAndResponse;
+import com.jieli.jl_rcsp.model.parameter.StopFileTransferParam;
+import com.jieli.jl_rcsp.model.response.StopFileTransferResponse;
+
+/* JADX INFO: loaded from: classes17.dex */
+@Deprecated
+public class StopFileTransferCmd extends CommandWithParamAndResponse<StopFileTransferParam, StopFileTransferResponse> {
+    public StopFileTransferCmd(StopFileTransferParam r3) {
+        super(23, StopFileTransferCmd.class.getSimpleName(), r3);
+    }
+}

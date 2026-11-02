@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/bg_white_radius_20_light" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="19.0dp" android:textColor="@color/text_color" android:id="@id/tv_tip_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:text="@string/guide_warm_title" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/img_close" android:layout_width="25.0dp" android:layout_height="25.0dp" android:layout_marginTop="6.0dp" android:src="@drawable/ic_tip_close" android:layout_alignParentTop="true" android:layout_marginEnd="11.0dp" android:layout_alignParentEnd="true" />
+        <ImageView android:id="@id/img_tip" android:layout_width="match_parent" android:layout_height="157.0dp" android:layout_marginTop="23.0dp" android:src="@drawable/ic_binaural_tip" android:layout_below="@id/tv_tip_title" android:layout_marginHorizontal="20.0dp" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="16.0dp" android:textColor="@color/text_secondary_color" android:gravity="center" android:id="@id/tv_tip_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dp" android:text="@string/binaural_tip_1" android:layout_below="@id/img_tip" android:layout_marginHorizontal="32.0dp" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="16.0dp" android:textColor="@color/text_secondary_color" android:gravity="center" android:id="@id/tv_tip_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="@string/binaural_tip_2" android:layout_below="@id/tv_tip_1" android:layout_marginHorizontal="32.0dp" />
+        <Button android:id="@id/bt_tip" android:layout_width="match_parent" android:layout_marginTop="20.0dp" android:text="@string/translation_video_tip" android:layout_below="@id/tv_tip_2" android:layout_marginStart="20.0dp" android:layout_marginEnd="20.0dp" style="@style/btn_common" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:layout_marginBottom="15.0dp" android:layout_below="@id/bt_tip" android:layout_centerHorizontal="true">
+            <androidx.appcompat.widget.AppCompatCheckBox android:textSize="16.0dp" android:textColor="@color/text_secondary_color" android:gravity="center_vertical" android:id="@id/tip_check" android:text="@string/not_prompt_again" style="@style/checkbox_add" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,12 @@
+/workspace/
+/.downloads/
+/dist/
+*.apk
+*.xapk
+*.apks
+*.jks
+*.keystore
+*.idsig
+hs_err_pid*.log
+__pycache__/
+.DS_Store

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/ll_context" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dp" android:layout_marginStart="15.0dp" android:layout_marginEnd="15.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/tv_item_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="15.0dp" android:layout_marginTop="1.0dp" android:layout_marginBottom="1.0dp" />
+    <View android:layout_marginStart="15.0dp" android:layout_marginEnd="15.0dp" style="@style/history_reports_line_style" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="15.0dp" android:paddingEnd="15.0dp" />
+</androidx.appcompat.widget.LinearLayoutCompat>

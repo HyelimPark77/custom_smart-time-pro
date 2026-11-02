@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="60.0dp" android:layout_marginTop="10.0dp" android:layout_marginBottom="10.0dp" android:layout_marginStart="26.0dp" android:layout_marginEnd="26.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/shape_temp_day_item_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="4.0dp" android:layout_marginBottom="4.0dp">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="20.0dp">
+            <com.sma.smartv3.view.text.DINCondBold android:textSize="24.0sp" android:id="@id/tempItemValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="36.9" />
+            <com.sma.smartv3.view.text.DINCondBold android:textSize="14.0sp" android:textColor="@color/line_color" android:id="@id/tempItemUnit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/degree_centigrade" android:layout_centerVertical="true" android:layout_marginStart="6.0dp" />
+        </LinearLayout>
+        <com.sma.smartv3.view.text.PFMedium android:textSize="24.0sp" android:id="@id/tempItemStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:layout_marginBottom="10.0dp" android:text="normal" android:layout_centerVertical="true" android:layout_marginEnd="20.0dp" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@drawable/shape_temp_day_item_center_bg" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_centerInParent="true">
+        <com.sma.smartv3.view.text.DINCondBold android:textColor="@color/text_color" android:id="@id/tempItemTime" android:padding="18.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12:00" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

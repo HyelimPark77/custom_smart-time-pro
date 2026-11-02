@@ -1,0 +1,78 @@
+package com.sma.smartv3.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import androidx.viewpager.widget.ViewPager;
+import com.google.android.material.tabs.TabLayout;
+import com.sma.smartv3.pro.R;
+
+/* JADX INFO: loaded from: classes19.dex */
+public final class ActivityStatusInfoV2Binding implements ViewBinding {
+
+    @NonNull
+    private final LinearLayout rootView;
+
+    @NonNull
+    public final TabLayout table;
+
+    @NonNull
+    public final View topLine;
+
+    @NonNull
+    public final ViewPager viewPager;
+
+    private ActivityStatusInfoV2Binding(@NonNull LinearLayout rootView, @NonNull TabLayout table, @NonNull View topLine, @NonNull ViewPager viewPager) {
+        this.rootView = rootView;
+        this.table = table;
+        this.topLine = topLine;
+        this.viewPager = viewPager;
+    }
+
+    @NonNull
+    public static ActivityStatusInfoV2Binding bind(@NonNull View rootView) {
+        int r0 = R.id.table;
+        TabLayout r1 = (TabLayout) ViewBindings.findChildViewById(rootView, R.id.table);
+        if (r1 == null) goto L11;
+        r0 = R.id.top_line;
+        View r2 = ViewBindings.findChildViewById(rootView, R.id.top_line);
+        if (r2 == null) goto L11;
+        r0 = R.id.view_pager;
+        ViewPager r3 = (ViewPager) ViewBindings.findChildViewById(rootView, R.id.view_pager);
+        if (r3 == null) goto L11;
+        return new ActivityStatusInfoV2Binding((LinearLayout) rootView, r1, r2, r3);
+    L11:
+        throw new NullPointerException("Missing required view with ID: ".concat(rootView.getResources().getResourceName(r0)));
+    }
+
+    @NonNull
+    public static ActivityStatusInfoV2Binding inflate(@NonNull LayoutInflater inflater) {
+        return inflate(inflater, null, false);
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    @NonNull
+    public /* bridge */ /* synthetic */ View getRoot() {
+        return getRoot();
+    }
+
+    @NonNull
+    public static ActivityStatusInfoV2Binding inflate(@NonNull LayoutInflater inflater, @Nullable ViewGroup parent, boolean attachToParent) {
+        View r2 = inflater.inflate(R.layout.activity_status_info_v2, parent, false);
+        if (attachToParent == false) goto L6;
+        parent.addView(r2);
+    L6:
+        return bind(r2);
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    @NonNull
+    public LinearLayout getRoot() {
+        return this.rootView;
+    }
+}

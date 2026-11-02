@@ -1,0 +1,70 @@
+package com.jieli.jl_rcsp.model.device;
+
+import com.android.mltcode.paycertificationapi.i0XO1;
+import com.jieli.jl_rcsp.util.CHexConver;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+
+/* JADX INFO: loaded from: classes17.dex */
+public class ReverberationParam {
+    public static final int MASK = 1;
+    private int depthValue;
+    private boolean isOn;
+    private int strengthValue;
+
+    public ReverberationParam() {
+    }
+
+    public static ReverberationParam parseData(byte[] bArr) {
+        if (bArr == null || bArr.length < 5) {
+            return null;
+        }
+        return new ReverberationParam(bArr[0] == 1, CHexConver.bytesToInt(bArr, 1, 2), CHexConver.bytesToInt(bArr, 3, 2));
+    }
+
+    public int getDepthValue() {
+        return this.depthValue;
+    }
+
+    public int getStrengthValue() {
+        return this.strengthValue;
+    }
+
+    public boolean isOn() {
+        return this.isOn;
+    }
+
+    public void setDepthValue(int i) {
+        this.depthValue = i;
+    }
+
+    public void setOn(boolean z) {
+        this.isOn = z;
+    }
+
+    public void setStrengthValue(int i) {
+        this.strengthValue = i;
+    }
+
+    public byte[] toData() {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        byteArrayOutputStream.write(CHexConver.intToByte(this.isOn ? 1 : 0));
+        try {
+            byteArrayOutputStream.write(CHexConver.int2byte2(this.depthValue));
+            byteArrayOutputStream.write(CHexConver.int2byte2(this.strengthValue));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return byteArrayOutputStream.toByteArray();
+    }
+
+    public String toString() {
+        return "ReverberationParam{isOn=" + this.isOn + ", depthValue=" + this.depthValue + ", strengthValue=" + this.strengthValue + i0XO1.f7442IO;
+    }
+
+    public ReverberationParam(boolean z, int i, int i2) {
+        setOn(z);
+        setDepthValue(i);
+        setStrengthValue(i2);
+    }
+}

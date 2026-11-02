@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ab_banner_margin" android:layout_marginEnd="@dimen/ab_banner_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sma.smartv3.view.ad.ADPAdContainerView android:id="@id/adContainerView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" app:acv_adUnitId="@string/adp_unit_banner1_home_health" app:acv_autoLoad="false" />
+</LinearLayout>

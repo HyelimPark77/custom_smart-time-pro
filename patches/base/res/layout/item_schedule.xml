@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View style="@style/h_divider_gray2_margin22" />
+    <com.sma.smartv3.view.text.PFMedium android:textSize="16.0sp" android:textColor="@color/black" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:layout_marginStart="22.0dp" />
+    <com.sma.smartv3.view.text.PFMedium android:textSize="16.0sp" android:textColor="@drawable/selector_text_color_white_gray8a" android:id="@id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:layout_below="@id/tv_title" android:layout_alignStart="@id/tv_title" />
+    <View android:layout_marginTop="15.0dp" android:layout_below="@id/tv_time" style="@style/h_divider_gray2_margin22" />
+</RelativeLayout>

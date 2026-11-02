@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/item_special_course_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/item_special_course_pic" android:layout_width="80.0dp" android:layout_height="80.0dp" android:layout_margin="10.0dp" android:src="@drawable/icon_course" />
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <View android:id="@id/item_special_course_view" android:background="@color/selection_bg_color" android:layout_width="match_parent" android:layout_height="1.0px" android:layout_marginBottom="1.0dp" android:layout_marginEnd="15.0dp" />
+        <com.sma.smartv3.view.text.PFBold android:textColor="@color/black" android:id="@id/item_special_course_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dp" />
+        <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:id="@id/item_special_course_intro" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.sma.smartv3.view.text.PFMedium android:textColor="@color/line_color" android:id="@id/tv_course_class" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:drawableStart="@drawable/icon_ai_hot" />
+    </LinearLayout>
+</LinearLayout>

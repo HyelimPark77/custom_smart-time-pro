@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/view_page_secondary_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dp" android:layout_marginStart="20.0dp" android:layout_marginEnd="20.0dp" app:cardCornerRadius="@dimen/pop_bottom_bg_radius" app:cardElevation="0.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/menu_wrap_layout" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignTop="@id/ll_item_panel" android:layout_alignBottom="@id/ll_item_panel">
+        <ImageButton android:id="@id/bt_delete_language" android:background="@color/delete_bg_color" android:layout_width="50.0dp" android:layout_height="match_parent" android:src="@drawable/ic_delete" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_item_panel" android:background="@color/view_page_secondary_bg" android:paddingTop="16.0dp" android:paddingBottom="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="12.0dp" android:paddingEnd="12.0dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dp">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.sma.smartv3.view.text.PFMedium android:textSize="16.0sp" android:textColor="@color/text_color" android:id="@id/tv_title1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Title1" />
+                <com.sma.smartv3.view.text.PFMedium android:textSize="8.0sp" android:textColor="@color/colorAccent_light" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_state1" android:background="@drawable/bg_language_update_item_title_state" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="3.0dp" android:layout_marginBottom="3.0dp" android:text="tip" android:paddingStart="5.0dp" android:paddingEnd="5.0dp" android:layout_marginStart="2.0dp" />
+                <com.sma.smartv3.view.text.PFMedium android:textSize="8.0sp" android:textColor="@color/colorAccent_light" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_state2" android:background="@drawable/bg_language_update_item_title_state" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="3.0dp" android:layout_marginBottom="3.0dp" android:text="@string/language_update2__state_updated" android:paddingStart="5.0dp" android:paddingEnd="5.0dp" android:layout_marginStart="2.0dp" />
+            </LinearLayout>
+            <TextView android:textSize="13.0sp" android:textColor="@color/line_color" android:id="@id/tv_title2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:text="Title2" />
+        </LinearLayout>
+        <FrameLayout android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginEnd="10.0dp">
+            <com.sma.smartv3.view.text.PFMedium android:layout_gravity="center" android:id="@id/tv_btn" android:visibility="visible" android:layout_width="wrap_content" android:text="@string/language_update2__btn_update" style="@style/btn_common" />
+            <ImageView android:layout_gravity="center" android:id="@id/checkBox" android:visibility="gone" android:layout_width="25.0dp" android:layout_height="25.0dp" android:src="@drawable/file_check_icon" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="30.0dp" android:scrollbars="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginRight="16.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_horizontal" android:paddingLeft="20.0dp" android:paddingRight="20.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/inter_star_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.5dp" android:layout_marginBottom="4.0dp" android:layout_centerHorizontal="true">
+            <TextView android:textSize="14.0sp" android:textColor="#ffffff" android:ellipsize="end" android:id="@id/inter_star_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dp" android:text="4.7" android:textAlignment="center" android:layout_marginEnd="4.0dp" />
+            <TextView android:background="@drawable/bigo_ad_ic_star_white" android:layout_width="14.0dp" android:layout_height="14.0dp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/inter_star_layout" android:layout_centerHorizontal="true">
+            <TextView android:textSize="12.0sp" android:textColor="#b2ffffff" android:ellipsize="end" android:id="@id/inter_commit_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20M Reviews" android:textAlignment="center" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="#e7eaed" android:layout_width="1.0dp" android:layout_height="24.0dp" />
+    <RelativeLayout android:gravity="center" android:id="@id/inter_download_num_layout" android:paddingLeft="20.0dp" android:paddingRight="20.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/inter_download_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.5dp" android:layout_marginBottom="4.0dp" android:layout_centerHorizontal="true">
+            <TextView android:textSize="14.0sp" android:textColor="#ffffff" android:ellipsize="end" android:id="@id/inter_download_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20M" android:textAlignment="center" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/inter_download_layout" android:layout_centerHorizontal="true">
+            <TextView android:textSize="12.0sp" android:textColor="#b2ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bigo_ad_download_num_text" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="#e7eaed" android:layout_width="1.0dp" android:layout_height="24.0dp" />
+    <RelativeLayout android:gravity="center" android:id="@id/inter_everyone_layout" android:paddingLeft="20.0dp" android:paddingRight="20.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/inter_everyone_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.5dp" android:layout_marginBottom="4.0dp" android:layout_centerHorizontal="true">
+            <TextView android:textSize="14.0sp" android:textColor="#ffffff" android:ellipsize="end" android:background="@drawable/bigo_ad_ic_everyone_white" android:layout_width="20.0dp" android:layout_height="20.0dp" android:textAlignment="center" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/inter_everyone_icon" android:layout_centerHorizontal="true">
+            <TextView android:textSize="12.0sp" android:textColor="#b2ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Everyone" />
+            <ImageView android:background="@drawable/bigo_ad_ic_info_white" android:padding="1.0dp" android:layout_width="12.0dp" android:layout_height="12.0dp" android:layout_marginLeft="3.0dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

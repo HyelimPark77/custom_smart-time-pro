@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="22.0dp" android:paddingEnd="78.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="start" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="11.0dp">
+        <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="10.0dp" android:layout_height="10.0dp" android:src="@drawable/bg_black_radius_10" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="14.0dp" android:textColor="@color/color_binaural_left_translate" android:id="@id/tv_original" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10.0dp" />
+        </LinearLayout>
+        <com.sma.smartv3.view.text.PFMedium android:textSize="14.0dp" android:textColor="@color/color_binaural_left_original" android:id="@id/tv_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="00:00:00.00-00:00:08.24" android:layout_marginStart="20.0dp" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="14.0dp" android:textColor="@color/color_binaural_left_original" android:id="@id/tv_translated" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:layout_marginStart="20.0dp" />
+    </LinearLayout>
+</FrameLayout>

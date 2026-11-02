@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?android:selectableItemBackground" android:padding="15.0dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toStartOf="@id/rbSelectedState" android:layout_alignParentStart="true">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="18.0dp" android:textColor="@color/text_color" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="Algerian Minister of Religious Affairs and Wakfs" />
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dp">
+            <com.sma.smartv3.view.text.PFMedium android:textSize="16.0dp" android:textColor="@color/line_color" android:id="@id/tv_fajr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fair:18.0°" />
+            <com.sma.smartv3.view.text.PFMedium android:textSize="16.0dp" android:textColor="@color/line_color" android:id="@id/tv_isha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="lsha'a: 17.0°" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatRadioButton android:id="@id/rbSelectedState" android:focusable="false" android:focusableInTouchMode="false" android:visibility="visible" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" android:backgroundTint="@color/text_color" android:layout_marginHorizontal="10.0dp" />
+</RelativeLayout>

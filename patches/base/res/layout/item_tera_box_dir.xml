@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="60.0dp" android:layout_height="60.0dp" android:layout_marginTop="12.0dp" android:layout_marginBottom="12.0dp" android:src="@drawable/item_tera_box_dir_icon" android:layout_marginStart="22.0dp" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="10.0dp">
+        <com.sma.smartv3.view.text.PFMedium android:textColor="@color/text_color" android:id="@id/item_tera_box_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dp" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="12.0dp" android:textColor="@color/line_color" android:id="@id/item_tera_box_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:layout_marginEnd="22.0dp" style="@style/match_record_item_ll_rl_right_tv_right_iv_style" />
+</LinearLayout>

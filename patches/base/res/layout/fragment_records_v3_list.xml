@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/view_page_main_bg" style="@style/status_info_ll"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/layout_title_iv_tv_iv" />
+    <FrameLayout android:id="@id/table_layout" android:background="@drawable/shape_bottom_btn_disabled_v2" android:padding="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_vertical_margin" android:layout_marginStart="40.0dp" android:layout_marginEnd="40.0dp">
+        <com.google.android.material.tabs.TabLayout android:id="@id/table" style="@style/status_info_tba_card" />
+    </FrameLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@id/view_pager" style="@style/status_info_vp" />
+</LinearLayout>

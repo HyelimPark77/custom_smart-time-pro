@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_func_ll" android:background="@color/title_bar" android:layout_width="match_parent" android:layout_height="50.0dp">
+        <ImageView style="@style/abh_title_left" />
+        <LinearLayout android:id="@id/abh_search_map_et" android:background="@drawable/ripple_ai_tab_seach_bg" android:padding="5.0dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginRight="10.0dp" android:layout_weight="1.0">
+            <ImageView android:padding="3.0dp" android:visibility="gone" android:layout_width="26.0dp" android:layout_height="26.0dp" android:layout_marginLeft="10.0dp" android:src="@drawable/search_icon" />
+            <EditText android:textSize="16.0sp" android:textColor="@color/text_color" android:textColorHint="@color/text_color" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/search_view" android:background="@null" android:paddingLeft="10.0dp" android:paddingRight="10.0dp" android:layout_width="0.0dp" android:layout_height="match_parent" android:hint="@string/search_map_et_hint" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+        <com.sma.smartv3.view.text.PFMedium android:textColor="@color/colorAccent" android:id="@id/search_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dp" android:text="@string/ccs_search_hint" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/offline_maps_title" android:layout_marginStart="16.0dp" android:layout_marginEnd="16.0dp" />
+</LinearLayout>

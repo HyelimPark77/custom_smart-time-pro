@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/status_card_style"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_marginBottom="20.0dp" style="@style/status_card_style_1">
+        <com.sma.smartv3.view.TintImageView android:id="@id/tempIv" android:src="@drawable/icon_energy_rating" style="@style/status_card_style_1_iv" />
+        <LinearLayout android:id="@id/tempLastlayout" android:layout_toEndOf="@id/tempIv" style="@style/status_card_style_1_ll">
+            <com.sma.smartv3.view.text.PFMedium android:text="@string/status_body_energy" style="@style/status_card_style_1_title" />
+            <com.sma.smartv3.view.text.DINCondBold android:id="@id/tempLastTime" android:text="2019.10.23 08:30" style="@style/status_card_style_1_time" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true">
+            <com.sma.smartv3.view.text.DINCondBold android:id="@id/tempLastValue" android:text="98" android:layout_marginEnd="6.0dp" style="@style/status_card_style_1_content" />
+            <com.sma.smartv3.view.text.PFRegular android:id="@id/tmpUnit" android:text="" style="@style/unit_style" />
+        </LinearLayout>
+        <com.sma.smartv3.view.EnergySegmentProgressView android:id="@id/sw_segmentProgress" android:layout_width="match_parent" android:layout_height="50.0dp" android:layout_marginTop="10.0dp" android:layout_below="@id/tempLastlayout" app:cutSize="1.0px" app:progressRadius="30.0dp" app:segGap="4.0dp" app:selectColors="#F44336,#FF9800,#FFEB3B,#4CAF50,#2196F3" app:selectIndex="2" app:strokeWidth="2.0px" app:triangleHeight="11.0dp" />
+    </RelativeLayout>
+</LinearLayout>

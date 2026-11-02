@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:layout_gravity="center" android:id="@id/chat_send_time" android:background="@drawable/voice_chat_time_bg" android:padding="4.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4月12日 早上07:51" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dp">
+        <com.sma.smartv3.view.ImageViewRound android:id="@id/iv_send_picture" android:layout_width="40.0dp" android:layout_height="40.0dp" android:src="@drawable/icon_voice_chat_gpt" android:layout_alignParentEnd="true" app:isCustomize="true" app:radius="8.0dp" app:type="rectangle" />
+        <TextView android:textColor="#191919" android:id="@id/tv_send_content" android:background="@drawable/chat_tv_send" android:paddingTop="10.0dp" android:paddingBottom="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="hello" android:textIsSelectable="true" android:paddingStart="10.0dp" android:paddingEnd="15.0dp" android:layout_marginStart="50.0dp" android:layout_marginEnd="5.0dp" android:layout_toStartOf="@id/iv_send_picture" android:backgroundTint="#cba67d" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root_view" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout style="@style/abh_title">
+        <ImageView style="@style/abh_title_left" />
+        <com.sma.smartv3.view.text.PFMedium android:text="@string/call_translation" style="@style/abh_title_center" />
+        <ImageView android:visibility="visible" app:tint="@color/text_color" style="@style/abh_title_right" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_me_bottom_ll_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="20.0dp">
+        <LinearLayout android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="50.0dp" android:paddingStart="20.0dp" android:paddingEnd="20.0dp">
+            <TextView android:textSize="18.0dp" android:textColor="@color/text_color" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/translation_call_me_language" />
+            <TextView android:textSize="18.0dp" android:textColor="@color/text_color" android:ellipsize="end" android:gravity="right" android:id="@id/translation_call_me_language" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/language_chinese" android:maxLines="1" android:drawableRight="@drawable/ic_arrow_drop_down" android:drawablePadding="10.0dp" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="1.0px" android:paddingStart="2.0dp" android:paddingEnd="2.0dp" />
+        <LinearLayout android:layout_gravity="center_vertical" android:background="@drawable/shape_me_bottom_ll_bg" android:layout_width="match_parent" android:layout_height="50.0dp" android:paddingStart="20.0dp" android:paddingEnd="20.0dp">
+            <TextView android:textSize="18.0dp" android:textColor="@color/text_color" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/translation_call_other_language" />
+            <TextView android:textSize="18.0dp" android:textColor="@color/text_color" android:ellipsize="end" android:gravity="right" android:id="@id/translation_call_other_language" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/language_english" android:maxLines="1" android:drawableRight="@drawable/ic_arrow_drop_down" android:drawablePadding="10.0dp" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/shape_me_bottom_ll_bg" android:layout_width="match_parent" android:layout_height="50.0dp" android:layout_margin="20.0dp">
+        <LinearLayout android:gravity="center" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <TextView android:textSize="18.0dp" android:textColor="@color/text_color" android:gravity="center_horizontal" android:id="@id/translation_call_video_call" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/translation_call_video_call" android:drawableLeft="@drawable/ic_eq_mode_select_sel" android:drawablePadding="4.0dp" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <TextView android:textSize="18.0dp" android:textColor="@color/text_color" android:gravity="center_horizontal" android:id="@id/translation_call_voice_call" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/translation_call_voice_call" android:drawableLeft="@drawable/ic_eq_mode_select_nor" android:drawablePadding="4.0dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button android:layout_width="match_parent" android:layout_height="40.0dp" android:layout_margin="20.0dp" android:text="@string/translation_call_invite_friends" style="@style/bottom_btn" />
+    <TextView android:textColor="@color/text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22.0dp" android:layout_marginTop="10.0dp" android:text="@string/translation_call_tip_title" />
+    <TextView android:textColor="@color/line_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22.0dp" android:text="@string/translation_call_tip" />
+</LinearLayout>

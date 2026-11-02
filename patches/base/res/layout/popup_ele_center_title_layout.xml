@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-5.0dp" android:src="@drawable/popup_view_btn_bg_vector" android:layout_marginEnd="15.0dp" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/popup_view_btn_bg" android:paddingLeft="15.0dp" android:paddingRight="15.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="10.0dp">
+        <com.sma.smartv3.view.text.PFMedium android:textSize="14.0sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/ele_all_record" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="10.0dp" android:text="全部记录" android:maxLines="1" />
+        <View android:layout_gravity="center_horizontal" android:background="@color/white" android:visibility="invisible" android:layout_width="120.0dp" android:layout_height="1.0px" android:layout_marginTop="10.0dp" android:layout_marginBottom="10.0dp" />
+        <com.sma.smartv3.view.text.PFMedium android:textSize="14.0sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/ele_symptom_record" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginBottom="10.0dp" android:text="有症状记录" android:maxLines="1" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/inter_form_question_layout" android:background="#e9f0f5" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <sg.bigo.ads.common.view.RoundedFrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" app:bigo_ad_bottomLeftRadius="8.0dp" app:bigo_ad_bottomRightRadius="8.0dp">
+        <LinearLayout android:orientation="vertical" android:id="@id/bigo_ad_id_form_question" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24.0dp" android:paddingEnd="24.0dp">
+            <TextView android:textSize="15.5sp" android:textColor="#9fb0bb" android:id="@id/inter_form_question_purpose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="27.5dp" />
+        </LinearLayout>
+    </sg.bigo.ads.common.view.RoundedFrameLayout>
+    <sg.bigo.ads.common.view.RoundedFrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="84.0dp" app:bigo_ad_radius="8.0dp">
+        <LinearLayout android:orientation="vertical" android:background="#ffffff" android:paddingBottom="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24.0dp" android:paddingEnd="24.0dp">
+            <TextView android:textSize="16.0sp" android:textColor="#262e33" android:id="@id/inter_form_privacy_notice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:layout_marginBottom="15.0dp" />
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <sg.bigo.ads.common.view.MixtureTextView android:textSize="13.0sp" android:textColor="#6d7e88" android:id="@id/inter_form_privacy_desc" android:paddingBottom="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <sg.bigo.ads.common.view.PrivacyCheckBox android:id="@id/inter_form_check_box" android:layout_width="16.0dp" android:layout_height="16.0dp" app:bigo_ad_hcb_is_check="true" app:bigo_ad_hcb_style="hollow_out" app:bigo_ad_hcb_uncheck_circle_color="#dde5e9" />
+                </sg.bigo.ads.common.view.MixtureTextView>
+                <View android:id="@id/bigo_ad_check_box_expand" android:layout_width="25.0dp" android:layout_height="25.0dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </sg.bigo.ads.common.view.RoundedFrameLayout>
+</LinearLayout>

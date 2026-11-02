@@ -1,0 +1,46 @@
+SMART-TIME PRO 2.1.3.4 커스터마이징 작업 자료
+
+먼저 CUSTOMIZATION_GUIDE.html을 브라우저에서 여세요.
+
+현재 대상 기기: Diz-SW01. 사용자가 원본 앱에서 연결됨을 확인했습니다.
+수정·재서명한 앱과의 연결은 아직 실기기에서 검증하지 않았습니다.
+
+editable/base: 실제 APK 수정용 Smali, AndroidManifest.xml, XML 리소스, 이미지, assets.
+editable/arm64: ARM64 네이티브 라이브러리와 분할 APK 설정.
+editable/xxhdpi: 화면 밀도용 분할 리소스.
+readable: JADX가 구조를 복원한 Java와 리소스. 읽기·분석용입니다.
+linear_reference: 앱·연결 SDK 중심의 단순 명령 흐름 Java 보조 자료.
+inventory: 원본 클래스, 수정 파일 위치, 컴포넌트, 네이티브 심볼, 복원 결함 등의 목록.
+renames.jobf: JADX 자동 별칭 매핑. 원 제작자의 ProGuard/R8 mapping.txt가 아닙니다.
+originals: 원본 메타데이터. 로컬 분석 폴더에는 원본 APK도 있으며 공개 번들에서는 제외합니다.
+builds: 로컬 재조립 검증에 사용한 미서명 APK. 공개 번들에서는 제외하며 스크립트로 다시 생성합니다.
+tools: 재현에 사용한 JADX, Apktool. 도구 버전·출처는 tools/PROVENANCE.txt 참고.
+logs: 복원과 빌드 결과 로그.
+
+원본 변수명·주석·소스 프로젝트·Gradle 의존성·서버 코드는 APK에서 완전 복원되지 않습니다.
+Java 출력에는 goto, 잘못 추론한 타입, 복원 실패 표시 등이 포함될 수 있습니다.
+Java 파일을 Android Studio에 넣으면 바로 빌드된다는 뜻이 아닙니다.
+난독화된 코드의 원래 의미를 모두 복구하거나 네이티브 C/C++를 복원한 상태도 아닙니다.
+
+수정 방식
+1. CUSTOMIZATION_GUIDE.html에서 기능과 관련 경로를 찾습니다.
+2. inventory/code_index.json에서 원래 클래스의 Smali 파일 위치를 찾습니다.
+3. 읽기용 Java를 참고해 editable의 XML·이미지·Smali를 수정합니다.
+4. PowerShell에서 .\Rebuild.ps1 을 실행합니다. Java가 필요합니다.
+5. 자신의 Android SDK Build Tools의 zipalign·apksigner와 배포용 키를 준비합니다.
+   .\Sign.ps1 -Zipalign <전체경로> -Apksigner <전체경로> -Keystore <전체경로> -Alias <키별칭>
+   암호는 apksigner의 대화형 입력으로 입력하며 이 자료에 저장하지 않습니다.
+6. 설치·연결은 별도로 진행합니다. 기존 앱과 다른 키를 사용하면 기존 앱 위에 업데이트되지 않습니다.
+   기존 앱을 삭제하면 앱 내부 데이터가 사라질 수 있으니 데이터 이전 계획을 먼저 세웁니다.
+   분할 APK 3개는 동일한 키로 서명해야 합니다.
+   설치 명령 예: adb install-multiple signed/base.apk signed/arm64.apk signed/xxhdpi.apk
+
+설치용 기준 테스트 APK는 GitHub Release에서 별도로 받습니다.
+https://github.com/dlwlsrnjs/custom_smart-time-pro/releases/tag/analysis-v2.1.3.4-baseline
+Build-TestApk.ps1로 단일 APK를 만들고 개발용 서명을 적용할 수 있습니다.
+비공개 테스트 서명 키는 공개 저장소와 번들에 포함하지 않습니다.
+
+이번 작업은 앱을 휴대전화에 설치하거나 워치에 펌웨어를 전송하지 않았습니다.
+패키지명·서버·인증·기기 통신의 제품 동작을 임의로 변경하지 않았습니다.
+네이티브 코드의 다른 CPU ABI는 제공된 XAPK에 없으므로 새로 생성하지 않았습니다.
+공개 배포 전 타사 코드·이미지·SDK의 이용 권한과 배포 요구사항을 확인해야 합니다.

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/giftTranslationBgIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_gift_translation_bg" android:layout_centerHorizontal="true" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="190.0dp" android:layout_centerHorizontal="true">
+        <TextView android:textSize="28.0sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="恭喜获得" />
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="免费获得时长" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="30.0sp" android:textStyle="bold" android:textColor="#f02340" android:id="@id/freeTimeValueTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="600" />
+        <TextView android:textSize="12.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="有效期三个月" />
+        <RelativeLayout android:id="@id/giftTranslationConfirmRl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dp">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_gift_translation_bt_shape" />
+            <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开心收下" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

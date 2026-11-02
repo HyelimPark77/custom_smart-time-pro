@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/view_page_main_bg" style="@style/status_info_ll"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_top" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabLayout android:id="@id/table" android:layout_width="0.0dp" android:layout_weight="1.0" app:tabMode="auto" app:tabRippleColor="@null" app:tabSelectedTextColor="@color/colorAccent" app:tabTextAppearance="@style/TabLayoutTextStyle" app:tabTextColor="@color/line_color" style="@style/status_info_tba" />
+        <ImageView android:id="@id/iv_more_sport" android:visibility="gone" android:layout_width="30.0dp" android:layout_height="wrap_content" android:src="@drawable/ai_answer_more_icon" android:layout_marginEnd="10.0dp" />
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@id/view_pager" style="@style/status_info_vp" />
+</LinearLayout>
