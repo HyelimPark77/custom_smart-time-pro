@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-02",
+  "method": "user-authorized read-only ADB diagnosis with manual reproduction",
+  "device_model": "SM-S931N",
+  "android_release": "16",
+  "android_api": 36,
+  "one_ui_property": "80500",
+  "abi": "arm64-v8a",
+  "page_size_bytes": 4096,
+  "original_package_installed": false,
+  "custom_package_installed": false,
+  "observed_foreground_component": "android/com.samsung.android.core.pm.install.UnknownSourceAppBlockActivity",
+  "observed_block_ui_owner": "Samsung system framework",
+  "detailed_classification_rule": null,
+  "detailed_classification_reason": null,
+  "device_downloaded_apk_hash_verified": false,
+  "apk_installed_or_security_settings_changed_by_agent": false,
+  "private_logs_or_device_serial_published": false,
+  "interpretation": "Samsung external-app install blocking UI confirmed; underlying classification cause unresolved. 16KB page-size incompatibility does not explain this observed 4KB-device preinstall block."
+}

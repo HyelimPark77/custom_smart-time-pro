@@ -10,6 +10,8 @@ SMART-TIME PRO **2.1.3.4** (`com.sma.smartv3.pro`, versionCode 8413)의 정적 �
 
 ## 다운로드
 
+**실기기 확인:** S25에서 실제 차단 화면은 삼성 시스템의 `UnknownSourceAppBlockActivity`였고, OS는 Android 16/API 36, 메모리 페이지는 4KB였습니다. 내부 판정 사유는 아직 확인하지 못했습니다. [최신 기기 진단](docs/DEVICE_BLOCK_DIAGNOSIS.md)을 참고하세요.
+
 [별도 앱 ID의 Diz SW01 Custom 0.1.0 테스트 빌드](https://github.com/dlwlsrnjs/custom_smart-time-pro/releases/tag/custom-v0.1.0-identity)
 
 - 설치 이름: **Diz SW01 Custom**
