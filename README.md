@@ -8,6 +8,14 @@ SMART-TIME PRO **2.1.3.4** (`com.sma.smartv3.pro`, versionCode 8413)의 정적 �
 
 ## 다운로드
 
+[별도 앱 ID의 Diz SW01 Custom 0.1.0 테스트 빌드](https://github.com/dlwlsrnjs/custom_smart-time-pro/releases/tag/custom-v0.1.0-identity)
+
+- 설치 이름: **Diz SW01 Custom**
+- 앱 ID: **`com.diz.sw01.custom`**
+- 파일: `Diz_SW01_Custom_0.1.0_ARM64_TEST.apk`
+- 기존 앱과 Provider·자체 권한 식별자를 분리했습니다. 실제 병행 설치·실행·Diz-SW01 연결은 미검증입니다.
+- 이 변경은 앱 식별자 분리이며, 앞서 보고된 보안 차단의 원인을 해결하거나 안전 판정을 받은 버전이 아닙니다. [변경 범위와 제약](docs/CUSTOM_APP_IDENTITY.md)을 확인하세요.
+
 [기준 테스트 빌드와 전체 복원 작업 공간 받기](https://github.com/dlwlsrnjs/custom_smart-time-pro/releases/tag/analysis-v2.1.3.4-baseline)
 
 - `SMART_TIME_PRO_2.1.3.4_ARM64_TEST.apk`: 휴대폰 설치 테스트용 단일 APK. ARM64 Android 8.0 이상 대상.
@@ -49,7 +57,7 @@ cd custom_smart-time-pro
 .\scripts\Build.ps1
 ```
 
-결과는 `dist/SMART_TIME_PRO_2.1.3.4_ARM64_TEST.apk`입니다. 새 환경에서는 로컬 테스트 키가 생성됩니다. 이 키와 원래 Release APK의 테스트 키는 다르므로 서로 업데이트 설치가 안 될 수 있습니다. 생성한 키는 Git에 올리지 않습니다.
+기본 결과는 `dist/Diz_SW01_Custom_0.1.0_ARM64_TEST.apk`입니다. 이름·앱 ID·버전은 `profiles/diz-sw01-custom.json`에서 관리합니다. 원래 앱 ID의 기준 빌드를 재현하려면 `scripts/Build.ps1 -Baseline`을 사용합니다. 새 환경에서는 로컬 테스트 키가 생성됩니다. 이 키와 원래 Release APK의 테스트 키는 다르므로 서로 업데이트 설치가 안 될 수 있습니다. 생성한 키는 Git에 올리지 않습니다.
 
 `reference-java`를 Android Studio에 가져와 바로 빌드하는 프로젝트가 아닙니다. 실제 수정·재조립 경로는 Smali와 리소스입니다.
 

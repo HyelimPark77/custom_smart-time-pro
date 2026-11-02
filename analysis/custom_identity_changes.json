@@ -1,0 +1,149 @@
+{
+  "old_application_id": "com.sma.smartv3.pro",
+  "profile": {
+    "application_id": "com.diz.sw01.custom",
+    "app_name": "Diz SW01 Custom",
+    "version_name": "0.1.0",
+    "version_code": 1,
+    "apk_filename": "Diz_SW01_Custom_0.1.0_ARM64_TEST.apk",
+    "device_model": "Samsung Galaxy S25 (SM-S931N)",
+    "watch_model": "Diz-SW01"
+  },
+  "manifest_changes": [
+    {
+      "tag": "permission",
+      "attribute": "name",
+      "before": "com.sma.smartv3.pro.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+      "after": "com.diz.sw01.custom.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    },
+    {
+      "tag": "uses-permission",
+      "attribute": "name",
+      "before": "com.sma.smartv3.pro.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+      "after": "com.diz.sw01.custom.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    },
+    {
+      "tag": "data",
+      "attribute": "pathPrefix",
+      "before": "/com.sma.smartv3.pro/callback",
+      "after": "/com.diz.sw01.custom/callback"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.fileprovider",
+      "after": "com.diz.sw01.custom.fileprovider"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.androidx-startup",
+      "after": "com.diz.sw01.custom.androidx-startup"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.contextprovider",
+      "after": "com.diz.sw01.custom.contextprovider"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.IronsourceLifecycleProvider",
+      "after": "com.diz.sw01.custom.IronsourceLifecycleProvider"
+    },
+    {
+      "tag": "data",
+      "attribute": "host",
+      "before": "cct.com.sma.smartv3.pro",
+      "after": "cct.com.diz.sw01.custom"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.imagepicker.provider",
+      "after": "com.diz.sw01.custom.imagepicker.provider"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.applovininitprovider",
+      "after": "com.diz.sw01.custom.applovininitprovider"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.mobileadsinitprovider",
+      "after": "com.diz.sw01.custom.mobileadsinitprovider"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.AudienceNetworkContentProvider",
+      "after": "com.diz.sw01.custom.AudienceNetworkContentProvider"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.vungle-provider",
+      "after": "com.diz.sw01.custom.vungle-provider"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.LevelPlayActivityLifecycleProvider",
+      "after": "com.diz.sw01.custom.LevelPlayActivityLifecycleProvider"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.sls_provider",
+      "after": "com.diz.sw01.custom.sls_provider"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.MicrosoftCognitiveServicesSpeech.InternalContentProvider",
+      "after": "com.diz.sw01.custom.MicrosoftCognitiveServicesSpeech.InternalContentProvider"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.utilcode.provider",
+      "after": "com.diz.sw01.custom.utilcode.provider"
+    },
+    {
+      "tag": "action",
+      "attribute": "name",
+      "before": "com.sma.smartv3.pro.messenger",
+      "after": "com.diz.sw01.custom.messenger"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.fileprovider",
+      "after": "com.diz.sw01.custom.fileprovider"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.BigoAdsProvider",
+      "after": "com.diz.sw01.custom.BigoAdsProvider"
+    },
+    {
+      "tag": "provider",
+      "attribute": "authorities",
+      "before": "com.sma.smartv3.pro.mbcomponentlifcycleprovider",
+      "after": "com.diz.sw01.custom.mbcomponentlifcycleprovider"
+    }
+  ],
+  "app_name_resource_configurations": [
+    "values",
+    "values-ar",
+    "values-hr-rHR"
+  ],
+  "dex_modified": false,
+  "permissions_removed": [],
+  "security_block_resolved": false,
+  "note": "Separate app identity for coexistence; original runtime implementation retained. External SDK registrations may need new application ID/certificate configuration."
+}

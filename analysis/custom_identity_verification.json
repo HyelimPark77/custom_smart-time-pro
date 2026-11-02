@@ -1,0 +1,40 @@
+{
+  "filename": "Diz_SW01_Custom_0.1.0_ARM64_TEST.apk",
+  "sha256": "94331dac82401815115650592e012fe99fa2e59f43d4e860afa2a7b94a868b93",
+  "bytes": 233616526,
+  "application_id": "com.diz.sw01.custom",
+  "label": "Diz SW01 Custom",
+  "version_name": "0.1.0",
+  "version_code": 1,
+  "zip_crc_ok": true,
+  "dex_files": 21,
+  "dex_payloads_unchanged": true,
+  "native_libraries": 50,
+  "native_payloads_unchanged": true,
+  "original_component_classes_preserved": true,
+  "provider_authority_collisions_with_original": [],
+  "all_provider_authorities_use_new_application_id": true,
+  "all_display_labels_updated": true,
+  "runtime_tested": false,
+  "coinstallation_tested": false,
+  "watch_connection_tested": false,
+  "security_block_resolved": false,
+  "original_resource_id_count": 30432,
+  "custom_resource_id_count": 30432,
+  "all_original_resource_ids_preserved": true,
+  "permissions_added": [
+    "com.diz.sw01.custom.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "permissions_removed": [
+    "com.sma.smartv3.pro.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "badging_identity": [
+    "package: name='com.diz.sw01.custom' versionCode='1' versionName='0.1.0' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'",
+    "minSdkVersion:'26'",
+    "targetSdkVersion:'36'",
+    "application-label:'Diz SW01 Custom'",
+    "application-label-ko:'Diz SW01 Custom'",
+    "launchable-activity: name='com.sma.smartv3.ui.launcher.LauncherActivity'  label='Diz SW01 Custom' icon=''",
+    "native-code: 'arm64-v8a'"
+  ]
+}

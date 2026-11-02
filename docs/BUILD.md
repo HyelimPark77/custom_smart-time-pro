@@ -33,10 +33,10 @@ Windows, Java 11 이상, Python 3.6 이상, GitHub CLI가 필요합니다. JADX�
 1. 저장소의 빌드 스크립트를 작업 공간에 복사합니다.
 2. `patches/`의 변경 파일을 `editable/`의 같은 위치에 반영합니다. 다른 기존 파일은 덮어쓰기 전 작업 공간의 `.cache`에 백업합니다.
 3. `Rebuild.ps1`로 세 분할 APK를 재조립합니다.
-4. `PrepareStandalone.py`로 기본 리소스·분할 리소스·ARM64 라이브러리를 합칩니다. 최신 재조립 DEX를 사용합니다.
+4. `PrepareStandalone.py`로 기본 리소스·분할 리소스·ARM64 라이브러리를 합칩니다. 최신 재조립 DEX를 사용합니다. 기본 빌드에서는 이후 `ApplyIdentity.py`로 커스텀 프로필의 이름·앱 ID·Provider·자체 권한·버전을 적용합니다.
 5. 통합 APK를 만들고 4바이트 ZIP 정렬을 적용합니다. 현재 APK는 `extractNativeLibs=true`입니다.
 6. 로컬 테스트 키로 서명하고 서명·정렬을 검증합니다.
-7. 결과를 `dist/SMART_TIME_PRO_2.1.3.4_ARM64_TEST.apk`에 복사합니다.
+7. 결과를 `dist/Diz_SW01_Custom_0.1.0_ARM64_TEST.apk`에 복사합니다. `scripts/Build.ps1 -Baseline`은 앱 ID를 유지한 이전 기준 빌드를 생성합니다.
 
 입력 예외가 나면 해당 단계에서 중단합니다. `workspace/.../logs`에서 단계별 결과를 확인하세요. 일괄 래퍼 자체를 별도의 새 환경에서 끝까지 재실행한 것은 아니지만, 기준 산출물에는 동일한 디코딩·재조립·통합·정렬·서명·검증 단계를 실제 수행했습니다.
 
@@ -48,7 +48,7 @@ Windows, Java 11 이상, Python 3.6 이상, GitHub CLI가 필요합니다. JADX�
 
 ## 5. 패키지명을 바꾸려면
 
-현재 `com.sma.smartv3.pro`를 유지합니다. 별도 앱으로 병행 설치하려면 매니페스트의 package만 바꿔서는 부족합니다. provider authorities, signature permission 이름, 리플렉션·문자열 참조, 외부 로그인 리디렉션, 지도·광고 SDK 설정, 서비스 등록 및 서버 바인딩을 함께 검토해야 합니다.
+이전 기준 빌드는 `com.sma.smartv3.pro`를 유지하며, 새 커스텀 프로필은 `com.diz.sw01.custom`을 사용합니다. [별도 앱 식별자 변경 기록](CUSTOM_APP_IDENTITY.md)을 확인하세요. 병행 설치를 위해 provider authorities, signature permission 이름과 패키지에 종속되는 intent 식별자를 함께 변경했습니다. 리플렉션·문자열 참조, 외부 로그인 리디렉션, 지도·광고 SDK 설정, 서비스 등록 및 서버 바인딩은 추가 런타임 검토가 필요합니다.
 
 Diz-SW01 연결이 새 서명에서 유지되는지 먼저 확인한 후 패키지명 변경을 별도 변경으로 진행하세요. 각 변경은 UI 변경과 분리해서 커밋하면 실패 원인을 찾기 쉽습니다.
 
