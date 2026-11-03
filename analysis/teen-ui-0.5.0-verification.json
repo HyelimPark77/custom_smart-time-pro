@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-03",
+  "version": "0.5.0",
+  "application_id": "com.diz.sw01.custom.ui",
+  "device": "Galaxy S25 / Android 16 / ARM64",
+  "sha256": "e0a1c08a870ca9617141ca7b16b04d916c7f749dbc12d26b5e30c90dae8d69f7",
+  "native_libraries_unchanged": 50,
+  "dex19_class_count": 7311,
+  "dex19_format": "038",
+  "preserved_game_model": true,
+  "updated_ui": [
+    "health home",
+    "sports",
+    "watch",
+    "profile",
+    "settings",
+    "sleep detail",
+    "welcome and login",
+    "mind island"
+  ],
+  "vendor_auto_update": "Skipped only for exact custom package in BaseMainActivity.checkAppVersion; original package and firmware paths retained. Manual vendor update menu remains.",
+  "runtime_limits": [
+    "No physical watch connection verification",
+    "No clinical efficacy verification",
+    "No exhaustive third-party SDK or dark-mode visual verification"
+  ],
+  "profile_capture": "Temporary display-only example nickname and ID; gender hidden. No account data was saved. Preview helper removed."
+}

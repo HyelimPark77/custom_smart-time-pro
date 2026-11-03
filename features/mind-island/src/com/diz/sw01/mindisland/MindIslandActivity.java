@@ -2,9 +2,13 @@ package com.diz.sw01.mindisland;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Build;
 import android.graphics.Color;
+import android.graphics.Insets;
 import android.util.AtomicFile;
 import android.view.View;
+import android.view.WindowInsets;
+import android.widget.FrameLayout;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
@@ -49,11 +53,11 @@ public final class MindIslandActivity extends Activity {
     @Override public void onCreate(Bundle state) {
         setTheme(android.R.style.Theme_Material_Light_NoActionBar);
         super.onCreate(state);
-        getWindow().setStatusBarColor(Color.rgb(246, 247, 242));
-        getWindow().setNavigationBarColor(Color.rgb(246, 247, 242));
+        getWindow().setStatusBarColor(Color.rgb(249, 246, 255));
+        getWindow().setNavigationBarColor(Color.rgb(249, 246, 255));
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR | View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
         web = new WebView(this);
-        web.setBackgroundColor(Color.rgb(246, 247, 242));
+        web.setBackgroundColor(Color.rgb(249, 246, 255));
         web.getSettings().setJavaScriptEnabled(true);
         web.getSettings().setDomStorageEnabled(false);
         web.getSettings().setAllowFileAccess(false);
@@ -71,7 +75,20 @@ public final class MindIslandActivity extends Activity {
                 return new WebResourceResponse("text/plain", "UTF-8", new ByteArrayInputStream(new byte[0]));
             }
         });
-        setContentView(web);
+        FrameLayout frame = new FrameLayout(this);
+        frame.setBackgroundColor(Color.rgb(249, 246, 255));
+        frame.addView(web, new FrameLayout.LayoutParams(-1, -1));
+        if (Build.VERSION.SDK_INT >= 30) {
+            getWindow().setDecorFitsSystemWindows(false);
+            frame.setOnApplyWindowInsetsListener((view, insets) -> {
+                Insets safe = insets.getInsets(WindowInsets.Type.systemBars()
+                    | WindowInsets.Type.displayCutout() | WindowInsets.Type.ime());
+                view.setPadding(safe.left, safe.top, safe.right, safe.bottom);
+                return WindowInsets.CONSUMED;
+            });
+        } else { frame.setFitsSystemWindows(true); }
+        setContentView(frame);
+        frame.requestApplyInsets();
         web.loadUrl(ROOT + "index.html");
     }
     @Override protected void onPause() {

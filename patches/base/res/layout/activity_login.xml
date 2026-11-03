@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:id="@id/rv" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:animateLayoutChanges="true"
+<LinearLayout android:id="@id/rv" android:background="@drawable/diz_welcome_bg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" android:animateLayoutChanges="true"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
         <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="80.0dp">
-                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/login_bk" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dp" android:paddingStart="20.0dp" android:paddingEnd="20.0dp">
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:src="@drawable/login_email" />
+            <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/diz_card" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dp" android:paddingStart="20.0dp" android:paddingEnd="20.0dp">
+                    <ImageView android:layout_width="160dp" android:layout_height="140dp" android:layout_marginTop="16dp" android:src="@drawable/diz_mascots" android:scaleType="fitCenter" android:contentDescription="함께 시작하는 토끼와 별 친구" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="다시 만나서 반가워!" android:textSize="23sp" android:textStyle="bold" android:textColor="#48355F" android:layout_marginBottom="12dp" />
                     <RelativeLayout style="@style/edittext_rl">
                         <View style="@style/edittext_bottom_line" />
                         <com.google.android.material.textfield.TextInputLayout android:theme="@style/common_til" android:textColorHint="@color/line_color" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="@string/email">

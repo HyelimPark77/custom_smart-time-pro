@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-03",
+  "version": "0.4.0",
+  "device": "Galaxy S25 / Android 16",
+  "note": "Unedited screenshots. Empty game records; account identity excluded. Login views were opened using a temporary same-signature instrumentation runner without logging out or submitting credentials.",
+  "screens": [
+    {
+      "file": "health-home.png",
+      "width": 1080,
+      "height": 2340,
+      "sha256": "920f283512de9bff039291f396470eb94e214a78ef57aad0f2233a5e11016ad9"
+    },
+    {
+      "file": "login-choice.png",
+      "width": 1080,
+      "height": 2340,
+      "sha256": "8bf4bb42fb7c5069b6bb811c9c32c1f7992a3fbc3ab648d5863a096fcab73208"
+    },
+    {
+      "file": "email-login.png",
+      "width": 1080,
+      "height": 2340,
+      "sha256": "909a9e8767040458b0371dcd72cd34e54be972e7b199d9975f218ef537e71d1d"
+    },
+    {
+      "file": "island.png",
+      "width": 1080,
+      "height": 2340,
+      "sha256": "02a504fdd98fc12e1d49d2c6a9cc70d9c2b87cb54bcf74c844dab3454e7a1e98"
+    },
+    {
+      "file": "mood.png",
+      "width": 1080,
+      "height": 2340,
+      "sha256": "90bcb42236058de5c452d9022e01cfcaccc5b587acc269047aba54b41d4d06c6"
+    },
+    {
+      "file": "quests.png",
+      "width": 1080,
+      "height": 2340,
+      "sha256": "a8c1679853e715531b50f1af8a34cc2e6b591bba7695cd4fd639a10a1e20acda"
+    },
+    {
+      "file": "rest.png",
+      "width": 1080,
+      "height": 2340,
+      "sha256": "0659bda6c09b9e9fa88c472d2fc671039599c11fc3cdcc987c8cece997c10963"
+    }
+  ]
+}

@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:topLeftRadius="@dimen/bottom_btn_radius" android:topRightRadius="@dimen/bottom_btn_radius" android:bottomLeftRadius="@dimen/bottom_btn_radius" android:bottomRightRadius="@dimen/bottom_btn_radius" />
-    <stroke android:width="1.0dp" android:color="@color/line_color_light" />
-</shape>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"><gradient android:angle="315" android:startColor="#A67AD7" android:endColor="#865DBB"/><corners android:radius="26dp"/><stroke android:width="1dp" android:color="#9B72CC"/></shape>

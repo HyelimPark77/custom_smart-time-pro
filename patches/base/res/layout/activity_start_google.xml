@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+<RelativeLayout android:background="@drawable/diz_welcome_bg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <androidx.core.widget.NestedScrollView android:id="@id/rv" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="20.0dp">
-        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:paddingTop="60.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <RelativeLayout android:gravity="center_vertical" android:id="@id/googleRl" android:padding="12.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:paddingTop="30dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="안녕! 만나서 반가워" android:textSize="27sp" android:textStyle="bold" android:textColor="#48355F" android:layout_marginTop="16dp" />
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="작은 일상부터, 우리 함께 시작해요" android:textSize="13sp" android:textColor="#81718F" android:layout_marginTop="8dp" />
+<ImageView android:layout_width="220dp" android:layout_height="200dp" android:src="@drawable/diz_mascots" android:scaleType="fitCenter" android:contentDescription="보라 토끼와 별 친구" android:layout_marginTop="10dp" />
+<RelativeLayout android:gravity="center_vertical" android:id="@id/googleRl" android:padding="12.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
                 <ImageView android:layout_width="200.0dp" android:layout_height="48.0dp" android:src="@drawable/selector_bottom_btn_google" android:onClick="google" />
             </RelativeLayout>
             <com.sma.smartv3.view.text.PFMedium android:textSize="16.0sp" android:textColor="@color/line_color" android:background="@drawable/common_ripple_borderless" android:padding="10.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dp" android:text="@string/not_logged_in_yet" android:onClick="noLogin" />

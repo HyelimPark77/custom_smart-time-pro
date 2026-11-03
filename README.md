@@ -2,23 +2,39 @@
 
 **한국어 건강 앱 UI와 청소년의 감정·일상 돌아보기를 연결하는 오프라인 게임 프로토타입**
 
-SMART-TIME PRO 복원 작업 공간을 바탕으로 주요 화면을 한국어와 청록색 카드 UI로 정리하고, 건강 홈에서 열리는 **마음섬**을 추가했습니다. 마음 날씨를 남기고, 작은 퀘스트로 씨앗을 모아 나만의 섬을 꾸밀 수 있습니다.
+SMART-TIME PRO 복원 작업 공간을 바탕으로 기존 건강·운동·워치·프로필·설정 화면을 한국어와 캐릭터·파스텔 카드 UI로 통일하고, 건강 홈에서 열리는 **마음섬**을 추가했습니다. 마음 날씨를 남기고, 작은 퀘스트로 씨앗을 모아 나만의 섬을 꾸밀 수 있습니다.
 
 | 항목 | 현재 상태 |
 | --- | --- |
-| 커스텀 앱 | **디즈 워치 0.3.0** · `com.diz.sw01.custom.ui` · versionCode `3` |
+| 커스텀 앱 | **디즈 워치 0.5.0** · `com.diz.sw01.custom.ui` · versionCode `5` |
 | 추가 기능 | 마음 날씨·메모, 섬 꾸미기, 작은 퀘스트, 1분 호흡, 주관적 쉼 기록 |
-| 실행 확인 | Android 12 / API 31 Google APIs 에뮬레이터에서 설치·실행·저장·복원 확인 |
+| 실행 확인 | 0.5.0 Galaxy S25 / Android 16 업데이트 설치·주요 화면 확인. 기존 0.3.0 API31 저장·복원 검증 |
 | 워치 | 대상 Diz-SW01. **커스텀 앱의 실물 연결·동기화는 아직 미검증** |
 | 개발 형태 | 기존 앱은 **Smali·리소스 재조립**, 새 마음섬은 Java Activity + 로컬 HTML/CSS/JS |
-| 문서·캡처 기준 | **2026-11-03**, 0.3.0 실제 에뮬레이터 화면 27장 |
+| 문서·캡처 기준 | **2026-11-03**, 0.5.0 실제 폰 6장 + 0.4.0 실제 폰 7장 + 0.3.0 에뮬레이터 27장 |
 | 배포 상태 | 팀 검토용 프로토타입. 스토어 배포·실기기 안전 판정·임상 효과 검증 완료 상태가 아님 |
 
 > 처음 합류한 팀원은 **[화면별 설명](docs/SCREENS.md) → [빠른 실행·빌드](#빠른-실행빌드) → [팀 작업 안내](docs/TEAM_GUIDE.md)** 순서로 보세요.
 >
 > 화면의 기분·메모·씨앗·꾸미기는 설명을 위해 만든 **예시 데이터**입니다. 실제 청소년의 감정 기록이나 건강 측정값이 아닙니다. 개인 프로필과 계정 ID가 노출되는 화면은 공개 캡처에서 제외했습니다.
 
-<table><tr><th>건강 홈 → 마음섬 진입</th><th>나만의 작은 섬</th></tr><tr><td><img src="docs/screenshots/01-health-home.png" width="260" alt="한국어 건강 홈과 마음섬 진입 카드" /></td><td><img src="docs/screenshots/08-island-decorated.png" width="260" alt="예시 꾸미기를 배치한 마음섬" /></td></tr></table>
+<table><tr><th>건강 홈 → 마음섬 진입</th><th>나만의 작은 섬</th></tr><tr><td><img src="docs/screenshots/v0.5/health.png" width="260" alt="한국어 건강 홈과 마음섬 진입 카드" /></td><td><img src="docs/screenshots/v0.4/island.png" width="260" alt="예시 꾸미기를 배치한 마음섬" /></td></tr></table>
+
+## 앱 전체 공통 테마 · 0.5.0
+
+마음섬뿐 아니라 **건강·운동·내 워치·내 정보·설정**과 공통 상세 화면을 같은 캐릭터·파스텔 콘셉트로 맞췄습니다. 운동의 회색 배경·주황 시작 버튼, 건강의 선형 아이콘, 프로필·설정 목록과 스위치도 변경했습니다.
+
+**[실제 폰 화면 6장과 수정 범위](docs/APP_WIDE_THEME.md)** · [0.5.0 검증 기록](analysis/teen-ui-0.5.0-verification.json)
+
+커스텀 패키지에서 원 제조사 자동 앱 버전 검사를 분리해 온라인 실행 시 원 앱으로 교체하라는 강제 안내가 주요 화면을 막지 않게 했습니다. 설정의 수동 업데이트 메뉴와 별도 커스텀 배포 채널은 후속 정리가 필요합니다. 워치 펌웨어 업데이트 경로는 유지했습니다.
+
+## 캐릭터 디자인 기록 · 0.4.0
+
+시작·로그인 선택 화면의 인물 사진을 캐릭터로 교체하고, 마음섬에 토끼·별 친구와 라벤더·민트·복숭아색 UI를 적용했습니다. Android 16의 시스템 바·키보드 여백도 별도로 처리합니다. [변경 화면·소스·생성 이미지 설명](docs/TEEN_UI.md)을 참고하세요.
+
+<img src="patches/base/assets/mind-island/mascots.png" width="230" alt="마음섬의 라벤더 토끼와 노란 별 친구" />
+
+0.4.0 빌드 프로필은 `profiles/diz-sw01-teen-ui.json`입니다. 아래 27장 갤러리와 기존 검증 표는 **0.3.0 기록**이며, 0.4.0 변경 내역은 위 문서에서 구분합니다.
 
 ## 목차
 
@@ -56,6 +72,8 @@ SMART-TIME PRO 복원 작업 공간을 바탕으로 주요 화면을 한국어�
 **워치 없이도 마음섬의 전 기능을 사용할 수 있습니다.** 현재 산책 퀘스트는 자가 기록 방식이며 실제 걸음 수·수면·심박수 자동 연동은 구현하지 않았습니다. 워치 생체정보로 우울·불안을 추정하지 않습니다.
 
 ## 앱 화면 하나씩 보기
+
+**최신 0.5.0 네이티브 화면 6장은 [전체 테마 문서](docs/APP_WIDE_THEME.md), 캐릭터 게임·로그인 화면 7장은 [0.4.0 기록](docs/TEEN_UI.md)에 있습니다. 아래는 0.3.0 기능·상태 갤러리입니다.**
 
 모두 실제 APK의 에뮬레이터 화면입니다. 합성 시안이 아니며 PNG 원본은 `docs/screenshots/`에 있습니다. 표의 번호는 [화면 명세서](docs/SCREENS.md) 및 [캡처 목록](docs/screenshots/manifest.json)과 같습니다. 화면은 서로 다른 설명용 상태를 보여주므로 모든 이미지가 하나의 연속 사용 세션을 뜻하지는 않습니다.
 
@@ -256,13 +274,13 @@ c6cf98d0cfadb9eebde48e19c8cbedd7954abd7c35f98801dc240a9b6448461b
 ### 4. 마음섬 0.3.0 APK 빌드
 
 ```powershell
-.\scripts\Build.ps1 -IdentityProfile .\profiles\diz-sw01-mind-island.json
+.\scripts\Build.ps1 -IdentityProfile .\profiles\diz-sw01-teen-ui.json
 ```
 
 결과:
 
 ```text
-dist/Diz_SW01_Mind_Island_0.3.0_ARM64_TEST.apk
+dist/Diz_SW01_Teen_UI_0.5.0_ARM64_TEST.apk
 ```
 
 이 저장소에 APK를 일반 Git 파일로 넣지 않습니다. GitHub 소스만 clone하면 APK와 전체 기준 작업 공간이 함께 내려오는 구성이 아닙니다. 현재 팀 공유 기준은 **소스 + 화면 + 재현 가능한 빌드 절차**입니다. 이 포크에 새 APK Release가 게시되었다고 가정하는 다운로드 링크도 넣지 않았습니다.
@@ -280,7 +298,7 @@ adb devices -l
 # 실제 출력에 나온 일련번호로 바꾸세요.
 $serial = 'emulator-5554'
 adb -s $serial shell getprop ro.product.cpu.abilist
-adb -s $serial install -r .\dist\Diz_SW01_Mind_Island_0.3.0_ARM64_TEST.apk
+adb -s $serial install -r .\dist\Diz_SW01_Teen_UI_0.5.0_ARM64_TEST.apk
 adb -s $serial shell am start -W -n `
   com.diz.sw01.custom.ui/com.sma.smartv3.ui.launcher.LauncherActivity
 ```
@@ -346,7 +364,7 @@ node .\tests\mind-island-model.test.cjs
 
 | 우선순위 | 항목 | 다음 확인 / 완료 기준 |
 | --- | --- | --- |
-| P0 | 원 제조사 강제 업데이트 | 커스텀 앱의 업데이트 정책을 분리하고 온라인 실행 시 원 앱으로 이동시키지 않는 동작 검증 |
+| P0 | 커스텀 업데이트 채널 | 0.5.0 자동 제조사 검사는 분리. 설정 수동 검사와 커스텀 릴리스 안내를 정리 |
 | P0 | 실기기 설치 차단 조사 | 기존 삼성 차단 기록·권한·서명·네이티브 호환성을 검토. 0.3.0 안전 판정 완료로 표시하지 않음 |
 | P1 | 실제 워치 연결 | 원 앱과 같은 조건에서 검색·인증·연결·동기화 로그를 확보한 뒤 SDK 경로 검증 |
 | P1 | 게임과 건강 데이터 연결 | 실제 값·사용자 선택·미연결 상태를 구분하고 자가 기록을 자동 측정처럼 표시하지 않기 |
@@ -363,7 +381,7 @@ node .\tests\mind-island-model.test.cjs
 | [화면 명세서](docs/SCREENS.md) | 27개 화면의 진입 경로·상태·버튼·저장 의미 |
 | [팀 작업 안내](docs/TEAM_GUIDE.md) | 역할별 수정 위치, 브랜치·테스트·캡처 갱신 절차 |
 | [마음섬 기술 문서](docs/MIND_ISLAND.md) | 새 기능의 구현·저장·네이티브 연결 |
-| [현재 인수인계](docs/HANDOFF.md) | 이번 버전 상태와 다음 담당자의 시작 지점 |
+| [기존 게임 기능 인수인계](docs/HANDOFF.md) | 이번 버전 상태와 다음 담당자의 시작 지점 |
 | [APK 빌드](docs/BUILD.md) | 복원→오버레이→DEX→통합→서명 세부 절차 |
 | [에뮬레이터](docs/EMULATOR.md) | 실행 준비·ABI·Bluetooth 검증 범위 |
 | [한국어 UI 변경](docs/KOREAN_UI.md) | 0.2.0 UI 시안과 후속 변경의 출발점 |

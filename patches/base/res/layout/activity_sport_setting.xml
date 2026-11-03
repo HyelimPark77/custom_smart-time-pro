@@ -2,6 +2,7 @@
 <LinearLayout android:orientation="vertical" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <include layout="@layout/layout_title_iv_tv_iv" />
+<include layout="@layout/diz_companion_banner"/>
     <LinearLayout android:id="@id/llVoiceBroadcast" android:visibility="gone" style="@style/sport_set_ll_style">
         <View style="@style/line_sport_set" />
         <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">

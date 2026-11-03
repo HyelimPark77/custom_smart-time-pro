@@ -2,6 +2,7 @@
 <LinearLayout android:orientation="vertical" android:id="@id/root_view" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <include layout="@layout/layout_title_iv_tv_iv" />
+<include layout="@layout/diz_companion_banner"/>
     <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
         <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
             <View android:layout_marginTop="22.0dp" style="@style/h_divider_gray2_margin22" />

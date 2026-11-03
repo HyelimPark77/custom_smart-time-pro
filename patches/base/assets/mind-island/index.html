@@ -14,7 +14,7 @@
 <header class="app-header"><button class="icon-button" id="close-app" aria-label="건강 화면으로 돌아가기">←</button><div class="wordmark">마음섬<span>내 마음이 쉬어가는 곳</span></div><button class="seed-pill" id="open-shop" aria-label="씨앗과 섬 꾸미기"><span aria-hidden="true">✦</span> <b id="seed-count">12</b><span class="seed-label">씨앗</span></button></header>
 <main id="main-content">
 <section id="page-island" class="page active" aria-label="나의 섬">
-  <div class="eyebrow" id="today-label"></div><h1>오늘도, 나의 속도로.</h1><p class="intro">잘한 날도, 힘든 날도 머물 수 있는 작은 섬.</p>
+  <div class="welcome-banner"><div class="welcome-copy"><div class="eyebrow" id="today-label"></div><span class="hello-tag">MY LITTLE HAPPY PLACE ✦</span><h1>오늘도, 나답게<br>반짝이면 돼!</h1><p class="intro">잘한 날도, 힘든 날도<br>우리는 네 편이야.</p></div><img class="welcome-mascot" src="mascots.png" alt="반갑게 손을 흔드는 보라 토끼와 노란 별 친구" /></div>
   <div class="island-stage garden" id="island-stage" aria-label="나의 작은 섬">
     <div class="scene-label"><span class="live-dot"></span><span id="scene-name">낮의 정원</span></div>
     <svg class="island-scene" viewBox="0 0 360 285" aria-label="꾸미는 섬 풍경" role="img">
@@ -27,7 +27,7 @@
       <g transform="translate(152 129)"><path d="M-29 18 L0-5 L31 18 L31 58 L-29 58Z" fill="#f5e9cd"/><path d="M-36 20 L0-12 L38 20" fill="none" stroke="#476e5b" stroke-width="13" stroke-linejoin="round"/><path d="M-6 58 L-6 34 Q5 26 14 34 L14 58" fill="#bf9977"/><rect x="-22" y="29" width="12" height="13" rx="3" fill="#e9c777"/><path d="M22 0 L22-17 L29-17 L29 8" fill="#c5ac8a"/></g>
       <g id="decorations"></g><g id="weather-detail"></g>
     </svg>
-    <button class="stage-edit" id="decorate-button"><span aria-hidden="true">✧</span> 섬 꾸미기</button>
+    <span class="island-sticker" aria-hidden="true">✦ HELLO, MY ISLAND ✦</span><button class="stage-edit" id="decorate-button"><span aria-hidden="true">✧</span> 섬 꾸미기</button>
   </div>
   <button class="mood-nudge" id="go-mood"><span class="nudge-symbol" id="mood-symbol">☁</span><span><b id="mood-title">지금, 마음은 어떤 날씨인가요?</b><small id="mood-subtitle">정답 없이 골라보세요 · 10초면 충분해요</small></span><span aria-hidden="true">↗</span></button>
   <div class="section-line"><h2>오늘의 작은 한 걸음</h2><button class="text-button" data-tab="quests">모두 보기 →</button></div>
@@ -35,17 +35,17 @@
   <p class="quiet-note">매일 오지 않아도 괜찮아요. 섬은 여기서 기다릴게요.</p>
 </section>
 <section id="page-mood" class="page" aria-label="마음 날씨">
-  <div class="eyebrow">MIND WEATHER</div><h1>어떤 마음이든 괜찮아요.</h1><p class="intro">좋고 나쁨을 매기지 않고, 지금의 나를 알아봐요.</p>
+  <div class="buddy-note"><img src="mascots.png" alt="" /><span>오늘의 너도 환영해!<small>기분에는 정답이 없으니까.</small></span><b aria-hidden="true">♡</b></div><div class="eyebrow">MIND WEATHER</div><h1>어떤 마음이든 괜찮아요.</h1><p class="intro">좋고 나쁨을 매기지 않고, 지금의 나를 알아봐요.</p>
   <div class="paper"><h2>나의 마음 날씨</h2><div class="weather-options" id="weather-options"></div><label class="note-label" for="mood-note">마음에 남은 한 줄 <span>선택</span></label><textarea id="mood-note" aria-label="마음에 남은 한 줄, 선택 입력" maxlength="200" placeholder="오늘 나에게 어떤 일이 있었나요? 쓰지 않아도 괜찮아요."></textarea><div class="field-foot"><span>이 앱 안에만 저장돼요</span><span id="note-count">0 / 200</span></div><button id="save-mood" class="primary-button">오늘의 마음 남기기</button><p class="small-note">어떤 날씨를 골라도 첫 기록 보상은 씨앗 5개예요.</p></div>
   <div class="section-line"><h2>최근 일주일의 마음</h2><span class="caption">나만 보는 기록</span></div><div id="mood-history" class="history-list"></div>
 </section>
 <section id="page-quests" class="page" aria-label="작은 퀘스트">
-  <div class="eyebrow">SMALL STEPS</div><h1>작아서 더 좋은 퀘스트.</h1><p class="intro">할 수 있는 만큼만. 쉬어가도 보상이 사라지지 않아요.</p>
+  <div class="buddy-note mint"><img src="mascots.png" alt="" /><span>작은 도전도 멋진 모험!<small>너의 속도로 하나씩 해보자.</small></span><b aria-hidden="true">✦</b></div><div class="eyebrow">SMALL STEPS</div><h1>작아서 더 좋은 퀘스트.</h1><p class="intro">할 수 있는 만큼만. 쉬어가도 보상이 사라지지 않아요.</p>
   <div class="choice-block"><label for="walk-choice">움직임은 내 상황에 맞게</label><select id="walk-choice"><option value="walk">5분, 잠깐 산책하기</option><option value="stretch">앉아서 1분 몸 풀기</option></select><label for="courage-choice">오늘의 작은 용기</label><select id="courage-choice"><option value="water">나를 위해 물 한 잔 챙기기</option><option value="hello">편한 사람에게 안부 한마디</option><option value="window">창밖을 보며 잠깐 쉬기</option></select></div>
   <div id="quest-list"></div><p class="quiet-note">퀘스트는 직접 완료를 기록해요. 걸음 수나 심박수로 판단하지 않아요.</p>
 </section>
 <section id="page-rest" class="page" aria-label="쉬어가기">
-  <div class="eyebrow">A LITTLE PAUSE</div><h1>잠깐, 숨을 고를까요?</h1><p class="intro">기록을 잘하려는 마음도 잠시 내려놓아요.</p>
+  <div class="buddy-note peach"><img src="mascots.png" alt="" /><span>잠깐 쉬어도 괜찮아<small>토끼와 별도 같이 쉬어갈게.</small></span><b aria-hidden="true">☾</b></div><div class="eyebrow">A LITTLE PAUSE</div><h1>잠깐, 숨을 고를까요?</h1><p class="intro">기록을 잘하려는 마음도 잠시 내려놓아요.</p>
   <div class="breath-card"><span class="tag">1분의 쉼</span><div class="breath-orbit"><div class="breath-orb" id="breath-orb"><span id="breath-instruction">편안하게</span><small id="breath-time">01:00</small></div></div><p id="breath-caption">원을 따라 편안한 만큼 숨 쉬어요.<br>불편하면 언제든 멈춰도 괜찮아요.</p><div class="breath-actions"><button id="breath-start" class="primary-button">1분 쉬어가기</button><button id="breath-stop" class="secondary-button" hidden>그만 쉬기</button></div><p class="small-note" id="breath-reward-note">하루 한 번, 씨앗 3개 · 잠시 멈춰도 괜찮아요</p></div>
   <div class="paper sleep-card"><h2>어젯밤, 잘 쉬었나요?</h2><p>워치 점수 대신 내가 느낀 쉼을 남겨요.</p><div class="sleep-options" id="sleep-options"><button data-sleep="rested">개운했어요</button><button data-sleep="okay">그저 그랬어요</button><button data-sleep="tired">더 쉬고 싶어요</button></div><p class="small-note">어떤 답이든 괜찮아요. 보상이나 섬의 성장과는 무관해요.</p></div>
   <p class="quiet-note">잠들기 전이라면 화면은 여기까지.<br>섬도 내일 다시 만나면 돼요.</p>

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dp" android:src="@drawable/launcher_image" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/diz_welcome_bg" android:fitsSystemWindows="true">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" android:orientation="vertical" android:gravity="center" android:padding="28dp">
+  <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="나를 위한 작은 모험" android:textSize="14sp" android:textColor="#8265AD" android:letterSpacing="0.08" />
+  <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="반가워, 마음섬!" android:textSize="34sp" android:textStyle="bold" android:textColor="#48355F" android:layout_marginTop="12dp" />
+  <ImageView android:layout_width="280dp" android:layout_height="280dp" android:src="@drawable/diz_mascots" android:scaleType="fitCenter" android:contentDescription="손을 흔드는 보라 토끼와 노란 별 친구" android:layout_marginTop="24dp" />
+  <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="오늘의 마음도, 작은 한 걸음도
+우리 같이 모아볼까?" android:textSize="16sp" android:textColor="#756780" android:gravity="center" android:lineSpacingExtra="6dp" android:layout_marginTop="20dp" />
+  <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="디즈 워치  ·  마음섬" android:textSize="12sp" android:textColor="#9688A5" android:layout_marginTop="36dp" />
+ </LinearLayout>
+
 </RelativeLayout>

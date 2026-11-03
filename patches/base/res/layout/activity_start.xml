@@ -1,42 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+<RelativeLayout android:background="@drawable/diz_welcome_bg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/start_bg" android:scaleType="centerCrop" />
-    <androidx.core.widget.NestedScrollView android:id="@id/rv" android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_alignParentBottom="true">
+
+    <androidx.core.widget.NestedScrollView android:id="@id/rv" android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true" android:paddingTop="24dp" android:paddingBottom="28dp">
         <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <RelativeLayout android:id="@id/googleRl" android:background="@drawable/start_gg" android:visibility="visible" android:onClick="google" style="@style/style_start_rl">
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="안녕! 만나서 반가워" android:textSize="27sp" android:textStyle="bold" android:textColor="#48355F" android:layout_marginTop="16dp" />
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="작은 일상부터, 우리 함께 시작해요" android:textSize="13sp" android:textColor="#81718F" android:layout_marginTop="8dp" />
+<ImageView android:layout_width="220dp" android:layout_height="200dp" android:src="@drawable/diz_mascots" android:scaleType="fitCenter" android:contentDescription="보라 토끼와 별 친구" android:layout_marginTop="10dp" />
+
+            <RelativeLayout android:id="@id/googleRl" android:background="@drawable/diz_card" android:visibility="visible" android:onClick="google" style="@style/style_start_rl">
                 <ImageView android:layout_width="25.0dp" android:layout_height="25.0dp" android:src="@drawable/icon_google" android:layout_centerVertical="true" android:layout_marginStart="35.0dp" />
-                <com.sma.smartv3.view.text.PFMedium android:textColor="@color/text_color_light" android:text="@string/google" style="@style/style_start_tv" />
+                <com.sma.smartv3.view.text.PFMedium android:textColor="#48355F" android:text="@string/google" style="@style/style_start_tv" />
             </RelativeLayout>
-            <RelativeLayout android:id="@id/faceBookRl" android:background="@drawable/start_fb" android:visibility="visible" android:onClick="faceBook" style="@style/style_start_rl">
+            <RelativeLayout android:id="@id/faceBookRl" android:background="@drawable/diz_card" android:visibility="visible" android:onClick="faceBook" style="@style/style_start_rl">
                 <ImageView android:layout_width="25.0dp" android:layout_height="25.0dp" android:src="@drawable/icon_facebook" android:layout_centerVertical="true" android:layout_marginStart="35.0dp" />
-                <com.sma.smartv3.view.text.PFMedium android:textColor="@color/light" android:text="@string/facebook" style="@style/style_start_tv" />
+                <com.sma.smartv3.view.text.PFMedium android:textColor="#48355F" android:text="@string/facebook" style="@style/style_start_tv" />
             </RelativeLayout>
-            <RelativeLayout android:id="@id/weChatRl" android:background="@drawable/start_wc" android:onClick="weChat" style="@style/style_start_rl">
+            <RelativeLayout android:id="@id/weChatRl" android:background="@drawable/diz_card" android:onClick="weChat" style="@style/style_start_rl">
                 <ImageView android:layout_width="25.0dp" android:layout_height="25.0dp" android:src="@drawable/icon_wechat" android:layout_centerVertical="true" android:layout_marginStart="35.0dp" />
-                <com.sma.smartv3.view.text.PFMedium android:textColor="@color/light" android:text="@string/wechat" style="@style/style_start_tv" />
+                <com.sma.smartv3.view.text.PFMedium android:textColor="#48355F" android:text="@string/wechat" style="@style/style_start_tv" />
             </RelativeLayout>
-            <RelativeLayout android:id="@id/QQRl" android:background="@drawable/start_qq" android:onClick="qq" style="@style/style_start_rl">
+            <RelativeLayout android:id="@id/QQRl" android:background="@drawable/diz_card" android:onClick="qq" style="@style/style_start_rl">
                 <ImageView android:layout_width="25.0dp" android:layout_height="25.0dp" android:src="@drawable/icon_qq" android:layout_centerVertical="true" android:layout_marginStart="35.0dp" />
-                <com.sma.smartv3.view.text.PFMedium android:textColor="@color/light" android:text="@string/qq" style="@style/style_start_tv" />
+                <com.sma.smartv3.view.text.PFMedium android:textColor="#48355F" android:text="@string/qq" style="@style/style_start_tv" />
             </RelativeLayout>
-            <RelativeLayout android:id="@id/weiBoRl" android:background="@drawable/start_wb" android:onClick="weiBo" style="@style/style_start_rl">
+            <RelativeLayout android:id="@id/weiBoRl" android:background="@drawable/diz_card" android:onClick="weiBo" style="@style/style_start_rl">
                 <ImageView android:layout_width="25.0dp" android:layout_height="25.0dp" android:src="@drawable/icon_weibo" android:layout_centerVertical="true" android:layout_marginStart="35.0dp" />
-                <com.sma.smartv3.view.text.PFMedium android:textColor="@color/text_color_light" android:text="@string/weibo" style="@style/style_start_tv" />
+                <com.sma.smartv3.view.text.PFMedium android:textColor="#48355F" android:text="@string/weibo" style="@style/style_start_tv" />
             </RelativeLayout>
-            <RelativeLayout android:id="@id/twitterRl" android:background="@drawable/start_tw" android:visibility="visible" android:onClick="twitter" style="@style/style_start_rl">
+            <RelativeLayout android:id="@id/twitterRl" android:background="@drawable/diz_card" android:visibility="visible" android:onClick="twitter" style="@style/style_start_rl">
                 <ImageView android:layout_width="25.0dp" android:layout_height="25.0dp" android:src="@drawable/icon_twitter" android:layout_centerVertical="true" android:layout_marginStart="35.0dp" />
-                <com.sma.smartv3.view.text.PFMedium android:textColor="@color/text_color_light" android:text="@string/twitter" style="@style/style_start_tv" />
+                <com.sma.smartv3.view.text.PFMedium android:textColor="#48355F" android:text="@string/twitter" style="@style/style_start_tv" />
             </RelativeLayout>
             <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="30.0dp" android:layout_marginVertical="30.0dp">
                 <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:onClick="emailLogin">
-                    <ImageView android:layout_width="18.0dp" android:layout_height="18.0dp" android:src="@drawable/start_email" />
-                    <com.sma.smartv3.view.text.PFMedium android:textSize="13.0dp" android:textColor="@color/light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="@string/email" />
+                    <ImageView android:layout_width="18.0dp" android:layout_height="18.0dp" android:tint="#805DB8" android:src="@drawable/start_email" />
+                    <com.sma.smartv3.view.text.PFMedium android:textSize="13.0dp" android:textColor="#48355F" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="@string/email" />
                 </LinearLayout>
                 <View android:layout_gravity="center" android:background="@color/light" android:layout_width="1.0dp" android:layout_height="15.0dp" />
                 <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:onClick="noLogin">
-                    <ImageView android:layout_width="18.0dp" android:layout_height="18.0dp" android:src="@drawable/start_guest" />
-                    <com.sma.smartv3.view.text.PFMedium android:textSize="13.0dp" android:textColor="@color/light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="@string/guest_login" />
+                    <ImageView android:layout_width="18.0dp" android:layout_height="18.0dp" android:tint="#805DB8" android:src="@drawable/start_guest" />
+                    <com.sma.smartv3.view.text.PFMedium android:textSize="13.0dp" android:textColor="#48355F" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="@string/guest_login" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

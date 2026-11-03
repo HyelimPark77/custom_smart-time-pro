@@ -19,7 +19,7 @@ try {
         $apkFilename = 'SMART_TIME_PRO_2.1.3.4_ARM64_TEST.apk'
         & './Build-TestApk.ps1'
     } else {
-        $profilePath = if ($IdentityProfile) { $IdentityProfile } else { Join-Path $repoRoot 'profiles/diz-sw01-custom.json' }
+        $profilePath = if ($IdentityProfile) { $IdentityProfile } else { Join-Path $repoRoot 'profiles/diz-sw01-teen-ui.json' }
         $apkFilename = (Get-Content -Raw -LiteralPath $profilePath | ConvertFrom-Json).apk_filename
         & './Build-TestApk.ps1' -IdentityProfile $profilePath
     }

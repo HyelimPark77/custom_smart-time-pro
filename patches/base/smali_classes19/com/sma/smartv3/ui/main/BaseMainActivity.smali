@@ -726,6 +726,17 @@
 .method private final checkAppVersion()V
     .locals 11
 
+    # This fork has its own release channel. Do not replace it with a vendor APK.
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    move-result-object v0
+    const-string v1, "com.diz.sw01.custom.ui"
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v0
+    if-eqz v0, :vendor_app_version_check
+    return-void
+
+    :vendor_app_version_check
+
     sget-object v0, Lcom/android/mltcode/paycertificationapi/a01;->OXO1:Lcom/android/mltcode/paycertificationapi/a01;
 
     invoke-virtual {v0}, Lcom/android/mltcode/paycertificationapi/a01;->OXO1()Lcom/blankj/utilcode/util/SPUtils;

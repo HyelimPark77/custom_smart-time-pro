@@ -1,5 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layer-list android:shape="rectangle"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/shape_me_bottom_ll_bg_light" />
-</layer-list>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="#20AD87D0"><item android:drawable="@android:color/transparent"/></ripple>

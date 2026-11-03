@@ -1,6 +1,6 @@
 # 커스터마이징하고 APK로 만드는 방법
 
-> 현재 버전은 마음섬 0.3.0입니다. 반드시 마음섬 IdentityProfile을 지정하세요. 인자 없는 Build.ps1은 초기 0.1.0 프로필을 선택합니다. 환경 설정은 [README](../README.md#빠른-실행빌드)가 기준입니다.
+> 현재 버전은 앱 전체 테마 0.5.0입니다. 현재 기본 프로필은 diz-sw01-teen-ui.json이며, 아래 명령처럼 명시해서 빌드할 수도 있습니다. 환경 설정은 [README](../README.md#빠른-실행빌드)가 기준입니다.
 >
 > Windows는 짧은 작업 경로를 권장합니다. Restore-Workspace.ps1의 DestinationRoot로 경로를 지정하고 출력된 폴더를 SMART_TIME_WORKSPACE로 설정하세요. 현재 복원 스크립트는 GitHub CLI 없이 고정 상위 Release를 다운로드하고 SHA-256을 검사합니다. 빌드 시작 시 마음섬 Java를 DEX 20으로 컴파일합니다. 현재 패키지는 com.diz.sw01.custom.ui입니다.
 
@@ -29,7 +29,7 @@ Windows, Java 17 이상, Python 3.8 이상, Android SDK platform 35와 build-too
 ## 3. 오버레이 적용·빌드·통합·서명
 
 ```powershell
-.\scripts\Build.ps1 -IdentityProfile .\profiles\diz-sw01-mind-island.json
+.\scripts\Build.ps1 -IdentityProfile .\profiles\diz-sw01-teen-ui.json
 ```
 
 실행 순서는 다음과 같습니다.
@@ -40,7 +40,7 @@ Windows, Java 17 이상, Python 3.8 이상, Android SDK platform 35와 build-too
 4. `PrepareStandalone.py`로 기본 리소스·분할 리소스·ARM64 라이브러리를 합칩니다. 최신 재조립 DEX를 사용합니다. 기본 빌드에서는 이후 `ApplyIdentity.py`로 커스텀 프로필의 이름·앱 ID·Provider·자체 권한·버전을 적용합니다.
 5. 통합 APK를 만들고 4바이트 ZIP 정렬을 적용합니다. 현재 APK는 `extractNativeLibs=true`입니다.
 6. 로컬 테스트 키로 서명하고 서명·정렬을 검증합니다.
-7. 결과를 `dist/Diz_SW01_Mind_Island_0.3.0_ARM64_TEST.apk`에 복사합니다. `scripts/Build.ps1 -Baseline`은 앱 ID를 유지한 이전 기준 빌드를 생성합니다.
+7. 결과를 `dist/Diz_SW01_Teen_UI_0.5.0_ARM64_TEST.apk`에 복사합니다. `scripts/Build.ps1 -Baseline`은 앱 ID를 유지한 이전 기준 빌드를 생성합니다.
 
 입력 예외가 나면 해당 단계에서 중단합니다. `workspace/.../logs`에서 단계별 결과를 확인하세요. 현재 PC의 복원 작업 공간에서 0.3.0 빌드·서명·설치·런타임 검증을 수행했습니다. 별도 팀원 PC의 깨끗한 환경까지 재현한 것은 아닙니다.
 

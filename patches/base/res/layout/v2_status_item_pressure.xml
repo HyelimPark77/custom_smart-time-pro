@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <LinearLayout android:id="@id/empty_panel" android:background="@drawable/diz_card" style="@style/status_card_style">
+    <LinearLayout android:id="@id/empty_panel" android:background="@drawable/diz_card_mint" style="@style/status_card_style">
         <com.sma.smartv3.view.text.PFMedium android:text="@string/pressure" style="@style/status_card_style_1_title" />
         <com.sma.smartv3.view.text.PFMedium android:id="@id/tv_no_data" style="@style/status_card_style_no_data" />
-        <com.sma.smartv3.view.TintImageView android:layout_gravity="end" android:src="@drawable/diz_stress" style="@style/status_card_style_2_iv" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginTop="22dp" android:alpha="0.8" />
+        <com.sma.smartv3.view.TintImageView android:layout_gravity="end" android:src="@drawable/diz_stress" style="@style/status_card_style_2_iv" android:layout_width="48dp" android:layout_height="48dp" android:layout_marginTop="22dp" android:alpha="1" />
     </LinearLayout>
-    <LinearLayout android:id="@id/data_panel" android:visibility="gone" style="@style/status_card_style">
+    <LinearLayout android:id="@id/data_panel" android:background="@drawable/diz_card_mint" android:visibility="gone" style="@style/status_card_style">
         <com.sma.smartv3.view.text.PFMedium android:text="@string/pressure" style="@style/status_card_style_1_title" />
         <RelativeLayout style="@style/status_card_style_1">
             <LinearLayout style="@style/status_card_style_1_ll">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/root_view" android:background="@color/view_page_main_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+<RelativeLayout android:id="@id/root_view" android:background="@drawable/diz_welcome_bg" android:layout_width="match_parent" android:layout_height="match_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <com.sma.smartv3.view.text.PFMedium android:textSize="32.0sp" android:textColor="@color/black" android:id="@id/sport_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dp" android:layout_marginBottom="@dimen/activity_vertical_margin" android:text="@string/bottom_sport" android:layout_marginStart="@dimen/activity_horizontal_margin" />
     <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/sport_title" />

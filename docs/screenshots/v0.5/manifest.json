@@ -1,0 +1,62 @@
+{
+  "version": "0.5.0",
+  "date": "2026-11-03",
+  "device": "Galaxy S25 Android 16",
+  "note": "Original screenshots. Health values are empty. Profile nickname/ID are display-only examples; gender hidden.",
+  "screens": [
+    {
+      "file": "health.png",
+      "title": "건강 홈",
+      "sha256": "e7fda2392f33c6eeff4127a5c8bf09eba270c7eaf087550768f7eb619554525c",
+      "size": [
+        1080,
+        2340
+      ]
+    },
+    {
+      "file": "sport.png",
+      "title": "운동",
+      "sha256": "15e4090ce6bb5c87b8a685e224ca34af9856d3dda90a9ed04f3a68d4db82a63d",
+      "size": [
+        1080,
+        2340
+      ]
+    },
+    {
+      "file": "watch.png",
+      "title": "내 워치",
+      "sha256": "e37aef9a19e945366bfb954715748f7d159d74e93c0edc985a7921a6b5b546dc",
+      "size": [
+        1080,
+        2340
+      ]
+    },
+    {
+      "file": "profile.png",
+      "title": "내 정보 · 예시 프로필",
+      "sha256": "f655b27442cf3cee9f4d6388053241a340dbae6fd8f5e86acb5d677906d6957d",
+      "size": [
+        1080,
+        2340
+      ]
+    },
+    {
+      "file": "settings.png",
+      "title": "설정",
+      "sha256": "d4d4ba265b1321ba3504ca66591643601d0bb315f581c38a13242de15ea68def",
+      "size": [
+        1080,
+        2340
+      ]
+    },
+    {
+      "file": "sleep-detail.png",
+      "title": "수면 상세 · 빈 기록",
+      "sha256": "d9645f0f135003cbcb08f58c0744178b889931b971a6e5e650e9b51e4511acd9",
+      "size": [
+        1080,
+        2340
+      ]
+    }
+  ]
+}
