@@ -5,6 +5,7 @@
   const themeNames={garden:'낮의 정원',sunset:'포근한 노을',night:'별빛의 밤'};
   const itemIcons={flower:'✿',tree:'♧',bench:'⌑',star:'✧',tent:'△',water:'≈'};
   let state=M.fresh(), storageOkay=true, currentPage='island', selectedWeather=null, slot=0, toastTimer, focusBeforeModal;
+  let watchData=null;
   let today=M.dayKey(new Date()), breathElapsed=0, breathRunning=false, breathLast=0, breathFrame=0;
   function toast(message) { $('toast').textContent=message; $('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,3500); }
   function load() {
@@ -67,6 +68,23 @@
     for(const q of list){const done=M.claimed(state,today,q.id),card=el('article','quest-card'+(done?' complete':'')),top=el('div','quest-top'),head=el('div');head.append(el('small','',q.hint),el('h2','',q.name));top.append(el('span','quest-icon',q.icon),head,el('span','quest-reward',done?'완료':'✦ 4'));card.append(top,el('p','',q.description));const button=el('button','primary-button',done?'오늘은 해냈어요 ✓':'해냈어요 · 씨앗 4개');button.disabled=done;button.onclick=()=>dispatch({type:'quest',id:q.id},'작은 한 걸음을 남겼어요');card.append(button);$('quest-list').append(card);}
     for(const q of list.slice(0,2)){const button=el('button','mini-quest'),body=el('div');body.append(el('b','',q.name),el('small','',q.hint+' · 씨앗 4개'));button.append(el('span','mini-symbol',q.icon),body,el('span',M.claimed(state,today,q.id)?'done':'',M.claimed(state,today,q.id)?'해냈어요 ✓':'↗'));button.onclick=()=>switchPage('quests');$('daily-summary').append(button);}
   }
+  function renderWatch(){
+    const now=Date.now(),w=watchData,valid=window.WatchCoach.fresh(w,today,now),advice=window.WatchCoach.suggest(w,today,now,state.sleep[today],(state.moods[today]||{}).weather);
+    $('watch-metrics').replaceChildren();
+    const sameDay=w&&w.day===today;
+    const sleep=sameDay&&Number.isFinite(w.sleepMinutes)?Math.floor(w.sleepMinutes/60)+'h '+w.sleepMinutes%60+'m':'—';
+    const hr=w&&Number.isFinite(w.heartRate)&&Number.isFinite(w.heartRateAt)&&w.heartRateAt<=now+300000&&now-w.heartRateAt<86400000?w.heartRate+' bpm':'—';
+    for(const [label,value] of [['오늘 걸음',sameDay&&Number.isInteger(w.steps)?w.steps.toLocaleString('ko-KR'):'—'],['최근 밤 수면',sleep],['최근 기록 심박',hr]]){const metric=el('div','watch-metric');metric.append(el('small','',label),el('b','',value));$('watch-metrics').append(metric);}
+    $('watch-source').textContent=w&&w.ok?(w.stepsAt&&sameDay?'걸음 측정 '+new Date(w.stepsAt).toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})+(valid?' · 최근 기록':' · 오래된 기록'):'오늘 걸음 기록 없음')+' · 심박은 운동 강도·감정 판단에 사용하지 않아요.':'기록을 아직 읽지 못했어요. 건강 화면에서 동기화한 뒤 다시 열어주세요.';
+    $('coach-title').textContent=advice.title;$('coach-reason').textContent=advice.reason;$('coach-action').textContent=advice.action;
+    $('coach-action').onclick=()=>{if(advice.stretch)dispatch({type:'choice',id:'walk',value:'stretch'});switchPage(advice.tab);};
+    const start=state.watchWalk[today],done=M.claimed(state,today,'walk'),reset=!!(start&&sameDay&&Number.isInteger(w.steps)&&w.steps<start.steps),delta=start&&sameDay&&Number.isInteger(w.steps)?Math.max(0,Math.min(300,w.steps-start.steps)):0;
+    $('watch-progress').value=delta;
+    $('watch-mission-status').textContent=done?'오늘 움직임 보상을 받았어요. 더 채우지 않아도 괜찮아요.':reset?'걸음 누적값이 바뀌었어요. 다시 시작하거나 몸 풀기로 바꿀 수 있어요.':start?'시작 후 '+delta+' / 300걸음'+(!valid?' · 최근 동기화가 필요해요.':''):'시작 버튼을 누른 시점부터 추가 걸음을 모아요. 기록이 없으면 0걸음으로 간주하지 않아요.';
+    $('watch-start').hidden=done||!!(start&&!reset);$('watch-start').disabled=!valid;$('watch-start').textContent=reset?'현재 걸음에서 다시 시작':'지금 걸음에서 시작하기';
+    $('watch-claim').hidden=done||!start||reset;$('watch-claim').disabled=!valid||delta<300||w.stepsAt<start.at;
+  }
+  function refreshWatch(){if(window.IslandStore&&window.IslandStore.refreshWatch)window.IslandStore.refreshWatch();}
   function decoration(id,x,y){
     const map={
       flowers:'<path d="M-15 8 L-15-9 M5 15 L5-5 M20 5 L20-13" stroke="#4d8056" stroke-width="3"/><g fill="#e1b7c4"><circle cx="-15" cy="-12" r="8"/><circle cx="5" cy="-8" r="7"/></g><circle cx="20" cy="-16" r="7" fill="#f1d38a"/><circle cx="-15" cy="-12" r="3" fill="#f6e4b3"/>',
@@ -98,7 +116,7 @@
   function render(){
     $('seed-count').textContent=String(state.seeds);$('open-shop').setAttribute('aria-label','씨앗 '+state.seeds+'개, 섬 꾸미기');
     $('today-label').textContent=new Date().toLocaleDateString('ko-KR',{month:'long',day:'numeric',weekday:'long'});
-    renderScene();renderWeather();renderHistory();renderQuests();renderShop();
+    renderScene();renderWeather();renderHistory();renderQuests();renderShop();renderWatch();
     document.querySelectorAll('[data-sleep]').forEach(b=>{const active=state.sleep[today]===b.dataset.sleep;b.classList.toggle('selected',active);b.setAttribute('aria-pressed',String(active));});
     $('breath-reward-note').textContent=M.claimed(state,today,'breath')?'오늘의 쉼을 남겼어요. 다시 쉬어도 좋아요.':'하루 한 번, 씨앗 3개 · 잠시 멈춰도 괜찮아요';
   }
@@ -113,6 +131,9 @@
     breathRunning=true;breathLast=performance.now();$('breath-start').textContent='잠깐 멈추기';$('breath-stop').hidden=false;$('breath-caption').textContent='4초 들이쉬고, 4초 내쉬어요. 내게 편한 만큼만.';updateBreath();breathFrame=requestAnimationFrame(tick);
   }
   function pauseBreath(){if(!breathRunning)return;breathRunning=false;cancelAnimationFrame(breathFrame);$('breath-instruction').textContent='잠깐 쉬는 중';$('breath-start').textContent='이어서 쉬어가기';$('breath-orb').style.transform='scale(1)';}
+  $('refresh-watch').onclick=()=>{refreshWatch();toast('폰에 동기화된 기록을 다시 읽어요. 워치 동기화는 건강 화면에서 해주세요.');};
+  $('watch-start').onclick=()=>dispatch({type:'watchStart',snapshot:watchData,now:Date.now()},'작은 산책을 시작했어요. 편한 만큼만 걸어봐요.');
+  $('watch-claim').onclick=()=>dispatch({type:'watchClaim',snapshot:watchData,now:Date.now()},'실제 한 걸음이 섬의 씨앗이 됐어요!');
   $('close-app').onclick=()=>{pauseBreath();if(window.IslandStore)window.IslandStore.close();};
   document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>switchPage(b.dataset.tab));
   $('go-mood').onclick=()=>switchPage('mood');$('open-shop').onclick=() =>openModal('shop');$('decorate-button').onclick=()=>openModal('shop');$('privacy-button').onclick=()=>openModal('privacy');
@@ -125,9 +146,10 @@
   $('breath-start').onclick=startBreath;$('breath-stop').onclick=()=>{pauseBreath();breathElapsed=0;updateBreath();$('breath-instruction').textContent='편안하게';$('breath-start').textContent='1분 쉬어가기';$('breath-stop').hidden=true;$('breath-caption').textContent='여기까지도 괜찮아요. 원할 때 다시 쉬어가요.';};
   document.querySelectorAll('[data-sleep]').forEach(b=>b.onclick=()=>dispatch({type:'sleep',value:b.dataset.sleep},'내가 느낀 쉼을 남겼어요'));
   $('erase-records').onclick=()=>{$('erase-confirm').hidden=false;$('erase-cancel').focus();$('erase-confirm').scrollIntoView({block:'nearest'});};$('erase-cancel').onclick=()=>$('erase-confirm').hidden=true;$('erase-yes').onclick=()=>{if(dispatch({type:'erase'},'마음과 쉼 기록을 지웠어요')){selectedWeather=null;populateNote();renderWeather();$('erase-confirm').hidden=true;}};
-  document.addEventListener('visibilitychange',()=>{if(document.hidden)pauseBreath();else refreshDay();});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)pauseBreath();else {refreshDay();refreshWatch();}});
   window.addEventListener('blur',pauseBreath);
   document.addEventListener('keydown',e=>{const modal=[...document.querySelectorAll('.modal-backdrop')].find(m=>!m.hidden);if(!modal)return;if(e.key==='Escape'){closeModal(modal.id.split('-')[0]);e.preventDefault();}if(e.key==='Tab'){const focusable=[...modal.querySelectorAll('button,select,textarea')].filter(n=>!n.disabled&&!n.closest('[hidden]'));if(!focusable.length)return;const first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}}});
-  window.MindIslandApp={pause:pauseBreath,back:()=>{const modal=[...document.querySelectorAll('.modal-backdrop')].find(m=>!m.hidden);if(modal){closeModal(modal.id.split('-')[0]);return true;}if(currentPage!=='island'){switchPage('island');return true;}return false;}};
-  load();render();
+  window.MindIslandApp={watch:data=>{watchData=data;refreshDay();renderWatch();},pause:pauseBreath,back:()=>{const modal=[...document.querySelectorAll('.modal-backdrop')].find(m=>!m.hidden);if(modal){closeModal(modal.id.split('-')[0]);return true;}if(currentPage!=='island'){switchPage('island');return true;}return false;}};
+  load();render();refreshWatch();
+  setInterval(()=>{if(!document.hidden){refreshDay();refreshWatch();renderWatch();}},20000);
 })();

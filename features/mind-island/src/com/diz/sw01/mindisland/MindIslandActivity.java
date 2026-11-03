@@ -20,11 +20,23 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.nio.charset.StandardCharsets;
 
-/** Offline-only game. No sensor claims, external URLs, or network requests. */
+/** Local game with a read-only bridge to synchronized watch records. */
 public final class MindIslandActivity extends Activity {
     private WebView web;
+    private final java.util.concurrent.ExecutorService reader = java.util.concurrent.Executors.newSingleThreadExecutor();
+    private final java.util.concurrent.atomic.AtomicBoolean reading = new java.util.concurrent.atomic.AtomicBoolean();
     private static final String ROOT = "file:///android_asset/mind-island/";
     private final class Store {
+        @JavascriptInterface public void refreshWatch() {
+            if (!reading.compareAndSet(false, true)) return;
+            reader.execute(() -> {
+                String snapshot = WatchSnapshot.read().toString();
+                runOnUiThread(() -> {
+                    reading.set(false);
+                    if (web != null) web.evaluateJavascript("if(window.MindIslandApp) window.MindIslandApp.watch(" + snapshot + ");", null);
+                });
+            });
+        }
         private final AtomicFile file = new AtomicFile(new File(getNoBackupFilesDir(), "mind-island-v1.json"));
         @JavascriptInterface public synchronized String read() {
             try {
@@ -101,6 +113,7 @@ public final class MindIslandActivity extends Activity {
         web.evaluateJavascript("window.MindIslandApp ? window.MindIslandApp.back() : false", value -> { if (!"true".equals(value)) finish(); });
     }
     @Override protected void onDestroy() {
+        reader.shutdownNow();
         if (web != null) { web.removeJavascriptInterface("IslandStore"); web.destroy(); web = null; }
         super.onDestroy();
     }

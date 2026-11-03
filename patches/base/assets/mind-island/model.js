@@ -17,7 +17,7 @@
   function dayKey(date) {
     return [date.getFullYear(),String(date.getMonth()+1).padStart(2,'0'),String(date.getDate()).padStart(2,'0')].join('-');
   }
-  function fresh() { return {version:1,seeds:12,owned:[],slots:[null,null,null],theme:'garden',moods:{},claims:{},sleep:{},choices:{}}; }
+  function fresh() { return {version:1,seeds:12,owned:[],slots:[null,null,null],theme:'garden',moods:{},claims:{},sleep:{},choices:{},watchWalk:{}}; }
   function normalize(raw) {
     if (!raw || raw.version !== 1) return fresh();
     const s = fresh();
@@ -26,10 +26,11 @@
     const seen = new Set();
     s.slots = [0,1,2].map(i=> { const id=raw.slots && raw.slots[i]; if (!s.owned.includes(id)||seen.has(id)) return null; seen.add(id);return id; });
     s.theme = themes.includes(raw.theme)?raw.theme:'garden';
-    for (const key of ['moods','claims','sleep','choices']) {
+    for (const key of ['moods','claims','sleep','choices','watchWalk']) {
       const source = raw[key] && typeof raw[key]==='object' ? raw[key]:{};
       for (const day of Object.keys(source).filter(safeDay).sort().slice(-180)) {
         const v=source[day];
+        if (key==='watchWalk' && v && Number.isInteger(v.steps) && v.steps>=0 && v.steps<1000000 && Number.isFinite(v.at)) s.watchWalk[day]={steps:v.steps,at:v.at};
         if (key==='moods' && v && moods.includes(v.weather)) s.moods[day]={weather:v.weather,note:String(v.note||'').slice(0,200)};
         if (key==='claims' && Array.isArray(v)) s.claims[day]=[...new Set(v.filter(x=>['mood','breath',...questIds].includes(x)))];
         if (key==='sleep' && ['rested','okay','tired'].includes(v)) s.sleep[day]=v;
@@ -47,8 +48,20 @@
   function reduce(current, action) {
     const s=normalize(clone(current)); let earned=0;
     const day=action.day;
-    if (['mood','quest','breath','sleep','choice'].includes(action.type) && !safeDay(day)) return {state:current,error:'날짜를 확인해 주세요.'};
+    if (['mood','quest','breath','sleep','choice','watchStart','watchClaim'].includes(action.type) && !safeDay(day)) return {state:current,error:'날짜를 확인해 주세요.'};
     switch (action.type) {
+      case 'watchStart':
+      case 'watchClaim': {
+        const w=action.snapshot, now=action.now;
+        if (!w || !w.ok || w.day!==day || !Number.isInteger(w.steps) || w.steps<0 || w.steps>=1000000 || !Number.isFinite(now) || dayKey(new Date(now))!==day || !Number.isFinite(w.stepsAt) || w.stepsAt>now+300000 || now-w.stepsAt>1800000 || !Number.isFinite(w.readAt) || now-w.readAt>60000 || w.readAt>now+300000) return {state:current,error:'최근 걸음 기록이 필요해요. 건강 화면에서 워치를 동기화한 뒤 새로고침해 주세요.'};
+        if (action.type==='watchStart') s.watchWalk[day]={steps:w.steps,at:now};
+        else {
+          const start=s.watchWalk[day];
+          if (!start || w.stepsAt<start.at || w.steps-start.steps<300) return {state:current,error:'시작 후 300걸음이 새로 동기화되면 받을 수 있어요. 힘들면 몸 풀기로 바꿔도 좋아요.'};
+          earned=reward(s,day,'walk',4);
+        }
+        break;
+      }
       case 'mood':
         if (!moods.includes(action.weather)) return {state:current,error:'마음 날씨를 골라주세요.'};
         s.moods[day]={weather:action.weather,note:String(action.note||'').slice(0,200)};

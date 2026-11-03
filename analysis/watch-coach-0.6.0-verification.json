@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-03",
+  "version": "0.6.0",
+  "sha256": "512fc50b3d5f22ee5eb0b7f4e164eaf2d43f5798f54646233005954151cb71f2",
+  "application_id": "com.diz.sw01.custom.ui",
+  "native_libraries_unchanged": 50,
+  "ble_dex_3_13_17_18_unchanged": true,
+  "dex19_class_count": 7311,
+  "unit_tests": [
+    "15 existing model checks",
+    "watch-coach regression scenarios"
+  ],
+  "physical_phone": {
+    "device": "Galaxy S25 / Android 16",
+    "update_install": "success; same key and package; no target uninstall or data clear",
+    "native_database_read": "verified after normal health initialization",
+    "actual_heart_rate_record": "present and displayed in game",
+    "today_step_record": "not present at probe time; shown as missing",
+    "sleep_record": "not present at probe time; shown as missing",
+    "temporary_probe": "removed"
+  },
+  "limits": [
+    "Physical 300-step completion and subsequent reward need a new synchronized walk",
+    "Sleep parser path reused from native card; no actual sleep record available for runtime display check",
+    "Native manufacturer advertising may open independently during cold launch; existing ad behavior not changed"
+  ]
+}
