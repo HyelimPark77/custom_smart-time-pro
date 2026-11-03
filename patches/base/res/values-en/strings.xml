@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="QRCode">QR Code</string>
-    <string name="album">Album</string>
-    <string name="applovin_agree_message">Please press \"Continue\" if you choose to start using our app.</string>
+    <string name="album">이미지</string>
+    <string name="applovin_agree_message">앱 사용을 시작하려면 \"계속하기\"을 누르십시오.</string>
     <string name="applovin_alt_privacy_policy_text" />
-    <string name="applovin_continue_button_text">Continue</string>
-    <string name="applovin_pp_and_tos_title">To use %s you must agree to our Terms &amp; Conditions and affirm you have reviewed our Privacy Policy</string>
-    <string name="applovin_pp_title">To use %s you must affirm that you have reviewed and acknowledged our Privacy Policy.</string>
-    <string name="applovin_privacy_policy_text">Privacy Policy</string>
-    <string name="applovin_terms_of_service_text">Terms &amp; Conditions</string>
-    <string name="applovin_terms_of_use_text">Terms of Use</string>
+    <string name="applovin_continue_button_text">계속하기</string>
+    <string name="applovin_pp_and_tos_title">%s을 사용하려면 이용 약관에 동의하고 개인 정보 보호 정책을 검토했음을 확인해야 합니다.</string>
+    <string name="applovin_pp_title">%s을(를) 사용하려면 당사의 개인 정보 보호 정책을 검토하고 인정했음을 확인해야 합니다.</string>
+    <string name="applovin_privacy_policy_text">개인 정보 보호 정책</string>
+    <string name="applovin_terms_of_service_text">이용 약관</string>
+    <string name="applovin_terms_of_use_text">이용 약관</string>
     <string name="copy">copy</string>
     <string name="czxing_click_close_flash_light">Tap to turn light off</string>
     <string name="czxing_click_open_flash_light">Tap to turn light on</string>

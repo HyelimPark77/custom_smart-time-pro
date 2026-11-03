@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:id="@id/empty_panel" android:background="@drawable/v2_status_item_blood_pressure_bg" style="@style/status_card_style">
+<?xml version='1.0' encoding='utf-8'?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:id="@id/empty_panel" android:background="@drawable/diz_card" style="@style/status_card_style">
         <com.sma.smartv3.view.text.PFMedium android:text="@string/blood_pressure" style="@style/status_card_style_1_title" />
         <com.sma.smartv3.view.text.PFMedium android:id="@id/tv_no_data" style="@style/status_card_style_no_data" />
-        <com.sma.smartv3.view.TintImageView android:layout_gravity="end" android:src="@drawable/icon_status_bp" style="@style/status_card_style_2_iv" />
+        <com.sma.smartv3.view.TintImageView android:layout_gravity="end" android:src="@drawable/diz_heart" style="@style/status_card_style_2_iv" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginTop="22dp" android:alpha="0.8" />
     </LinearLayout>
     <LinearLayout android:id="@id/data_panel" android:visibility="gone" style="@style/status_card_style">
         <com.sma.smartv3.view.text.PFMedium android:text="@string/blood_pressure" style="@style/status_card_style_1_title" />

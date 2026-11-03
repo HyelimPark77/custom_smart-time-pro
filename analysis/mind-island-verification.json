@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-03",
+  "version": "0.3.0",
+  "application_id": "com.diz.sw01.custom.ui",
+  "sha256": "9badedf9f32c0a753a1e97d66ee04c41b50f88aaa2f6c1b9f95b847c5c508d07",
+  "model_tests_passed": 15,
+  "native_libraries_unchanged": 50,
+  "changed_existing_dex": [
+    "classes19.dex"
+  ],
+  "added_dex": "classes20.dex",
+  "bundled_game_assets_match_source": true,
+  "install": "Success (update, no uninstall)",
+  "device_checks": [
+    "health-home entry opens game",
+    "mood and optional note persisted",
+    "same-day mood edits do not duplicate reward",
+    "two decoration purchases/placements and free theme",
+    "force-stop and relaunch restore state",
+    "breath pause keeps screen unchanged for 5 seconds",
+    "real 60 seconds of breathing with pause/resume awards 3 seeds",
+    "alternative movement quest choice and one-time completion reward",
+    "subjective rest record does not change seeds",
+    "confirmed erasure clears notes/moods/sleep only",
+    "only game QA state restored to pre-test snapshot"
+  ],
+  "limits": [
+    "quests are self-reported, not watch steps",
+    "existing manufacturer forced-update flow remains unresolved online",
+    "no physical watch, server-login or clinical-effectiveness verification"
+  ],
+  "data_storage": "app-private no-backup AtomicFile; bundled page blocks external requests"
+}

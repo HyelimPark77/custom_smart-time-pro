@@ -1,9 +1,12 @@
-param([switch]$Baseline)
+param([switch]$Baseline, [string]$IdentityProfile = '')
 $ErrorActionPreference = 'Stop'
 $repoRoot = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $repoRoot
-$workspace = Join-Path $repoRoot 'workspace/SMART_TIME_PRO_customization'
+if ($Baseline -and $IdentityProfile) { throw 'Choose Baseline or IdentityProfile, not both.' }
+if ($IdentityProfile) { $IdentityProfile = (Resolve-Path -LiteralPath $IdentityProfile).Path }
+$workspace = if ($env:SMART_TIME_WORKSPACE) { $env:SMART_TIME_WORKSPACE } else { Join-Path $repoRoot 'workspace/SMART_TIME_PRO_customization' }
 if (-not (Test-Path -LiteralPath $workspace)) { throw 'Run scripts/Restore-Workspace.ps1 first.' }
+if (Test-Path -LiteralPath (Join-Path $repoRoot 'features/mind-island/src')) { & (Join-Path $PSScriptRoot 'Compile-MindIsland.ps1') }
 foreach ($name in @('Rebuild.ps1','Sign.ps1','Build-TestApk.ps1','PrepareStandalone.py','ApplyIdentity.py')) {
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot $name) -Destination (Join-Path $workspace $name)
 }
@@ -16,7 +19,7 @@ try {
         $apkFilename = 'SMART_TIME_PRO_2.1.3.4_ARM64_TEST.apk'
         & './Build-TestApk.ps1'
     } else {
-        $profilePath = Join-Path $repoRoot 'profiles/diz-sw01-custom.json'
+        $profilePath = if ($IdentityProfile) { $IdentityProfile } else { Join-Path $repoRoot 'profiles/diz-sw01-custom.json' }
         $apkFilename = (Get-Content -Raw -LiteralPath $profilePath | ConvertFrom-Json).apk_filename
         & './Build-TestApk.ps1' -IdentityProfile $profilePath
     }

@@ -1,5 +1,6 @@
 /workspace/
 /.downloads/
+/patches/base/classes20.dex
 /dist/
 *.apk
 *.xapk

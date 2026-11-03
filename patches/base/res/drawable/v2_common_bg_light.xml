@@ -1,5 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ripple android:color="@color/transparent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/v2_common_top_bg" />
-</ripple>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle"><solid android:color="#F4F7F5"/></shape>

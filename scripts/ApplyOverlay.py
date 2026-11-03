@@ -1,6 +1,9 @@
 import os,shutil,hashlib,uuid
 root=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-workspace=os.path.join(root,'workspace','SMART_TIME_PRO_customization')
+workspace=os.path.abspath(os.environ.get('SMART_TIME_WORKSPACE') or os.path.join(root,'workspace','SMART_TIME_PRO_customization'))
+if os.name=='nt':
+    root='\\\\?\\'+root
+    workspace='\\\\?\\'+workspace
 if not os.path.isdir(workspace):raise SystemExit('Run Restore-Workspace.ps1 first.')
 backup=os.path.join(workspace,'.cache','overlay-backup-'+uuid.uuid4().hex)
 count=0

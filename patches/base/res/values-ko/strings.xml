@@ -87,7 +87,7 @@
     <string name="activity_permissions_tip">이 권한은 걷기, 자전거 타기, 운전, 걸음 수 등과 같은 활동에 액세스할 수 있습니다.</string>
     <string name="add">추가</string>
     <string name="add_alarm">알람 추가</string>
-    <string name="add_device">기기 추가</string>
+    <string name="add_device">워치 연결하기</string>
     <string name="add_device_hint_title">기기 페이지에서 기기를 바인딩하면 APP에서 기기 데이터를 동기적으로 표시할 수 있습니다.</string>
     <string name="add_later">나중에 추가</string>
     <string name="add_medication_alarm">알림 추가</string>
@@ -112,10 +112,10 @@
     <string name="agps_upgrade">AGPS 업그레이드</string>
     <string name="agps_upgrade_describe">위치 정확도 향상을 위한 위치 데이터 동기화</string>
     <string name="agps_upgrade_title">위치 지원</string>
-    <string name="agree">동의</string>
+    <string name="agree">동의하고 시작</string>
     <string name="ai_analysis">AI 분석:</string>
     <string name="ai_benefit_buy_tip">이 AI 기능은 구매하셔야 합니다. 지금 구매하시면 AI Q&amp;A와 AIGC 워치 페이스 특전을 누리실 수 있습니다~</string>
-    <string name="ai_benefit_expired_tip">"Ai 혜택이 만료되었습니다. 
+    <string name="ai_benefit_expired_tip">"Ai 혜택이 만료되었습니다.
 Ai Q&amp;A 및 Aigc 워치 페이스 혜택을 계속 누리시려면 지금 구매하세요."</string>
     <string name="ai_benefit_package">Ai 혜택 패키지</string>
     <string name="ai_benefits_about_expire">Ai 혜택이 곧 만료됩니다. Ai Q&amp;A 및 Aigc 워치 페이스 혜택을 계속 이용하려면 지금 구매하세요.</string>
@@ -174,7 +174,7 @@ Ai Q&amp;A 및 Aigc 워치 페이스 혜택을 계속 누리시려면 지금 구
 1. 생성 과정이 다소 길어질 수 있으니 잠시만 기다려 주세요."</string>
     <string name="air_pressure">기압</string>
     <string name="airpressure_value_devices">기압 값 장치 수:</string>
-    <string name="alarm_clock">알람 설정</string>
+    <string name="alarm_clock">알람</string>
     <string name="alarm_max_tip">최대 %d개의 알람을 설정할 수 있습니다.</string>
     <string name="album">이미지</string>
     <string name="alipay_hard_ware_help">알리페이 사용 튜토리얼</string>
@@ -198,7 +198,7 @@ Ai Q&amp;A 및 Aigc 워치 페이스 혜택을 계속 누리시려면 지금 구
     <string name="ambient_sound_control">주변 소리 제어</string>
     <string name="an_hour">1시간</string>
     <string name="anaerobic_exercise">무산소 운동</string>
-    <string name="analytic_data">"분석 데이터 
+    <string name="analytic_data">"분석 데이터
 건강을 보호하세요"</string>
     <string name="android_bind_remind">저희 스마트워치를 사용해 주셔서 감사합니다. 사용하는 동안 앱이 백그라운드에서 실행될 수 있도록 설정해 주셔야 모든 기능을 정상적으로 사용하실 수 있습니다. 사용 중 문의사항이 생기시면 언제든지 고객센터로 문의 부탁드립니다.</string>
     <string name="anti_lost">분실 방지</string>
@@ -383,11 +383,11 @@ Ai Q&amp;A 및 Aigc 워치 페이스 혜택을 계속 누리시려면 지금 구
     <string name="body_shape_9">운동 보디빌더</string>
     <string name="bodyshape">체형</string>
     <string name="bottom_ai">AI</string>
-    <string name="bottom_device">제품 설정</string>
-    <string name="bottom_health">건강</string>
-    <string name="bottom_me">사용자 설정</string>
+    <string name="bottom_device">내 워치</string>
+    <string name="bottom_health">오늘의 건강</string>
+    <string name="bottom_me">내 정보</string>
     <string name="bottom_sport">운동</string>
-    <string name="bottom_status">측정 기록</string>
+    <string name="bottom_status">건강</string>
     <string name="bottomsheet_action_collapse">하단 시트 접기</string>
     <string name="bottomsheet_action_expand">하단 시트 펼치기</string>
     <string name="bottomsheet_action_expand_halfway">반만 펼치기</string>
@@ -710,7 +710,7 @@ Ai Q&amp;A 및 Aigc 워치 페이스 혜택을 계속 누리시려면 지금 구
     <string name="detail">세부 사항</string>
     <string name="detailed_description_of_the_problem">문의 내용 입력</string>
     <string name="device_agps_upgrade_describe">동기화 후 정확도 향상</string>
-    <string name="device_application">장치 애플리케이션</string>
+    <string name="device_application">편의 기능</string>
     <string name="device_connectied">연결됨</string>
     <string name="device_connecting">연결 중...</string>
     <string name="device_disconnected">연결 끊기</string>
@@ -721,7 +721,7 @@ Ai Q&amp;A 및 Aigc 워치 페이스 혜택을 계속 누리시려면 지금 구
     <string name="device_reset">공장 초기화</string>
     <string name="device_reset_tip">확인 후, 기기와 앱 간의 바인딩 관계가 해제되고, 기기를 공장 초기화하면 모든 데이터가 삭제됩니다. 주의 깊게 확인해 주세요!</string>
     <string name="device_reset_title">공장 초기화를 확인하시겠습니까?</string>
-    <string name="device_settings">기기 설정</string>
+    <string name="device_settings">워치 설정</string>
     <string name="device_shutdown">종료</string>
     <string name="device_shutdown_tip">기기를 끈 후 다시 켜려면 충전이 필요합니다!</string>
     <string name="device_shutdown_title">전원이 꺼져 있는지 확인하시겠습니까?</string>
@@ -993,9 +993,9 @@ Ai Q&amp;A 및 Aigc 워치 페이스 혜택을 계속 누리시려면 지금 구
 
 3. 시계의 전원이 완전히 방전되면 펌웨어를 복구하기 전에 충전하고 다시 켜세요."</string>
     <string name="firmware_repair_search_tip">펌웨어 복구, 잠시 기다리십시오…</string>
-    <string name="firmware_repair_tip">"안내 사항 : 
-1.폰트 복구 진행은 약 15 분이 소요될 수 있습니다. 복구가 완료되기 전에 화면을 닫지 마세요. 
-2.레코딩 과정 중에 연결 해제 및 재 연결이 발생할 수 있습니다. 이것은 정상입니다. 
+    <string name="firmware_repair_tip">"안내 사항 :
+1.폰트 복구 진행은 약 15 분이 소요될 수 있습니다. 복구가 완료되기 전에 화면을 닫지 마세요.
+2.레코딩 과정 중에 연결 해제 및 재 연결이 발생할 수 있습니다. 이것은 정상입니다.
 3.폰트 파일이 커서 사용 시간이 길어질 수 있습니다. 이 단계에서 페어링 창이 나타나면 확인을 누르세요. 실패하면 다시 시도하세요."</string>
     <string name="firmware_repair_use_origin_mac_tip">기기의 원래 주소를 찾은 경우 펌웨어 복구를 위해 기기 주소를 선택하거나, 계속해서 기기의 OTA 주소를 검색할 수 있습니다.</string>
     <string name="firmware_upgrade">펌웨어 업그레이드</string>
@@ -1082,7 +1082,7 @@ Ai Q&amp;A 및 Aigc 워치 페이스 혜택을 계속 누리시려면 지금 구
     <string name="go_pair_failed">휴대폰에 바인딩 프롬프트가 표시되지 않으면 휴대폰 블루투스 설정에서 3.0을 수동으로 바인딩하고 설정으로 이동해야 합니다.</string>
     <string name="go_recharge">지금 시작하세요</string>
     <string name="go_to_sports">스포츠로 이동</string>
-    <string name="goal">활동 목표</string>
+    <string name="goal">목표 설정</string>
     <string name="goal_done">목표 완료</string>
     <string name="goal_progress">목표 진행 상황</string>
     <string name="goal_set">목표 설정</string>
@@ -1150,9 +1150,9 @@ Ai Q&amp;A 및 Aigc 워치 페이스 혜택을 계속 누리시려면 지금 구
     <string name="guide_notification_set_title">푸시할 앱을 선택합니다</string>
     <string name="guide_notification_tip">시계의 메시지 알림 및 음악 제어 기능을 사용하려면 \"알림 액세스\"를 사용하도록 허용해야 합니다. 허용하지 않으면 시계가 휴대폰에서 메시지 알림을 받을 수 없습니다.</string>
     <string name="guide_warm_tip">이 스마트워치는 다음과 같은 상황에서 사용하기에 적합하지 않습니다. 1. 수영, 스노클링, 다이빙 또는 기타 수상 활동. 2. 고온 다습한 환경에서 샤워, 온천, 사우나 및 기타 활동. 3. 고속 수류, 수상 스키, 서핑, 제트 스키, 모터 수상 스포츠, 세차 및 래프팅 활동.</string>
-    <string name="guide_warm_tip_2">"다음 사용 시나리오에는 적용되지 않습니다. 
-1. 스쿠버 다이빙과 같은 고압 다이빙 활동; 
-2. 온수 샤워, 온천, 사우나(스팀룸) 등 고온 다습한 환경에서 수행되는 활동; 
+    <string name="guide_warm_tip_2">"다음 사용 시나리오에는 적용되지 않습니다.
+1. 스쿠버 다이빙과 같은 고압 다이빙 활동;
+2. 온수 샤워, 온천, 사우나(스팀룸) 등 고온 다습한 환경에서 수행되는 활동;
 3. 다이빙, 동력 수상 스포츠, 세차 등 높은 수압 또는 빠른 물 흐름에서 수행되는 활동"</string>
     <string name="guide_warm_title">Tips</string>
     <string name="guide_welcome_tip">저희 제품을 이용해 주셔서 대단히 감사합니다! 다음으로 시계를 더 쉽게 사용할 수 있도록 몇 가지 일반적인 설정을 지정하겠습니다</string>
@@ -1162,30 +1162,30 @@ Ai Q&amp;A 및 Aigc 워치 페이스 혜택을 계속 누리시려면 지금 구
     <string name="has_new_version">이 앱은 새로운 버전이 출시되었습니다!</string>
     <string name="have_an_account_to_login_tip">이미 계정이 있으십니까?</string>
     <string name="health_care">건강 관리</string>
-    <string name="health_care_bottom_tip">"특수한 경우: 
-1.장기 월경 주기가 28일 정도인 여성의 경우 본 앱을 참조할 수 있으며 
+    <string name="health_care_bottom_tip">"특수한 경우:
+1.장기 월경 주기가 28일 정도인 여성의 경우 본 앱을 참조할 수 있으며
 2. 월경 주기가 너무 짧거나 긴 여성의 경우 해당되지 않기 때문에 이 앱은 참조용으로만 사용할 수 있습니다."</string>
     <string name="health_care_tip">전원을 켜면 설정에 따라 생리주기가 표시됩니다.</string>
     <string name="health_data">건강 데이터</string>
-    <string name="health_definition_bg">"혈당 알고리즘을 통해 6.1 미만은 정상 혈당, 6.1~6.9는 당뇨병 전단계, 6.9 초과는 당뇨병으로 계산됩니다. 
+    <string name="health_definition_bg">"혈당 알고리즘을 통해 6.1 미만은 정상 혈당, 6.1~6.9는 당뇨병 전단계, 6.9 초과는 당뇨병으로 계산됩니다.
 알고리즘을 통해 얻은 데이터는 참고용이며, 의학적 진단 및 질병 진단에는 사용할 수 없습니다. 불편함을 느끼시면 전문의와 상담하십시오."</string>
-    <string name="health_definition_bp">"정상: 이완기 혈압 90 이상, 이완기 혈압 140 이하, 수축기 혈압 60 이상, 수축기 혈압 90 미만 
-높음: 이완기 혈압 140 이상, 수축기 혈압 90 이상 
+    <string name="health_definition_bp">"정상: 이완기 혈압 90 이상, 이완기 혈압 140 이하, 수축기 혈압 60 이상, 수축기 혈압 90 미만
+높음: 이완기 혈압 140 이상, 수축기 혈압 90 이상
 낮음: 기타 값"</string>
-    <string name="health_definition_hr">"정상: 정상 심박수는 분당 60~100회입니다. 
-높음: 가장 높은 심박수는 분당 100회 이상입니다. 
+    <string name="health_definition_hr">"정상: 정상 심박수는 분당 60~100회입니다.
+높음: 가장 높은 심박수는 분당 100회 이상입니다.
 낮음: 가장 낮은 심박수는 분당 60회 미만입니다."</string>
     <string name="health_definition_oxy" formatted="false">92%에서 100% 사이의 혈중 산소 수치는 정상으로 간주되고, 92% 미만의 수치는 낮은 것으로 간주됩니다.</string>
     <string name="health_definition_pressure">0~25는 편안함을, 25~50은 보통을, 50~75는 중간 정도의 압력을, 75~100은 과도한 압력을 나타냅니다.</string>
-    <string name="health_definition_sleep">"수면 시간이 7~9시간 사이이고, 깊은 수면 시간이 2시간 이상인 경우 '좋음'으로 간주됩니다. 
-수면 시간이 7~9시간 사이이고, 깊은 수면 시간이 1시간 이상인 경우 '정상'으로 간주됩니다. 
-수면 시간이 7시간 미만인 경우 '나쁨'으로 간주됩니다. 
+    <string name="health_definition_sleep">"수면 시간이 7~9시간 사이이고, 깊은 수면 시간이 2시간 이상인 경우 '좋음'으로 간주됩니다.
+수면 시간이 7~9시간 사이이고, 깊은 수면 시간이 1시간 이상인 경우 '정상'으로 간주됩니다.
+수면 시간이 7시간 미만인 경우 '나쁨'으로 간주됩니다.
 수면 시간이 9시간 이상인 경우 '졸음'으로 간주됩니다."</string>
     <string name="health_definition_title">건강 데이터 결과 정의</string>
-    <string name="health_definition_weight">"체중은 BMI 체질량지수에 따라 결정됩니다. 
-BMI = 체중(kg) ÷ 키(m)². 
+    <string name="health_definition_weight">"체중은 BMI 체질량지수에 따라 결정됩니다.
+BMI = 체중(kg) ÷ 키(m)².
 BMI 체질량지수 정의: 0~18.4는 저체중, 18.4~24.9는 정상, 24.9~29.9는 과체중, 29.9 이상은 비만입니다."</string>
-    <string name="health_monitoring">건강 모니터링</string>
+    <string name="health_monitoring">건강 관리</string>
     <string name="health_qa">건강 질문과 답변</string>
     <string name="health_qa_desc">개인 건강 상담을 제공합니다</string>
     <string name="health_report">건강 보고서</string>
@@ -1591,7 +1591,7 @@ API 키는 https://platform.openai.com/account/api-keys에서 확인하실 수 �
     <string name="music_transfer_tip">음악을 추가하면 더 많은 전력이 소모되므로 시계가 전원에 연결된 상태에서 추가하는 것이 좋습니다.</string>
     <string name="music_transfer_type_tip">"3. 음악을 다운로드하거나 전송할 때, 전송 실패를 방지하기 위해 메모리가 충분한지 확인하세요.
 4. 음악 인터페이스 종료 시 잠시 연결이 끊어질 수 있습니다. 기기는 자동으로 연결되니 걱정하지 마세요."</string>
-    <string name="music_transfer_type_tip4">"1. BT 3.0 페어링이 정상인지 확인하세요. 
+    <string name="music_transfer_type_tip4">"1. BT 3.0 페어링이 정상인지 확인하세요.
  2. 음악 추가는 전력 소모가 많으므로, 시계가 전원에 연결된 상태에서 하는 것이 좋습니다.
 3. 시계는 MP3 형식만 지원합니다. 전송 시 MP3 형식을 선택하세요.
 4. 음악 다운로드 또는 전송 시, 전송 실패를 방지하기 위해 메모리 용량이 충분한지 확인하세요."</string>
@@ -1627,7 +1627,7 @@ API 키는 https://platform.openai.com/account/api-keys에서 확인하실 수 �
     <string name="no_application">신청 없음</string>
     <string name="no_application_tip">애플리케이션이 아직 다운로드되지 않았습니다. \"모든 애플리케이션\" 페이지로 가서 애플리케이션을 다운로드하세요!</string>
     <string name="no_content_set_key">아직 콘텐츠가 설정되지 않았습니다.</string>
-    <string name="no_data">데이터가 없습니다.</string>
+    <string name="no_data">아직 기록이 없어요</string>
     <string name="no_device_not_airpressure_value">검색하지 않고는 장치를 종료할 수 없습니다.</string>
     <string name="no_device_not_bt_name">검색하지 않고는 장치를 설정할 수 없습니다.</string>
     <string name="no_device_not_readLog">검색하지 않고는 장치를 종료할 수 없습니다.</string>
@@ -1669,7 +1669,7 @@ API 키는 https://platform.openai.com/account/api-keys에서 확인하실 수 �
     <string name="not_pair_tip">이 기능을 정상적으로 사용하려면 먼저 기기와 페어링해야 합니다. 먼저 기기를 페어링하세요.</string>
     <string name="not_runing_music_app">실행 중인 음악 앱이 감지되지 않았습니다. 음악 앱을 열고 수동으로 음악 재생 후 다시 시도해 주세요.</string>
     <string name="not_selected">선택되지 않음</string>
-    <string name="notification">알림</string>
+    <string name="notification">앱 알림</string>
     <string name="notification_bar">알림 표시줄</string>
     <string name="notification_explain_content">현재 걸음 수와 운동 상태 및 기타 시나리오를 표시하는 데 사용됩니다.</string>
     <string name="notification_explain_title">알림 권한 신청 지침</string>
@@ -1840,21 +1840,21 @@ API 키는 https://platform.openai.com/account/api-keys에서 확인하실 수 �
     <string name="pressure_set">스트레스 모니터링</string>
     <string name="pressure_set_tip">기기가 켜지면 스트레스 수준을 지속적으로 모니터링합니다.</string>
     <string name="pressure_tips">이 제품은 의료기기가 아니므로 질병유무를 판단할 수 없으며, 질병의 유무를 판단하기 위해서는 의사의 검진이 필요합니다.</string>
-    <string name="privacy_agreement">\t개인 정보처리 방침</string>
+    <string name="privacy_agreement">개인정보 처리방침</string>
     <string name="privacy_agreement_reminder">계정 등록 및 로그인 시 개인 정보보호 정책에 동의하고 시작합니다.</string>
     <string name="privacy_agreement_reminder_no_login">자세한 내용은 확인하시기 바랍니다</string>
-    <string name="privacy_content" formatted="false">"%1$s 는 사용자의 운동데이터 및 건강데이터를 기록, 분석 및 표시하는 응용 프로그램 소프트웨어로, 스마트 웨어러블 제품을 기반으로 하는 응용 프로그램입니다. 
+    <string name="privacy_content" formatted="false">"%1$s 는 사용자의 운동데이터 및 건강데이터를 기록, 분석 및 표시하는 응용 프로그램 소프트웨어로, 스마트 웨어러블 제품을 기반으로 하는 응용 프로그램입니다.
 
- %1$s 는 더 나은 서비스를 제공하기 위해 '위치, 블루투스, 카메라, 통화기록'에 대한 정보를 수집합니다. 
+ %1$s 는 더 나은 서비스를 제공하기 위해 '위치, 블루투스, 카메라, 통화기록'에 대한 정보를 수집합니다.
 
- 관련하여 휴대전화 사용 권한 및 기능사용에 동의하지 않으시면 시계의 일부 기능이 제대로 작동하지 않을 수 있습니다 귀하는 언제든지 계정을 삭제하실 수 있으며, 삭제 이후 귀하의 데이터는 저장되지 않습니다. 
+ 관련하여 휴대전화 사용 권한 및 기능사용에 동의하지 않으시면 시계의 일부 기능이 제대로 작동하지 않을 수 있습니다 귀하는 언제든지 계정을 삭제하실 수 있으며, 삭제 이후 귀하의 데이터는 저장되지 않습니다.
 
  '동의'버튼을 클릭 하시면 위의 내용 및 %s 개인정보보호 정책에 동의 하는 것으로 간주 됩니다"</string>
-    <string name="privacy_content_no_login">"%1$s 는 사용자의 운동데이터 및 건강데이터를 기록, 분석 및 표시하는 응용 프로그램 소프트웨어로, 스마트 웨어러블 제품을 기반으로 하는 응용 프로그램입니다. 
+    <string name="privacy_content_no_login">"%1$s 는 사용자의 운동데이터 및 건강데이터를 기록, 분석 및 표시하는 응용 프로그램 소프트웨어로, 스마트 웨어러블 제품을 기반으로 하는 응용 프로그램입니다.
 
- %1$s 는 더 나은 서비스를 제공하기 위해 '위치, 블루투스, 카메라, 통화기록'에 대한 정보를 수집합니다. 
+ %1$s 는 더 나은 서비스를 제공하기 위해 '위치, 블루투스, 카메라, 통화기록'에 대한 정보를 수집합니다.
 
- 관련하여 휴대전화 사용 권한 및 기능사용에 동의하지 않으시면 시계의 일부 기능이 제대로 작동하지 않을 수 있습니다 귀하는 언제든지 계정을 삭제하실 수 있으며, 삭제 이후 귀하의 데이터는 저장되지 않습니다. 
+ 관련하여 휴대전화 사용 권한 및 기능사용에 동의하지 않으시면 시계의 일부 기능이 제대로 작동하지 않을 수 있습니다 귀하는 언제든지 계정을 삭제하실 수 있으며, 삭제 이후 귀하의 데이터는 저장되지 않습니다.
 
  '동의'버튼을 클릭 하시면 위의 내용 및 %1$s 개인정보보호 정책에 동의 하는 것으로 간주 됩니다"</string>
     <string name="privacy_info_content">"%s (or we) respects and protects user information and treats it with a high degree of responsibility and care. When you use the services provided by we, we collect, process and disclose your information in accordance with this Privacy Policy. We want to give you a clear picture of how we handle your information through this Privacy Policy, so we recommend that you read this Privacy Policy in its entirety to help you understand how to maintain your privacy.
@@ -2124,7 +2124,7 @@ If you have any questions and comments on the contents of this statement and pol
     <string name="receipt_code">영수증 코드</string>
     <string name="recharge">충전</string>
     <string name="recharge_points_arrived_tip">축하합니다. 성공적인 충전 포인트가 도착했습니다. AI의 즐거움을 경험해 보세요.</string>
-    <string name="recharge_successful_tip">"축하합니다. 성공적인 충전 포인트가 도착했습니다. 
+    <string name="recharge_successful_tip">"축하합니다. 성공적인 충전 포인트가 도착했습니다.
  AI의 즐거움을 경험해 보세요."</string>
     <string name="recommended_course">추천 강좌</string>
     <string name="recommended_for_you">추천 항목</string>
@@ -2206,7 +2206,7 @@ If you have any questions and comments on the contents of this statement and pol
     <string name="score_pop_btn_feedback">싫어요, 토하고 싶어요</string>
     <string name="score_pop_btn_praise">좋아요, 칭찬하기</string>
     <string name="score_pop_btn_reject">알림 없음</string>
-    <string name="score_pop_content">"제가 마음에 드신다면 칭찬해주세요. 
+    <string name="score_pop_content">"제가 마음에 드신다면 칭찬해주세요.
 계속 열심히 노력하겠습니다!"</string>
     <string name="score_pop_title">점수를 매길 수 있는 소프트웨어를 주세요</string>
     <string name="screen">화면</string>
@@ -2228,10 +2228,10 @@ If you have any questions and comments on the contents of this statement and pol
 SECTOR &amp;amp; MORELLATO
 스마트 기기"</string>
     <string name="security_code">보안 확인 코드</string>
-    <string name="sedentary">오래 앉음 경고</string>
+    <string name="sedentary">오래 앉음 알림</string>
     <string name="sedentary_tip">이 기능을 활성화하면 워치 밴드를 통해 오래 앉음 경고 알림을 작동합니다.</string>
     <string name="see_more_match_record">활동 기록</string>
-    <string name="see_more_sports">더 많은 운동 기록</string>
+    <string name="see_more_sports">운동 기록 보기</string>
     <string name="segment_activity">세그먼트 활동</string>
     <string name="segment_activity0">시간</string>
     <string name="segment_activity1">달리기</string>
@@ -2336,7 +2336,7 @@ SECTOR &amp;amp; MORELLATO
     <string name="sms_quick_reply_tip">왼쪽의 버튼을 드래그하여 카드의 순서를 조정합니다. 최대 %d개까지 설정할 수 있습니다.</string>
     <string name="sos_edit_hint">지역번호와 전화번호를 입력하세요</string>
     <string name="sos_emergency_number">비상 연락처</string>
-    <string name="sos_hint_tip">"팁: 
+    <string name="sos_hint_tip">"팁:
 1. 가장 가까운 사람의 전화번호를 저장하는 것이 좋습니다.
 2. 긴급 전화 연결 실패를 방지하기 위해 입력한 번호가 정확한지 확인하세요.
 3. 국제 장거리 전화를 걸 때는 전화번호의 지역 번호를 입력해야 합니다. 그렇지 않으면 발신이 실패합니다."</string>
@@ -2384,7 +2384,7 @@ SECTOR &amp;amp; MORELLATO
     <string name="step_goal_suggest">건강한 삶을 위해 매일 1만보 이상 걷기를 권장합니다.</string>
     <string name="step_v2_consume">소비</string>
     <string name="stepnum">걸음 수</string>
-    <string name="steps">걸음</string>
+    <string name="steps">걸음 수</string>
     <string name="stock_market">주식 시장</string>
     <string name="stock_max_tip">최대 5개의 주식을 추가할 수 있습니다.</string>
     <string name="stock_settings">설정</string>
@@ -2625,7 +2625,7 @@ SECTOR &amp;amp; MORELLATO
     <string name="tt_video_without_wifi_tips">재생하면 %.2fMB 트래픽이 소비하다</string>
     <string name="tt_web_title_default">광고</string>
     <string name="turn_off">작동 안함</string>
-    <string name="turn_the_wrist_screen">손목 올려 화면 켜기</string>
+    <string name="turn_the_wrist_screen">손목을 들어 화면 켜기</string>
     <string name="turn_the_wrist_screen_tip">이 기능을 켜면 설정된 시간 동안 작동합니다.</string>
     <string name="turn_wrist">손목 돌리기</string>
     <string name="tutorial_help_title">튜토리얼</string>
@@ -2761,7 +2761,7 @@ SECTOR &amp;amp; MORELLATO
     <string name="weightofskeletalmuscle">골격근의 무게</string>
     <string name="weightofwater">물의 무게</string>
     <string name="weighttocontrol">통제할 무게</string>
-    <string name="welcome_to">에 오신 것을 환영합니다.</string>
+    <string name="welcome_to">일상을 더 가볍게</string>
     <string name="welfare_point_remind">귀하의 정보가 완벽하지 않습니다. 먼저 정보를 개선해 주시면 귀하의 개인 계정에 포인트를 더 잘 보내드릴 수 있습니다.</string>
     <string name="wenxinyiyan">웬신이얀</string>
     <string name="whether_delete_device">기기를 삭제하면 기기가 앱과 더 이상 통신하지 않습니다. 삭제를 계속하시겠습니까?</string>
