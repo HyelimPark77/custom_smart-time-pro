@@ -1,6 +1,6 @@
 {
   "apk": "Diz_SW01_Watch_Integration_0.7.0-dev.1_ARM64_TEST.apk",
-  "sha256": "ed909adb9b762d19ce49616372fb95091dfdff30e235e3387d59b2f3d9e65b7b",
+  "sha256": "710547a58f4db3d8e26a42e19763d566fff7df2e736d3705c4d562a4a42d3d60",
   "baseline_sha256": "512fc50b3d5f22ee5eb0b7f4e164eaf2d43f5798f54646233005954151cb71f2",
   "unchanged_core_entries": 70,
   "mind_island_dex_matches_source": true,
@@ -25,12 +25,66 @@
     "vendor_update_prompt_absent_after_fix": true,
     "scope": "One end-to-end real-watch voice/save/restart trial. Reconnection and repeated recognition need more trials."
   },
-  "latest_build_ui_validation": {
+  "previous_build_ui_validation": {
+    "apk_sha256": "ed909adb9b762d19ce49616372fb95091dfdff30e235e3387d59b2f3d9e65b7b",
     "capture_seconds": 10,
     "native_layout_checked_on_s25": true,
     "mind_island_theme_and_existing_characters": true,
     "calm_water_and_wind_air_icons": true,
     "cards_aligned_without_clipping": true,
     "voice_10s_real_watch_retest": "pending user trial"
+  },
+  "route_preparation_fix": {
+    "mode_before_hfp_voice_open": false,
+    "explicit_app_communication_request_even_if_global_route_selected": true,
+    "bounded_device_publication_wait": true,
+    "release_only_this_apps_route_preference": true,
+    "same_watch_input_verification_retained": true,
+    "legacy_test_app_audio_route_removed_with_user_approval": true,
+    "prior_trial_after_legacy_route_cleanup_failed": true,
+    "installed_on_s25": false,
+    "real_watch_retest": "superseded by successful-capture baseline restoration; changes not in current APK",
+    "prefer_direct_audiomanager_route_before_hfp_bootstrap": true,
+    "explicit_route_trial_failed": true,
+    "mode_order_trial_failed": true
+  },
+  "successful_capture_restoration": {
+    "source_commit": "42798cbc",
+    "capture_method_exact_match": true,
+    "capture_seconds": 6,
+    "recognition_response_timeout_seconds": 20,
+    "themed_ui_retained": true,
+    "installed_on_s25": true,
+    "real_watch_retest": "user reported recognition success on unchanged six-second restored build after prior failures",
+    "requested_ten_seconds": "applied to subsequent build; connection settings unchanged",
+    "latest_diagnosis": {
+      "hfp_connected": true,
+      "sco_audio_opened_then_closed": true,
+      "legacy_probe_also_failed": true,
+      "disconnect_initiator": "S25 local host per Bluetooth stack reason; internal requesting component undetermined",
+      "next_comparison": "live filtered Bluetooth log during unchanged extension trial",
+      "bixby_user_confirmed_watch_phrase_recognized": true,
+      "bixby_audio_session_seconds": 3.7,
+      "failed_probe_session_seconds": 0.219
+    }
+  },
+  "ten_second_duration_only_update": {
+    "capture_seconds": 10,
+    "connection_preparation_unchanged_from_successful_restored_build": true,
+    "input_route_checks_unchanged": true,
+    "cleanup_unchanged": true,
+    "recognizer_settings_unchanged": true,
+    "recognition_response_timeout_seconds": 20,
+    "installed_on_s25": true,
+    "real_watch_retest": "user confirmed real-watch speech recognition success",
+    "intermittent_failure_root_cause": "not established",
+    "apk_sha256": "a53d9f931c58d92733144056c489d2398ca6b42f7cba07f806405c50b8f909f2"
+  },
+  "current_six_second_duration_update": {
+    "capture_seconds": 6,
+    "reason": "user preference after successful ten-second trial",
+    "connection_and_recognizer_settings_unchanged": true,
+    "installed_on_s25": true,
+    "current_apk_real_watch_retest": "not yet performed; previous six-second restored build and ten-second build succeeded per user"
   }
 }

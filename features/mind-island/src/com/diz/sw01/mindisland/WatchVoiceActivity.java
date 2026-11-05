@@ -39,7 +39,7 @@ public final class WatchVoiceActivity extends Activity {
     private volatile int generation;
     private String recognized="",signalSummary="";
     private final StringBuilder segments=new StringBuilder();
-    private static final int CAPTURE_SECONDS=10;
+    private static final int CAPTURE_SECONDS=6;
     private static final int BYTES_PER_SECOND=32000;
     private static final int CAPTURE_BYTES=CAPTURE_SECONDS*BYTES_PER_SECOND;
     private static final String[] KEYS={"sun","clear","cloud","rain","wind"};
@@ -67,7 +67,7 @@ public final class WatchVoiceActivity extends Activity {
         LinearLayout greeting=new LinearLayout(this);greeting.setOrientation(1);buddy.addView(greeting,new LinearLayout.LayoutParams(0,-2,1));
         TextView welcome=label(greeting,"어떤 마음이든\n들려줘도 괜찮아요.",18);welcome.setTypeface(null,Typeface.BOLD);label(greeting,"토끼와 별 친구가 기다려요 ♡",11);
         TextView heading=label(box,"말로 남기는 나의 마음 날씨",24);heading.setTypeface(null,Typeface.BOLD);heading.setPadding(0,dp(24),0,dp(6));
-        label(box,"연결 확인 → 10초 말하기 → 마음 확인",12);
+        label(box,"연결 확인 → 6초 말하기 → 마음 확인",12);
         LinearLayout input=card(box,new String[]{"#FFFFFF","#FFFFFF"});inputCard=input;
         routeView=label(input,"워치와 전화용 Bluetooth로 연결해 주세요.",12);
         status=label(input,"준비되면 시작해 주세요.",18);status.setTypeface(null,Typeface.BOLD);
@@ -198,7 +198,7 @@ public final class WatchVoiceActivity extends Activity {
             }
             update(token,()->routeView.setText("실제 입력 경로: Bluetooth SCO 워치 마이크 확인"));
 
-            update(token,()->status.setText("워치 가까이 말해 주세요"+" · 남은 10초"));
+            update(token,()->status.setText("워치 가까이 말해 주세요"+" · 남은 6초"));
             int total=0,lastSeconds=-1;
             long squareSum=0;int peak=0,activeChunks=0;
             while(!cancelled.get()&&total<CAPTURE_BYTES) {
@@ -223,7 +223,7 @@ public final class WatchVoiceActivity extends Activity {
             // Limit gain by both RMS and peak to avoid clipping. This cannot repair unintelligible audio.
             final double gain=rms==0?1:Math.max(1,Math.min(6,Math.min(1800.0/rms,28000.0/Math.max(1,max))));
             for(int j=0;j+1<captured.length;j+=2){int sample=(short)((captured[j]&255)|(captured[j+1]<<8));int scaled=(int)Math.round(sample*gain);captured[j]=(byte)scaled;captured[j+1]=(byte)(scaled>>8);}
-            signalSummary="입력 10초 · RMS "+rms+" / 최대 "+max+" / 소리 감지 구간 "+chunks+"개\n인식용 음량 보정 "+String.format(java.util.Locale.ROOT,"%.1f",gain)+"배";
+            signalSummary="입력 6초 · RMS "+rms+" / 최대 "+max+" / 소리 감지 구간 "+chunks+"개\n인식용 음량 보정 "+String.format(java.util.Locale.ROOT,"%.1f",gain)+"배";
             update(token,()->routeView.setText("워치에서 입력을 받았어요. 인식 문구를 확인해 주세요."));
         } catch(Exception e) {
             final String message=e.getMessage();update(token,()->{status.setText("입력 확인 실패: "+message);busy=false;start.setEnabled(true);});
@@ -256,7 +256,7 @@ public final class WatchVoiceActivity extends Activity {
             recognizer.startListening(intent);
             final byte[] data=pcm;final ParcelFileDescriptor writer=pipe[1];
             new Thread(()->{try(OutputStream out=new ParcelFileDescriptor.AutoCloseOutputStream(writer)){for(int i=0;i<data.length&&!cancelled.get()&&token==generation;i+=3200){out.write(data,i,Math.min(3200,data.length-i));Thread.sleep(100);}}catch(Exception ignored){}},"MindIslandSpeechPipe").start();
-            handler.postDelayed(()->{if(token==generation&&busy){status.setText("음성 인식 응답이 늦어 중단했어요. 다시 시도해 주세요.");finishRecognition();}},30000);
+            handler.postDelayed(()->{if(token==generation&&busy){status.setText("음성 인식 응답이 늦어 중단했어요. 다시 시도해 주세요.");finishRecognition();}},20000);
         }catch(Exception e){status.setText("음성 인식기를 시작하지 못했어요. 직접 선택해 주세요.");finishRecognition();}
     }
     private void complete(String value){
