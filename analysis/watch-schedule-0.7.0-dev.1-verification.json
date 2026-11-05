@@ -38,5 +38,13 @@
     "no_data_and_single_sample_checks_passed": true
   },
   "ui_regression_passed": true,
-  "changes_local_only_per_user": true
+  "checkpoint": {
+    "date": "2026-11-05",
+    "purpose": "user-approved development branch checkpoint; not complete release validation",
+    "checks_rerun_passed": true,
+    "apk_signature_verified": true,
+    "all_interval_long_run_and_reboot_tests": "pending",
+    "automatic_health_alerts": false,
+    "watchface_export_integration": "pending"
+  }
 }
