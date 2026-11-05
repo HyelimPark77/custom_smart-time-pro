@@ -1,6 +1,6 @@
 {
   "apk": "Diz_SW01_Watch_Integration_0.7.0-dev.1_ARM64_TEST.apk",
-  "sha256": "c564e8bb010ca410a54426d0022c6fcb03f2f5760a1f3b40bc0f37c14f98d915",
+  "sha256": "b1b97eeec8b70c7aaf3ec83f6ec52e40c3d152e25f37b54446b7f047dfff0f0d",
   "baseline_sha256": "512fc50b3d5f22ee5eb0b7f4e164eaf2d43f5798f54646233005954151cb71f2",
   "unchanged_core_entries": 70,
   "mind_island_dex_matches_source": true,
@@ -24,7 +24,19 @@
   "exact_alarm_permission_requires_user_allow": true,
   "health_history_read_only": true,
   "automatic_health_alerts": false,
-  "real_watch_scheduled_delivery": "pending",
+  "real_watch_scheduled_delivery": "user confirmed scheduled reminder arrived while app screen was not open; force-stop, reboot and all interval modes not yet verified",
   "voice_source_unchanged_from_commit": "e10c3d6b",
-  "ui_and_calendar_checks_passed": true
+  "ui_and_calendar_checks_passed": true,
+  "scheduled_delivery_confirmed_build_sha256": "c564e8bb010ca410a54426d0022c6fcb03f2f5760a1f3b40bc0f37c14f98d915",
+  "schedule_summary_large_text": true,
+  "health_charts": {
+    "heart_rate": "time-based line, actual samples as points",
+    "stress": "measurement-order bars, 0-100",
+    "s25_real_record_display_checked": true,
+    "heart_rate_sample_count": 8,
+    "stress_sample_count": 3,
+    "no_data_and_single_sample_checks_passed": true
+  },
+  "ui_regression_passed": true,
+  "changes_local_only_per_user": true
 }

@@ -41,9 +41,22 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
       assert.deepEqual(await page.evaluate(()=>window.__scheduled.at(-1)),{time:'16:35',enabled:true,mode:'interval',interval:minutes});
     }
     await page.evaluate(()=>window.MindIslandApp.watch({ok:true,heartRateHistory:[{at:Date.now()-600000,value:70},{at:Date.now(),value:80}],stressHistory:[]}));
-    await page.locator('details.watch-reminder summary').click();
+    await page.locator('details.watch-reminder > summary').click();
     assert.ok((await page.locator('#heart-history').textContent()).includes('10분 간격'));
     assert.ok((await page.locator('#stress-history').textContent()).includes('기록이 없어요'));
+    assert.equal(await page.locator('#heart-history svg circle').count(),2);
+    assert.equal(await page.locator('#stress-history svg').count(),0);
+    await page.evaluate(()=>window.MindIslandApp.watch({ok:true,heartRateHistory:[{at:Date.now(),value:75}],stressHistory:[{at:Date.now(),value:35}]}));
+    assert.equal(await page.locator('#heart-history svg circle').count(),1);
+    assert.equal(await page.locator('#heart-history svg polyline').count(),0);
+    assert.equal(await page.locator('#stress-history svg rect').count(),1);
+    await page.evaluate(()=>window.MindIslandApp.schedule({enabled:true,mode:'daily',time:'15:25',next:Date.now()+60000,message:'예약됨'}));
+    assert.equal(await page.locator('#rest-schedule-state').textContent(),'✓ 예약 켜짐');
+    assert.equal(await page.locator('#rest-schedule-setting').textContent(),'매일 오후 3:25');
+    await page.locator('#rest-reminder-time').fill('16:40');
+    assert.equal(await page.locator('#rest-schedule-setting').textContent(),'매일 오후 3:25'); // draft does not claim to be saved
+    await page.evaluate(()=>window.MindIslandApp.schedule({enabled:false,message:'꺼짐'}));
+    assert.equal(await page.locator('#rest-schedule-state').textContent(),'예약 꺼짐');
     await page.evaluate(()=>delete window.IslandStore.sendRestReminder);
     await send.click();assert.ok((await page.locator('#rest-reminder-status').textContent()).includes('사용할 수 없어요'));
     assert.deepEqual(errors,[]);

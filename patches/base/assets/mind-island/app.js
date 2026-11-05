@@ -86,12 +86,31 @@
     $('watch-claim').hidden=done||!start||reset;$('watch-claim').disabled=!valid||delta<300||w.stepsAt<start.at;
   }
   function refreshWatch(){if(window.IslandStore&&window.IslandStore.refreshWatch)window.IslandStore.refreshWatch();}
+  function healthChart(rows,stress){
+    const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');
+    svg.setAttribute('viewBox','0 0 330 155');svg.setAttribute('role','img');svg.setAttribute('aria-label',(stress?'스트레스 막대그래프':'심박수 추세선')+' · '+rows.length+'개 측정 기록');svg.classList.add('health-chart');
+    function shape(tag,attrs,text){const node=document.createElementNS(ns,tag);for(const [key,value] of Object.entries(attrs))node.setAttribute(key,String(value));if(text!==undefined)node.textContent=text;svg.append(node);return node;}
+    const max=stress?100:Math.max(100,Math.ceil(Math.max(...rows.map(row=>row.value))/20)*20),top=14,bottom=116,left=35,right=312;
+    const y=value=>bottom-(bottom-top)*value/max;
+    for(const value of [0,max/2,max]){shape('line',{x1:left,y1:y(value),x2:right,y2:y(value),stroke:'#e4ddec'});shape('text',{x:left-6,y:y(value)+4,'text-anchor':'end',fill:'#756584','font-size':10},value);}
+    const x=i=>rows.length===1?(left+right)/2:stress?left+(right-left)*(i+.5)/rows.length:left+(right-left)*(rows[i].at-rows[0].at)/Math.max(1,rows.at(-1).at-rows[0].at);
+    if(!stress&&rows.length>1)shape('polyline',{points:rows.map((row,i)=>x(i)+','+y(row.value)).join(' '),fill:'none',stroke:'#9573cf','stroke-width':3,'stroke-linejoin':'round'});
+    rows.forEach((row,i)=>{if(stress)shape('rect',{x:x(i)-Math.min(14,100/rows.length),y:y(row.value),width:Math.min(28,200/rows.length),height:bottom-y(row.value),rx:5,fill:'#72b7a0'});else shape('circle',{cx:x(i),cy:y(row.value),r:4,fill:'#9573cf',stroke:'#fff','stroke-width':2});});
+    const indices=rows.length===1?[0]:[0,rows.length-1];for(const i of indices)shape('text',{x:x(i),y:139,'text-anchor':rows.length===1?'middle':stress?'middle':i===0?'start':'end',fill:'#756584','font-size':10},new Date(rows[i].at).toLocaleTimeString('ko-KR',{hour12:false,hour:'2-digit',minute:'2-digit'}));
+    return svg;
+  }
   function renderHealthHistory(){
     for(const [field,id,unit] of [['heartRateHistory','heart-history','회/분'],['stressHistory','stress-history','']]){
-      const target=$(id);target.replaceChildren();
+      const target=$(id),expanded=!!target.querySelector('details[open]');target.replaceChildren();
       const rows=watchData&&Array.isArray(watchData[field])?watchData[field].filter(row=>Number.isFinite(row.at)&&Number.isFinite(row.value)&&row.at>0&&row.value>0).slice(-8):[];
       if(!rows.length){target.textContent=watchData&&watchData[field+'Error']?'기록을 읽지 못했어요. 워치 동기화 후 다시 확인해 주세요.':'최근 24시간 측정 기록이 없어요. 워치 동기화 후 다시 확인해 주세요.';continue;}
-      let previous=0;for(const row of rows){const line=el('p','');line.textContent=new Date(row.at).toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})+' · '+row.value+unit+(previous?' · 이전 기록과 '+Math.round((row.at-previous)/60000)+'분 간격':'');target.append(line);previous=row.at;}
+      const latest=rows.at(-1),card=el('div','health-record-card'),headline=el('div','health-record-value');headline.append(el('strong','',String(latest.value)),el('span','',unit||'스트레스 지수'));card.append(headline);
+      card.append(el('p','health-record-time','최근 측정 · '+new Date(latest.at).toLocaleString('ko-KR',{month:'long',day:'numeric',hour:'numeric',minute:'2-digit'})));
+      card.append(healthChart(rows,field==='stressHistory'));
+      card.append(el('p','health-record-caption',field==='stressHistory'?'측정 순서별 기록 · 세로축 0–100':'가로축은 측정 시각 · 점은 실제 기록, 선은 점 사이 연결'));
+      const details=el('details','health-record-details');details.open=expanded;details.append(el('summary','',rows.length+'개 값과 측정 간격 보기'));
+      let previous=0;for(const row of rows){const line=el('p','');line.textContent=new Date(row.at).toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})+' · '+row.value+unit+(previous?' · 이전 기록과 '+Math.round((row.at-previous)/60000)+'분 간격':'');details.append(line);previous=row.at;}
+      card.append(details);target.append(card);
     }
   }
   $('refresh-health-history').onclick=refreshWatch;
@@ -172,7 +191,16 @@
   $('rest-reminder-mode').onchange=scheduleOptions;
   function receiveSchedule(data){
     if(!data)return;
-    $('rest-schedule-status').textContent=String(data.message||'')+(data.enabled&&data.next?' 다음 알림: '+new Date(data.next).toLocaleString('ko-KR'):'');
+    $('rest-schedule-status').textContent=String(data.message||'');
+    if(typeof data.enabled==='boolean'){
+      const on=data.enabled,summary=$('rest-schedule-summary');summary.classList.toggle('is-on',on);summary.classList.toggle('is-off',!on);
+      $('rest-schedule-state').textContent=on?'✓ 예약 켜짐':'예약 꺼짐';
+      let setting='원하는 시각이나 간격을 고른 뒤 예약을 켜 주세요.';
+      if(on&&data.mode==='interval'){const minutes=Number(data.interval);setting=minutes>=60&&minutes%60===0?minutes/60+'시간마다 알림':minutes+'분마다 알림';}
+      else if(on&&typeof data.time==='string'&&/^\d{2}:\d{2}$/.test(data.time)){const [hour,minute]=data.time.split(':').map(Number);setting='매일 '+(hour<12?'오전 ':'오후 ')+(hour%12||12)+':'+String(minute).padStart(2,'0');}
+      $('rest-schedule-setting').textContent=setting;
+      $('rest-schedule-next').textContent=on&&Number.isFinite(data.next)&&data.next>0?'다음 알림 · '+new Date(data.next).toLocaleString('ko-KR',{month:'long',day:'numeric',hour:'numeric',minute:'2-digit'}):'';
+    }
     if(typeof data.time==='string')$('rest-reminder-time').value=data.time;
     if(data.mode)$('rest-reminder-mode').value=data.mode;
     if(data.interval)$('rest-reminder-interval').value=String(data.interval);
