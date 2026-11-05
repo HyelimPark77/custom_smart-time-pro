@@ -1,6 +1,7 @@
 package com.diz.sw01.mindisland;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Build;
 import android.graphics.Color;
@@ -23,10 +24,20 @@ import java.nio.charset.StandardCharsets;
 /** Local game with a read-only bridge to synchronized watch records. */
 public final class MindIslandActivity extends Activity {
     private WebView web;
+    private static final int WATCH_VOICE=701;
+    private boolean voiceOpen;
     private final java.util.concurrent.ExecutorService reader = java.util.concurrent.Executors.newSingleThreadExecutor();
     private final java.util.concurrent.atomic.AtomicBoolean reading = new java.util.concurrent.atomic.AtomicBoolean();
     private static final String ROOT = "file:///android_asset/mind-island/";
     private final class Store {
+        @JavascriptInterface public void openWatchVoice() {
+            runOnUiThread(()->{
+                if(voiceOpen||isFinishing())return;
+                voiceOpen=true;
+                try{startActivityForResult(new Intent(MindIslandActivity.this,WatchVoiceActivity.class),WATCH_VOICE);}
+                catch(Exception e){voiceOpen=false;}
+            });
+        }
         @JavascriptInterface public void refreshWatch() {
             if (!reading.compareAndSet(false, true)) return;
             reader.execute(() -> {
@@ -108,6 +119,18 @@ public final class MindIslandActivity extends Activity {
         super.onPause();
     }
     @Override protected void onResume() { super.onResume(); if (web != null) web.onResume(); }
+    @Override protected void onActivityResult(int request,int result,Intent data){
+        super.onActivityResult(request,result,data);
+        if(request!=WATCH_VOICE)return;
+        voiceOpen=false;
+        if(result!=RESULT_OK||data==null||web==null)return;
+        String weather=data.getStringExtra("weather"),transcript=data.getStringExtra("transcript");
+        if(!java.util.Arrays.asList("sun","clear","cloud","rain","wind").contains(weather))return;
+        try{
+            JSONObject payload=new JSONObject().put("weather",weather).put("transcript",transcript==null?"":transcript);
+            web.evaluateJavascript("if(window.MindIslandApp)window.MindIslandApp.voice("+payload+");",null);
+        }catch(Exception ignored){}
+    }
     @Override public void onBackPressed() {
         if (web == null) { finish(); return; }
         web.evaluateJavascript("window.MindIslandApp ? window.MindIslandApp.back() : false", value -> { if (!"true".equals(value)) finish(); });

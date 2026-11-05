@@ -1,0 +1,9 @@
+{
+  "application_id": "com.diz.sw01.watch.integration",
+  "app_name": "디즈 워치 마음섬 확장",
+  "version_name": "0.7.0-dev.1",
+  "version_code": 7,
+  "apk_filename": "Diz_SW01_Watch_Integration_0.7.0-dev.1_ARM64_TEST.apk",
+  "device_model": "Galaxy S25 Android 16",
+  "watch_model": "Diz-SW01"
+}

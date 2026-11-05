@@ -48,7 +48,7 @@
     $('mood-subtitle').textContent=entry?'마음은 바뀌어도 괜찮아요. 다시 남길 수 있어요.':'정답 없이 골라보세요 · 10초면 충분해요';
     $('save-mood').textContent=entry?'오늘의 마음 수정하기':'오늘의 마음 남기기';
   }
-  function populateNote(){const entry=state.moods[today];selectedWeather=entry?entry.weather:null;$('mood-note').value=entry?entry.note:'';noteCount();}
+  function populateNote(){const entry=state.moods[today];selectedWeather=entry?entry.weather:null;$('mood-note').value=entry?entry.note:'';$('voice-result').textContent='음성으로 고른 마음 날씨도 확인 후 저장해 주세요.';noteCount();}
   function noteCount(){$('note-count').textContent=$('mood-note').value.length+' / 200';}
   function renderHistory(){
     const box=$('mood-history');box.replaceChildren();
@@ -140,6 +140,7 @@
   document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>closeModal(b.dataset.close));
   document.querySelectorAll('.modal-backdrop').forEach(b=>b.addEventListener('click',e=>{if(e.target===b)closeModal(b.id.split('-')[0]);}));
   $('save-mood').onclick=()=>{if(dispatch({type:'mood',weather:selectedWeather||(state.moods[today]&&state.moods[today].weather),note:$('mood-note').value},'지금의 마음을 남겼어요'))populateNote();};
+  $('watch-voice').onclick=()=>{if(window.IslandStore&&window.IslandStore.openWatchVoice)window.IslandStore.openWatchVoice();else toast('이 버전에서는 워치 음성을 사용할 수 없어요. 직접 선택해 주세요.');};
   $('mood-note').oninput=noteCount;
   $('walk-choice').onchange=e=>dispatch({type:'choice',id:'walk',value:e.target.value});$('courage-choice').onchange=e=>dispatch({type:'choice',id:'courage',value:e.target.value});
   $('clear-slot').onclick=()=>dispatch({type:'unequip',slot},'이 자리를 비웠어요. 꾸미기는 계속 가지고 있어요.');
@@ -149,7 +150,14 @@
   document.addEventListener('visibilitychange',()=>{if(document.hidden)pauseBreath();else {refreshDay();refreshWatch();}});
   window.addEventListener('blur',pauseBreath);
   document.addEventListener('keydown',e=>{const modal=[...document.querySelectorAll('.modal-backdrop')].find(m=>!m.hidden);if(!modal)return;if(e.key==='Escape'){closeModal(modal.id.split('-')[0]);e.preventDefault();}if(e.key==='Tab'){const focusable=[...modal.querySelectorAll('button,select,textarea')].filter(n=>!n.disabled&&!n.closest('[hidden]'));if(!focusable.length)return;const first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}}});
-  window.MindIslandApp={watch:data=>{watchData=data;refreshDay();renderWatch();},pause:pauseBreath,back:()=>{const modal=[...document.querySelectorAll('.modal-backdrop')].find(m=>!m.hidden);if(modal){closeModal(modal.id.split('-')[0]);return true;}if(currentPage!=='island'){switchPage('island');return true;}return false;}};
+  function receiveVoice(data){
+    if(!data||!M.moods.includes(data.weather))return;
+    if(currentPage!=='mood')switchPage('mood');
+    refreshDay();selectedWeather=data.weather;renderWeather();
+    $('voice-result').textContent='인식 문구: '+String(data.transcript||'').slice(0,500)+' · 마음 날씨를 확인한 뒤 저장해 주세요.';
+    toast('마음 날씨를 적용했어요. 저장 버튼을 눌러 기록해 주세요.');
+  }
+  window.MindIslandApp={voice:receiveVoice,watch:data=>{watchData=data;refreshDay();renderWatch();},pause:pauseBreath,back:()=>{const modal=[...document.querySelectorAll('.modal-backdrop')].find(m=>!m.hidden);if(modal){closeModal(modal.id.split('-')[0]);return true;}if(currentPage!=='island'){switchPage('island');return true;}return false;}};
   load();render();refreshWatch();
   setInterval(()=>{if(!document.hidden){refreshDay();refreshWatch();renderWatch();}},20000);
 })();

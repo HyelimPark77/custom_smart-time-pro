@@ -10,6 +10,7 @@
     <uses-feature android:name="android.hardware.sensor.stepcounter" android:required="false"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <queries>
+        <intent><action android:name="android.speech.RecognitionService"/></intent>
         <package android:name="com.tencent.mm"/>
         <intent>
             <action android:name="android.intent.action.VIEW"/>
@@ -113,6 +114,7 @@
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
     <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.sma.smartv3.App" android:networkSecurityConfig="@xml/network_config" android:requestLegacyExternalStorage="true" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
         <activity android:name="com.diz.sw01.mindisland.MindIslandActivity" android:exported="false" android:label="마음섬" android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.diz.sw01.mindisland.WatchVoiceActivity" android:exported="false" android:label="워치로 마음 말하기" />
         <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="@string/adp_admob_id"/>
         <activity android:exported="true" android:name="com.sma.smartv3.wxapi.WXEntryActivity"/>
         <activity android:exported="true" android:launchMode="singleTask" android:name="com.sma.smartv3.ui.device.TeraBoxFileManagerActivity">
