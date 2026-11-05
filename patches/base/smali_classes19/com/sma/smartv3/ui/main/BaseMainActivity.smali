@@ -729,6 +729,13 @@
     # This fork has its own release channel. Do not replace it with a vendor APK.
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
     move-result-object v0
+    const-string v1, "com.diz.sw01.watch.integration"
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v1
+    if-eqz v1, :check_original_custom_identity
+    return-void
+
+    :check_original_custom_identity
     const-string v1, "com.diz.sw01.custom.ui"
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
     move-result v0

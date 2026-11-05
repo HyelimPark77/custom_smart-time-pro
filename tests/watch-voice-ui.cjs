@@ -17,6 +17,8 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
     });
     await page.goto(pathToFileURL(path.resolve(__dirname,'../patches/base/assets/mind-island/index.html')).href);
     await page.locator('[data-tab="mood"]').click();
+    assert.equal(await page.locator('.weather-choice img').count(),2);
+    await page.waitForFunction(()=>[...document.querySelectorAll('.weather-choice img')].every(image=>image.complete&&image.naturalWidth>0));
     await page.locator('#mood-note').fill('직접 적은 메모');
     const before=await page.evaluate(()=>({writes:window.__writes,state:localStorage.getItem('voice-ui-test')}));
     await page.locator('#watch-voice').click();assert.equal(await page.evaluate(()=>window.__opened),1);

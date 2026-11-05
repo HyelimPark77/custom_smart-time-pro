@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   const M=window.MindIslandModel, $=id=>document.getElementById(id);
-  const weather={sun:{icon:'☀',name:'맑음'},clear:{icon:'◒',name:'잔잔함'},cloud:{icon:'☁',name:'흐림'},rain:{icon:'☂',name:'비'},wind:{icon:'〰',name:'바람'}};
+  const weather={sun:{icon:'☀',name:'맑음'},clear:{icon:'◒',name:'잔잔함',image:'icons/mood-calm.svg'},cloud:{icon:'☁',name:'흐림'},rain:{icon:'☂',name:'비'},wind:{icon:'〰',name:'바람',image:'icons/mood-wind.svg'}};
   const themeNames={garden:'낮의 정원',sunset:'포근한 노을',night:'별빛의 밤'};
   const itemIcons={flower:'✿',tree:'♧',bench:'⌑',star:'✧',tent:'△',water:'≈'};
   let state=M.fresh(), storageOkay=true, currentPage='island', selectedWeather=null, slot=0, toastTimer, focusBeforeModal;
@@ -28,6 +28,7 @@
     render();return true;
   }
   function el(tag, className, text) {const n=document.createElement(tag);if(className)n.className=className;if(text!==undefined)n.textContent=text;return n;}
+  function weatherIcon(node,key){const info=weather[key];node.replaceChildren();if(info.image){const image=el('img');image.src=info.image;image.alt='';node.append(image);}else node.textContent=info.icon;return node;}
   function refreshDay() { const next=M.dayKey(new Date()); if(next!==today){today=next;selectedWeather=null;render();if(currentPage==='mood')populateNote();} }
   function switchPage(page) {
     if (!['island','mood','quests','rest'].includes(page))return;
@@ -42,8 +43,8 @@
     const entry=state.moods[today];
     const current=selectedWeather||(entry&&entry.weather);
     $('weather-options').replaceChildren();
-    for(const key of M.moods){const info=weather[key],button=el('button','weather-choice'+(current===key?' selected':''));button.type='button';button.setAttribute('aria-pressed',String(current===key));button.setAttribute('aria-label',info.name);button.append(el('span','weather-icon',info.icon),el('small','',info.name));button.onclick=()=>{selectedWeather=key;renderWeather();};$('weather-options').append(button);}
-    $('mood-symbol').textContent=entry?weather[entry.weather].icon:'☁';
+    for(const key of M.moods){const info=weather[key],button=el('button','weather-choice'+(current===key?' selected':''));button.type='button';button.setAttribute('aria-pressed',String(current===key));button.setAttribute('aria-label',info.name);button.append(weatherIcon(el('span','weather-icon'),key),el('small','',info.name));button.onclick=()=>{selectedWeather=key;renderWeather();};$('weather-options').append(button);}
+    weatherIcon($('mood-symbol'),entry?entry.weather:'cloud');
     $('mood-title').textContent=entry?'오늘의 마음은 '+weather[entry.weather].name:'지금, 마음은 어떤 날씨인가요?';
     $('mood-subtitle').textContent=entry?'마음은 바뀌어도 괜찮아요. 다시 남길 수 있어요.':'정답 없이 골라보세요 · 10초면 충분해요';
     $('save-mood').textContent=entry?'오늘의 마음 수정하기':'오늘의 마음 남기기';
@@ -54,7 +55,7 @@
     const box=$('mood-history');box.replaceChildren();
     const dates=Object.keys(state.moods).sort().reverse().filter(d=>{const delta=(new Date(today+'T12:00:00')-new Date(d+'T12:00:00'))/86400000;return delta>=0&&delta<7;});
     if(!dates.length){box.append(el('div','empty-history','아직 남긴 마음이 없어요.\n첫 기록은 짧아도, 메모가 없어도 괜찮아요.'));return;}
-    for(const day of dates){const entry=state.moods[day],row=el('article','history-row'),details=el('div');row.append(el('span','history-symbol',weather[entry.weather].icon));const heading=el('div');heading.append(el('b','',day===today?'오늘':day.slice(5).replace('-','월 ')+'일'),el('small','',weather[entry.weather].name));details.append(heading);details.append(el('p','',entry.note||'마음 날씨만 가볍게 남겼어요.'));row.append(details);box.append(row);}
+    for(const day of dates){const entry=state.moods[day],row=el('article','history-row'),details=el('div');row.append(weatherIcon(el('span','history-symbol'),entry.weather));const heading=el('div');heading.append(el('b','',day===today?'오늘':day.slice(5).replace('-','월 ')+'일'),el('small','',weather[entry.weather].name));details.append(heading);details.append(el('p','',entry.note||'마음 날씨만 가볍게 남겼어요.'));row.append(details);box.append(row);}
   }
   function quests(){const choice=state.choices[today]||{walk:'walk',courage:'water'};return [
     {id:'walk',icon:'↟',name:choice.walk==='stretch'?'앉아서 1분 몸 풀기':'5분, 잠깐 산책하기',hint:'가벼운 움직임',description:choice.walk==='stretch'?'편한 자리에서 어깨와 손목을 부드럽게 움직여요. 내 몸에 편한 만큼이면 충분해요.':'기록이나 속도를 신경 쓰지 않고 가까운 곳을 걸어봐요. 걷기 어렵다면 위에서 몸 풀기를 골라도 좋아요.'},

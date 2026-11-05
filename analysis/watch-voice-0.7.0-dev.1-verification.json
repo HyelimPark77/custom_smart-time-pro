@@ -1,0 +1,36 @@
+{
+  "apk": "Diz_SW01_Watch_Integration_0.7.0-dev.1_ARM64_TEST.apk",
+  "sha256": "ed909adb9b762d19ce49616372fb95091dfdff30e235e3387d59b2f3d9e65b7b",
+  "baseline_sha256": "512fc50b3d5f22ee5eb0b7f4e164eaf2d43f5798f54646233005954151cb71f2",
+  "unchanged_core_entries": 70,
+  "mind_island_dex_matches_source": true,
+  "mind_island_assets_match_source": true,
+  "version_guard_dex_matches_input": true,
+  "scope": "Static APK check only; device voice, persistence and Bluetooth testing remain separate.",
+  "core_dex_semantic_check": {
+    "classes_compared": 7311,
+    "only_changed_method": "com.sma.smartv3.ui.main.BaseMainActivity.checkAppVersion"
+  },
+  "previous_build_end_to_end_validation": {
+    "apk_sha256": "b709e80f36c1b2113d668b0e525e1728abf7ef369e78aa6f4d2f46702085a6c7",
+    "capture_seconds": 6,
+    "device": "Galaxy S25 / Android 16",
+    "watch": "Diz-SW01",
+    "extension_installed_beside_0_6_0": true,
+    "real_watch_phrase_example": "오늘 마음 흐림",
+    "mood_candidate": "cloud",
+    "user_confirmed_apply_and_save": true,
+    "cold_restart_mood_retained": true,
+    "cold_restart_seeds": 17,
+    "vendor_update_prompt_absent_after_fix": true,
+    "scope": "One end-to-end real-watch voice/save/restart trial. Reconnection and repeated recognition need more trials."
+  },
+  "latest_build_ui_validation": {
+    "capture_seconds": 10,
+    "native_layout_checked_on_s25": true,
+    "mind_island_theme_and_existing_characters": true,
+    "calm_water_and_wind_air_icons": true,
+    "cards_aligned_without_clipping": true,
+    "voice_10s_real_watch_retest": "pending user trial"
+  }
+}
