@@ -21,7 +21,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.nio.charset.StandardCharsets;
 
-/** Local game with a read-only bridge to synchronized watch records. */
+/** Local game, synchronized record reader and explicit watch interactions. */
 public final class MindIslandActivity extends Activity {
     private WebView web;
     private static final int WATCH_VOICE=701;
@@ -30,6 +30,14 @@ public final class MindIslandActivity extends Activity {
     private final java.util.concurrent.atomic.AtomicBoolean reading = new java.util.concurrent.atomic.AtomicBoolean();
     private static final String ROOT = "file:///android_asset/mind-island/";
     private final class Store {
+        @JavascriptInterface public String reminderSchedule(){return RestReminderSchedule.status(MindIslandActivity.this).toString();}
+        @JavascriptInterface public void configureReminder(String time,boolean enabled,String mode,int interval){runOnUiThread(()->{
+            JSONObject outcome=RestReminderSchedule.configure(MindIslandActivity.this,time,enabled,mode,interval);
+            if(web!=null)web.evaluateJavascript("if(window.MindIslandApp)window.MindIslandApp.schedule("+outcome+");",null);
+        });}
+        @JavascriptInterface public void openReminderPermission(){runOnUiThread(()->{
+            if(Build.VERSION.SDK_INT>=31)try{startActivity(new Intent(android.provider.Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM,android.net.Uri.parse("package:"+getPackageName())));}catch(Exception ignored){}
+        });}
         @JavascriptInterface public void sendRestReminder() {
             runOnUiThread(()->{
                 if(isFinishing()||web==null)return;
@@ -83,6 +91,7 @@ public final class MindIslandActivity extends Activity {
     @Override public void onCreate(Bundle state) {
         setTheme(android.R.style.Theme_Material_Light_NoActionBar);
         super.onCreate(state);
+        RestReminderSchedule.arm(this);
         getWindow().setStatusBarColor(Color.rgb(249, 246, 255));
         getWindow().setNavigationBarColor(Color.rgb(249, 246, 255));
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR | View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);

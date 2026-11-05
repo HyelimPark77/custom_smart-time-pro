@@ -23,6 +23,13 @@ final class WatchSnapshot {
         c.set(Calendar.SECOND, 0); c.set(Calendar.MILLISECOND, 0);
         c.add(Calendar.DATE, offset); return c.getTimeInMillis();
     }
+    private static JSONArray recent(Object dao,String method,String valueName,long now) throws Exception {
+        List<?> rows=(List<?>)range(dao,method,now-24L*60*60*1000,now+1);
+        java.util.TreeMap<Long,Long> values=new java.util.TreeMap<>();
+        for(Object row:rows){long at=number(row,"getMTime"),value=number(row,valueName);if(value>0&&at>0&&at<=now)values.put(at,value);}
+        while(values.size()>8)values.pollFirstEntry();
+        JSONArray out=new JSONArray();for(java.util.Map.Entry<Long,Long> entry:values.entrySet())out.put(new JSONObject().put("at",entry.getKey()).put("value",entry.getValue()));return out;
+    }
     static JSONObject read() {
         JSONObject out = new JSONObject();
         long now = System.currentTimeMillis();
@@ -45,6 +52,10 @@ final class WatchSnapshot {
                 Object hr = call(call(db, "heartRateDao"), "getLastHeartRate");
                 if (hr != null) out.put("heartRate", number(hr, "getMBpm")).put("heartRateAt", number(hr, "getMTime"));
             } catch (Exception ignored) { out.put("heartRateError", true); }
+            try{out.put("heartRateHistory",recent(call(db,"heartRateDao"),"getHeartRates","getMBpm",now));}
+            catch(Exception ignored){out.put("heartRateHistoryError",true);}
+            try{out.put("stressHistory",recent(call(db,"pressureDao"),"getPressures","getMValue",now));}
+            catch(Exception ignored){out.put("stressHistoryError",true);}
             try {
                 // Use the existing sleep parser and native card's overnight window.
                 Class<?> time = Class.forName("com.android.mltcode.paycertificationapi.O0X11OiO");

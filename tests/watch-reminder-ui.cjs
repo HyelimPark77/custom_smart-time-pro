@@ -26,6 +26,24 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
     assert.equal(await page.locator('#rest-reminder-status img').count(),0);
     assert.ok((await page.locator('#rest-reminder-status').textContent()).includes('<img'));
     assert.equal(await page.evaluate(()=>window.__writes),writes); // no reward or mood mutation
+    await page.evaluate(()=>{
+      window.__scheduled=[];
+      window.IslandStore.configureReminder=(time,enabled,mode,interval)=>window.__scheduled.push({time,enabled,mode,interval});
+    });
+    await page.locator('#rest-reminder-time').fill('16:35');
+    await page.locator('#save-rest-schedule').click();
+    await page.locator('#disable-rest-schedule').click();
+    assert.deepEqual(await page.evaluate(()=>window.__scheduled),[{time:'16:35',enabled:true,mode:'daily',interval:30},{time:'16:35',enabled:false,mode:'daily',interval:30}]);
+    await page.locator('#rest-reminder-mode').selectOption('interval');
+    assert.equal(await page.locator('#rest-time-options').isVisible(),false);
+    for(const minutes of [10,15,20,30,60,120]){
+      await page.locator('#rest-reminder-interval').selectOption(String(minutes));await page.locator('#save-rest-schedule').click();
+      assert.deepEqual(await page.evaluate(()=>window.__scheduled.at(-1)),{time:'16:35',enabled:true,mode:'interval',interval:minutes});
+    }
+    await page.evaluate(()=>window.MindIslandApp.watch({ok:true,heartRateHistory:[{at:Date.now()-600000,value:70},{at:Date.now(),value:80}],stressHistory:[]}));
+    await page.locator('details.watch-reminder summary').click();
+    assert.ok((await page.locator('#heart-history').textContent()).includes('10분 간격'));
+    assert.ok((await page.locator('#stress-history').textContent()).includes('기록이 없어요'));
     await page.evaluate(()=>delete window.IslandStore.sendRestReminder);
     await send.click();assert.ok((await page.locator('#rest-reminder-status').textContent()).includes('사용할 수 없어요'));
     assert.deepEqual(errors,[]);

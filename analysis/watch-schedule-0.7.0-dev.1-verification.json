@@ -1,0 +1,30 @@
+{
+  "apk": "Diz_SW01_Watch_Integration_0.7.0-dev.1_ARM64_TEST.apk",
+  "sha256": "c564e8bb010ca410a54426d0022c6fcb03f2f5760a1f3b40bc0f37c14f98d915",
+  "baseline_sha256": "512fc50b3d5f22ee5eb0b7f4e164eaf2d43f5798f54646233005954151cb71f2",
+  "unchanged_core_entries": 70,
+  "mind_island_dex_matches_source": true,
+  "mind_island_assets_match_source": true,
+  "version_guard_dex_matches_input": true,
+  "scope": "Static APK check only; device voice, persistence and Bluetooth testing remain separate.",
+  "installed_on_s25": true,
+  "manual_reminder_prior_build_user_confirmed": true,
+  "schedule_modes": [
+    "daily",
+    "interval"
+  ],
+  "interval_minutes": [
+    10,
+    15,
+    20,
+    30,
+    60,
+    120
+  ],
+  "exact_alarm_permission_requires_user_allow": true,
+  "health_history_read_only": true,
+  "automatic_health_alerts": false,
+  "real_watch_scheduled_delivery": "pending",
+  "voice_source_unchanged_from_commit": "e10c3d6b",
+  "ui_and_calendar_checks_passed": true
+}

@@ -86,6 +86,15 @@
     $('watch-claim').hidden=done||!start||reset;$('watch-claim').disabled=!valid||delta<300||w.stepsAt<start.at;
   }
   function refreshWatch(){if(window.IslandStore&&window.IslandStore.refreshWatch)window.IslandStore.refreshWatch();}
+  function renderHealthHistory(){
+    for(const [field,id,unit] of [['heartRateHistory','heart-history','회/분'],['stressHistory','stress-history','']]){
+      const target=$(id);target.replaceChildren();
+      const rows=watchData&&Array.isArray(watchData[field])?watchData[field].filter(row=>Number.isFinite(row.at)&&Number.isFinite(row.value)&&row.at>0&&row.value>0).slice(-8):[];
+      if(!rows.length){target.textContent=watchData&&watchData[field+'Error']?'기록을 읽지 못했어요. 워치 동기화 후 다시 확인해 주세요.':'최근 24시간 측정 기록이 없어요. 워치 동기화 후 다시 확인해 주세요.';continue;}
+      let previous=0;for(const row of rows){const line=el('p','');line.textContent=new Date(row.at).toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})+' · '+row.value+unit+(previous?' · 이전 기록과 '+Math.round((row.at-previous)/60000)+'분 간격':'');target.append(line);previous=row.at;}
+    }
+  }
+  $('refresh-health-history').onclick=refreshWatch;
   function decoration(id,x,y){
     const map={
       flowers:'<path d="M-15 8 L-15-9 M5 15 L5-5 M20 5 L20-13" stroke="#4d8056" stroke-width="3"/><g fill="#e1b7c4"><circle cx="-15" cy="-12" r="8"/><circle cx="5" cy="-8" r="7"/></g><circle cx="20" cy="-16" r="7" fill="#f1d38a"/><circle cx="-15" cy="-12" r="3" fill="#f6e4b3"/>',
@@ -159,6 +168,28 @@
     toast('마음 날씨를 적용했어요. 저장 버튼을 눌러 기록해 주세요.');
   }
   let reminderPending=false,reminderTimeout=0;
+  function scheduleOptions(){const interval=$('rest-reminder-mode').value==='interval';$('rest-time-options').hidden=interval;$('rest-interval-options').hidden=!interval;}
+  $('rest-reminder-mode').onchange=scheduleOptions;
+  function receiveSchedule(data){
+    if(!data)return;
+    $('rest-schedule-status').textContent=String(data.message||'')+(data.enabled&&data.next?' 다음 알림: '+new Date(data.next).toLocaleString('ko-KR'):'');
+    if(typeof data.time==='string')$('rest-reminder-time').value=data.time;
+    if(data.mode)$('rest-reminder-mode').value=data.mode;
+    if(data.interval)$('rest-reminder-interval').value=String(data.interval);
+    scheduleOptions();
+    if(typeof data.enabled==='boolean')$('save-rest-schedule').textContent=data.enabled?'예약 변경하고 저장':'예약 저장하고 켜기';
+    $('rest-schedule-last').textContent=String(data.last||'');
+  }
+  function refreshSchedule(){try{if(window.IslandStore&&window.IslandStore.reminderSchedule)receiveSchedule(JSON.parse(window.IslandStore.reminderSchedule()));}catch(e){}}
+  function configureSchedule(enabled){
+    if(!window.IslandStore||!window.IslandStore.configureReminder){receiveSchedule({message:'이 버전에서는 예약 알림을 사용할 수 없어요.'});return;}
+    window.IslandStore.configureReminder($('rest-reminder-time').value,enabled,$('rest-reminder-mode').value,Number($('rest-reminder-interval').value));
+  }
+  $('save-rest-schedule').onclick=()=>configureSchedule(true);
+  $('disable-rest-schedule').onclick=()=>configureSchedule(false);
+  $('rest-schedule-permission').onclick=()=>{if(window.IslandStore&&window.IslandStore.openReminderPermission)window.IslandStore.openReminderPermission();};
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshSchedule();});
+  refreshSchedule();
   function receiveReminder(data){
     if(!reminderPending||!data||typeof data.message!=='string')return;
     clearTimeout(reminderTimeout);reminderPending=false;$('send-rest-reminder').disabled=false;
@@ -171,7 +202,7 @@
     reminderTimeout=setTimeout(()=>receiveReminder({message:'전송 결과를 확인하지 못했어요. 워치 화면을 먼저 확인해 주세요.'}),5000);
     try{window.IslandStore.sendRestReminder();}catch(e){receiveReminder({message:'알림 전송을 시작하지 못했어요. 다시 시도해 주세요.'});}
   };
-  window.MindIslandApp={reminder:receiveReminder,voice:receiveVoice,watch:data=>{watchData=data;refreshDay();renderWatch();},pause:pauseBreath,back:()=>{const modal=[...document.querySelectorAll('.modal-backdrop')].find(m=>!m.hidden);if(modal){closeModal(modal.id.split('-')[0]);return true;}if(currentPage!=='island'){switchPage('island');return true;}return false;}};
+  window.MindIslandApp={schedule:receiveSchedule,reminder:receiveReminder,voice:receiveVoice,watch:data=>{watchData=data;refreshDay();renderWatch();renderHealthHistory();},pause:pauseBreath,back:()=>{const modal=[...document.querySelectorAll('.modal-backdrop')].find(m=>!m.hidden);if(modal){closeModal(modal.id.split('-')[0]);return true;}if(currentPage!=='island'){switchPage('island');return true;}return false;}};
   load();render();refreshWatch();
   setInterval(()=>{if(!document.hidden){refreshDay();refreshWatch();renderWatch();}},20000);
 })();

@@ -7,6 +7,9 @@ import org.json.JSONObject;
 final class WatchReminder {
     private static long lastQueued=-30000;
     static synchronized JSONObject send(String packageName) {
+        return send(packageName,false);
+    }
+    static synchronized JSONObject send(String packageName,boolean scheduled) {
         try {
             long now=SystemClock.elapsedRealtime();
             if(now-lastQueued<30000)return result("wait","잠시 기다린 뒤 다시 보내 주세요. 알림은 30초에 한 번 보낼 수 있어요.");
@@ -19,7 +22,7 @@ final class WatchReminder {
             Class<?> notificationClass=Class.forName("com.szabh.smable3.entity.BleNotification");
             Class<?> bufferClass=Class.forName("com.bestmafen.baseble.data.BleBuffer");
             Object notification=notificationClass.getConstructor(int.class,long.class,String.class,String.class,String.class)
-                .newInstance(127,System.currentTimeMillis(),packageName,"마음섬 · 잠깐 쉬어갈까요?","하던 일을 잠시 내려놓고, 편안하게 숨을 골라요. 쉼 알림 연결 시험입니다.");
+                .newInstance(127,System.currentTimeMillis(),packageName,"마음섬 · 잠깐 쉬어갈까요?",scheduled?"정해 둔 쉼 시간이에요. 하던 일을 잠시 내려놓고, 편안하게 숨을 골라요.":"하던 일을 잠시 내려놓고, 편안하게 숨을 골라요. 쉼 알림 연결 시험입니다.");
             Object queued=connectorClass.getMethod("sendObject",keyClass,flagClass,bufferClass,boolean.class,boolean.class)
                 .invoke(connector,keyClass.getField("NOTIFICATION").get(null),flagClass.getField("UPDATE").get(null),notification,false,false);
             if(!Boolean.TRUE.equals(queued))return result("failed","알림을 보내지 못했어요. 워치 연결을 확인한 뒤 다시 보내 주세요.");
