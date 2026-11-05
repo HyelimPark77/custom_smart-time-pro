@@ -1,0 +1,22 @@
+{
+  "apk": "Diz_SW01_Watch_Integration_0.7.0-dev.1_ARM64_TEST.apk",
+  "sha256": "456a3cefae76a33e8bc919763cd43ec88184a17bc980e76ceb17df9bba2aae65",
+  "baseline_sha256": "512fc50b3d5f22ee5eb0b7f4e164eaf2d43f5798f54646233005954151cb71f2",
+  "unchanged_core_entries": 70,
+  "mind_island_dex_matches_source": true,
+  "mind_island_assets_match_source": true,
+  "version_guard_dex_matches_input": true,
+  "scope": "Static APK check only; device voice, persistence and Bluetooth testing remain separate.",
+  "manual_reminder_user_confirmed_display_and_vibration": true,
+  "device": "Galaxy S25 / Android 16",
+  "watch": "Diz-SW01",
+  "voice_source_unchanged_from_commit": "e10c3d6b",
+  "ui_checks": [
+    "explicit single send",
+    "duplicate suppression",
+    "no game state writes",
+    "safe text",
+    "missing bridge"
+  ],
+  "scheduled_reminders": "not implemented yet"
+}

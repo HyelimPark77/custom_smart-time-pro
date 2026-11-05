@@ -30,6 +30,13 @@ public final class MindIslandActivity extends Activity {
     private final java.util.concurrent.atomic.AtomicBoolean reading = new java.util.concurrent.atomic.AtomicBoolean();
     private static final String ROOT = "file:///android_asset/mind-island/";
     private final class Store {
+        @JavascriptInterface public void sendRestReminder() {
+            runOnUiThread(()->{
+                if(isFinishing()||web==null)return;
+                JSONObject outcome=WatchReminder.send(getPackageName());
+                web.evaluateJavascript("if(window.MindIslandApp)window.MindIslandApp.reminder("+outcome+");",null);
+            });
+        }
         @JavascriptInterface public void openWatchVoice() {
             runOnUiThread(()->{
                 if(voiceOpen||isFinishing())return;

@@ -158,7 +158,20 @@
     $('voice-result').textContent='인식 문구: '+String(data.transcript||'').slice(0,500)+' · 마음 날씨를 확인한 뒤 저장해 주세요.';
     toast('마음 날씨를 적용했어요. 저장 버튼을 눌러 기록해 주세요.');
   }
-  window.MindIslandApp={voice:receiveVoice,watch:data=>{watchData=data;refreshDay();renderWatch();},pause:pauseBreath,back:()=>{const modal=[...document.querySelectorAll('.modal-backdrop')].find(m=>!m.hidden);if(modal){closeModal(modal.id.split('-')[0]);return true;}if(currentPage!=='island'){switchPage('island');return true;}return false;}};
+  let reminderPending=false,reminderTimeout=0;
+  function receiveReminder(data){
+    if(!reminderPending||!data||typeof data.message!=='string')return;
+    clearTimeout(reminderTimeout);reminderPending=false;$('send-rest-reminder').disabled=false;
+    $('rest-reminder-status').textContent=data.message;
+  }
+  $('send-rest-reminder').onclick=()=>{
+    if(reminderPending)return;
+    if(!window.IslandStore||typeof window.IslandStore.sendRestReminder!=='function'){$('rest-reminder-status').textContent='이 버전에서는 워치 알림을 사용할 수 없어요.';return;}
+    reminderPending=true;$('send-rest-reminder').disabled=true;$('rest-reminder-status').textContent='워치 연결을 확인하고 있어요…';
+    reminderTimeout=setTimeout(()=>receiveReminder({message:'전송 결과를 확인하지 못했어요. 워치 화면을 먼저 확인해 주세요.'}),5000);
+    try{window.IslandStore.sendRestReminder();}catch(e){receiveReminder({message:'알림 전송을 시작하지 못했어요. 다시 시도해 주세요.'});}
+  };
+  window.MindIslandApp={reminder:receiveReminder,voice:receiveVoice,watch:data=>{watchData=data;refreshDay();renderWatch();},pause:pauseBreath,back:()=>{const modal=[...document.querySelectorAll('.modal-backdrop')].find(m=>!m.hidden);if(modal){closeModal(modal.id.split('-')[0]);return true;}if(currentPage!=='island'){switchPage('island');return true;}return false;}};
   load();render();refreshWatch();
   setInterval(()=>{if(!document.hidden){refreshDay();refreshWatch();renderWatch();}},20000);
 })();
